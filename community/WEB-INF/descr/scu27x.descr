@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Check New Badge">
+  <Script path="WEB-INF/groovy/BadgeChecknewBadge.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Check New Badge</ModelName>
+    <ParentContainer>opg25x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu27x">scu27x.scoreBadgeDict</OperationParam>
+      <OperationParam unit="scu27x">scu27x.user</OperationParam>
+      <OperationParam unit="scu27x">scu27x.userGot</OperationParam>
+      <OperationParam unit="scu27x">scu27x.idBadgeDict</OperationParam>
+      <OperationParam unit="scu27x">scu27x.userScore</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln272x</Link>
+      <Link resultCode="error">kln42x</Link>
+      <Link resultCode="success" transport="true">ln182x</Link>
+      <Link resultCode="error" transport="true">ln182x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

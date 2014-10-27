@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get status">
+  <MaxResults/>
+  <Query entity="ent19x">
+    <Output id="att66x" name="description" index="0"/>
+    <HQL>select distinct a_textMail.description from TextMail a_textMail order by a_textMail.description asc</HQL>
+  </Query>
+</Descriptor>

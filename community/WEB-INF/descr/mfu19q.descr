@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent16x</Entity>
+  <ModifiedAttributes>att1q|att71x|att2q|att50x|att39x|att41x|att60x|att9q|att3q</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond40q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify</ModelName>
+    <ParentContainer>opg23q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu19q">mfu19q.att41x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att71x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att2q</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att39x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att50x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att1q</OperationParam>
+      <OperationParam unit="mfu19q">kcond40q.att38x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att3q</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att60x</OperationParam>
+      <OperationParam unit="mfu19q">mfu19q.att9q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln290q</Link>
+      <Link resultCode="error">kln63q</Link>
+      <Link resultCode="error.opg23q">kln63q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

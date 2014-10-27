@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="New">
+  <FormFields>
+    <Field id="fld18q" name="Email" type="string" localized="false"></Field>
+    <Field id="fld19q" name="Password" type="password" localized="false"></Field>
+    <Field id="fld20q" name="Username" type="string" localized="false"></Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu9q" linkId="ln116q" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld18q" id="mnd15q" name="Mandatory15">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld19q" id="mnd11q" name="Mandatory11">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld20q" id="mnd14q" name="Mandatory14">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Badge">
+  <MaxResults/>
+  <Query entity="ent13x">
+    <Input id="p0" param="kcond46x.att42x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att42x" name="oid" index="0"/>
+    <Output id="att48x" name="title" index="1"/>
+    <Output id="att117x" name="area" index="2"/>
+    <Output id="att20x" name="neededScore" index="3"/>
+    <HQL>select a_badgeType.oid, a_badgeType.title, a_badgeType.area, a_badgeType.neededScore from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

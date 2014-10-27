@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.JumpUnitService" name="go to user ranking">
+  <Direction>forward</Direction>
+  <CollectorUnit>pcu4q</CollectorUnit>
+  <IgnoreHistory>false</IgnoreHistory>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>go to user ranking</ModelName>
+    <ParentContainer>sv2q</ParentContainer>
+    <MasterPage>mpage1q</MasterPage>
+    <NavigationAncestors>sv2q</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>sp|acond20q|cmplink|acond16q|link|pcp4o|smc</Params>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

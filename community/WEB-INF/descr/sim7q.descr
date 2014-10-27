@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.store.scaleimageunit.ScaleImageUnitService" name="imageX16">
+  <Width>16</Width>
+  <Height>16</Height>
+  <Format>jpg</Format>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>imageX16</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="sim7q">sim7q.image</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln385q</Link>
+      <Link resultCode="success" transport="true">ln254q</Link>
+      <Link resultCode="error" transport="true">ln254q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

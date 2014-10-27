@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Badge Area">icp153q</Parameter>
+  <Parameter name="Image">icp154q</Parameter>
+  <Parameter name="Title">icp155q</Parameter>
+  <Parameter name="Active">icp156q</Parameter>
+  <Parameter name="Description">icp157q</Parameter>
+  <Parameter name="Level">icp158q</Parameter>
+  <Parameter name="Needed Score">icp159q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm40q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu46q">icp154q</OperationParam>
+      <OperationParam unit="icu46q">icp157q</OperationParam>
+      <OperationParam unit="icu46q">icp159q</OperationParam>
+      <OperationParam unit="icu46q">icp153q</OperationParam>
+      <OperationParam unit="icu46q">icp158q</OperationParam>
+      <OperationParam unit="icu46q">icp155q</OperationParam>
+      <OperationParam unit="icu46q">icp156q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln325q</Link>
+      <Link resultCode="success" transport="true">ln198q</Link>
+      <Link resultCode="error" transport="true">ln198q</Link>
+      <Link resultCode="success" transport="true">ln199q</Link>
+      <Link resultCode="error" transport="true">ln199q</Link>
+      <Link resultCode="success" transport="true">ln200q</Link>
+      <Link resultCode="error" transport="true">ln200q</Link>
+      <Link resultCode="success" transport="true">ln168q</Link>
+      <Link resultCode="error" transport="true">ln168q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

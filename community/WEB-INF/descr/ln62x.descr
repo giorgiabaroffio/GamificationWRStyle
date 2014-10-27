@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page18x</Target>
+  <Secure>false</Secure>
+  <Source>pwu6x</Source>
+  <SourcePage>page4x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="fld52x_slot" sourceUnit="pwu6x" sourceParam="data[].att117x"/>
+    <ContextPropagation targetParam="fld55x_slot" sourceUnit="pwu6x" sourceParam="data[].att42x"/>
+    <ContextPropagation targetParam="fld53x_slot" sourceUnit="pwu6x" sourceParam="data[].att64x"/>
+  </ContextPropagations>
+</Descriptor>

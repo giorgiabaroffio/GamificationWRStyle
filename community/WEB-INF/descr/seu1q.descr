@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Max Date">
+  <MaxResults/>
+  <Query entity="ent3q">
+    <Input id="p0" param="kcond1q.att13q|kcond1q.att14q" fixedCharLengths="-1|-1" type="string" implied="false" expandStyle="in" function="concat" functionArgs="_$$_"/>
+    <Output id="att13q" name="actionTypeOid" index="0"/>
+    <Output id="att14q" name="rankOid" index="1"/>
+    <Output id="att15q" name="maxDate" index="2"/>
+    <HQL>select a_maxDateActionInstance.actionTypeOid, a_maxDateActionInstance.rankOid, a_maxDateActionInstance.maxDate from MaxDateActionInstance a_maxDateActionInstance
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]concat(format_number(a_maxDateActionInstance.actionTypeOid), '_$$_', format_number(a_maxDateActionInstance.rankOid)) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select Max Date</ModelName>
+    <ParentContainer>opm1q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu1q">kcond1q.att13q</OperationParam>
+      <OperationParam unit="seu1q">kcond1q.att14q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln8q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

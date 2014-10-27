@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.ThematicArea" table="`thematic_area`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="areaName" column="`area_name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="thematicAreaToGamifiedApplication" table="`gamifiedapplication_thematic_a`" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`thematic_area_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.gamificationCommunity.GamifiedApplication" not-found="exception" embed-xml="true" unique="false">
+        <column name="`gamified_application_oid`"/>
+      </many-to-many>
+    </set>
+    <set name="thematicAreaToActionType" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`thematic_area_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.ActionType" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="thematicAreaToBadgeType" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`thematic_area_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.BadgeType" not-found="exception" embed-xml="true"/>
+    </set>
+  </class>
+  <!-- mapping for relationship 'Thematic AreaToGamifiedApplication[role8q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ThematicArea_to_thematicAreaToGamifiedApplication" table="`gamifiedapplication_thematic_a`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`thematic_area_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`gamified_application_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'Thematic AreaToAction Type[role9q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ThematicArea_to_thematicAreaToActionType" table="`action_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`thematic_area_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Thematic AreaToBadge Type[role11q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ThematicArea_to_thematicAreaToBadgeType" table="`badge_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`thematic_area_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

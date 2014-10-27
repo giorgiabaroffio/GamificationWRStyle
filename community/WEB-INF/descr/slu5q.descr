@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="getUserRewards">
+  <Operation name="getUserRewards" nsURI="http://www.webratio.com/webservices/getUserRewards" stateful="false" invocationStyle="SOAP" requestMethod="GET" contentType="XML"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp10q" name="userEmail" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserRewards</ModelName>
+    <ParentContainer>port5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>eru9q.faultException|rsp8q|adu3q.userEmail|eru9q.faultMessage|adu3q.neededPoints|adu3q.oid|miu6q.icp248q|adu3q.rewardName</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln24q</Link>
+      <Link resultCode="error">kln19q</Link>
+      <Link resultCode="success" transport="true">ln3q</Link>
+      <Link resultCode="error" transport="true">ln3q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

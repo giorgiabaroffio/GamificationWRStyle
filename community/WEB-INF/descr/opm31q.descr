@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu34q">
+    <InputParameter id="icp118q" name="Gamified App OID"/>
+    <InputParameter id="icp119q" name="Gamified App Name"/>
+    <InputParameter id="icp17q" name="Thematic Area OIDS"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu36q</OKCollectorUnits>
+  <KOCollectorUnits>kocu19q</KOCollectorUnits>
+  <OperationUnits>icu34q|okcu36q|kocu19q|mfu17q|cnu6q|dcnu11q|seu41q</OperationUnits>
+</Descriptor>

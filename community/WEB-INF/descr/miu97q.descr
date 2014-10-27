@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm3q</Module>
+  <InputCollectorId>icu3q</InputCollectorId>
+  <InputParameter>icp6q</InputParameter>
+  <InputParameter>icp7q</InputParameter>
+  <InputParameter>icp8q</InputParameter>
+  <InputParameter>icp9q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm63q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu97q">miu97q.icp9q</OperationParam>
+      <OperationParam unit="miu97q">miu97q.icp7q</OperationParam>
+      <OperationParam unit="miu97q">miu97q.icp8q</OperationParam>
+      <OperationParam unit="miu97q">miu97q.icp6q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln473q</Link>
+      <Link resultCode="error.kocu2q">kln137q</Link>
+      <Link resultCode="error.kocu1q">kln138q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

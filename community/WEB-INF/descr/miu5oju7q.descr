@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.JumpUnitService" name="go to monthly">
+  <Direction>forward</Direction>
+  <CollectorUnit>pcu4q</CollectorUnit>
+  <IgnoreHistory>false</IgnoreHistory>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>go to monthly</ModelName>
+    <ParentContainer>area4p</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu5oacond128q|miu5oacond137q|link|miu5oacond135q|miu5oacond88q|miu5oacond120q|miu5ohinu18q.newSortAttribute|miu5oocp74q|miu5oacond122q|miu5ohinu18q.sortCriteria|miu5oacond114q|miu5oacond131q|scu4o.nickname|acond40p|miu5oacond112q|cmplink|scu4o.isPublic|var31p|miu5ohinu15q.sortCriteria|kcond27o.userOID|miu5ohinu16q.newSortAttribute|miu5oacond129q|sp|miu5oacond136q|miu5oacond89q|miu5oacond134q|miu5oacond121q|miu5oacond103q|miu5orcond28q.userOID|miu5ohinu15q.newSortAttribute|miu5oacond119q|miu5ohinu17q.block|miu5ohinu14q.current.userOID|miu5ohinu19q.newSortAttribute|miu5oacond130q|miu5ohinu16q.sortCriteria|miu5oacond115q|miu5oacond113q|miu5ohinu14q.block|smc|miu5ohinu19q.sortCriteria|miu5ohinu17q.current.userOID</Params>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

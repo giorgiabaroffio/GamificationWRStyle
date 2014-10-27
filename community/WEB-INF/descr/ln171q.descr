@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page4x</Target>
+  <Secure>false</Secure>
+  <Source>inu2q</Source>
+  <SourcePage>page4x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>rcond36q.att21q|inu2q.current.att21q</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="rcond36q.att21q" sourceUnit="inu2q" sourceParam="data[].att21q"/>
+    <ContextPropagation targetParam="inu2q.current.att21q" sourceUnit="inu2q" sourceParam="data[].att21q"/>
+  </ContextPropagations>
+</Descriptor>

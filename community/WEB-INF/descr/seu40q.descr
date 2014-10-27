@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Get area">
+  <MaxResults/>
+  <Query entity="ent2q">
+    <Input id="p0" param="rcond17q.att21q" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att6q" name="oid" index="0"/>
+    <HQL>select a_gamifiedApplication.oid from GamifiedApplication a_gamifiedApplication
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_gamifiedApplication.oid in(select a_gamifiedApplication_p0.source_oid from Rel_GamifiedApplication_to_gamifiedApplicationToThematicArea a_gamifiedApplication_p0 where a_gamifiedApplication_p0.target_oid in(?))}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

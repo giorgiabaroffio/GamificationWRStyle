@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="One Action per Post per Executor">
+  <MaxResults/>
+  <Query entity="ent14x">
+    <Input id="p0" param="rcond29q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="acond148q" type="string" implied="true" impliedText="1 = 1" expandStyle="in" attribute="att29x"/>
+    <Input id="p2" param="rcond30q.att38x" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p3" param="acond149q" type="integer" implied="true" impliedText="1 = 1" expandStyle="in" attribute="att5q"/>
+    <Input id="p4" param="acond150q" type="string" implied="false" expandStyle="in" attribute="att73x"/>
+    <Output id="att49x" name="oid" index="0"/>
+    <HQL>select a_actionInstance.oid from ActionInstance a_actionInstance
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_actionInstance.actionToUserHeadQuarter.OID in(?))})) and (({[p1]safe_cast(a_actionInstance.executor) in(?)})) and (({[p2](a_actionInstance.actionInstanceToActionType.oid in(?))})) and (({[p3]a_actionInstance.objectKey in(?)})) and (({[p4]safe_cast(a_actionInstance.description) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>One Action per Post per Executor</ModelName>
+    <ParentContainer>opg43q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu60q">rcond29q.userOID</OperationParam>
+      <OperationParam unit="seu60q">acond149q</OperationParam>
+      <OperationParam unit="seu60q">acond148q</OperationParam>
+      <OperationParam unit="seu60q">rcond30q.att38x</OperationParam>
+      <OperationParam unit="seu60q">acond150q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln447q</Link>
+      <Link resultCode="error">kln130q</Link>
+      <Link resultCode="error.opg43q">kln130q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

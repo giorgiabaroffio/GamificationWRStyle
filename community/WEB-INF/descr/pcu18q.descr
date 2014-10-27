@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.ParameterCollectorUnitService" name="Action Data">
+  <Parameter value="">pcp64q</Parameter>
+  <Parameter value="">pcp65q</Parameter>
+  <Parameter value="">pcp66q</Parameter>
+  <Parameter value="">pcp67q</Parameter>
+  <Parameter value="">pcp68q</Parameter>
+  <Parameter value="">pcp69q</Parameter>
+  <Parameter value="">pcp70q</Parameter>
+  <Parameter value="">pcp71q</Parameter>
+  <Parameter value="">pcp72q</Parameter>
+  <Parameter value="">pcp73q</Parameter>
+  <Parameter value="">pcp74q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Action Data</ModelName>
+    <ParentContainer>opg43q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="pcu18q">pcp70q</OperationParam>
+      <OperationParam unit="pcu18q">pcp66q</OperationParam>
+      <OperationParam unit="pcu18q">pcp69q</OperationParam>
+      <OperationParam unit="pcu18q">pcp67q</OperationParam>
+      <OperationParam unit="pcu18q">pcp68q</OperationParam>
+      <OperationParam unit="pcu18q">pcp71q</OperationParam>
+      <OperationParam unit="pcu18q">pcp74q</OperationParam>
+      <OperationParam unit="pcu18q">pcp72q</OperationParam>
+      <OperationParam unit="pcu18q">pcp65q</OperationParam>
+      <OperationParam unit="pcu18q">pcp64q</OperationParam>
+      <OperationParam unit="pcu18q">pcp73q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln439q</Link>
+      <Link resultCode="error">kln130q</Link>
+      <Link resultCode="success" transport="true">ln314q</Link>
+      <Link resultCode="error" transport="true">ln314q</Link>
+      <Link resultCode="success" transport="true">ln315q</Link>
+      <Link resultCode="error" transport="true">ln315q</Link>
+      <Link resultCode="success" transport="true">ln316q</Link>
+      <Link resultCode="error" transport="true">ln316q</Link>
+      <Link resultCode="error.opg43q">kln130q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

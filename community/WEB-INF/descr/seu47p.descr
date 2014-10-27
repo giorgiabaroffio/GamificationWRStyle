@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="n.User filtered">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="acond90p" type="decimal" implied="false" expandStyle="aggregate" function="min" value="0" attribute="att319x"/>
+    <Input id="p1" param="acond10p" type="integer" implied="true" impliedText="1 = 1" expandStyle="in" attribute="userOID"/>
+    <Input id="p2" param="acond62p" type="boolean" implied="false" expandStyle="in" value="true" attribute="att12p"/>
+    <Input id="p3" param="acond101p" type="boolean" implied="false" expandStyle="in" value="false" attribute="att99x"/>
+    <HQL>from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.participation7Days &gt; ?})) and (({[p1]a_communityUser.OID in(?)})) and (({[p2]a_communityUser.publicProfile in(?)})) and (({[p3]a_communityUser.internal in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

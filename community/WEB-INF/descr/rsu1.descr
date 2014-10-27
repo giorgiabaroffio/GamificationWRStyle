@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getRankResponce">
+  <Response name="getRankResponce" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>JSON</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp1" name="users" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getRankResponce</ModelName>
+    <ParentContainer>port2</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu1">rsp1</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>
+ 

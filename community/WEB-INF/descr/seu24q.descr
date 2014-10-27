@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Community User">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond12q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att110p" name="creditsAvailable" index="1"/>
+    <HQL>select a_communityUser.OID, d_creditsAvailable.value from CommunityUser a_communityUser left join a_communityUser.creditsAvailableBean d_creditsAvailable
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

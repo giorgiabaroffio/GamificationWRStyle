@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getUserCreditsResponse">
+  <Response name="getUserCreditsResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>XML</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp13q" name="userCredits" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf11q" name="userEmail" minCard="1" maxCard="1"/>
+      <SimpleParameterFragment id="spf12q" name="totalCredit" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+      <SimpleParameterFragment id="spf13q" name="creditsSpent" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+      <SimpleParameterFragment id="spf14q" name="creditsAvailable" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserCreditsResponse</ModelName>
+    <ParentContainer>port13q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu13q">rsp13q.userCredits$userEmail</OperationParam>
+      <OperationParam unit="rsu13q">rsp13q.userCredits$totalCredit</OperationParam>
+      <OperationParam unit="rsu13q">rsp13q.userCredits$creditsAvailable</OperationParam>
+      <OperationParam unit="rsu13q">rsp13q.userCredits$creditsSpent</OperationParam>
+      <Params>eru13q.faultException|eru13q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln26q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

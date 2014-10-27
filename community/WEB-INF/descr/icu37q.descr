@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym6q</ParentContainer>
+    <ParentModule>hym6q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu61q.icp120q|miu61q.icp129q|mssu4q.shownMessages|slot1q|slot2q|miu61q.icp128q|miu61q.icp127q|mc|miu61q.icp130q|miu61q.icp126q|miu61q.icp125q|miu61q.icp124q|miu61q.icp121q|miu61q.icp122q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln270q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Update Bundle Data">
+  <BulkUpdate>true</BulkUpdate>
+  <Entity>BundleData</Entity>
+  <ModifiedAttributes>bundleDataKey|bundleDataMessage</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond63q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Update Bundle Data</ModelName>
+    <ParentContainer>opg36q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu31q">mfu31q.bundleDataMessage</OperationParam>
+      <OperationParam unit="mfu31q">mfu31q.bundleDataKey</OperationParam>
+      <OperationParam unit="mfu31q">kcond63q.bundleDataOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln357q</Link>
+      <Link resultCode="error">kln92q</Link>
+      <Link resultCode="error.opg36q">kln92q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

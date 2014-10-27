@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get contact">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond16c.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <HQL>select a_communityUser.OID from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get contact</ModelName>
+    <ParentContainer>opg25x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu22p">kcond16c.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln85p</Link>
+      <Link resultCode="error">kln42x</Link>
+      <Link resultCode="success" transport="true">ln16p</Link>
+      <Link resultCode="error" transport="true">ln16p</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

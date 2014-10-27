@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="New Container">
+  <ParentContainer>area7p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page38p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page38p.link"/>
+    <Navigation name="2" links="page38p.auto-link"/>
+    <Navigation name="3" links="page38p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln115p|validation-failed"/>
+    <Navigation name="5" links="ln115p|impl" postPropagatedLink="ln115p"/>
+    <Navigation name="6" interPage="always" links="ln147p"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|5|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence/>
+  <UnitComputations>
+    <UnitComputation unit="enu10p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|6|5"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln47p</ManualLink>
+    <ManualLink>ln115p</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page38p_grid_0">
+      <Layout id="page38p_cell_0">
+        <Layout id="enu10p_0" unitId="enu10p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>New Container</ModelName>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam>miu88q.icp200q</PageParam>
+      <PageParam>miu88q.icp201q</PageParam>
+      <PageParam>miu88q.icp202q</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld12p_presel">sfld12p_presel</PageParam>
+      <PageParam>pwu16p.newSortAttribute</PageParam>
+      <PageParam>pwu16p.current.att31x</PageParam>
+      <PageParam>acond29p</PageParam>
+      <PageParam>pwu16p.sortCriteria</PageParam>
+      <PageParam>miu86q.icp195q</PageParam>
+      <PageParam preservedByForm="true">fld44p_slot</PageParam>
+      <PageParam preservedByForm="true">fld12p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld10p_presel">sfld10p_presel</PageParam>
+      <PageParam preservedByForm="true">fld16p_slot</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

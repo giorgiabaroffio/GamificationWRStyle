@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.SwitchUnitService" name="email type">
+  <Case value="community.publicProfile"/>
+  <Case value="community.privateProfile"/>
+  <Case value="community.registration"/>
+  <DefaultCase>true</DefaultCase>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>email type</ModelName>
+    <ParentContainer>opm6x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="switch8x">switch8x.switch</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.community.publicProfile">oln220x</Link>
+      <Link resultCode="success.community.privateProfile">oln225x</Link>
+      <Link resultCode="success.community.registration">oln226x</Link>
+      <Link resultCode="success">oln227x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

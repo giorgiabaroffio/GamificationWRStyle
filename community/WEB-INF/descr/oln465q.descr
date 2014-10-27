@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>okcu66q</Target>
+  <Secure>false</Secure>
+  <Source>seu65q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="ocp85q" sourceUnit="seu65q" sourceParam="att38xArray"/>
+    <ContextPropagation targetParam="ocp86q" sourceUnit="seu65q" sourceParam="att62xArray"/>
+    <ContextPropagation targetParam="ocp87q" sourceUnit="seu65q" sourceParam="att39xArray"/>
+  </ContextPropagations>
+</Descriptor>

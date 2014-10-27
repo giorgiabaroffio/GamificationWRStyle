@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="getActions">
+  <Operation name="getActions" nsURI="http://www.webratio.com/webservices/getActions" stateful="false" invocationStyle="REST" requestMethod="GET"/>
+  <QueryStringParameters>
+    <QueryStringParameter id="slp14q" name="app" minCard="1" maxCard="1"/>
+  </QueryStringParameters>
+  <BodyParameters></BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getActions</ModelName>
+    <ParentContainer>port9q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>scu3q.actionOID|miu20q.icp247q|scu3q.actionName|rsp9q|scu3q.gamifiedApp</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln156q</Link>
+      <Link resultCode="error">kln29q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

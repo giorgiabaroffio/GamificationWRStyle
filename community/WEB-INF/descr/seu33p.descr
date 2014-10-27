@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get containers">
+  <MaxResults/>
+  <Query entity="ent20x">
+    <Input id="p0" param="acond3p" type="string" implied="false" expandStyle="in" attribute="att79x"/>
+    <Output id="att31x" name="oid" index="0"/>
+    <Output id="att81x" name="alias" index="1"/>
+    <HQL>select a_containers.oid, a_containers.alias from Containers a_containers
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_containers.languageCode) in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

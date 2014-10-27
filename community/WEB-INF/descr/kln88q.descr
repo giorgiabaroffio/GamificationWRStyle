@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>eru7q</Target>
+  <Secure>false</Secure>
+  <Source>miu22q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="eru7q.faultException" sourceUnit="miu22q" sourceParam="ocp95q"/>
+    <ContextPropagation targetParam="eru7q.faultMessage" sourceUnit="miu22q" sourceParam="ocp96q"/>
+  </ContextPropagations>
+</Descriptor>

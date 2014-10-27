@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="Reward">
+  <Query entity="ent12p">
+    <Input id="p0" param="kcond11q.att95p" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att95p" name="oid" index="0"/>
+    <Output id="att100p" name="neededPoints" index="1"/>
+    <Output id="att55x" name="image" blob="true" index="2"/>
+    <Output id="att99p" name="description" index="3"/>
+    <Output id="att98p" name="title" index="4"/>
+    <HQL>select a_rewardType.oid, a_rewardType.neededPoints, a_rewardType.imageRef, a_rewardType.description, a_rewardType.title from RewardType a_rewardType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_rewardType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

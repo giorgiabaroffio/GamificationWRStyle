@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Manage Administrator Users">
+  <ParentContainer>area1q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page7q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page7q.link"/>
+    <Navigation name="2" links="page7q.auto-link"/>
+    <Navigation name="3" links="page7q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="ln110q"/>
+    <Navigation name="5" interPage="always" links="ln114q|oln83q" effects="#pr#"/>
+    <Navigation name="6" interPage="always" links="ln115q"/>
+    <Navigation name="7" interPage="always" links="ln116q|oln93q" effects="#pr#"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln51q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="pwu4q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|7|6|5|4"/>
+    </UnitComputation>
+    <UnitComputation unit="seu11q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln109q</ManualLink>
+    <ManualLink>ln120q</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page7q_grid_0">
+      <Layout id="page7q_cell_0">
+        <Layout id="pwu4q_0" unitId="pwu4q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Manage Administrator Users</ModelName>
+    <NavigationAncestors>sv2x|area1q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="pwu4q">rcond7q.groupOID</PageParam>
+      <PageParam preservedByForm="true">fld15q_slot</PageParam>
+      <PageParam preservedByForm="true">fld16q_slot</PageParam>
+      <PageParam preservedByForm="true">fld17q_slot</PageParam>
+      <PageParam>miu35q.icp79q</PageParam>
+      <PageParam>miu35q.icp78q</PageParam>
+      <PageParam>miu35q.icp80q</PageParam>
+      <PageParam>miu37q.icp77q</PageParam>
+      <PageParam>miu37q.icp76q</PageParam>
+      <PageParam>miu37q.icp75q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

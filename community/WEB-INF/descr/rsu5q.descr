@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getUserCreditsResponse">
+  <Response name="getUserCreditsResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>JSON</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp3q" name="userCredits" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf1q" name="userEmail" minCard="1" maxCard="1"/>
+      <SimpleParameterFragment id="spf2q" name="totalCredit" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+      <SimpleParameterFragment id="spf3q" name="creditsSpent" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+      <SimpleParameterFragment id="spf4q" name="creditsAvailable" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserCreditsResponse</ModelName>
+    <ParentContainer>port6q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu5q">rsp3q.userCredits$userEmail</OperationParam>
+      <OperationParam unit="rsu5q">rsp3q.userCredits$creditsAvailable</OperationParam>
+      <OperationParam unit="rsu5q">rsp3q.userCredits$creditsSpent</OperationParam>
+      <OperationParam unit="rsu5q">rsp3q.userCredits$totalCredit</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

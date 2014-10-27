@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu8q">
+    <InputParameter id="icp12q" name="thematic area oid"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu11q|okcu12q</OKCollectorUnits>
+  <KOCollectorUnits>kocu6q</KOCollectorUnits>
+  <OperationUnits>icu8q|okcu11q|okcu12q|kocu6q|dlu5q|seu27q|seu28q|dcnu7q|switch9q</OperationUnits>
+</Descriptor>

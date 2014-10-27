@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page17q</Target>
+  <Secure>false</Secure>
+  <Source>enu10q</Source>
+  <SourcePage>page17q</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>scu10q.block|acond86q|acond87q|acond67q</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="acond86q" sourceUnit="enu10q" sourceParam="fld26q"/>
+    <ContextPropagation targetParam="acond87q" sourceUnit="enu10q" sourceParam="fld27q"/>
+  </ContextPropagations>
+</Descriptor>

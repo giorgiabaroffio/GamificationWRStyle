@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.MailUnitService" name="send email">
+  <MailUnit name="send email" id="mlu2x" smtpServerId="smtp2" encoding="" format="html" template="" messageId="">
+    <SubjectTemplate/>
+    <BodyTemplate xml:space="preserve"/>
+    <Placeholders>
+      <Placeholder name="firstname"/>
+      <Placeholder name="overall_points"/>
+      <Placeholder name="badge"/>
+      <Placeholder name="other_actions"/>
+      <Placeholder name="gift_image"/>
+      <Placeholder name="gift_title"/>
+      <Placeholder name="gift_description"/>
+      <Placeholder name="next_gifts"/>
+      <Placeholder name="gift_points"/>
+      <Placeholder name="seven_days_points"/>
+      <Placeholder name="seven_days_position"/>
+      <Placeholder name="overall_position"/>
+      <Placeholder name="leaderboards"/>
+      <Placeholder name="monthly_points"/>
+      <Placeholder name="user_photo"/>
+    </Placeholders>
+    <Attachments></Attachments>
+  </MailUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>send email</ModelName>
+    <ParentContainer>opg8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mlu2x">mlu2x.seven_days_position</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.to</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.overall_points</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.seven_days_points</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.next_gifts</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.gift_image</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.overall_position</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.subject</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.badge</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.firstname</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.gift_points</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.gift_title</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.user_photo</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.other_actions</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.gift_description</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.leaderboards</OperationParam>
+      <OperationParam unit="mlu2x">mlu2x.body</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln333x</Link>
+      <Link resultCode="error">kln95x</Link>
+      <Link resultCode="error.opg8x">kln96x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Country">icp221q</Parameter>
+  <Parameter name="Photo">icp222q</Parameter>
+  <Parameter name="Public profile">icp223q</Parameter>
+  <Parameter name="First Name">icp224q</Parameter>
+  <Parameter name="Email">icp225q</Parameter>
+  <Parameter name="Last Name">icp226q</Parameter>
+  <Parameter name="City">icp227q</Parameter>
+  <Parameter name="Geographical Area">icp228q</Parameter>
+  <Parameter name="Internal">icp229q</Parameter>
+  <Parameter name="BirthDate">icp230q</Parameter>
+  <Parameter name="Iso Code">icp231q</Parameter>
+  <Parameter name="Password">icp232q</Parameter>
+  <Parameter name="username">icp233q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm57q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu66q">icp221q</OperationParam>
+      <OperationParam unit="icu66q">icp222q</OperationParam>
+      <OperationParam unit="icu66q">icp223q</OperationParam>
+      <OperationParam unit="icu66q">icp226q</OperationParam>
+      <OperationParam unit="icu66q">icp228q</OperationParam>
+      <OperationParam unit="icu66q">icp232q</OperationParam>
+      <OperationParam unit="icu66q">icp227q</OperationParam>
+      <OperationParam unit="icu66q">icp229q</OperationParam>
+      <OperationParam unit="icu66q">icp233q</OperationParam>
+      <OperationParam unit="icu66q">icp225q</OperationParam>
+      <OperationParam unit="icu66q">icp224q</OperationParam>
+      <OperationParam unit="icu66q">icp230q</OperationParam>
+      <OperationParam unit="icu66q">icp231q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln419q</Link>
+      <Link resultCode="success" transport="true">ln303q</Link>
+      <Link resultCode="error" transport="true">ln303q</Link>
+      <Link resultCode="success" transport="true">ln304q</Link>
+      <Link resultCode="error" transport="true">ln304q</Link>
+      <Link resultCode="success" transport="true">ln305q</Link>
+      <Link resultCode="error" transport="true">ln305q</Link>
+      <Link resultCode="success" transport="true">ln306q</Link>
+      <Link resultCode="error" transport="true">ln306q</Link>
+      <Link resultCode="success" transport="true">ln307q</Link>
+      <Link resultCode="error" transport="true">ln307q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

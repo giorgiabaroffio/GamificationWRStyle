@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm9q</Module>
+  <InputCollectorId>icu9q</InputCollectorId>
+  <InputParameter>icp13q</InputParameter>
+  <InputParameter>icp14q</InputParameter>
+  <InputParameter>icp15q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym2q</ParentContainer>
+    <ParentModule>hym2q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu45q">miu45q.icp14q</OperationParam>
+      <OperationParam unit="miu45q">miu45q.icp13q</OperationParam>
+      <OperationParam unit="miu45q">miu45q.icp15q</OperationParam>
+      <Params>mc|sp|ocp8q|cmplink|link|msfld7q_presel|msfld7q_label|fld40q_slot|fld39q_slot|msfld7q_output|smc|rcond17q.att21q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln188q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

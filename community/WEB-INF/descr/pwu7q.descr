@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.PasswordUnitService" name="generate random code">
+  <PasswordUnit xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="pwu7q" name="generate random code" gr:x="220" gr:y="-145" passwordSize="4" _sel="t">
+    <OKLink id="oln390q" name="OKFlow27" to="sfu7q" _sel="t">
+      <LinkParameter id="par1136q" name="Generated Password_random code" source="password" target="str20q" _sel="t"/>
+    </OKLink>
+    <Link id="ln259q" name="Flow66" to="sfu8q" type="transport" validate="true" _sel="t">
+      <LinkParameter id="par1137q" name="Generated Password_random code" source="password" target="str23q" _sel="t"/>
+    </Link>
+    <Link id="ln260q" name="Flow70" to="sfu9q" type="transport" validate="true" _sel="t">
+      <LinkParameter id="par1138q" name="Generated Password_random code" source="password" target="str26q" _sel="t"/>
+    </Link>
+    <Link id="ln261q" name="Flow71" to="sfu10q" type="transport" validate="true" _sel="t">
+      <LinkParameter id="par1139q" name="Generated Password_random code" source="password" target="str29q" _sel="t"/>
+    </Link>
+    <Link id="ln262q" name="Flow71" to="sfu11q" type="transport" validate="true" _sel="t">
+      <LinkParameter id="par1140q" name="Generated Password_random code" source="password" target="str32q" _sel="t"/>
+    </Link>
+    <Link id="ln263q" name="Flow70" to="sfu12q" type="transport" validate="true" _sel="t">
+      <LinkParameter id="par1141q" name="Generated Password_random code" source="password" target="str35q" _sel="t"/>
+    </Link>
+  </PasswordUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>generate random code</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln390q</Link>
+      <Link resultCode="success" transport="true">ln259q</Link>
+      <Link resultCode="error" transport="true">ln259q</Link>
+      <Link resultCode="success" transport="true">ln260q</Link>
+      <Link resultCode="error" transport="true">ln260q</Link>
+      <Link resultCode="success" transport="true">ln261q</Link>
+      <Link resultCode="error" transport="true">ln261q</Link>
+      <Link resultCode="success" transport="true">ln262q</Link>
+      <Link resultCode="error" transport="true">ln262q</Link>
+      <Link resultCode="success" transport="true">ln263q</Link>
+      <Link resultCode="error" transport="true">ln263q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

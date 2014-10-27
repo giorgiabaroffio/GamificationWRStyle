@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.TextMail" table="`text_mail`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="code" column="`code`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="languageCode" column="`language_code`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="body" column="`body`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="description" column="`description`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="subject" column="`subject`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <many-to-one name="textMailToContainersHeader" class="com.webratio.webapp.gamificationCommunity.Containers" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`containers_oid_header`"/>
+    </many-to-one>
+    <many-to-one name="textMailToContainersFooter" class="com.webratio.webapp.gamificationCommunity.Containers" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`containers_oid_footer`"/>
+    </many-to-one>
+    <set name="textMailToNotification" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`text_mail_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.Notification" not-found="exception" embed-xml="true"/>
+    </set>
+  </class>
+  <!-- mapping for relationship 'Text MailToContainers_Header[role8x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_TextMail_to_textMailToContainersHeader" table="`text_mail`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`containers_oid_header`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Text MailToContainers_Footer[role10x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_TextMail_to_textMailToContainersFooter" table="`text_mail`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`containers_oid_footer`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Text MailToNotification[role18x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_TextMail_to_textMailToNotification" table="`notification`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`text_mail_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="Gifts created">
+  <Type>OK</Type>
+  <Parameter name="next gifts" value="">ocp1x</Parameter>
+  <Parameter name="gift_image" value="">ocp2x</Parameter>
+  <Parameter name="gift_oid" value="">ocp5x</Parameter>
+  <Parameter name="gift_description" value="">ocp6x</Parameter>
+  <Parameter name="gift_points" value="">ocp8x</Parameter>
+  <Parameter name="gift_title" value="">ocp10x</Parameter>
+  <Parameter name="email_code" value="">ocp3x</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Gifts created</ModelName>
+    <ParentContainer>opm9x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="okcu4x">ocp10x</OperationParam>
+      <OperationParam unit="okcu4x">ocp5x</OperationParam>
+      <OperationParam unit="okcu4x">ocp3x</OperationParam>
+      <OperationParam unit="okcu4x">ocp6x</OperationParam>
+      <OperationParam unit="okcu4x">ocp2x</OperationParam>
+      <OperationParam unit="okcu4x">ocp1x</OperationParam>
+      <OperationParam unit="okcu4x">ocp8x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

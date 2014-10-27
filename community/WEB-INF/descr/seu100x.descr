@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="read badge text chunk">
+  <MaxResults/>
+  <Query entity="ent3p">
+    <Input id="p0" param="acond50x" type="string" implied="false" expandStyle="in" attribute="att16p"/>
+    <Input id="p1" param="acond60x" type="string" implied="false" expandStyle="in" attribute="att129p"/>
+    <HQL>from TextChunk a_textChunk
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_textChunk.key) in(?)})) and (({[p1]safe_cast(a_textChunk.languageCode) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>read badge text chunk</ModelName>
+    <ParentContainer>opm8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu100x">acond60x</OperationParam>
+      <OperationParam unit="seu100x">acond50x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln446x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

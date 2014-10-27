@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.SwitchUnitService" name="private?">
+  <Case value="true"/>
+  <DefaultCase>true</DefaultCase>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>private?</ModelName>
+    <ParentContainer>opg2q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="switch6q">switch6q.switch</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln58q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln56q</Link>
+      <Link resultCode="success.true">oln57q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

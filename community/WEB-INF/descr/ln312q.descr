@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>pcu18q</Target>
+  <Secure>false</Secure>
+  <Source>lpu1q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="pcp67q" sourceUnit="lpu1q" sourceParam="lsa7q"/>
+    <ContextPropagation targetParam="pcp68q" sourceUnit="lpu1q" sourceParam="lsa8q"/>
+    <ContextPropagation targetParam="pcp71q" sourceUnit="lpu1q" sourceParam="lsa4q"/>
+    <ContextPropagation targetParam="pcp70q" sourceUnit="lpu1q" sourceParam="lsa3q"/>
+    <ContextPropagation targetParam="pcp74q" sourceUnit="lpu1q" sourceParam="lsa18q"/>
+  </ContextPropagations>
+</Descriptor>

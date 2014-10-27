@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DeleteUnitService" name="Delete Community User">
+  <Entity>ent15x</Entity>
+  <CascadeDeleteRoles>role22x|role51p|role7p|role6x</CascadeDeleteRoles>
+  <FetchMode keyCondition="kcond21q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Delete Community User</ModelName>
+    <ParentContainer>opm21q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="dlu3q">kcond21q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln140q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

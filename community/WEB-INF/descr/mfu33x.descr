@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="update notification">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent22x</Entity>
+  <ModifiedAttributes>att88x</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond44x">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>update notification</ModelName>
+    <ParentContainer>job2x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu33x">mfu33x.att88x</OperationParam>
+      <OperationParam unit="mfu33x">kcond44x.att32x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln376x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="List of Gamified Applications">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent2q">
+    <Output id="att6q" name="oid" index="0"/>
+    <Output id="att7q" name="name" index="1"/>
+    <HQL>select a_gamifiedApplication.oid, a_gamifiedApplication.name from GamifiedApplication a_gamifiedApplication order by a_gamifiedApplication.name asc</HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att7q" dynamic="false" order="asc">a_gamifiedApplication.name</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu1q" linkId="ln108q" action="validate"/>
+    <wr:ValidationLink elementId="pwu1q" linkId="ln16q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

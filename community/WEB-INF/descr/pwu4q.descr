@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Administrator Users">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="User">
+    <Input id="p0" param="rcond7q.groupOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="email" name="email" index="1"/>
+    <Output id="userName" name="userName" index="2"/>
+    <Output id="password" name="password" index="3"/>
+    <HQL>select a_user.OID, a_user.email, a_user.userName, a_user.password from User a_user
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_user.defaultGroup.OID in(?))}))</Where>
+    </HQL>
+  </Query>
+  <SortAttributes></SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu4q" linkId="ln109q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

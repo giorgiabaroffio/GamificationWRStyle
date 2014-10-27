@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.BadgeInstance" table="`badge_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="date" column="`date`" type="java.sql.Timestamp" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="score" column="`score`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <many-to-one name="badgeAcquiredToUserHeadQuarter" class="com.webratio.webapp.gamificationCommunity.CommunityUser" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`rank_oid`"/>
+    </many-to-one>
+    <many-to-one name="badgeAcquiredToGamificationDictionary" class="com.webratio.webapp.gamificationCommunity.BadgeType" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`badge_type_oid`"/>
+    </many-to-one>
+  </class>
+  <!-- mapping for relationship 'Badge Acquired ToUser HeadQuarter[role5x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_BadgeInstance_to_badgeAcquiredToUserHeadQuarter" table="`badge_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_OID" column="`rank_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Badge Acquired ToGamification Dictionary[role11x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_BadgeInstance_to_badgeAcquiredToGamificationDictionary" table="`badge_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`badge_type_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

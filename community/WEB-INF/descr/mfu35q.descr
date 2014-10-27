@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Update Container">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent20x</Entity>
+  <ModifiedAttributes>att80x|att81x|att79x</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond70q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Update Container</ModelName>
+    <ParentContainer>opg39q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu35q">mfu35q.att81x</OperationParam>
+      <OperationParam unit="mfu35q">kcond70q.att31x</OperationParam>
+      <OperationParam unit="mfu35q">mfu35q.att80x</OperationParam>
+      <OperationParam unit="mfu35q">mfu35q.att79x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln377q</Link>
+      <Link resultCode="error">kln110q</Link>
+      <Link resultCode="error.opg39q">kln110q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

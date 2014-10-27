@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page26p</Target>
+  <Secure>false</Secure>
+  <Source>miu86q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations></ContextPropagations>
+  <PageActions>
+    <Close pages=""/>
+    <Open page="page26p"/>
+    <WindowConfiguration title="" width="200" height="200" resizable="false" autoResizing="false" closable="false" maximizable="false" minimizable="false" draggable="false" modal="true" className="" showEffect="fade" hideEffect="fade"/>
+  </PageActions>
+</Descriptor>

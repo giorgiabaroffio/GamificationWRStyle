@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.store.stringsfunctionunit.StringsFunctionUnitService" name="16x image name">
+  <Mode>concatStrings</Mode>
+  <Separator value="_"/>
+  <String value="">str28q</String>
+  <String value="">str29q</String>
+  <String value="">str30q</String>
+  <SubstringType>byIndex</SubstringType>
+  <SubstringMode>afterSeparator</SubstringMode>
+  <StartIndex/>
+  <EndIndex/>
+  <RegularExpression/>
+  <ReplacingString/>
+  <StringToReplace/>
+  <EncryptAlgorithm>com.webratio.rtx.core.DES3UnicodeCryptImplementation</EncryptAlgorithm>
+  <PadString/>
+  <Size/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>16x image name</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="sfu10q">str29q</OperationParam>
+      <OperationParam unit="sfu10q">str28q</OperationParam>
+      <OperationParam unit="sfu10q">str30q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln393q</Link>
+      <Link resultCode="success" transport="true">ln266q</Link>
+      <Link resultCode="error" transport="true">ln266q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

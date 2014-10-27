@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu17x</Target>
+  <Secure>false</Secure>
+  <Source>seu14x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu17x.icp15x" sourceUnit="seu14x" sourceParam="att87xArray"/>
+    <ContextPropagation targetParam="miu17x.icp3x" sourceUnit="seu14x" sourceParam="att91xArray"/>
+    <ContextPropagation targetParam="miu17x.icp22x" sourceUnit="seu14x" sourceParam="att32xArray"/>
+  </ContextPropagations>
+</Descriptor>

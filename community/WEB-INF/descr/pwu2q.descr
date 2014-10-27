@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="my badges">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent5x">
+    <Input id="p0" param="acond11q" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="att21x" name="oid" index="0"/>
+    <Output id="att27x" name="date" index="1"/>
+    <Output id="role11x$att48x" name="badgeAcquiredToGamificationDictionary_title" index="2" useId="true"/>
+    <Output id="role11x$att43x" name="badgeAcquiredToGamificationDictionary_level" index="3" useId="true"/>
+    <Output id="role11x$att117x" name="badgeAcquiredToGamificationDictionary_area" index="4" useId="true"/>
+    <HQL>select a_badgeInstance.oid, a_badgeInstance.date, a_badgeType_role11x.title, a_badgeType_role11x.level, a_badgeType_role11x.area from BadgeInstance a_badgeInstance left join a_badgeInstance.badgeAcquiredToGamificationDictionary a_badgeType_role11x
+      <Where defaultPolicy="fill" allImplied="false">([(a_badgeInstance.oid in( select a_badgeInstance_2.oid from BadgeInstance a_badgeInstance_2 inner join a_badgeInstance_2.badgeAcquiredToUserHeadQuarter s_communityUser_role5x where ({[p0]s_communityUser_role5x.OID in(?)})))])</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att27x" dynamic="true" order="desc">a_badgeInstance.date</Attribute>
+    <Attribute id="att27x" dynamic="false" order="desc">a_badgeInstance.date</Attribute>
+  </SortAttributes>
+</Descriptor>

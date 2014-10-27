@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.ModelService" crc="Ny4yLjUuMjAxNDA5MTFNb250aGx5TnVtYmVyb2ZVc2Vyc05ld0FjdGlvbnNOaWNrbmFtZU92ZXJBbGxOdW1iZXJvZlVzZXJzUG9pbnRzQWNxdWlyZWQ=" enterpriseApplication="false">
+  <WebRatioVersion>7.2.6</WebRatioVersion>
+  <WebRatioBuildId>201409230114</WebRatioBuildId>
+  <URLFragment>targetURLName</URLFragment>
+  <ModuleDomainName>community</ModuleDomainName>
+  <WebContainer httpPort="8080" httpsPort="8443" defaultApplicationEncoding="UTF-8" defaultServerEncoding="ISO-8859-1" useDefaultURLEncoding="false" serverName="" useAbsoluteURL="false" httpRequestHelperClass="com.webratio.struts.DefaultHttpRequestHelper" maxUploadFileSize="12M" defaultCookieTimeout="30"/>
+  <AdminArea username="manager" password="m4n4g3r" cryptedPassword="false"/>
+  <WebModel defaultLoginPage="GamificationFrontEndStyle_Login.login.jsp" defaultExpirePage="WRDefault_Default.expire.jsp" defaultErrorPage="WRDefault_Default.error.jsp">
+    <SiteView id="sv1x" homePage="pcu1o" name="Private" home="false" protected="true" loginPage="BootstrapStyle_Login.login.jsp" expirePage="WRDefault_Default.expire.jsp" errorPage="BootstrapStyle_Error.error.jsp">
+      <Area id="area1x" name="Leaderboards" topLevel="true" defaultPage="pcu4q">
+        <Area id="area1o" name="Leaderboards" topLevel="false">
+          <Page id="page1o" name="HQ.NotPublicProfile" customURLName="private-profile"/>
+          <Page id="page2o" name="HQ.UserDashboard.Public" customURLName="user-dashboard"/>
+        </Area>
+        <Page id="page7p" name="Leaderboards" customURLName="users-list"/>
+        <OperationUnit id="pcu8o" name="Public Dashboard" customURLName="public-dashboard"/>
+        <OperationUnit id="pcu4q" name="UserRanking" customURLName="users-list-access"/>
+        <Property name="app-code" value="community-users"/>
+      </Area>
+      <Area id="area2q" name="Rewards" topLevel="true" defaultPage="page12q"/>
+      <Area id="area4p" name="HQ.UserDashboard " topLevel="true" defaultPage="pcu1q">
+        <Page id="page12p" name="HQ.UserDashboard.Private" customURLName="my-dashboard-private"/>
+        <Page id="page20p" name="HQ.MyDashboard " customURLName="my-dashboard"/>
+        <OperationUnit id="pcu1o" name="my dashboard" customURLName="home-page"/>
+        <OperationUnit id="pcu1q" name="HQ.UserDashboard " customURLName="dashboard"/>
+        <Property name="app-code" value="community-dashboard"/>
+      </Area>
+    </SiteView>
+    <SiteView id="sv2q" homePage="page9q" name="Public" home="true" loginPage="BootstrapStyle_Login.login.jsp" expirePage="WRDefault_Default.expire.jsp" errorPage="BootstrapStyle_Error.error.jsp">
+      <Page id="page8q" name="Getting Started" customURLName="getting-started">
+        <Property name="app-code" value="community-getting-started"/>
+      </Page>
+      <Page id="page9q" name="Headquarter" customURLName="overview">
+        <Property name="app-code" value="community-headquarter"/>
+      </Page>
+    </SiteView>
+    <SiteView id="sv2x" homePage="page1q" name="Administration" home="false" protected="true" customURLName="admin" loginPage="BootstrapStyle_Login.login.jsp" expirePage="WRDefault_Default.expire.jsp" errorPage="BootstrapStyle_Error.error.jsp">
+      <Area id="area1p" name="Rewards Area" topLevel="true" defaultPage="page22p"/>
+      <Area id="area1q" name="Administrator Users Area" topLevel="true" defaultPage="page7q"/>
+      <Area id="area2p" name="Gamification Area" topLevel="true" defaultPage="page1q"/>
+      <Area id="area3p" name="Community Users Area" topLevel="true" defaultPage="page4p">
+        <Page id="page31p" name="Reward" loginPage="GamificationBackEndStyle_Default.login.jsp" expirePage="WRDefault_Default.expire.jsp" errorPage="GamificationBackEndStyle_Default.error.jsp"/>
+      </Area>
+      <Area id="area3q" name="Text Management Area" topLevel="true" defaultPage="page16q"/>
+      <Area id="area7p" name="Notification Area" topLevel="true" defaultPage="page36p"/>
+    </SiteView>
+    <ModuleView id="mov1x">
+      <HybridModule id="hym8q" name="Edit Text Chunk"/>
+      <HybridModule id="hym1q" name="Edit Gamified Application"/>
+      <HybridModule id="hym2q" name="Edit Thematic Area"/>
+      <HybridModule id="hym4q" name="Modify Action Type"/>
+      <HybridModule id="hym5q" name="Delete Action Type"/>
+      <HybridModule id="hym6q" name="Create Action Type"/>
+    </ModuleView>
+  </WebModel>
+  <SessionParameters>
+    <SessionParameter name="MonthlyNumberofUsers" type="integer">ctx3x</SessionParameter>
+    <SessionParameter name="NewActions" type="boolean">ctx7p</SessionParameter>
+    <SessionParameter name="Nickname" type="integer">ctx2p</SessionParameter>
+    <SessionParameter name="OverAllNumberofUsers" type="integer">ctx4x</SessionParameter>
+    <SessionParameter name="PointsAcquired" type="integer">ctx7x</SessionParameter>
+    <SessionParameter name="PublicProfileEmail" type="string">ctx6x</SessionParameter>
+    <SessionParameter name="privateProfile" type="boolean">ctx5p</SessionParameter>
+    <SessionParameter name="userSelected" type="integer">ctx9p</SessionParameter>
+    <SessionParameter name="CountryISOCtxParam" type="string">CountryISOCtxParam</SessionParameter>
+    <SessionParameter name="GroupCtxParam" type="string">GroupCtxParam</SessionParameter>
+    <SessionParameter name="LanguageISOCtxParam" type="string">LanguageISOCtxParam</SessionParameter>
+    <SessionParameter name="RunningProfileCtxParam" type="string">RunningProfileCtxParam</SessionParameter>
+    <SessionParameter name="UserCtxParam" type="string">UserCtxParam</SessionParameter>
+  </SessionParameters>
+  <ServiceDataProviders>
+    <XsdProvider id="xsdp2x" name="CommunityWS" _sel="t">
+      <XsdResource id="xsdr3x" name="Community" file="WebContent/WEB-INF/webservice/Community.xsd" _sel="t"/>
+    </XsdProvider>
+    <SMTPServer id="smtp1p" name="smtp server" _sel="t"/>
+    <SMTPServer id="smtp1" name="SMTP Cubrik" url="54.75.252.197" port="25" useSsl="false" username="support" password="cubrikproject86$" defaultFrom="support@sketchness.com" _sel="t"/>
+    <SMTPServer id="smtp2" name="Local Server SMTP" url="127.0.0.1" port="25" useSsl="false" defaultFrom="support@thameswater.co.uk" _sel="t"/>
+    <CookieStorageProvider id="userCredentials" name="USER_CREDENTIALS" cookieName="USER_CREDENTIALS" _sel="t"/>
+  </ServiceDataProviders>
+  <LinkPreservedParameters>
+    <LinkPreservedParameter>boxed</LinkPreservedParameter>
+    <LinkPreservedParameter>fllbck</LinkPreservedParameter>
+  </LinkPreservedParameters>
+  <DefaultFileEncoding/>
+  <Statistics pages="57" units="780"/>
+  <Property name="ajaxDebug" value="full"/>
+  <Property name="app-code" value="community"/>
+  <BLOBSecurity enable="true" digestId="12345" digestWithSessionId="" digestType="" digestProviderClass="" digestAlgorithm=""/>
+  <AutoLoadServices>_i18n|_job.manager</AutoLoadServices>
+</Descriptor>

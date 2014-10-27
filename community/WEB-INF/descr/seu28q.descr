@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get action">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Input id="p0" param="rcond11q.att21q" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from ActionType a_actionType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_actionType.actionTypeToThematicArea.oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get action</ModelName>
+    <ParentContainer>opg5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu28q">rcond11q.att21q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln126q</Link>
+      <Link resultCode="error">kln18q</Link>
+      <Link resultCode="error.opg5q">kln18q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

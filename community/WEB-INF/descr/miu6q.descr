@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm62q</Module>
+  <InputCollectorId>icu71q</InputCollectorId>
+  <InputParameter>icp248q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu6q">miu6q.icp248q</OperationParam>
+      <Params>eru9q.faultException|rsp8q|adu3q.userEmail|eru9q.faultMessage|adu3q.neededPoints|adu3q.oid|adu3q.rewardName</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln26q</Link>
+      <Link resultCode="error">kln21q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

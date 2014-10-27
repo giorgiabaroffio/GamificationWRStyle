@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DisconnectUnitService" name="Disconnect application thematic">
+  <Role useHQL="true">role8q</Role>
+  <Source id="ent5q" keyCondition="kcond87q"></Source>
+  <Target id="ent2q" keyCondition="kcond88q"></Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Disconnect application thematic</ModelName>
+    <ParentContainer>opg21q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="dcnu11q">kcond88q.att6q</OperationParam>
+      <OperationParam unit="dcnu11q">kcond87q.att21q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln190q</Link>
+      <Link resultCode="error">kln56q</Link>
+      <Link resultCode="error.opg21q">kln56q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Text Mail">
+  <ParentContainer>area7p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page36p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page36p.link"/>
+    <Navigation name="2" links="page36p.auto-link"/>
+    <Navigation name="3" links="page36p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln157p|impl" postPropagatedLink="ln157p"/>
+    <Navigation name="5" links="ln157p|impl" selectiveRefresh="true" postPropagatedLink="ln157p"/>
+    <Navigation name="6" links="ln157p|oln360q" effects="#pr#"/>
+    <Navigation name="7" links="ln157p|oln360q" selectiveRefresh="true" effects="#pr#"/>
+    <Navigation name="8" interPage="always" links="ln161p"/>
+    <Navigation name="9" interPage="always" links="ln162p|oln367q"/>
+    <Navigation name="10" links="pwu4patt33x"/>
+    <Navigation name="11" links="pwu4patt33x" selectiveRefresh="true"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="10" futile="" renewed="acond1p"/>
+    <UselessPreserve navs="2|5|4|11" effects="-" futile=""/>
+    <UselessPreserve navs="5|4|11" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="pwu4p.sortCriteria|pwu4p.newSortAttribute|pwu4p.current.att1x"/>
+    <UselessPreserve navs="7|6" effects="-" futile="pwu4p.sortCriteria|pwu4p.newSortAttribute"/>
+    <UselessPreserve navs="3|2|7|6" effects="#pr#" futile="pwu4p.sortCriteria|pwu4p.newSortAttribute"/>
+  </UselessPreserves>
+  <LinkSequence>ln158p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="pwu4p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="7|5|11" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="8" inputs="pwu4p.current.att1x"/>
+      <RefreshFormAll navs="1|0|4"/>
+      <RefreshForm selectiveRefresh="true" navs="11" inputs="pwu4p.sortCriteria|pwu4p.newSortAttribute"/>
+      <RefreshForm navs="10" inputs="pwu4p.sortCriteria|pwu4p.newSortAttribute"/>
+    </UnitComputation>
+    <UnitComputation unit="enu16p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="3|7|5" effects="#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="7|5" effects="-"/>
+      <RefreshFormAll navs="1|0|4|8"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln159p</ManualLink>
+    <ManualLink>ln160p</ManualLink>
+    <ManualLink>pwu4patt33x</ManualLink>
+    <ManualLink>ln157p</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page36p_grid_0">
+      <Layout id="page36p_cell_8">
+        <Layout id="enu16p_0" unitId="enu16p"></Layout>
+      </Layout>
+      <Layout id="page36p_cell_12">
+        <Layout id="pwu4p_0" unitId="pwu4p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu4p.current.att1x|pwu4p.sortCriteria|pwu4p.newSortAttribute</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>pwu4p.current.att1x</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Text Mail</ModelName>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="pwu4p">pwu4p.sortCriteria</PageParam>
+      <PageParam unit="pwu4p">acond1p</PageParam>
+      <PageParam unit="pwu4p">pwu4p.newSortAttribute</PageParam>
+      <PageParam unit="pwu4p">pwu4p.current.att1x</PageParam>
+      <PageParam>kcond66q.att1x</PageParam>
+      <PageParam>miu84q.icp185q</PageParam>
+      <PageParam>miu84q.icp186q</PageParam>
+      <PageParam>miu84q.icp184q</PageParam>
+      <PageParam>acond3p</PageParam>
+      <PageParam preservedByForm="true">sfld14p_label</PageParam>
+      <PageParam preservedByForm="true">fld25p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld16p_presel">sfld16p_presel</PageParam>
+      <PageParam preservedByForm="true">sfld16p_output</PageParam>
+      <PageParam preservedByForm="true">fld28p_slot</PageParam>
+      <PageParam preservedByForm="true">fld24p_slot</PageParam>
+      <PageParam preservedByForm="true">fld39p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld14p_presel">sfld14p_presel</PageParam>
+      <PageParam preservedByForm="true">sfld16p_label</PageParam>
+      <PageParam preservedByForm="true">sfld14p_output</PageParam>
+      <PageParam preservedByForm="true">fld43p_slot</PageParam>
+      <PageParam>miu85q.icp191q</PageParam>
+      <PageParam>miu85q.icp190q</PageParam>
+      <PageParam>miu85q.icp189q</PageParam>
+      <PageParam>miu85q.icp192q</PageParam>
+      <PageParam>miu85q.icp187q</PageParam>
+      <PageParam>miu85q.icp188q</PageParam>
+      <PageParam>miu85q.icp193q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

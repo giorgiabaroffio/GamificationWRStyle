@@ -1,0 +1,35 @@
+.tab {
+    margin: 0px;
+}
+.tab ul {
+border-bottom: 2px solid #485FB7;
+    float: left;
+    list-style: none inside none;
+     padding: 15px 15px 0;
+}
+.tab ul li {
+    float: left;
+    height: 35px;
+    margin-right: 2px;
+    position: relative;
+ width: 125px;
+}
+.tab ul li a {
+    background-color: #485FB7;
+    border-radius: 10px 10px 0 0;
+    color: #FFFFFF;
+    display: block;
+    height: 100%;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    white-space: nowrap;
+ text-align: center;
+}
+.tab ul li:hover a {
+    background-color: #313F7D;
+}
+.tab ul li:active a, .tab ul li.current:hover a {
+    background-color: #FFFFFF;
+    color: #485FB7;
+}

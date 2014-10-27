@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Reward">
+  <ParentContainer>area3p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#|ctx9p">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page31p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page31p.link"/>
+    <Navigation name="2" links="page31p.auto-link"/>
+    <Navigation name="3" links="page31p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln192p|validation-failed"/>
+    <Navigation name="5" links="ln191p|impl" postPropagatedLink="ln191p"/>
+    <Navigation name="6" links="ln191p|impl" selectiveRefresh="true" postPropagatedLink="ln191p"/>
+    <Navigation name="7" links="ln191p|oln150q"/>
+    <Navigation name="8" links="ln191p|oln150q" selectiveRefresh="true"/>
+    <Navigation name="9" interPage="always" links="ln205p"/>
+    <Navigation name="10" interPage="always" links="ln222p"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|7|4|8" futile=""/>
+    <UselessPreserve navs="6|5" futile="fld56p_slot"/>
+  </UselessPreserves>
+  <LinkSequence>ln203p|ln199p|ln198p|ln200p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu24p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="6|8" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" effects="#pr#|ctx9p"/>
+      <RefreshForm selectiveRefresh="true" navs="8" inputs="fld56p_slot"/>
+      <RefreshFormAll navs="7" inputs="fld56p_slot"/>
+      <RefreshFormAll navs="1|10|0|5|9"/>
+      <RefreshForm selectiveRefresh="true" navs="3" effects="ctx9p" inputs="sfld27p_presel|sfld26p_output|sfld26p_label"/>
+      <RefreshForm navs="2" effects="ctx9p" inputs="sfld27p_presel|sfld26p_output|sfld26p_label"/>
+    </UnitComputation>
+    <UnitComputation unit="seu36p">
+      <NavigationCondition selectiveRefresh="true" navs="3" effects="#pr#|ctx9p"/>
+    </UnitComputation>
+    <UnitComputation unit="seu37p">
+      <NavigationCondition selectiveRefresh="true" navs="3" effects="#pr#|ctx9p"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu20p">
+      <NavigationCondition selectiveRefresh="true" navs="3" effects="#pr#|ctx9p"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln191p</ManualLink>
+    <ManualLink>ln192p</ManualLink>
+    <ManualLink>ln224p</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions>
+    <Condition id="cexpr4p" name="disable language" xml:space="preserve">return true</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page31p_grid_0">
+      <Layout id="page31p_cell_0">
+        <Layout id="enu24p_0" unitId="enu24p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Reward</ModelName>
+    <NavigationAncestors>sv2x|area3p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu36p">acond96p</PageParam>
+      <PageParam unit="seu37p">kcond24p.userOID</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld27p_presel" unit="enu24p">sfld27p_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu24p">fld56p_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu24p">sfld26p_output</PageParam>
+      <PageParam preservedByForm="true" unit="enu24p">sfld26p_label</PageParam>
+      <PageParam>miu41q.icp84q</PageParam>
+      <PageParam>miu42q.icp85q</PageParam>
+      <PageParam>miu42q.icp87q</PageParam>
+      <PageParam>miu42q.icp86q</PageParam>
+      <PageParam>acond113p</PageParam>
+      <PageParam>kcond27p.userOID</PageParam>
+      <PageParam>rcond10p.userOID</PageParam>
+      <PageParam>pwu13p.sortCriteria</PageParam>
+      <PageParam>acond112p</PageParam>
+      <PageParam>acond109p</PageParam>
+      <PageParam>pwu13p.newSortAttribute</PageParam>
+      <PageParam>pwu13p.current.att101p</PageParam>
+      <PageParam>pwu13p.block</PageParam>
+      <PageParam>acond106p</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld30p_presel">sfld30p_presel</PageParam>
+      <PageParam preservedByForm="true">sfld29p_output</PageParam>
+      <PageParam preservedByForm="true">sfld29p_label</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

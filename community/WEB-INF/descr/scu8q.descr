@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Decode Base64 image">
+  <Script path="WEB-INF/groovy/DecodeBase64String.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Decode Base64 image</ModelName>
+    <ParentContainer>port11q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu8q">scu8q.photoImage</OperationParam>
+      <OperationParam unit="scu8q">scu8q.photoName</OperationParam>
+      <Params>miu5q.icp219q|miu5q.icp218q|miu5q.icp216q|eru11q.faultException|miu5q.icp217q|miu5q.icp213q|miu5q.icp209q|miu5q.icp212q|miu5q.icp214q|miu5q.icp215q|miu5q.icp208q|miu5q.icp220q|miu5q.icp210q|eru11q.faultMessage|miu5q.icp211q|rsp7q.success$success</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln22q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

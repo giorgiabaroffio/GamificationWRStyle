@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.JumpUnitService" name="go to my dashboard">
+  <Direction>forward</Direction>
+  <CollectorUnit>pcu1o</CollectorUnit>
+  <IgnoreHistory>false</IgnoreHistory>
+  <ForwardParameter id="pcp46x" name="useroid"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>go to my dashboard</ModelName>
+    <ParentContainer>area1o</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area1x|area1o</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="ju1o">pcp46x</OperationParam>
+      <Params>miu6ohinu14q.current.userOID|miu6ohinu17q.block|miu6ohinu14q.block|miu6ohinu19q.sortCriteria|link|miu6ohinu16q.newSortAttribute|miu6oacond136q|miu6oacond103q|miu6ohinu16q.sortCriteria|miu6oocp74q|miu6oacond130q|miu6oacond134q|miu6oacond121q|miu6oacond115q|scu2o.isPublic|var5x|miu6ohinu15q.sortCriteria|cmplink|acond23o|miu6ohinu18q.newSortAttribute|miu6oacond129q|miu6oacond113q|miu6oacond119q|miu6oacond112q|miu6ohinu15q.newSortAttribute|sp|miu6orcond28q.userOID|miu6oacond89q|miu6oacond137q|miu6oacond131q|miu6oacond135q|miu6oacond122q|miu6ohinu17q.current.userOID|miu6oacond114q|miu6oacond120q|miu6oacond88q|miu6oacond128q|miu6ohinu19q.newSortAttribute|miu6ohinu18q.sortCriteria|smc</Params>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get score">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Input id="p0" param="kcond30q.att38x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att38x" name="oid" index="0"/>
+    <Output id="att71x" name="description" index="1"/>
+    <Output id="att41x" name="score" index="2"/>
+    <HQL>select a_actionType.oid, a_actionType.description, a_actionType.score from ActionType a_actionType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get score</ModelName>
+    <ParentContainer>opm26q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu25q">kcond30q.att38x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln228q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

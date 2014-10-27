@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Search">
+  <FormFields>
+    <Field id="fld11p" name="Email" type="string" localized="false"></Field>
+    <Field id="fld10p" name="Last Name" type="string" localized="false"></Field>
+    <Field id="fld9p" name="First Name" type="string" localized="false"></Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu1p" linkId="ln114p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

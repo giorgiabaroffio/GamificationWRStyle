@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>lpu1q</Target>
+  <Secure>false</Secure>
+  <Source>icu68q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="lsa4q" sourceUnit="icu68q" sourceParam="icp243q"/>
+    <ContextPropagation targetParam="lsa7q" sourceUnit="icu68q" sourceParam="icp239q"/>
+    <ContextPropagation targetParam="lpu1q.array" sourceUnit="icu68q" sourceParam="icp240q"/>
+    <ContextPropagation targetParam="lsa2q" sourceUnit="icu68q" sourceParam="icp237q"/>
+    <ContextPropagation targetParam="lsa6q" sourceUnit="icu68q" sourceParam="icp244q"/>
+    <ContextPropagation targetParam="lsa8q" sourceUnit="icu68q" sourceParam="icp238q"/>
+    <ContextPropagation targetParam="lsa3q" sourceUnit="icu68q" sourceParam="icp242q"/>
+    <ContextPropagation targetParam="lsa5q" sourceUnit="icu68q" sourceParam="icp241q"/>
+    <ContextPropagation targetParam="lsa18q" sourceUnit="icu68q" sourceParam="icp245q"/>
+  </ContextPropagations>
+</Descriptor>

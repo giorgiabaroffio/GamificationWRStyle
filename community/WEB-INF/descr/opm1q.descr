@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu1q">
+    <InputParameter id="icp1q" name="Action Oid"/>
+    <InputParameter id="icp2q" name="User Oid"/>
+    <InputParameter id="icp3q" name="Time"/>
+    <InputParameter id="icp10q" name="ElapsedActionTime"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu1q|okcu2q</OKCollectorUnits>
+  <KOCollectorUnits/>
+  <OperationUnits>icu1q|switch4q|inn5q|scu1q|okcu1q|okcu2q|seu1q</OperationUnits>
+</Descriptor>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Rewards">
+  <Results maxResults="" blockFactor="3" blockWindow="3"/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent14p">
+    <Input id="p0" param="rcond6p.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att101p" name="oid" index="0"/>
+    <Output id="att107p" name="score" index="1"/>
+    <Output id="att102p" name="date" index="2"/>
+    <Output id="role53p$att98p" name="rewardInstanceToRewardType_title" index="3" useId="true"/>
+    <HQL>select a_rewardInstance.oid, a_rewardInstance.score, a_rewardInstance.date, a_rewardType_role53p.title from RewardInstance a_rewardInstance left join a_rewardInstance.rewardInstanceToRewardType a_rewardType_role53p
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_rewardInstance.rewardInstanceToCommunityUser.OID in(?))}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att102p" dynamic="true" order="desc">a_rewardInstance.date</Attribute>
+    <Attribute id="role53p$att98p" dynamic="true" order="asc">a_rewardType_role53p.title</Attribute>
+    <Attribute id="att102p" dynamic="false" order="desc">a_rewardInstance.date</Attribute>
+    <Attribute id="role53p$att98p" dynamic="false" order="asc">a_rewardType_role53p.title</Attribute>
+  </SortAttributes>
+</Descriptor>

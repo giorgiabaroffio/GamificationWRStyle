@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu43q">
+    <InputParameter id="icp146q" name="Image"/>
+    <InputParameter id="icp147q" name="Badge Area OID"/>
+    <InputParameter id="icp148q" name="Sort Number"/>
+    <InputParameter id="icp149q" name="Name"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu42q</OKCollectorUnits>
+  <KOCollectorUnits>kocu26q</KOCollectorUnits>
+  <OperationUnits>icu43q|okcu42q|kocu26q|mfu21q|mfu22q</OperationUnits>
+</Descriptor>

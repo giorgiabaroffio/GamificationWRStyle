@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Getting Started">
+  <ParentContainer>sv1x</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page5p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page5p.link"/>
+    <Navigation name="2" links="page5p.auto-link"/>
+    <Navigation name="3" links="page5p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="pcu17p.enter|oln47p" effects="#pr#"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln7p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau30p">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu10p">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks></ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page5p_grid_0">
+      <Layout id="page5p_cell_0">
+        <Layout id="dau30p_0" unitId="dau30p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Getting Started</ModelName>
+    <NavigationAncestors>sv1x</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau30p">acond27p</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

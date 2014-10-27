@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="create next gifts">
+  <Script path="WEB-INF/groovy/CreateNextGifts.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>create next gifts</ModelName>
+    <ParentContainer>opm9x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu18x">scu18x.description</OperationParam>
+      <OperationParam unit="scu18x">scu18x.lang</OperationParam>
+      <OperationParam unit="scu18x">scu18x.title</OperationParam>
+      <OperationParam unit="scu18x">scu18x.credits</OperationParam>
+      <OperationParam unit="scu18x">scu18x.image</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln356x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

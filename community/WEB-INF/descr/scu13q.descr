@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="compare nickname">
+  <Script xml:space="preserve">#input session_nickname, nickname
+import com.webratio.rtx.RTXConstants
+import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.asString(session_nickname).equals(BeanHelper.asString(nickname))){
+	return [ "resultCode" : RTXConstants.SUCCESS_CODE ]
+}else{
+	 return [ "resultCode" : RTXConstants.ERROR_CODE ]
+}</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>compare nickname</ModelName>
+    <ParentContainer>opm55q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu13q">scu13q.nickname</OperationParam>
+      <OperationParam unit="scu13q">scu13q.session_nickname</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln294q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln404q</Link>
+      <Link resultCode="error">kln113q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

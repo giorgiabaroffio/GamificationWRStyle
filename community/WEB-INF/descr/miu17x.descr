@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Send Email">
+  <Module operation="true" singleLayout="false">opm1x</Module>
+  <InputCollectorId>icu1x</InputCollectorId>
+  <InputParameter>icp3x</InputParameter>
+  <InputParameter>icp8x</InputParameter>
+  <InputParameter>icp12x</InputParameter>
+  <InputParameter>icp13x</InputParameter>
+  <InputParameter>icp14x</InputParameter>
+  <InputParameter>icp15x</InputParameter>
+  <InputParameter>icp16x</InputParameter>
+  <InputParameter>icp17x</InputParameter>
+  <InputParameter>icp18x</InputParameter>
+  <InputParameter>icp19x</InputParameter>
+  <InputParameter>icp20x</InputParameter>
+  <InputParameter>icp21x</InputParameter>
+  <InputParameter>icp22x</InputParameter>
+  <InputParameter>icp24x</InputParameter>
+  <InputParameter>icp25x</InputParameter>
+  <InputParameter>icp26x</InputParameter>
+  <InputParameter>icp27x</InputParameter>
+  <InputParameter>icp29x</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Send Email</ModelName>
+    <ParentContainer>job2x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu17x">miu17x.icp18x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp16x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp17x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp8x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp20x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp21x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp14x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp22x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp15x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp13x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp19x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp3x</OperationParam>
+      <OperationParam unit="miu17x">miu17x.icp12x</OperationParam>
+      <Params>mfu33x.att88x|kcond44x.att32x</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln337x</Link>
+      <Link resultCode="error">kln94x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

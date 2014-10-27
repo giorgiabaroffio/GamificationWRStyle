@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu32q</Target>
+  <Secure>false</Secure>
+  <Source>page20x</Source>
+  <SourcePage>page20x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>pwu7x.newSortAttribute|pwu7x.sortCriteria</Params>
+  </PreservedContextParams>
+  <ContextPropagations></ContextPropagations>
+</Descriptor>

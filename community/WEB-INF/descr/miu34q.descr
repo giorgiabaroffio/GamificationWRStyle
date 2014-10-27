@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm20q</Module>
+  <InputCollectorId>icu23q</InputCollectorId>
+  <InputParameter>icp81q</InputParameter>
+  <InputParameter>icp82q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area3p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area3p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu34q">miu34q.icp82q</OperationParam>
+      <OperationParam unit="miu34q">miu34q.icp81q</OperationParam>
+      <Params>sp|acond51p|link|pwu8p.block|pwu8p.sortCriteria|pwu8p.current.att49x|acond61p|acond52p|sfld4p_label|kcond15x.userOID|acond54p|cmplink|rcond1p.userOID|acond53p|sfld6p_label|sfld4p_output|sfld6p_output|smc|pwu8p.newSortAttribute</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln115q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

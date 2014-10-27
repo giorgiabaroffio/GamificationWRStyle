@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntityBasedMultiEntryUnitService" name="Edit labels">
+  <Entity>BundleData</Entity>
+  <Query entity="BundleData">
+    <Input id="p0" param="meu1q.bundleDataOID" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from BundleData a_bundleData
+      <Where defaultPolicy="" allImplied="false">(({[p0]a_bundleData.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <MinLength/>
+  <FormFields>
+    <Field id="meu1qChecked" name="CheckedObjects" type="string"/>
+    <Field id="meu1qDataSize" name="DataSize" type="integer"/>
+    <Field id="key" indexedListProperty="meu1q" name="key" type="string" splitOutput="false">
+      <Slot id="bundleDataOID" output="true"/>
+    </Field>
+    <Field id="fld28q" name="Key" indexedListProperty="meu1q" type="string" localized="false" attributeId="bundleDataKey">
+      <Slot id="fld28q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld29q" name="Message" indexedListProperty="meu1q" type="string" localized="false" attributeId="bundleDataMessage">
+      <Slot id="fld29q_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="meu1q" linkId="ln227q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

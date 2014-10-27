@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page7p</Target>
+  <Secure>false</Secure>
+  <Source>enu6p</Source>
+  <SourcePage>page7p</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="scu22p.area" sourceUnit="enu6p" sourceParam="msfld3p"/>
+    <ContextPropagation targetParam="scu22p.geo_area" sourceUnit="enu6p" sourceParam="sfld15p"/>
+    <ContextPropagation targetParam="scu22p.levelmax" sourceUnit="enu6p" sourceParam="fld1o"/>
+    <ContextPropagation targetParam="scu22p.levelmin" sourceUnit="enu6p" sourceParam="fld2o"/>
+    <ContextPropagation targetParam="scu22p.name" sourceUnit="enu6p" sourceParam="fld7p"/>
+  </ContextPropagations>
+</Descriptor>

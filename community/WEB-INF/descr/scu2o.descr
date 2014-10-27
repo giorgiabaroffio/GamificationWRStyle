@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Check private">
+  <Script xml:space="preserve">#input Boolean isPublic
+import javax.servlet.http.HttpServletResponse
+import com.webratio.rtx.RTXConstants
+
+if (!isPublic) {
+	HttpServletResponse response = localContext.get(RTXConstants.HTTP_SERVLET_RESPONSE_KEY)	
+	response.sendRedirect("private-profile")
+	return
+}</Script>
+</Descriptor>

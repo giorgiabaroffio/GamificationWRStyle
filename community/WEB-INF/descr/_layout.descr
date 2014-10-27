@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.LayoutService">
+  <Resource name="GamificationFrontEndStyle/bootstrap-js"/>
+  <Resource name="GamificationFrontEndStyle/community-css"/>
+  <Resource name="GamificationFrontEndStyle/respond"/>
+  <Resource name="GamificationFrontEndStyle/app-css"/>
+  <Resource name="GamificationFrontEndStyle/html5shiv"/>
+  <Resource name="GamificationFrontEndStyle/app-js"/>
+  <Resource name="GamificationFrontEndStyle/bs-bpm-css"/>
+  <Resource name="GamificationFrontEndStyle/bootstrap-css">
+    <ContentScript xml:space="preserve">def theme = pageContext.getAttribute("bootstrap-theme")
+if (theme == null || theme == "" || "default".equals(theme))
+	theme = ""
+else
+	theme = "/" + theme
+
+return content + theme + "/bootstrap.min.css"
+</ContentScript>  </Resource>  <Resource name="GamificationFrontEndStyle/bs-filestyle-js"/>  <Resource name="BootstrapStyle/bootstrap-js"/>  <Resource name="BootstrapStyle/respond"/>  <Resource name="BootstrapStyle/app-css"/>  <Resource name="BootstrapStyle/html5shiv"/>  <Resource name="BootstrapStyle/app-js"/>  <Resource name="BootstrapStyle/bs-bpm-css"/>  <Resource name="BootstrapStyle/bootstrap-css">    <ContentScript xml:space="preserve">def theme = pageContext.getAttribute("bootstrap-theme")
+if (theme == null || theme == "" || "default".equals(theme))
+	theme = ""
+else
+	theme = "/" + theme
+
+return content + theme + "/bootstrap.min.css"
+</ContentScript>  </Resource>  <Resource name="BootstrapStyle/bs-filestyle-js"/>  <Resource name="WRDefault/humblesoftware-flotr2"/>  <Resource name="BUILTIN/wr-utils-supportscripts"/>  <Resource name="BUILTIN/jquery-ui-style"/>  <Resource name="WRDefault/wrdefault-bpm-style"/>  <Resource name="BUILTIN/wr-runtime">    <ContentScript xml:space="preserve">def wrAjaxDebugLevel = pageContext.getAttribute("wrAjaxDebugLevel")
+def url = content + ("full".equals(wrAjaxDebugLevel) ? "wr.debug.js" : "wr.js")
+if (!wrBoxed) {
+    url += "?createDocumentApp=true"
+}
+return url</ContentScript>
+  </Resource>
+  <Resource name="GamificationBackEndStyle/tab"/>
+  <Resource name="BUILTIN/wr-960gs-12"/>
+  <Resource name="BUILTIN/wr-ui-style"/>
+  <Resource name="GamificationBackEndStyle/tagcloud-style"/>
+  <Resource name="BUILTIN/jquery-ui-datepicker-lang">
+    <ContentScript xml:space="preserve">def language = locale?.language ?: "en"
+return content + "jquery.ui.datepicker-${language}.js"</ContentScript>
+  </Resource>
+  <Resource name="BUILTIN/jsp-jstl-core"/>
+  <Resource name="GamificationBackEndStyle/prototype"/>
+  <Resource name="BUILTIN/jquery"/>
+  <Resource name="BUILTIN/wr-960gs-16"/>
+  <Resource name="BUILTIN/jsp-jstl-format"/>
+  <Resource name="BUILTIN/wr-taglib-xls"/>
+  <Resource name="BUILTIN/richardson-timepicker-style"/>
+  <Resource name="GamificationBackEndStyle/style"/>
+  <Resource name="BUILTIN/wr-browsercontrol-style"/>
+  <Resource name="WRDefault/wrdefault-style"/>
+  <Resource name="GamificationBackEndStyle/fancybox"/>
+  <Resource name="BUILTIN/cksource-ckeditor">
+    <ContentScript xml:space="preserve">return wrBaseURI + content</ContentScript>
+  </Resource>
+  <Resource name="GamificationBackEndStyle/fancybox-style"/>
+  <Resource name="WRDefault/google-excanvas"/>
+  <Resource name="BUILTIN/wr-ui-gridsystem"/>
+  <Resource name="GamificationBackEndStyle/small-tab"/>
+  <Resource name="BUILTIN/struts-tags-html"/>
+  <Resource name="GamificationBackEndStyle/flowplayer"/>
+  <Resource name="GamificationBackEndStyle/lotrack"/>
+  <Resource name="BUILTIN/wr-960gs-24"/>
+  <Resource name="BUILTIN/wr-ui-widgets"/>
+  <Resource name="GamificationBackEndStyle/lmstaglib"/>
+  <Resource name="GamificationBackEndStyle/analytics"/>
+  <Resource name="GamificationBackEndStyle/tagcloud"/>
+  <Resource name="BUILTIN/struts-tags-bean"/>
+  <Resource name="GamificationBackEndStyle/utils"/>
+  <Resource name="BUILTIN/richardson-timepicker"/>
+  <Resource name="BUILTIN/wr-taglib"/>
+  <Resource name="BUILTIN/wr-calendar-utils"/>
+  <Resource name="BUILTIN/richardson-timepicker-lang">
+    <ContentScript xml:space="preserve">def language = locale?.language ?: "en"
+return content + "jquery-ui-timepicker-${language}.js"</ContentScript>
+  </Resource>
+  <Resource name="BUILTIN/wr-taglib-report"/>
+  <Resource name="BUILTIN/jquery-ui"/>
+  <Resource name="BUILTIN/jsp-jstl-functions"/>
+</Descriptor>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Active">icp120q</Parameter>
+  <Parameter name="Check Time Elapsed">icp121q</Parameter>
+  <Parameter name="Description">icp122q</Parameter>
+  <Parameter name="Thematic Area OID">icp124q</Parameter>
+  <Parameter name="Name">icp125q</Parameter>
+  <Parameter name="Participation">icp126q</Parameter>
+  <Parameter name="Repeatable">icp127q</Parameter>
+  <Parameter name="Reputation">icp128q</Parameter>
+  <Parameter name="Score">icp129q</Parameter>
+  <Parameter name="Time Elapsed">icp130q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm32q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu38q">icp122q</OperationParam>
+      <OperationParam unit="icu38q">icp125q</OperationParam>
+      <OperationParam unit="icu38q">icp124q</OperationParam>
+      <OperationParam unit="icu38q">icp121q</OperationParam>
+      <OperationParam unit="icu38q">icp126q</OperationParam>
+      <OperationParam unit="icu38q">icp129q</OperationParam>
+      <OperationParam unit="icu38q">icp120q</OperationParam>
+      <OperationParam unit="icu38q">icp128q</OperationParam>
+      <OperationParam unit="icu38q">icp130q</OperationParam>
+      <OperationParam unit="icu38q">icp127q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln287q</Link>
+      <Link resultCode="success" transport="true">ln177q</Link>
+      <Link resultCode="error" transport="true">ln177q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

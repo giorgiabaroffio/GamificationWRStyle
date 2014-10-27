@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm59q</Module>
+  <InputCollectorId>icu68q</InputCollectorId>
+  <InputParameter>icp237q</InputParameter>
+  <InputParameter>icp238q</InputParameter>
+  <InputParameter>icp239q</InputParameter>
+  <InputParameter>icp240q</InputParameter>
+  <InputParameter>icp241q</InputParameter>
+  <InputParameter>icp242q</InputParameter>
+  <InputParameter>icp243q</InputParameter>
+  <InputParameter>icp244q</InputParameter>
+  <InputParameter>icp245q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port14q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu14q">miu14q.icp244q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp237q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp238q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp240q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp242q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp239q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp243q</OperationParam>
+      <OperationParam unit="miu14q">miu14q.icp241q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln70q</Link>
+      <Link resultCode="error">kln31q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

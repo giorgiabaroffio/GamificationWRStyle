@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mpage2q</Target>
+  <Secure>false</Secure>
+  <Source>gtu2q</Source>
+  <SourcePage>mpage2q</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="kcond2q.userOID" sourceUnit="gtu2q" sourceSessionParam="UserCtxParam"/>
+  </ContextPropagations>
+</Descriptor>

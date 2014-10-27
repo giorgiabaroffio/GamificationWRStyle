@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Create Adminstrator User">
+  <Module operation="true" singleLayout="false">opm18q</Module>
+  <InputCollectorId>icu21q</InputCollectorId>
+  <InputParameter>icp75q</InputParameter>
+  <InputParameter>icp76q</InputParameter>
+  <InputParameter>icp77q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create Adminstrator User</ModelName>
+    <ParentContainer>area1q</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area1q</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu37q">miu37q.icp77q</OperationParam>
+      <OperationParam unit="miu37q">miu37q.icp76q</OperationParam>
+      <OperationParam unit="miu37q">miu37q.icp75q</OperationParam>
+      <Params>fld17q_slot|sp|cmplink|link|fld15q_slot|rcond7q.groupOID|fld16q_slot|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln93q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

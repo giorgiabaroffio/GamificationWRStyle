@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Manage Actions">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page21x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page21x.link"/>
+    <Navigation name="2" links="page21x.auto-link"/>
+    <Navigation name="3" links="page21x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln200x"/>
+    <Navigation name="5" links="ln207x|impl" postPropagatedLink="ln207x"/>
+    <Navigation name="6" links="ln207x|oln341q" effects="#pr#"/>
+    <Navigation name="7" interPage="always" links="ln209x"/>
+    <Navigation name="8" links="ln218x|impl" postPropagatedLink="ln218x"/>
+    <Navigation name="9" links="ln218x|oln344q" effects="#pr#"/>
+    <Navigation name="10" links="ln232x|impl" postPropagatedLink="ln232x"/>
+    <Navigation name="11" links="ln232x|oln338q" effects="#pr#"/>
+    <Navigation name="12" links="pwu8xBlock"/>
+    <Navigation name="13" links="pwu8xFirst"/>
+    <Navigation name="14" links="pwu8xLast"/>
+    <Navigation name="15" links="pwu8xNext"/>
+    <Navigation name="16" links="pwu8xPrevious"/>
+    <Navigation name="17" links="pwu8xatt39x"/>
+    <Navigation name="18" links="pwu8xatt41x"/>
+    <Navigation name="19" links="scu25xBlock"/>
+    <Navigation name="20" links="scu25xFirst"/>
+    <Navigation name="21" links="scu25xLast"/>
+    <Navigation name="22" links="scu25xNext"/>
+    <Navigation name="23" links="scu25xPrevious"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="19|17|22|23|18|15|16|13|14|12|21|20|10|5|4|8" effects="#pr#" futile=""/>
+    <UselessPreserve navs="19|17|22|23|18|15|16|13|14|12|21|2|20|10|5|4|8" effects="-" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="pwu8x.sortCriteria|scu25x.scroller.att38x|scu25x.block|kcond46x.att42x|pwu8x.newSortAttribute|pwu8x.block"/>
+    <UselessPreserve navs="3|2|6|9|11" effects="#pr#" futile="scu25x.scroller.att38x|scu25x.block"/>
+    <UselessPreserve navs="6|9|11" effects="-" futile="scu25x.scroller.att38x|scu25x.block"/>
+  </UselessPreserves>
+  <LinkSequence>ln233x|ln219q|ln220q|ln201x|ln200x|ln206x|ln197x|ln198x</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="scu25x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="inu18x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu79x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mciu1x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="7" inputs="kcond54x.att38x"/>
+      <RefreshFormAll navs="10|1|0|6|5|9|8|11"/>
+      <RefreshForm navs="21|20|19|4|22|23" inputs="kcond54x.att38x"/>
+    </UnitComputation>
+    <UnitComputation unit="pwu8x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="7" inputs="rcond26x.att42x"/>
+      <RefreshFormAll navs="10|1|0|6|5|9|8|11"/>
+      <RefreshForm navs="15|16|13|14|12" inputs="pwu8x.block"/>
+      <RefreshForm navs="17|18" inputs="pwu8x.sortCriteria|pwu8x.newSortAttribute"/>
+    </UnitComputation>
+    <UnitComputation unit="seu89x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau19x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>scu25xFirst</ManualLink>
+    <ManualLink>scu25xPrevious</ManualLink>
+    <ManualLink>scu25xNext</ManualLink>
+    <ManualLink>scu25xLast</ManualLink>
+    <ManualLink>scu25xBlock</ManualLink>
+    <ManualLink>ln200x</ManualLink>
+    <ManualLink>ln207x</ManualLink>
+    <ManualLink>ln218x</ManualLink>
+    <ManualLink>pwu8xatt39x</ManualLink>
+    <ManualLink>pwu8xatt41x</ManualLink>
+    <ManualLink>pwu8xFirst</ManualLink>
+    <ManualLink>pwu8xPrevious</ManualLink>
+    <ManualLink>pwu8xNext</ManualLink>
+    <ManualLink>pwu8xLast</ManualLink>
+    <ManualLink>pwu8xBlock</ManualLink>
+    <ManualLink>ln231x</ManualLink>
+    <ManualLink>ln232x</ManualLink>
+  </ManualLinks>
+  <Variables>
+    <Variable id="var12x" name="ActionsAssociated" type="integer" unitId="pwu8x" parameter="dataSize">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </Variable>
+    <Variable id="var18x" name="title" type="string" unitId="seu89x" parameter="att48xArray"></Variable>
+    <Variable id="var19x" name="score" type="string" unitId="seu89x" parameter="att20xArray"></Variable>
+    <Variable id="var20x" name="area" type="string" unitId="seu89x" parameter="att117xArray"></Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr5x" name="DeleteAll" variables="var12x" xml:space="preserve">return(ActionsAssociated&gt;0)</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page21x_grid_0">
+      <Layout id="page21x_cell_0">
+        <Layout id="page21x_grid_1">
+          <Layout id="page21x_cell_1">
+            <Layout id="inu18x_0" unitId="inu18x"></Layout>
+            <Layout id="mciu1x_0" unitId="mciu1x"></Layout>
+            <Layout id="scu25x_0" unitId="scu25x"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page21x_cell_7">
+        <Layout id="page21x_grid_2">
+          <Layout id="page21x_cell_8">
+            <Layout id="pwu8x_0" unitId="pwu8x"></Layout>
+            <Layout id="ln232x_0" unitId="dau19x"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page21x_cell_14">
+        <Layout id="ln231x_0" unitId="dau19x"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu8x.sortCriteria|pwu8x.newSortAttribute|pwu8x.block|kcond46x.att42x|scu25x.scroller.att38x|scu25x.block</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>pwu8x.sortCriteria|pwu8x.newSortAttribute|pwu8x.block|kcond46x.att42x</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Manage Actions</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="scu25x">kcond52x.att38x</PageParam>
+      <PageParam unit="scu25x">acond123x</PageParam>
+      <PageParam unit="scu25x">scu25x.block</PageParam>
+      <PageParam unit="seu79x">rcond23x.att42x</PageParam>
+      <PageParam unit="seu89x">kcond46x.att42x</PageParam>
+      <PageParam unit="scu25x">scu25x.scroller.att38x</PageParam>
+      <PageParam unit="mciu1x">kcond54x.att38x</PageParam>
+      <PageParam unit="pwu8x">rcond26x.att42x</PageParam>
+      <PageParam unit="pwu8x">pwu8x.sortCriteria</PageParam>
+      <PageParam unit="pwu8x">pwu8x.newSortAttribute</PageParam>
+      <PageParam unit="pwu8x">pwu8x.block</PageParam>
+      <PageParam unit="dau19x">kcond67x.att42x</PageParam>
+      <PageParam>miu75q.icp169q</PageParam>
+      <PageParam>miu75q.icp170q</PageParam>
+      <PageParam>miu76q.icp171q</PageParam>
+      <PageParam>miu76q.icp172q</PageParam>
+      <PageParam>miu74q.icp168q</PageParam>
+      <PageParam>pwu9x.current.att42x</PageParam>
+      <PageParam>pwu9x.newSortAttribute</PageParam>
+      <PageParam>acond122x</PageParam>
+      <PageParam>pwu9x.sortCriteria</PageParam>
+      <PageParam>kcond51x.att42x</PageParam>
+      <PageParam>miu68q.icp150q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page2o</Target>
+  <Secure>false</Secure>
+  <Source>miu6ohinu16q</Source>
+  <SourcePage>page2o</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>miu6ohinu14q.block|miu6ohinu15q.sortCriteria|miu6ohinu15q.newSortAttribute|miu6ohinu17q.block|miu6ohinu19q.newSortAttribute|miu6ohinu19q.sortCriteria|acond23o|var5x|miu6oacond88q|miu6ohinu16q.newSortAttribute|miu6ohinu16q.sortCriteria|miu6ohinu18q.sortCriteria|miu6ohinu18q.newSortAttribute</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu6ohinu16q.newSortAttribute" value="userOID"/>
+    <ContextPropagation targetParam="miu6ohinu16q.sortCriteria" sourceUnit="miu6ohinu16q" sourceParam="sortCriteria"/>
+  </ContextPropagations>
+</Descriptor>

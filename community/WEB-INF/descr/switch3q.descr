@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.SwitchUnitService" name="Registered/Unregistered User ">
+  <Case value="true"/>
+  <Case value="false"/>
+  <DefaultCase>false</DefaultCase>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Registered/Unregistered User</ModelName>
+    <ParentContainer>opg41q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="switch3q">switch3q.switch</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.true">oln412q</Link>
+      <Link resultCode="success.false">oln413q</Link>
+      <Link resultCode="error">kln116q</Link>
+      <Link resultCode="error.opg41q">kln116q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

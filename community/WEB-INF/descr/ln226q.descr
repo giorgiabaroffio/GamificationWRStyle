@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page17q</Target>
+  <Secure>false</Secure>
+  <Source>scu10q</Source>
+  <SourcePage>page17q</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="meu1q.bundleDataOID" sourceUnit="scu10q" sourceParam="bundleDataOIDArray"/>
+  </ContextPropagations>
+</Descriptor>

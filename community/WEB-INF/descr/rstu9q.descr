@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.ResetUnitService" name="reset nickname">
+  <ContextParameters>ctx2p|ctx5p</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>reset nickname</ModelName>
+    <ParentContainer>opm55q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rstu9q">rstu9q.ctx2p</OperationParam>
+      <OperationParam unit="rstu9q">rstu9q.ctx5p</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln403q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Create Action Type">
+  <Module operation="false" singleLayout="false">hym6q</Module>
+  <InputCollectorId>icu37q</InputCollectorId>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create Action Type</ModelName>
+    <ParentContainer>area2p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu33q.icp108q|miu33q.icp110q|sp|miu33q.icp106q|miu33q.icp111q|miu33q.icp107q|inu3x.current.att21q|link|pwu7x.sortCriteria|miu33q.icp109q|pwu7x.newSortAttribute|miu33q.icp114q|miu31q.icp116q|rcond25q.att21q|cmplink|miu33q.icp115q|miu33q.icp113q|miu33q.icp112q|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln101q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

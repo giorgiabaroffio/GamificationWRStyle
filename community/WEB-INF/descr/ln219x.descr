@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mlu2x</Target>
+  <Secure>false</Secure>
+  <Source>icu1x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="mlu2x.next_gifts" sourceUnit="icu1x" sourceParam="icp19x"/>
+    <ContextPropagation targetParam="mlu2x.firstname" sourceUnit="icu1x" sourceParam="icp16x"/>
+    <ContextPropagation targetParam="mlu2x.other_actions" sourceUnit="icu1x" sourceParam="icp21x"/>
+    <ContextPropagation targetParam="mlu2x.badge" sourceUnit="icu1x" sourceParam="icp18x"/>
+    <ContextPropagation targetParam="mlu2x.gift_description" sourceUnit="icu1x" sourceParam="icp8x"/>
+    <ContextPropagation targetParam="mlu2x.gift_image" sourceUnit="icu1x" sourceParam="icp14x"/>
+    <ContextPropagation targetParam="mlu2x.gift_points" sourceUnit="icu1x" sourceParam="icp12x"/>
+    <ContextPropagation targetParam="mlu2x.gift_title" sourceUnit="icu1x" sourceParam="icp20x"/>
+    <ContextPropagation targetParam="mlu2x.overall_position" sourceUnit="icu1x" sourceParam="icp26x"/>
+    <ContextPropagation targetParam="mlu2x.seven_days_points" sourceUnit="icu1x" sourceParam="icp27x"/>
+    <ContextPropagation targetParam="mlu2x.seven_days_position" sourceUnit="icu1x" sourceParam="icp25x"/>
+    <ContextPropagation targetParam="mlu2x.leaderboards" sourceUnit="icu1x" sourceParam="icp24x"/>
+    <ContextPropagation targetParam="mlu2x.overall_points" sourceUnit="icu1x" sourceParam="icp17x"/>
+    <ContextPropagation targetParam="mlu2x.user_photo" sourceUnit="icu1x" sourceParam="icp29x"/>
+  </ContextPropagations>
+</Descriptor>

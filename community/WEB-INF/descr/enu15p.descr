@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Container">
+  <FormFields>
+    <Field id="fld12p" name="Text" type="text" localized="false">
+      <Slot id="fld12p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld16p" name="Alias" type="string" localized="false">
+      <Slot id="fld16p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld44p" name="id" type="string" localized="false">
+      <Slot id="fld44p_slot" label="true" output="true"/>
+    </Field>
+    <SelectionField id="sfld10p" name="language" type="string" localized="false" value="" splitOutput="">
+      <Slot id="slot11p" label="true" output="" value="Italiano|English"/>
+      <Slot id="slot8p" label="" output="true" value="it|en"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu15p" linkId="ln133p" action="validate"/>
+    <wr:ValidationLink elementId="enu15p" linkId="ln134p" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld16p" id="mnd13p" name="Mandatory5">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld10p" id="mnd14p" name="Mandatory10">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

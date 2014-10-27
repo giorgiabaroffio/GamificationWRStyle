@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.store.stringsfunctionunit.StringsFunctionUnitService" name="create badge code">
+  <Mode>concatStrings</Mode>
+  <Separator value="_"/>
+  <String value="">str1x</String>
+  <String value="">str2x</String>
+  <SubstringType>byIndex</SubstringType>
+  <SubstringMode>afterSeparator</SubstringMode>
+  <StartIndex/>
+  <EndIndex/>
+  <RegularExpression/>
+  <ReplacingString/>
+  <StringToReplace/>
+  <EncryptAlgorithm>com.webratio.rtx.core.DES3UnicodeCryptImplementation</EncryptAlgorithm>
+  <PadString/>
+  <Size/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>create badge code</ModelName>
+    <ParentContainer>opm8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="sfu1x">str2x</OperationParam>
+      <OperationParam unit="sfu1x">str1x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln444x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

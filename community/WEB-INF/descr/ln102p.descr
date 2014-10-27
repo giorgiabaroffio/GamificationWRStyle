@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page19p</Target>
+  <Secure>false</Secure>
+  <Source>dau2p</Source>
+  <SourcePage>page19p</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="acond17p" sourceUnit="dau2p" sourceParam="data.att110p"/>
+    <ContextPropagation targetParam="acond82p" sourceUnit="dau2p" sourceParam="data.att85x"/>
+  </ContextPropagations>
+</Descriptor>

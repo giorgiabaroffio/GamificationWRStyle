@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>sfu9q</Target>
+  <Secure>false</Secure>
+  <Source>icu61q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="str27q" value="32.jpg"/>
+    <ContextPropagation targetParam="str25q" sourceUnit="icu61q" sourceParam="icp205q"/>
+  </ContextPropagations>
+</Descriptor>

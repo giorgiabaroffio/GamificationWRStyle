@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mfu37q</Target>
+  <Secure>false</Secure>
+  <Source>icu65q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="mfu37q.att131p" sourceUnit="icu65q" sourceParam="icp219q"/>
+    <ContextPropagation targetParam="mfu37q.att12p" sourceUnit="icu65q" sourceParam="icp212q"/>
+    <ContextPropagation targetParam="mfu37q.email" sourceUnit="icu65q" sourceParam="icp209q"/>
+    <ContextPropagation targetParam="mfu37q.att85x" sourceUnit="icu65q" sourceParam="icp210q"/>
+    <ContextPropagation targetParam="mfu37q.att99x" sourceUnit="icu65q" sourceParam="icp218q"/>
+    <ContextPropagation targetParam="mfu37q.att115p" sourceUnit="icu65q" sourceParam="icp217q"/>
+    <ContextPropagation targetParam="mfu37q.att4q" sourceUnit="icu65q" sourceParam="icp211q"/>
+    <ContextPropagation targetParam="mfu37q.att127p" sourceUnit="icu65q" sourceParam="icp215q"/>
+    <ContextPropagation targetParam="mfu37q.userName" sourceUnit="icu65q" sourceParam="icp213q"/>
+    <ContextPropagation targetParam="mfu37q.att114p" sourceUnit="icu65q" sourceParam="icp216q"/>
+    <ContextPropagation targetParam="mfu37q.att113p" sourceUnit="icu65q" sourceParam="icp214q"/>
+    <ContextPropagation targetParam="mfu37q.password" sourceUnit="icu65q" sourceParam="icp220q"/>
+  </ContextPropagations>
+</Descriptor>

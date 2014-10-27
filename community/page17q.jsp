@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+	<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	<%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
+	<%@ taglib prefix="webratio" uri="http://www.webratio.com/2006/TagLib/JSP20" %>
+	<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<% response.setHeader("X-UA-Compatible", "IE=edge"); %>
+<webratio:Page page="page17q"/>
+<html lang="${LanguageISOCtxParam}">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<base href="<%=wrBaseURI%>"/> 
+		<title>Text Labels</title>
+		<c:set var="bootstrap-theme" value="default"/>
+		<c:set var="wrAjaxDebugLevel" value="full"/>
+	<link href="<webratio:Resource path="WRResources/ajax/jquery-ui/themes/smoothness/jquery-ui.min.css"/>" type="text/css" rel="stylesheet" data-wr-resname="jquery-ui-style" data-wr-resver="1.9.2">
+	<link href="<webratio:Resource path="WRResources/ajax/jquery-ui/themes/webratio/style.css"/>" type="text/css" rel="stylesheet" data-wr-resname="wr-ui-style" data-wr-resver="7.2.6">
+	<link href="<webratio:Resource path="builtin/960_Fluid_Nestable_12.css"/>" type="text/css" rel="stylesheet" data-wr-resname="wr-960gs-12">
+	<link href="<webratio:Resource path="style/css/style.css"/>" type="text/css" rel="stylesheet" data-wr-resname="style">
+	<link href="<webratio:Resource path="wrdefault/css/default.css"/>" type="text/css" rel="stylesheet" data-wr-resname="wrdefault-style">
+			<c:if test="${not(empty webratio:expandLayoutResourceContent('BootstrapStyle/bootstrap-css', 'BootstrapStyle/dist/css/', pageContext))}">
+	<link href="<webratio:Resource path="${webratio:expandLayoutResourceContent('BootstrapStyle/bootstrap-css', 'BootstrapStyle/dist/css/', pageContext)}"/>" type="text/css" rel="stylesheet" data-wr-resname="bootstrap-css">
+			</c:if>
+	<link href="<webratio:Resource path="builtin/grid_elements.css"/>" type="text/css" rel="stylesheet" data-wr-resname="wr-ui-gridsystem">
+	<link href="<webratio:Resource path="BootstrapStyle/css/app.css"/>" type="text/css" rel="stylesheet" data-wr-resname="app-css">
+<script>if (typeof wr !== "undefined") { wr.ui.html.resx.refreshLoaded(); }</script>
+		<c:set var="wrAjaxDebugLevel" value="full"/>
+	<script src="<webratio:Resource path="WRResources/ajax/jquery/jquery.min.js"/>" data-wr-resname="jquery" data-wr-resver="1.7.2"></script>
+	<script src="<webratio:Resource path="WRResources/script.js"/>" data-wr-resname="wr-utils-supportscripts" data-wr-resver="7.2.6"></script>
+	<script src="<webratio:Resource path="WRResources/ajax/jquery-ui/jquery-ui.min.js"/>" data-wr-resname="jquery-ui" data-wr-resver="1.9.2"></script>
+			<c:if test="${not(empty webratio:expandLayoutResourceContent('BUILTIN/wr-runtime', 'WRResources/ajax/webratio/', pageContext))}">
+	<script src="<webratio:Resource path="${webratio:expandLayoutResourceContent('BUILTIN/wr-runtime', 'WRResources/ajax/webratio/', pageContext)}"/>" data-wr-resname="wr-runtime" data-wr-resver="7.2.6"></script>
+<c:if test="${not wrAjax and not webratio:isWindow(pageContext)}">
+	<script type="text/javascript">
+		<c:choose>
+			<c:when test="${wrBoxed}">
+				(wr._configs = (wr._configs || {}))["${wrClientAppName}"] = (function() {
+					var app = new wr.app.App("${wrClientAppName}");
+					app.configure({
+			</c:when>
+			<c:otherwise>
+				(function() { 
+					wr.getApp().mergeConfig({
+			</c:otherwise>
+		</c:choose>
+			log: {
+				implementation: "wr.log.LogPlugin",
+				appenders: [
+					"wr.log.HtmlAppender"
+				],
+				categories: {
+					<c:choose>
+						<c:when test="${wrAjaxDebugLevel eq 'full'}">
+							"": wr.log.Level.DEBUG
+						</c:when>
+						<c:otherwise>
+							"": wr.log.Level.WARN,
+							"wr.logic.AjaxRequestActor._response": wr.log.Level.DEBUG,
+							"wr.ui.html.ElementViewer._code": wr.log.Level.DEBUG,
+							"wr.widgets": wr.log.Level.DEBUG
+						</c:otherwise>
+					</c:choose>
+				}
+			},
+		ui: {
+			implementation: "wr.ui.UIPlugin",
+			factories: {
+				"display": "wr.ui.DisplayControlFactory",
+				"window": "wr.ui.WindowControlFactory",
+				"default": "wr.ui.ViewerBasedControlFactory"
+			},
+			display: { 
+				factory: "display", 
+				viewer: "wr.ui.web.BrowserViewer",
+				views: {
+					"${wrCurrentWindowName}": {
+						factory: "window",
+						viewer: "${wrBoxed ? 'wr.ui.web.BoxViewer' : 'wr.ui.web.WindowViewer'}",
+						viewerConfig: { <c:if test="${wrBoxed}">boxSelector: "#wr-${wrClientAppName}"</c:if> },
+						views: {
+							"${wrCurrentWindowName}_page": {
+								viewer: "wr.ui.html.ContainerElementViewer",
+								viewerConfig: { containersFilter: ".wr-ajaxDiv" }
+							}
+						}
+					}
+				}
+			}
+		},
+		nav: {
+			implementation: "wr.nav.NavPlugin",
+			routers: [ {
+				name: "wr.nav.PropagationRouter",
+				priority: -50
+			}, {
+				name: "wr.nav.HttpWebRouter",
+				priority: -100
+			} ]
+		},
+		logic: {
+			implementation: "wr.logic.LogicPlugin"
+		},
+		oldajax: {
+			implementation: "wr.LegacyAjaxPlugin",
+				containersFilter: ".wr-ajaxDiv"
+			}
+		<c:choose>
+			<c:when test="${wrBoxed}">
+					}).chain(function() {
+						app.init();
+					}).chain(function() {
+						app.start();
+					});
+				});
+			</c:when>
+			<c:otherwise>
+					});
+				})();
+			</c:otherwise>
+		</c:choose>
+	</script>
+</c:if>
+			</c:if>
+			<!--[if lt IE 9]>
+	<script src="<webratio:Resource path="BootstrapStyle/js/html5shiv.min.js"/>" data-wr-resname="html5shiv"></script>
+			<![endif]-->
+			<!--[if lt IE 9]>
+	<script src="<webratio:Resource path="BootstrapStyle/js/respond.min.js"/>" data-wr-resname="respond"></script>
+			<![endif]-->
+	<script src="<webratio:Resource path="BootstrapStyle/dist/js/bootstrap.min.js"/>" data-wr-resname="bootstrap-js"></script>
+	<script src="<webratio:Resource path="BootstrapStyle/js/app.min.js"/>" data-wr-resname="app-js"></script>
+<script>if (typeof wr !== "undefined") { wr.ui.html.resx.refreshLoaded(); }</script>
+	</head>
+<body class="bootstrap-default">
+<a href="#main-content" class="sr-only">Skip to main content</a>
+	<c:if test="${wrBoxed}">
+		<div <c:if test="${not wrAjax}">id="wr-${wrClientAppName}" data-wr-appid="${wrClientAppName}"</c:if> class="wr-appui wr-appui-${wrClientAppName}">
+	</c:if>
+	<webratio:CollectScripts var="inlineScripts" enabled="${wrBoxed}" eventHandlerWrapper="wr.keepScoped">
+			<html:form action="form_page17q.do${wrAjax ? '#!ajax=true' : ''}" styleId="page17qFormBean" enctype="multipart/form-data">
+		<div class="wr-ajaxDiv" id="page17qHiddenFields">
+			<html:hidden property="lastURL" styleId="lastURL_page17q"/>
+				<input type="hidden" name="ln224q" value="<webratio:Link link="ln224q"/>">
+				<input type="hidden" name="ln225q" value="<webratio:Link link="ln225q"/>">
+					<input type="hidden" name="ln225q_sr" value="<webratio:Link link="ln225q" selectiveRefresh="true"/>">
+				<input type="hidden" name="ln227q" value="<webratio:Link link="ln227q"/>">
+		</div>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="page1q.do">WebRatio</a>
+			</div>
+			<div class="navbar-collapse collapse">		      
+	            <ul class="nav navbar-nav" role="menu">
+			<c:if test="${webratio:isTargetAccessible('page1q.link', pageContext)}">
+								<li class="dropdown">
+									<a href="<webratio:Link escapeXml="true" link="page1q.link"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#">Gamification Area<span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+			<c:if test="${webratio:isTargetAccessible('page1q.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page1q.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page1q.link"/>">
+   Manage Gamified Application
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page25q.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page25q.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page25q.link"/>">
+   Manage Thematic Area
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page20x.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page20x.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page20x.link"/>">
+   Manage Action
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page4x.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page4x.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page4x.link"/>">
+   Manage Badge Area
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page22x.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page22x.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page22x.link"/>">
+   Manage Badge
+</a>
+			</c:if>
+ </li>
+			</c:if>
+									</ul>
+								</li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page22p.link', pageContext)}">
+								<li class="dropdown">
+									<a href="<webratio:Link escapeXml="true" link="page22p.link"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#">Rewards Area<span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+			<c:if test="${webratio:isTargetAccessible('page22p.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page22p.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page22p.link"/>">
+   Manage Rewards
+</a>
+			</c:if>
+ </li>
+			</c:if>
+									</ul>
+								</li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page4p.link', pageContext)}">
+								<li><a href="<webratio:Link escapeXml="true" link="page4p.link"/>">Community Users Area</a></li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page7q.link', pageContext)}">
+								<li><a href="<webratio:Link escapeXml="true" link="page7q.link"/>">Administrator Users Area</a></li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page36p.link', pageContext)}">
+								<li class="dropdown">
+									<a href="<webratio:Link escapeXml="true" link="page36p.link"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#">Notification Area<span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+			<c:if test="${webratio:isTargetAccessible('page36p.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page36p.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page36p.link"/>">
+   Text Mail
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page35p.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page35p.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page35p.link"/>">
+   Manage Containers
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page37p.link', pageContext)}">
+														<li><c:if test="${webratio:isTargetAccessible('page37p.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page37p.link"/>">
+   Notification Events
+</a>
+			</c:if>
+ </li>
+			</c:if>
+									</ul>
+								</li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page16q.link', pageContext)}">
+								<li class="active dropdown">
+									<a href="<webratio:Link escapeXml="true" link="page16q.link"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#">Text Management Area<span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+			<c:if test="${webratio:isTargetAccessible('page16q.link', pageContext)}">
+													<li><c:if test="${webratio:isTargetAccessible('page16q.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page16q.link"/>">
+   Text Chunks
+</a>
+			</c:if>
+ </li>
+			</c:if>
+			<c:if test="${webratio:isTargetAccessible('page17q.link', pageContext)}">
+													<li><c:if test="${webratio:isTargetAccessible('page17q.link', pageContext)}">	
+ <a class="" href="<webratio:Link link="page17q.link"/>">
+   Text Labels
+</a>
+			</c:if>
+ </li>
+			</c:if>
+									</ul>
+								</li>
+			</c:if>
+	            </ul>
+	            <div class="nav navbar-right user-location">
+	            </div>
+			</div>
+		</div>
+	</nav>
+<div class="container container-fixed-top-padding">
+	<ol class="breadcrumb" aria-label="breadcrumbs">
+		 <li><c:if test="${webratio:isTargetAccessible('page16q.link', pageContext)}">	
+ <a class="small" href="<webratio:Link link="page16q.link"/>">
+   Text Management Area
+</a>
+			</c:if>
+ </li>
+		<li class="active">Text Labels</li>
+	</ol>
+	<div class="page-header clearfix">
+			<h1>Text Labels</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div id="main-content" role="main">
+			<div class="wr-ajaxDiv" id="page17q_grid_0">
+<div class="container_12">
+			<div class="grid_4 prefix_8 alpha omega agrd_8">
+				<div class="wr-ajaxDiv" id="page17q_cell_8">
+	<div class="wr-ajaxDiv" id="enu10q_0">
+<div class="left-bar">
+	<h2 class="">Search</h2>
+<div class="EntryUnit ">
+	<div class="form-horizontal ">
+	    <c:set var="btFieldError"><html:errors property="enu10q"/></c:set>
+		<c:if test="${not (empty btFieldError)}">
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<html:errors property="enu10q"/>
+			</div>
+		</c:if>
+				<c:set var="btFieldError"><html:errors property="sfld20q"/></c:set>
+				<div class="form-group<c:if test="${not (empty btFieldError)}"> has-error</c:if> ">
+					  <label for="sfld20q" class="control-label col-md-2">language</label>
+					<div class="controls col-md-10">
+					<html:select styleId="sfld20q" styleClass="wr-submitButtons:ln224q form-control " property="sfld20q" disabled="false">
+				  		<html:option value=""><bean:message key="selectionfield.noselection"/></html:option>
+				    <html:options property="sfld20qList" labelProperty="sfld20qLabelList"/>
+				</html:select><script type="text/javascript">
+			WREventUtils.observe("sfld20q", "change", function(event) { WREvent.observe(event, "page17q", "ln225q", $H({"isForm": true, "pressedLink": 'button:ln225q', "selectiveRefresh": true, "sourcePage": 'page17q'})); });
+		</script>
+					<c:set var="btFieldError"><html:errors property="sfld20q"/></c:set><c:if test="${not(empty(btFieldError))}"><span class="field-error help-block ">${btFieldError}</span></c:if>
+					</div>
+				</div>
+				<c:set var="btFieldError"><html:errors property="fld26q"/></c:set>
+				<div class="form-group<c:if test="${not (empty btFieldError)}"> has-error</c:if> ">
+					  <label for="fld26q" class="control-label col-md-2">Key</label>
+					<div class="controls col-md-10">
+					<html:text   styleId="fld26q" styleClass="wr-submitButtons:ln224q  form-control " property="fld26q" readonly="false"/>
+					<c:set var="btFieldError"><html:errors property="fld26q"/></c:set><c:if test="${not(empty(btFieldError))}"><span class="field-error help-block ">${btFieldError}</span></c:if>
+					</div>
+				</div>
+				<c:set var="btFieldError"><html:errors property="fld27q"/></c:set>
+				<div class="form-group<c:if test="${not (empty btFieldError)}"> has-error</c:if> ">
+					  <label for="fld27q" class="control-label col-md-2">Message</label>
+					<div class="controls col-md-10">
+					<html:text   styleId="fld27q" styleClass="wr-submitButtons:ln224q  form-control " property="fld27q" readonly="false"/>
+					<c:set var="btFieldError"><html:errors property="fld27q"/></c:set><c:if test="${not(empty(btFieldError))}"><span class="field-error help-block ">${btFieldError}</span></c:if>
+					</div>
+				</div>
+	</div>
+	<div class="row"><div class="col-md-offset-2 col-md-10">
+		<div class="form-group form-btn">
+			<c:if test="${webratio:isTargetAccessible('ln224q', pageContext)}">
+					 <c:if test="${webratio:isTargetAccessible('ln224q', pageContext)}">
+			<button title="Search" onclick="$('#page17qFormBean')[0].target='_self'" class="btn  btn-default " id="button:ln224q" name="button:ln224q" type="submit" value="Search">
+			Search</button>
+	</c:if>
+			</c:if>
+		</div>
+	</div></div>
+</div>	
+</div>
+</div>
+</div>
+			</div>
+				<div class="clear"></div>
+			<div class="grid_12 alpha omega agrd_24">
+				<div class="wr-ajaxDiv" id="page17q_cell_12">
+	<div class="wr-ajaxDiv" id="page17q_grid_1">
+<div class="wr-ajaxDiv" id="page17q_cell_13">
+<div class="left-bar">
+	<h2 class="">Labels</h2>
+		<div class="wr-ajaxDiv" id="scu10q_0">
+<c:choose>
+<c:when test="${not(empty scu10q) and (scu10q.dataSize gt 0) and scu10q.scroller.of gt 20}">
+		<div class="plain ">
+			<div class="plain ScrollerUnit">
+				 <table border="0" cellspacing="1" cellpadding="2">
+				   <tr> 
+						    <td class="scrollText">
+						        <c:choose>
+						            <c:when test="${scu10q.scroller.current ne scu10q.scroller.first}">
+					     	             <c:if test="${webratio:isTargetAccessible('scu10qFirst', pageContext)}">
+	 		<a title="<bean:message key="Scroller.First"/>" id="scu10qFirst" onclick="return ajaxRequest('<webratio:Link link="scu10qFirst" position="index" selectiveRefresh="true"/>', $H({pressedLink: 'scu10qFirst', sourcePage: 'page17q'}))" class="  scroll" href="<webratio:Link link="scu10qFirst" position="index"/>">							
+			<bean:message key="Scroller.First"/></a>
+	</c:if>
+						            </c:when>
+						            <c:otherwise>
+						           			<span><bean:message key="Scroller.First"/></span>
+						           		</c:otherwise>
+						        </c:choose>
+						    </td>
+						    <td class="scrollText">
+						        <c:choose>
+					                <c:when test="${scu10q.scroller.current ne scu10q.scroller.previous}">
+						    	         <c:if test="${webratio:isTargetAccessible('scu10qPrevious', pageContext)}">
+	 		<a title="<bean:message key="Scroller.Previous"/>" id="scu10qPrevious" onclick="return ajaxRequest('<webratio:Link link="scu10qPrevious" position="index" selectiveRefresh="true"/>', $H({pressedLink: 'scu10qPrevious', sourcePage: 'page17q'}))" class="  scroll" href="<webratio:Link link="scu10qPrevious" position="index"/>">							
+			<bean:message key="Scroller.Previous"/></a>
+	</c:if>
+					                </c:when>
+					                <c:otherwise>
+						           			<span><bean:message key="Scroller.Previous"/></span>
+						           	</c:otherwise>
+					            </c:choose>
+						    </td>
+					    <td class="scrollText" nowrap>${scu10q.scroller.from} <bean:message key="Scroller.To"/> ${scu10q.scroller.to} <bean:message key="Scroller.Of"/> ${scu10q.scroller.of}</td>
+						    <td class="nextLink">
+						        <c:choose>
+					                <c:when test="${scu10q.scroller.current ne scu10q.scroller.next}">
+			    			    	     <c:if test="${webratio:isTargetAccessible('scu10qNext', pageContext)}">
+	 		<a title="<bean:message key="Scroller.Next"/>" id="scu10qNext" onclick="return ajaxRequest('<webratio:Link link="scu10qNext" position="index" selectiveRefresh="true"/>', $H({pressedLink: 'scu10qNext', sourcePage: 'page17q'}))" class="  scroll" href="<webratio:Link link="scu10qNext" position="index"/>">							
+			<bean:message key="Scroller.Next"/></a>
+	</c:if>
+			    		            </c:when>
+				    	            <c:otherwise>
+						           			<span><bean:message key="Scroller.Next"/></span>
+				    	            </c:otherwise>
+				    	        </c:choose>
+						    </td>
+						    <td class="scrollText">
+						    	<c:choose>
+			    		            <c:when test="${scu10q.scroller.current ne scu10q.scroller.last}">
+				    		    	     <c:if test="${webratio:isTargetAccessible('scu10qLast', pageContext)}">
+	 		<a title="<bean:message key="Scroller.Last"/>" id="scu10qLast" onclick="return ajaxRequest('<webratio:Link link="scu10qLast" position="index" selectiveRefresh="true"/>', $H({pressedLink: 'scu10qLast', sourcePage: 'page17q'}))" class="  scroll" href="<webratio:Link link="scu10qLast" position="index"/>">							
+			<bean:message key="Scroller.Last"/></a>
+	</c:if>
+					                </c:when>
+					                <c:otherwise>
+						           			<span><bean:message key="Scroller.Last"/></span>
+					               </c:otherwise>
+					            </c:choose>
+						    </td>
+				   </tr>
+					   <tr>  
+						    <td colspan="5" class="scrollText"> 
+							    <span><bean:message key="Scroller.Jump"/></span>
+							    <c:forEach var="current" varStatus="status" items="${scu10q.scroller.blocks}">
+							      <c:set var="index" value="${status.index}"/>
+							      <span class="jump">
+							      <c:choose>
+							        <c:when test="${current ne scu10q.scroller.current}">
+							          <a class=" link" href="<webratio:Link escapeXml="true" link="scu10qBlock" position="index"/>" onclick="return ajaxRequest('<webratio:Link link="scu10qBlock" position="index" selectiveRefresh="true"/>', $H({pressedLink: 'scu10qBlock', sourcePage: 'page17q'}))">${current}</a>
+							        </c:when>
+							        <c:otherwise>
+							          ${current}
+							        </c:otherwise>
+							      </c:choose>
+							      </span>
+						    	</c:forEach> 
+						    </td>
+					   </tr>
+				 </table>
+			</div>
+		</div>
+</c:when>
+<c:when test="${scu10q.dataSize eq 0}">
+		<div class="plain ">
+			<div class="plain ScrollerUnit">
+				<table>
+				    <tr>
+				      <td><bean:message key="emptyUnitMessage"/></td>
+				    </tr>
+				</table>
+			</div>
+		</div>
+</c:when>
+</c:choose>
+</div>
+		<div class="wr-ajaxDiv" id="meu1q_0">
+	<div class="plain ">
+		<div class="plain MultiEntryUnit">
+			<c:set var="btFieldError"><html:errors property="meu1q"/><html:errors property="meu1qChecked"/></c:set>
+			<c:if test="${not (empty btFieldError)}">
+				<div class="alert alert-danger">
+					<html:errors property="meu1q"/>
+					<html:errors property="meu1qChecked"/>
+				</div>
+			</c:if>
+			<table class="table table-bordered table-hover  table-striped">
+				<thead>
+					<tr>
+						<th scope="col" class="smallcol hidden ">
+						</th>
+								<th scope="col" class=" header">Key</th>
+								<th scope="col" class=" header">Message</th>
+					</tr>
+				</thead>
+				<tbody>
+				<c:forEach var="meu1q" varStatus="status" items="${page17qFormBean.map.meu1q}">
+					<c:set var="index" value="${status.index}"/>
+					<tr>
+						<td class="smallcol hidden ">
+							<html:hidden property="value(key)" indexed="true" name="meu1q"/>
+						</td>
+								<c:set var="btFieldError"><html:errors property="meu1q[${index}].value(fld28q)"/></c:set>
+								<td class=" value<c:if test="${not (empty btFieldError)}"> has-error</c:if>">
+									<html:text title="Key" styleId="meu1q[${index}].value(fld28q)" indexed="true"  styleClass="form-control wr-submitButtons:ln227q " name="meu1q" property="value(fld28q)" readonly="true"/>
+									<c:set var="btFieldError"><html:errors property="meu1q[${index}].value(fld28q)"/></c:set>
+<c:if test="${not (empty btFieldError)}"><span class="field-error help-block"><html:errors property="meu1q[${index}].value(fld28q)"/></span></c:if>
+								</td>
+								<c:set var="btFieldError"><html:errors property="meu1q[${index}].value(fld29q)"/></c:set>
+								<td class=" value<c:if test="${not (empty btFieldError)}"> has-error</c:if>">
+									<html:text title="Message" styleId="meu1q[${index}].value(fld29q)" indexed="true"  styleClass="form-control wr-submitButtons:ln227q " name="meu1q" property="value(fld29q)" readonly="false"/>
+									<c:set var="btFieldError"><html:errors property="meu1q[${index}].value(fld29q)"/></c:set>
+<c:if test="${not (empty btFieldError)}"><span class="field-error help-block"><html:errors property="meu1q[${index}].value(fld29q)"/></span></c:if>
+								</td>
+					</tr>
+				</c:forEach>
+				</tbody>
+			</table>
+			<div class="form-group form-btn">
+					 <c:if test="${webratio:isTargetAccessible('ln227q', pageContext)}">
+			<button title="Save" onclick="$('#page17qFormBean')[0].target='_self'" class="btn  btn-default " id="button:ln227q" name="button:ln227q" type="submit" value="Save">
+			Save</button>
+	</c:if>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+			</div>
+				<div class="clear"></div>
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<hr class="footer-bar"/>
+	<footer class="copy-footer" role="contentinfo">
+		<p class="text-center">Generated by <a href="http://www.webratio.com" target="_blank" title="High Productivity Web and Mobile App Dev Platform">WebRatio<sup>&reg;</sup></a></p>
+	</footer>
+</div>
+		</html:form>
+		<script type="text/javascript">
+			if (typeof wr !== "undefined" && wr.getApp().isConfigurable()) {
+				wr.getApp().mergeConfig({
+					"ui+": {
+						autoFocusFirstWindow: true
+					}
+				});
+			}
+		</script>
+	<script type="application/json" class="wr-linkInfos">
+		<webratio:LinkInfos page="page17q"/>
+	</script>
+		<script type="application/json" class="wr-linkInfosSelective">
+			<webratio:LinkInfos page="page17q" selectiveRefresh="true"/>
+		</script>
+	<script type="application/json" class="wr-linkData">
+		<webratio:LinkData page="page17q"/>
+	</script>
+</webratio:CollectScripts>
+<c:if test="${wrBoxed}">
+		</div>
+		<c:if test="${not wrAjax}">
+			<script type="text/javascript">
+				jQuery(function($) {
+					wr.ui.html.addRemoveListener($("#wr-${wrClientAppName}")[0], $.proxy(wr.runScoped, this, "${wrClientAppName}", wr.LegacyAjaxPlugin.exit));
+				});
+				wr._configs["${wrClientAppName}"]();
+			</script>
+		</c:if>
+		<c:if test="${not(empty inlineScripts)}">
+			<script type="text/javascript">
+				wr.runScoped("${wrClientAppName}", function(ajaxRequest, WRAjaxRequest, $H, WRAjax, WRAjaxRequestUtils, WRAjaxRequestQueue, WREvent, WREventUtils, Form) {
+					${inlineScripts}
+				});
+			</script>
+		</c:if>
+</c:if>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="Text Chunk">
+  <Query entity="ent3p">
+    <Input id="p0" param="acond71p" type="string" implied="false" expandStyle="in" attribute="att129p"/>
+    <Input id="p1" param="acond73p" type="string" implied="false" expandStyle="in" value="community.text.rewards" attribute="att16p"/>
+    <Output id="att15p" name="oid" index="0"/>
+    <Output id="att17p" name="message" index="1"/>
+    <HQL>select a_textChunk.oid, a_textChunk.message from TextChunk a_textChunk
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_textChunk.languageCode) in(?)})) and (({[p1]safe_cast(a_textChunk.key) in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

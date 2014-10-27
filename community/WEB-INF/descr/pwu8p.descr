@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Actions">
+  <Results maxResults="" blockFactor="20" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent14x">
+    <Input id="p0" param="rcond1p.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="acond51p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att73x"/>
+    <Input id="p2" param="acond52p" type="timestamp" implied="true" impliedText="1 = 1" expandStyle="aggregate" function="min" attribute="att51x"/>
+    <Input id="p3" param="acond53p" type="timestamp" implied="true" impliedText="1 = 1" expandStyle="aggregate" function="max" attribute="att51x"/>
+    <Input id="p4" param="acond54p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att58x"/>
+    <Input id="p5" param="acond61p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att72x"/>
+    <Output id="att49x" name="oid" index="0"/>
+    <Output id="att73x" name="description" index="1"/>
+    <Output id="att72x" name="name" index="2"/>
+    <Output id="att51x" name="date" index="3"/>
+    <Output id="att58x" name="actionArea" index="4"/>
+    <Output id="att52x" name="score" index="5"/>
+    <Output id="role8p_userOID" name="actionToUserHeadQuarter_OID" index="6" useId="true"/>
+    <HQL>select a_actionInstance.oid, a_actionInstance.description, d_name.value, a_actionInstance.date, d_actionArea.value, a_actionInstance.score, a_actionInstance.actionToUserHeadQuarter.OID from ActionInstance a_actionInstance left join a_actionInstance.actionAreaBean d_actionArea left join a_actionInstance.nameBean d_name
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_actionInstance.actionToUserHeadQuarter.OID in(?))})) and (({[p1]upper(safe_cast(a_actionInstance.description)) like upper(safe_cast(?))})) and (({[p2]a_actionInstance.date &gt;= ?})) and (({[p3]a_actionInstance.date &lt;= ?})) and (({[p4]upper(safe_cast(d_actionArea.value)) like upper(safe_cast(?))})) and (({[p5]upper(safe_cast(d_name.value)) like upper(safe_cast(?))}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att51x" dynamic="true" order="desc">a_actionInstance.date</Attribute>
+    <Attribute id="att51x" dynamic="false" order="desc">a_actionInstance.date</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu8p" linkId="ln94q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ScheduleJobUnitService" name="schedule notification">
+  <Job>job2x</Job>
+  <SchedulePolicy>now</SchedulePolicy>
+  <JobInputParameter>iji1x</JobInputParameter>
+  <JobInputParameter>iji2x</JobInputParameter>
+  <JobInputParameter>iji4x</JobInputParameter>
+  <JobInputParameter>iji5x</JobInputParameter>
+  <JobInputParameter>iji6x</JobInputParameter>
+  <JobInputParameter>iji7x</JobInputParameter>
+  <JobInputParameter>iji8x</JobInputParameter>
+  <JobInputParameter>iji9x</JobInputParameter>
+  <JobInputParameter>iji10x</JobInputParameter>
+  <JobInputParameter>iji11x</JobInputParameter>
+  <JobInputParameter>iji13x</JobInputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>schedule notification</ModelName>
+    <ParentContainer>opm6x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scju8x">scju8x.iji1x</OperationParam>
+      <OperationParam unit="scju8x">scju8x.iji2x</OperationParam>
+      <OperationParam unit="scju8x">scju8x.iji5x</OperationParam>
+      <OperationParam unit="scju8x">scju8x.iji4x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln163x</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln238x</Link>
+      <Link resultCode="error">kln49x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

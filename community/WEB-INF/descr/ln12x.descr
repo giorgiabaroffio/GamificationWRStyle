@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu33q</Target>
+  <Secure>false</Secure>
+  <Source>pwu7x</Source>
+  <SourcePage>page20x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>pwu7x.newSortAttribute|pwu7x.sortCriteria</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu33q.icp108q" sourceUnit="pwu7x" sourceParam="data[].att9q"/>
+    <ContextPropagation targetParam="miu33q.icp109q" sourceUnit="pwu7x" sourceParam="data[].att1q"/>
+    <ContextPropagation targetParam="miu33q.icp110q" sourceUnit="pwu7x" sourceParam="data[].att71x"/>
+    <ContextPropagation targetParam="miu33q.icp115q" sourceUnit="pwu7x" sourceParam="data[].att39x"/>
+    <ContextPropagation targetParam="miu33q.icp106q" sourceUnit="pwu7x" sourceParam="data[].att38x"/>
+    <ContextPropagation targetParam="miu33q.icp111q" sourceUnit="pwu7x" sourceParam="data[].att60x"/>
+    <ContextPropagation targetParam="miu33q.icp107q" sourceUnit="pwu7x" sourceParam="data[].att3q"/>
+    <ContextPropagation targetParam="miu33q.icp112q" sourceUnit="pwu7x" sourceParam="data[].att50x"/>
+    <ContextPropagation targetParam="miu33q.icp113q" sourceUnit="pwu7x" sourceParam="data[].att41x"/>
+    <ContextPropagation targetParam="miu33q.icp114q" sourceUnit="pwu7x" sourceParam="data[].att2q"/>
+  </ContextPropagations>
+</Descriptor>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu4x">
+    <InputParameter id="icp6x" name="User"/>
+    <InputParameter id="icp7x" name="Area"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu3x</OKCollectorUnits>
+  <KOCollectorUnits>kocu6x</KOCollectorUnits>
+  <OperationUnits>icu4x|okcu3x|kocu6x|miu31x|scu27x|cru31x|seu81x|inn30x|inn31x|qu11x|seu82x|lpu12x|seu77x|inn27x|inn36x|opu5x|seu22p</OperationUnits>
+</Descriptor>

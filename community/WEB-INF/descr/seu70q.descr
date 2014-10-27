@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select User Rewards">
+  <MaxResults/>
+  <Query entity="ent12p">
+    <Input id="p0" param="kcond75q.att95p" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att95p" name="oid" index="0"/>
+    <Output id="att100p" name="neededPoints" index="1"/>
+    <HQL>select a_rewardType.oid, a_rewardType.neededPoints from RewardType a_rewardType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_rewardType.oid in(?)}))</Where>order by a_rewardType.title asc
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select User Rewards</ModelName>
+    <ParentContainer>opg45q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu70q">kcond75q.att95p</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln478q</Link>
+      <Link resultCode="error">kln142q</Link>
+      <Link resultCode="success" transport="true">ln329q</Link>
+      <Link resultCode="error" transport="true">ln329q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

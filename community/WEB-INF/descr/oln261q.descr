@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page4q</Target>
+  <Secure>false</Secure>
+  <Source>icu35q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="fld11q_slot" sourceUnit="icu35q" sourceParam="icp108q"/>
+    <ContextPropagation targetParam="sfld4q_presel" sourceUnit="icu35q" sourceParam="icp109q"/>
+    <ContextPropagation targetParam="sfld4q_label" sourceUnit="icu35q" sourceParam="icp109q"/>
+    <ContextPropagation targetParam="sfld4q_output" sourceUnit="icu35q" sourceParam="icp109q"/>
+    <ContextPropagation targetParam="fld6q_slot" sourceUnit="icu35q" sourceParam="icp110q"/>
+    <ContextPropagation targetParam="enu3q.att38x" sourceUnit="icu35q" sourceParam="icp106q"/>
+    <ContextPropagation targetParam="fld5q_slot" sourceUnit="icu35q" sourceParam="icp115q"/>
+    <ContextPropagation targetParam="sfld3q_label" sourceUnit="icu35q" sourceParam="icp107q"/>
+    <ContextPropagation targetParam="sfld3q_output" sourceUnit="icu35q" sourceParam="icp107q"/>
+    <ContextPropagation targetParam="sfld2q_label" sourceUnit="icu35q" sourceParam="icp112q"/>
+    <ContextPropagation targetParam="sfld2q_output" sourceUnit="icu35q" sourceParam="icp112q"/>
+    <ContextPropagation targetParam="fld4q_slot" sourceUnit="icu35q" sourceParam="icp113q"/>
+    <ContextPropagation targetParam="sfld1q_presel" sourceUnit="icu35q" sourceParam="icp111q"/>
+    <ContextPropagation targetParam="sfld1q_label" sourceUnit="icu35q" sourceParam="icp111q"/>
+    <ContextPropagation targetParam="sfld1q_output" sourceUnit="icu35q" sourceParam="icp111q"/>
+    <ContextPropagation targetParam="sfld3q_presel" sourceUnit="icu35q" sourceParam="icp107q"/>
+    <ContextPropagation targetParam="sfld2q_presel" sourceUnit="icu35q" sourceParam="icp112q"/>
+    <ContextPropagation targetParam="fld10q_slot" sourceUnit="icu35q" sourceParam="icp114q"/>
+  </ContextPropagations>
+</Descriptor>

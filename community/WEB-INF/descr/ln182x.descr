@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru31x</Target>
+  <Secure>false</Secure>
+  <Source>scu27x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru31x.role11x.att42x" sourceUnit="scu27x" sourceParam="result(newBadge)"/>
+    <ContextPropagation targetParam="cru31x.att27x" sourceUnit="scu27x" sourceParam="result(today)"/>
+    <ContextPropagation targetParam="cru31x.att118x" sourceUnit="scu27x" sourceParam="result(score)"/>
+    <ContextPropagation targetParam="cru31x.role5x.userOID" sourceUnit="scu27x" sourceParam="result(newUser)"/>
+  </ContextPropagations>
+</Descriptor>

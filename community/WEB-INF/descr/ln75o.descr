@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page12p</Target>
+  <Secure>false</Secure>
+  <Source>dau5p</Source>
+  <SourcePage>page12p</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="scu5o.isPublic" sourceUnit="dau5p" sourceParam="data.att12p"/>
+    <ContextPropagation targetParam="scu5o.nickname" sourceUnit="dau5p" sourceParam="data.userOID"/>
+  </ContextPropagations>
+</Descriptor>

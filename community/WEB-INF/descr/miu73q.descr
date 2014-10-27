@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm41q</Module>
+  <InputCollectorId>icu47q</InputCollectorId>
+  <InputParameter>icp160q</InputParameter>
+  <InputParameter>icp162q</InputParameter>
+  <InputParameter>icp163q</InputParameter>
+  <InputParameter>icp164q</InputParameter>
+  <InputParameter>icp165q</InputParameter>
+  <InputParameter>icp166q</InputParameter>
+  <InputParameter>icp167q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area2p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu73q">miu73q.icp163q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp164q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp160q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp162q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp161q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp167q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp166q</OperationParam>
+      <OperationParam unit="miu73q">miu73q.icp165q</OperationParam>
+      <Params>fld42x_slot|miu68q.icp150q|fld47x_slot|sp|fld24q_slot|enu13x.att42x|link|fld45x_slot|pwu9x.current.att42x|pwu9x.newSortAttribute|fld46x_slot|kcond46x.att42x|kcond51x.att42x|sfld8x_presel|fld39x_slot|acond122x|cmplink|pwu9x.sortCriteria|smc</Params>
+    </OperationParams>
+    <SecondaryIncomingLinks>ln217q</SecondaryIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln334q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get user language">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond24p.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att85x" name="isoCode" index="1"/>
+    <HQL>select a_communityUser.OID, a_communityUser.isoCode from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

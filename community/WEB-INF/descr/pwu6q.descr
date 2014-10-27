@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Chunks">
+  <Results maxResults="" blockFactor="20" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent3p">
+    <Input id="p0" param="acond66q" type="string" implied="false" expandStyle="in" attribute="att129p"/>
+    <Output id="att15p" name="oid" index="0"/>
+    <Output id="att129p" name="languageCode" index="1"/>
+    <Output id="att17p" name="message" index="2"/>
+    <Output id="att16p" name="key" index="3"/>
+    <HQL>select a_textChunk.oid, a_textChunk.languageCode, a_textChunk.message, a_textChunk.key from TextChunk a_textChunk
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_textChunk.languageCode) in(?)}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att16p" dynamic="true" order="asc">a_textChunk.key</Attribute>
+    <Attribute id="att16p" dynamic="false" order="asc">a_textChunk.key</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu6q" linkId="ln223q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

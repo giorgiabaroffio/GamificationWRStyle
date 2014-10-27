@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu11q</Target>
+  <Secure>false</Secure>
+  <Source>scu5q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu11q.icp244q" sourceUnit="scu5q" sourceParam="result(area)"/>
+    <ContextPropagation targetParam="miu11q.icp237q" sourceUnit="scu5q" sourceParam="result(description)"/>
+    <ContextPropagation targetParam="miu11q.icp238q" sourceUnit="scu5q" sourceParam="result(executor)"/>
+    <ContextPropagation targetParam="miu11q.icp243q" sourceUnit="scu5q" sourceParam="result(link)"/>
+    <ContextPropagation targetParam="miu11q.icp241q" sourceUnit="scu5q" sourceParam="result(actionName)"/>
+    <ContextPropagation targetParam="miu11q.icp242q" sourceUnit="scu5q" sourceParam="result(tag)"/>
+    <ContextPropagation targetParam="miu11q.icp239q" sourceUnit="scu5q" sourceParam="result(time)"/>
+    <ContextPropagation targetParam="miu11q.icp240q" sourceUnit="scu5q" sourceParam="result(userEmail)"/>
+    <ContextPropagation targetParam="miu11q.icp245q" sourceUnit="scu5q" sourceParam="result(objectkey)"/>
+  </ContextPropagations>
+</Descriptor>

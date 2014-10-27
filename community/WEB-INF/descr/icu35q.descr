@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="OID">icp106q</Parameter>
+  <Parameter name="Repeatable">icp107q</Parameter>
+  <Parameter name="Active">icp108q</Parameter>
+  <Parameter name="Check Time Elapsed">icp109q</Parameter>
+  <Parameter name="Description">icp110q</Parameter>
+  <Parameter name="Participation">icp111q</Parameter>
+  <Parameter name="Reputation">icp112q</Parameter>
+  <Parameter name="Score">icp113q</Parameter>
+  <Parameter name="Time Elapsed">icp114q</Parameter>
+  <Parameter name="Name">icp115q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym4q</ParentContainer>
+    <ParentModule>hym4q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu35q">icp115q</OperationParam>
+      <OperationParam unit="icu35q">icp107q</OperationParam>
+      <OperationParam unit="icu35q">icp112q</OperationParam>
+      <OperationParam unit="icu35q">icp111q</OperationParam>
+      <OperationParam unit="icu35q">icp110q</OperationParam>
+      <OperationParam unit="icu35q">icp114q</OperationParam>
+      <OperationParam unit="icu35q">icp106q</OperationParam>
+      <OperationParam unit="icu35q">icp108q</OperationParam>
+      <OperationParam unit="icu35q">icp109q</OperationParam>
+      <OperationParam unit="icu35q">icp113q</OperationParam>
+      <Params>fld4q_slot|miu62q.icp138q|fld6q_slot|sfld1q_label|miu62q.icp140q|sfld2q_label|fld11q_slot|sfld2q_presel|miu62q.icp135q|mc|miu62q.icp133q|sfld4q_presel|miu62q.icp137q|fld5q_slot|miu62q.icp139q|sfld3q_output|miu62q.icp131q|sfld4q_label|sfld1q_output|sfld2q_output|enu3q.att38x|fld10q_slot|miu62q.icp132q|sfld1q_presel|miu62q.icp134q|miu62q.icp136q|sfld4q_output|sfld3q_label|sfld3q_presel</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln261q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

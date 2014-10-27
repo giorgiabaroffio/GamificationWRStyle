@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm56q</Module>
+  <InputCollectorId>icu65q</InputCollectorId>
+  <InputParameter>icp208q</InputParameter>
+  <InputParameter>icp209q</InputParameter>
+  <InputParameter>icp210q</InputParameter>
+  <InputParameter>icp211q</InputParameter>
+  <InputParameter>icp212q</InputParameter>
+  <InputParameter>icp213q</InputParameter>
+  <InputParameter>icp214q</InputParameter>
+  <InputParameter>icp215q</InputParameter>
+  <InputParameter>icp216q</InputParameter>
+  <InputParameter>icp217q</InputParameter>
+  <InputParameter>icp218q</InputParameter>
+  <InputParameter>icp219q</InputParameter>
+  <InputParameter>icp220q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port3q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu27q">miu27q.icp209q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp218q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp219q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp220q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp217q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp208q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp214q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp211q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp212q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp210q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp216q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp215q</OperationParam>
+      <OperationParam unit="miu27q">miu27q.icp213q</OperationParam>
+      <Params>eru3q.faultMessage|eru3q.faultException</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln226q</Link>
+      <Link resultCode="error">kln100q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

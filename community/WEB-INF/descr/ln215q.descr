@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mfu25q</Target>
+  <Secure>false</Secure>
+  <Source>icu47q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="mfu25q.att8q" sourceUnit="icu47q" sourceParam="icp164q"/>
+    <ContextPropagation targetParam="mfu25q.att46x" sourceUnit="icu47q" sourceParam="icp165q"/>
+    <ContextPropagation targetParam="kcond47q.att42x" sourceUnit="icu47q" sourceParam="icp160q"/>
+    <ContextPropagation targetParam="mfu25q.att43x" sourceUnit="icu47q" sourceParam="icp166q"/>
+    <ContextPropagation targetParam="mfu25q.att20x" sourceUnit="icu47q" sourceParam="icp167q"/>
+    <ContextPropagation targetParam="mfu25q.att48x" sourceUnit="icu47q" sourceParam="icp163q"/>
+  </ContextPropagations>
+</Descriptor>

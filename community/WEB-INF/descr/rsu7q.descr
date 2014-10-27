@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="reedemUserRewardResponse">
+  <Response name="reedemUserRewardResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>JSON</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp11q" name="userAvailablePoints" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf5q" name="userEmail" minCard="1" maxCard="1"/>
+      <SimpleParameterFragment id="spf6q" name="availablePoints" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>reedemUserRewardResponse</ModelName>
+    <ParentContainer>port7q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu7q">rsp11q.userAvailablePoints$availablePoints</OperationParam>
+      <OperationParam unit="rsu7q">rsp11q.userAvailablePoints$userEmail</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

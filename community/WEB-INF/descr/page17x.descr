@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Sort Badges Area">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page17x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page17x.link"/>
+    <Navigation name="2" links="page17x.auto-link"/>
+    <Navigation name="3" links="page17x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln183x|validation-failed"/>
+    <Navigation name="5" links="ln185x|validation-failed"/>
+    <Navigation name="6" links="ln183x|impl" postPropagatedLink="ln183x"/>
+    <Navigation name="7" interPage="always" links="ln25x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|6|5|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln181x</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="meu2x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|7|6"/>
+    </UnitComputation>
+    <UnitComputation unit="seu78x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln183x</ManualLink>
+    <ManualLink>ln185x</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page17x_grid_0">
+      <Layout id="page17x_cell_0">
+        <Layout id="meu2x_0" unitId="meu2x"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Sort Badges Area</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="meu2x">fld43x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="meu2x">fld44x_slot</PageParam>
+      <PageParam>miu69q.icp151q</PageParam>
+      <PageParam>miu69q.icp152q</PageParam>
+      <PageParam>pwu9x.current.att42x</PageParam>
+      <PageParam>pwu9x.newSortAttribute</PageParam>
+      <PageParam>acond122x</PageParam>
+      <PageParam>pwu9x.sortCriteria</PageParam>
+      <PageParam>kcond46x.att42x</PageParam>
+      <PageParam>kcond51x.att42x</PageParam>
+      <PageParam>miu68q.icp150q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

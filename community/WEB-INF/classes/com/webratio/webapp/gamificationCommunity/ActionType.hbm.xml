@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.ActionType" table="`action_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="name" column="`name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="score" column="`score`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="reputation" column="`reputation`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="participation" column="`participation`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="description" column="`description`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="checkTimeElapsed" column="`check_time_elapsed`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="timeElapsed" column="`milliseconds_time_elapsed`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="repeatable" column="`repeatable`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="active" column="`active`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="actionTypeToGamificationDictionary" table="`badge_action`" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`action_type_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.gamificationCommunity.BadgeType" not-found="exception" embed-xml="true" unique="false">
+        <column name="`badge_type_oid`"/>
+      </many-to-many>
+    </set>
+    <set name="actionTypeToActionInstance" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`action_type_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.ActionInstance" not-found="exception" embed-xml="true"/>
+    </set>
+    <many-to-one name="actionTypeToThematicArea" class="com.webratio.webapp.gamificationCommunity.ThematicArea" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`thematic_area_oid`"/>
+    </many-to-one>
+  </class>
+  <!-- mapping for relationship 'Action TypeToGamification Dictionary[role14x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ActionType_to_actionTypeToGamificationDictionary" table="`badge_action`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`action_type_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`badge_type_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'Action TypeToAction Instance[role15x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ActionType_to_actionTypeToActionInstance" table="`action_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`action_type_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Action TypeToThematic Area[role10q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_ActionType_to_actionTypeToThematicArea" table="`action_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`thematic_area_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

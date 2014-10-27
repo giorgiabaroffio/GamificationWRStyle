@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DisconnectUnitService" name="Delete All Actions-Badge">
+  <Role useHQL="true">role14x</Role>
+  <Source id="ent16x" keyCondition="kcond48q"></Source>
+  <Target id="ent13x" keyCondition="kcond49q"></Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Delete All Actions-Badge</ModelName>
+    <ParentContainer>opg32q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="dcnu3q">kcond49q.att42x</OperationParam>
+      <OperationParam unit="dcnu3q">kcond48q.att38x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln337q</Link>
+      <Link resultCode="error">kln80q</Link>
+      <Link resultCode="error.opg32q">kln80q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

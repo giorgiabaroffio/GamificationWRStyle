@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getUserRegistrationResponse">
+  <Response name="getUserRegistrationResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>JSON</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp1q" name="success" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf7q" name="success" minCard="1" maxCard="1"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserRegistrationResponse</ModelName>
+    <ParentContainer>port10q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu10q">rsp1q.success$success</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

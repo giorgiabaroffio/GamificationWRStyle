@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu73q</Target>
+  <Secure>false</Secure>
+  <Source>enu13x</Source>
+  <SourcePage>page24x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>miu73q.icp160q|kcond51x.att42x</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu73q.icp164q" sourceUnit="enu13x" sourceParam="fld24q"/>
+    <ContextPropagation targetParam="miu73q.icp161q" sourceUnit="enu13x" sourceParam="sfld8x"/>
+    <ContextPropagation targetParam="miu73q.icp165q" sourceUnit="enu13x" sourceParam="fld47x"/>
+    <ContextPropagation targetParam="miu73q.icp162q" sourceUnit="enu13x" sourceParam="fld39x"/>
+    <ContextPropagation targetParam="miu73q.icp166q" sourceUnit="enu13x" sourceParam="fld42x"/>
+    <ContextPropagation targetParam="miu73q.icp167q" sourceUnit="enu13x" sourceParam="fld45x"/>
+    <ContextPropagation targetParam="miu73q.icp163q" sourceUnit="enu13x" sourceParam="fld46x"/>
+  </ContextPropagations>
+</Descriptor>

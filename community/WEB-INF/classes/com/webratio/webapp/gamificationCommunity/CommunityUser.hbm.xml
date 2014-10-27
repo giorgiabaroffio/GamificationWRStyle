@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <joined-subclass name="com.webratio.webapp.gamificationCommunity.CommunityUser" extends="com.webratio.webapp.User" table="`community_user`" dynamic-update="true" dynamic-insert="true" select-before-update="false">
+    <key on-delete="noaction">
+      <column name="`oid`"/>
+    </key>
+    <property name="participation" column="`participation`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="totalCredit" column="`credit`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="participation7Days" column="`participation_monthly`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="companyName" column="`company_name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="firstName" column="`first_name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lastName" column="`last_name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="city" column="`city`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="smallPhotoRef" column="`small_photo_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="smallPhotoBinary" column="`small_photoblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="twitter" column="`twitter`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="country" column="`country`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="geographicalArea" column="`geographical_area`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="webSite" column="`website`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="bigPhotoRef" column="`big_photo_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="bigPhotoBinary" column="`big_photoblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="bio" column="`bio`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="linkedin" column="`linkedin`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="publicProfile" column="`public_profile`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="facebook" column="`facebook`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="google" column="`google`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="isoCode" column="`iso_code`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="birthDate" column="`birthdate`" type="java.sql.Date" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="registrationDate" column="`registration_date`" type="java.sql.Timestamp" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="userHeadQuarterToAction" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`rank_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.ActionInstance" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="userHeadQuarterToBadgeAcquired" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`rank_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.BadgeInstance" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="usercrmToMostimportantBadge" inverse="true" mutable="false" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`rankoid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.communityBadgesArea.MostimportantBadge" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="communityUserToNotification" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`rank_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.Notification" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="communityUserToRewardInstance" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`rank_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.RewardInstance" not-found="exception" embed-xml="true"/>
+    </set>
+    <many-to-one name="creditsAvailableBean" class="com.webratio.webapp.gamificationCommunity.CommunityUser_CreditsAvailableBean" insert="false" update="false" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`oid`"/>
+    </many-to-one>
+    <many-to-one name="creditsSpentBean" class="com.webratio.webapp.gamificationCommunity.CommunityUser_CreditsSpentBean" insert="false" update="false" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`oid`"/>
+    </many-to-one>
+  </joined-subclass>
+  <!-- mapping for derived attribute 'Credits Available[att110p]' -->
+  <class name="com.webratio.webapp.gamificationCommunity.CommunityUser_CreditsAvailableBean" table="`community_user_credits_availab`" mutable="true" polymorphism="implicit" dynamic-update="false" dynamic-insert="false" select-before-update="false" optimistic-lock="version">
+    <id name="OID" column="`oid`" type="java.lang.Integer"/>
+    <property name="value" column="`der_attr`" type="java.lang.Integer" insert="false" update="false" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for derived attribute 'Credits Spent[att96p]' -->
+  <class name="com.webratio.webapp.gamificationCommunity.CommunityUser_CreditsSpentBean" table="`community_user_credits_spent_v`" mutable="true" polymorphism="implicit" dynamic-update="false" dynamic-insert="false" select-before-update="false" optimistic-lock="version">
+    <id name="OID" column="`oid`" type="java.lang.Integer"/>
+    <property name="value" column="`der_attr`" type="java.math.BigDecimal" insert="false" update="false" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'User HeadQuarterToAction[role7p]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_CommunityUser_to_userHeadQuarterToAction" table="`action_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_OID" column="`rank_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'User HeadQuarterToBadge Acquired [role6x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_CommunityUser_to_userHeadQuarterToBadgeAcquired" table="`badge_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_OID" column="`rank_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'UsercrmToMostimportantBadge[role6p]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_CommunityUser_to_usercrmToMostimportantBadge" table="`mostimportant_badge`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_OID" column="`rankoid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Community UserToNotification[role22x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_CommunityUser_to_communityUserToNotification" table="`notification`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_OID" column="`rank_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Community UserToReward Instance[role51p]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_CommunityUser_to_communityUserToRewardInstance" table="`reward_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_OID" column="`rank_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

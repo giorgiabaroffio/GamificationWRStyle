@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Getting Started">
+  <ParentContainer>sv2q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>false</CheckPermission>
+  <MasterPage>mpage1q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page8q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page8q.link"/>
+    <Navigation name="2" links="page8q.auto-link"/>
+    <Navigation name="3" links="page8q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="ln33q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln27q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau2q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu4q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks></ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page8q_grid_0">
+      <Layout id="page8q_cell_0">
+        <Layout id="dau2q_0" unitId="dau2q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Getting Started</ModelName>
+    <NavigationAncestors>sv2q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau2q">acond14q</PageParam>
+      <PageParam>acond16q</PageParam>
+      <PageParam>acond20q</PageParam>
+      <PageParam>pcp4o</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

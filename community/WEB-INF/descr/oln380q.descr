@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru21q</Target>
+  <Secure>false</Secure>
+  <Source>icu60q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru21q.att81x" sourceUnit="icu60q" sourceParam="icp200q"/>
+    <ContextPropagation targetParam="cru21q.att79x" sourceUnit="icu60q" sourceParam="icp201q"/>
+    <ContextPropagation targetParam="cru21q.att80x" sourceUnit="icu60q" sourceParam="icp202q"/>
+  </ContextPropagations>
+</Descriptor>

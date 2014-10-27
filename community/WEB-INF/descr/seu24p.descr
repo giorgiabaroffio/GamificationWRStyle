@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get name">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Output id="att39x" name="name" index="0"/>
+    <HQL>select distinct a_actionType.name from ActionType a_actionType</HQL>
+  </Query>
+</Descriptor>

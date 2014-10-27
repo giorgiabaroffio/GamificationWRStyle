@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="New Gamified Application">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page3q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page3q.link"/>
+    <Navigation name="2" links="page3q.auto-link"/>
+    <Navigation name="3" links="page3q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln20q|validation-failed"/>
+    <Navigation name="5" interPage="always" links="ln17q"/>
+    <Navigation name="6" links="ln20q|impl" postPropagatedLink="ln20q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|6|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln100q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu2q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|6|5"/>
+    </UnitComputation>
+    <UnitComputation unit="seu29q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln20q</ManualLink>
+    <ManualLink>ln21q</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page3q_grid_0">
+      <Layout id="page3q_cell_0">
+        <Layout id="enu2q_0" unitId="enu2q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>New Gamified Application</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="enu2q">msfld4q_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu2q">msfld4q_output</PageParam>
+      <PageParam>miu60q.icp117q</PageParam>
+      <PageParam>miu60q.icp16q</PageParam>
+      <PageParam>miu29q.icp21q</PageParam>
+      <PageParam>miu29q.icp20q</PageParam>
+      <PageParam>miu28q.icp18q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Edit Container">
+  <ParentContainer>area7p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page3p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page3p.link"/>
+    <Navigation name="2" links="page3p.auto-link"/>
+    <Navigation name="3" links="page3p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln133p|validation-failed"/>
+    <Navigation name="5" links="ln134p|validation-failed"/>
+    <Navigation name="6" interPage="always" links="ln130p"/>
+    <Navigation name="7" links="ln134p|impl" postPropagatedLink="ln134p"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|7|5|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence/>
+  <UnitComputations>
+    <UnitComputation unit="enu15p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="6" inputs="fld44p_slot|fld12p_slot|sfld10p_presel|fld16p_slot"/>
+      <RefreshFormAll navs="1|0|7"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln133p</ManualLink>
+    <ManualLink>ln134p</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page3p_grid_0">
+      <Layout id="page3p_cell_0">
+        <Layout id="enu15p_0" unitId="enu15p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Edit Container</ModelName>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="enu15p">fld44p_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu15p">fld12p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld10p_presel" unit="enu15p">sfld10p_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu15p">fld16p_slot</PageParam>
+      <PageParam>miu87q.icp198q</PageParam>
+      <PageParam>miu87q.icp197q</PageParam>
+      <PageParam>miu87q.icp196q</PageParam>
+      <PageParam>miu87q.icp199q</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld12p_presel">sfld12p_presel</PageParam>
+      <PageParam>pwu16p.newSortAttribute</PageParam>
+      <PageParam>pwu16p.current.att31x</PageParam>
+      <PageParam>acond29p</PageParam>
+      <PageParam>pwu16p.sortCriteria</PageParam>
+      <PageParam>miu86q.icp195q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

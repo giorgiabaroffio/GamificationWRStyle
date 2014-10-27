@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getActionsResponse">
+  <Response name="getActionsResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>XML</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp18q" name="actions" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getActionsResponse</ModelName>
+    <ParentContainer>port12q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu12q">rsp18q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln23q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

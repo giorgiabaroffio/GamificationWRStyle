@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get user">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond25q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att110p" name="creditsAvailable" index="1"/>
+    <HQL>select a_communityUser.OID, d_creditsAvailable.value from CommunityUser a_communityUser left join a_communityUser.creditsAvailableBean d_creditsAvailable
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get user</ModelName>
+    <ParentContainer>opg6q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu9q">kcond25q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln35q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln169q</Link>
+      <Link resultCode="error">kln34q</Link>
+      <Link resultCode="error.opg6q">kln34q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

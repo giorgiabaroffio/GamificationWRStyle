@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Involved Actions Associated">
+  <Results maxResults="" blockFactor="10" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent16x">
+    <Input id="p0" param="rcond26x.att42x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att38x" name="oid" index="0"/>
+    <Output id="att71x" name="description" index="1"/>
+    <Output id="att41x" name="score" index="2"/>
+    <Output id="att39x" name="name" index="3"/>
+    <HQL>select a_actionType.oid, a_actionType.description, a_actionType.score, a_actionType.name from ActionType a_actionType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.oid in(select a_actionType_p0.source_oid from Rel_ActionType_to_actionTypeToGamificationDictionary a_actionType_p0 where a_actionType_p0.target_oid in(?))}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att39x" dynamic="true" order="asc">a_actionType.name</Attribute>
+    <Attribute id="att41x" dynamic="true" order="asc">a_actionType.score</Attribute>
+    <Attribute id="att41x" dynamic="false" order="asc">a_actionType.score</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu8x" linkId="ln218x" action="validate"/>
+  </wr:Validation>
+</Descriptor>

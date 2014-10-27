@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="Input Port">
+  <Type>INPUT</Type>
+  <Parameter name="oid">icp20q</Parameter>
+  <Parameter name="Name">icp21q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Input Port</ModelName>
+    <ParentContainer>hym1q</ParentContainer>
+    <ParentModule>hym1q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu12q">icp20q</OperationParam>
+      <OperationParam unit="icu12q">icp21q</OperationParam>
+      <Params>msfld6q_output|miu36q.icp119q|fld37q_slot|msfld6q_label|miu36q.icp17q|mc|fld38q_slot|rcond16q.att6q|miu36q.icp118q|msfld6q_presel</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln166q</Link>
+      <Link resultCode="success" transport="true">ln128q</Link>
+      <Link resultCode="error" transport="true">ln128q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

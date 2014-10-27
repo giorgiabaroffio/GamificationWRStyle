@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Language">
+  <FormFields>
+    <SelectionField id="sfld11p" name="language" type="string" localized="false" value="" splitOutput="">
+      <Slot id="slot17p" label="true" output="" value="Italiano|English"/>
+      <Slot id="slot12p" label="" output="true" value="it|en"/>
+    </SelectionField>
+  </FormFields>
+</Descriptor>

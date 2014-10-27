@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="Credit History">
+  <Type>FAKE</Type>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Credit History</ModelName>
+    <ParentContainer>area4p</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>pwu20p.block|miu5oacond137q|miu5ohinu18q.newSortAttribute|miu5oacond122q|miu5ohinu18q.sortCriteria|miu5oacond131q|miu5oacond112q|scu4o.isPublic|var31p|acond7p|kcond27o.userOID|miu5ohinu16q.newSortAttribute|pwu20p.sortCriteria|sp|miu5oacond136q|acond82p|pwu10p.sortCriteria|miu5oacond103q|miu5orcond28q.userOID|pwu5p.newSortAttribute|miu5ohinu14q.current.userOID|miu5oacond130q|miu5ohinu16q.sortCriteria|miu5oacond113q|miu5ohinu14q.block|miu5ohinu19q.sortCriteria|miu5oacond128q|pwu11p.newSortAttribute|link|miu5oacond135q|pwu5p.sortCriteria|miu5oacond88q|miu5oacond120q|acond71p|miu5oocp74q|pwu20p.newSortAttribute|miu5oacond114q|scu4o.nickname|acond40p|cmplink|acond85p|acond168p|acond17p|miu5ohinu15q.sortCriteria|miu5oacond129q|miu5oacond89q|miu5oacond134q|miu5oacond121q|miu5ohinu15q.newSortAttribute|miu5oacond119q|miu5ohinu17q.block|miu5ohinu19q.newSortAttribute|pwu5p.block|miu5oacond115q|pwu10p.newSortAttribute|pwu11p.sortCriteria|rcond6p.userOID|smc|miu5ohinu17q.current.userOID</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">ln52o</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

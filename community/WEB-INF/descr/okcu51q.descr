@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="OK">
+  <Type>OK</Type>
+  <JumpToModuleInstance>true</JumpToModuleInstance>
+  <Parameter name="chunk oid" value="">ocp49q</Parameter>
+  <Parameter name="language" value="">ocp50q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>OK</ModelName>
+    <ParentContainer>hym8q</ParentContainer>
+    <ParentModule>hym8q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="okcu51q">ocp49q</OperationParam>
+      <OperationParam unit="okcu51q">ocp50q</OperationParam>
+      <Params>miu80q.icp176q|miu80q.icp179q|miu80q.icp175q|mc|sp|miu80q.icp180q|cmplink|link|enu12q.att15p|fld35q_slot|smc</Params>
+    </OperationParams>
+    <SecondaryIncomingLinks>ln233q</SecondaryIncomingLinks>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

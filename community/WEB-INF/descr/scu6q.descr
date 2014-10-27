@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Parse JSON">
+  <Script path="WEB-INF/groovy/ParseUserRegistrationRequest.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Parse JSON</ModelName>
+    <ParentContainer>port10q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu6q">scu6q.json</OperationParam>
+      <Params>miu3q.icp221q|miu3q.icp233q|miu3q.icp232q|scu9q.photoImage|miu3q.icp222q|miu3q.icp223q|miu3q.icp225q|miu3q.icp230q|miu3q.icp231q|scu9q.photoName|miu3q.icp229q|miu3q.icp224q|rsp1q.success$success|miu3q.icp228q|miu3q.icp227q|miu3q.icp226q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln20q</Link>
+      <Link resultCode="success" transport="true">ln12q</Link>
+      <Link resultCode="error" transport="true">ln12q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

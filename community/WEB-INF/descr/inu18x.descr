@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.IndexUnitService" name="Type of Action">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Input id="p0" param="acond125x" type="boolean" implied="false" expandStyle="in" value="true" attribute="att50x"/>
+    <Output id="att62x" name="area" index="0"/>
+    <HQL>select distinct a_thematicArea_role10q.areaName from ActionType a_actionType left join a_actionType.actionTypeToThematicArea a_thematicArea_role10q
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.reputation in(?)}))</Where>order by a_thematicArea_role10q.areaName asc
+    </HQL>
+  </Query>
+</Descriptor>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Possible Rewards">
+  <Results maxResults="1" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent12p">
+    <Input id="p0" param="acond17p" type="decimal" implied="false" expandStyle="aggregate" function="max" attribute="att100p"/>
+    <Input id="p1" param="acond97p" type="boolean" implied="false" expandStyle="in" value="true" attribute="att106p"/>
+    <Input id="p2" param="acond82p" type="string" implied="false" expandStyle="in" attribute="att68x"/>
+    <Output id="att95p" name="oid" index="0"/>
+    <Output id="att100p" name="neededPoints" index="1"/>
+    <Output id="att55x" name="image" blob="true" index="2"/>
+    <Output id="att99p" name="description" index="3"/>
+    <Output id="att98p" name="title" index="4"/>
+    <HQL>select a_rewardType.oid, a_rewardType.neededPoints, a_rewardType.imageRef, a_rewardType.description, a_rewardType.title from RewardType a_rewardType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_rewardType.neededPoints &lt;= ?})) and (({[p1]a_rewardType.available in(?)})) and (({[p2]safe_cast(a_rewardType.languageCode) in(?)}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att100p" dynamic="true" order="desc">a_rewardType.neededPoints</Attribute>
+    <Attribute id="att100p" dynamic="false" order="desc">a_rewardType.neededPoints</Attribute>
+  </SortAttributes>
+</Descriptor>

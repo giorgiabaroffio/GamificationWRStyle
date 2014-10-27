@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <filter-def name="ownerFilter">
+    <filter-param name="ownerId" type="int"/>
+  </filter-def>
+  <class name="com.webratio.webapp.communityBadgesArea.LastBadge" table="`LAST_BADGE`" persister="com.webratio.rtx.hibernate.LazySingleTableEntityPersister" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`OID`" type="java.lang.Integer">
+      <generator class="org.hibernate.id.IncrementGenerator"/>
+    </id>
+    <property name="nickname" column="`NICKNAME`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="area" column="`AREA`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="title" column="`TITLE`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="date" column="`DATE`" type="java.sql.Date" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="imageRef" column="`IMAGE`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="WROWNERID" column="`WROWNERID`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <filter name="ownerFilter" condition="WROWNERID = :ownerId"/>
+  </class>
+</hibernate-mapping>

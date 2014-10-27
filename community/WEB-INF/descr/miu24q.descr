@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm57q</Module>
+  <InputCollectorId>icu66q</InputCollectorId>
+  <InputParameter>icp221q</InputParameter>
+  <InputParameter>icp222q</InputParameter>
+  <InputParameter>icp223q</InputParameter>
+  <InputParameter>icp224q</InputParameter>
+  <InputParameter>icp225q</InputParameter>
+  <InputParameter>icp226q</InputParameter>
+  <InputParameter>icp227q</InputParameter>
+  <InputParameter>icp228q</InputParameter>
+  <InputParameter>icp229q</InputParameter>
+  <InputParameter>icp230q</InputParameter>
+  <InputParameter>icp231q</InputParameter>
+  <InputParameter>icp232q</InputParameter>
+  <InputParameter>icp233q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port2q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu24q">miu24q.icp226q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp229q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp227q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp228q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp225q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp224q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp230q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp223q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp231q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp222q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp221q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp232q</OperationParam>
+      <OperationParam unit="miu24q">miu24q.icp233q</OperationParam>
+      <Params>eru2q.faultException|eru2q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln207q</Link>
+      <Link resultCode="error">kln90q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

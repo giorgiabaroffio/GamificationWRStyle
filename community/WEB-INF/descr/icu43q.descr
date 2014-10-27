@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Image">icp146q</Parameter>
+  <Parameter name="Badge Area OID">icp147q</Parameter>
+  <Parameter name="Sort Number">icp148q</Parameter>
+  <Parameter name="Name">icp149q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm37q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu43q">icp146q</OperationParam>
+      <OperationParam unit="icu43q">icp149q</OperationParam>
+      <OperationParam unit="icu43q">icp147q</OperationParam>
+      <OperationParam unit="icu43q">icp148q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln310q</Link>
+      <Link resultCode="success" transport="true">ln184q</Link>
+      <Link resultCode="error" transport="true">ln184q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>scu27x</Target>
+  <Secure>false</Secure>
+  <Source>qu11x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="scu27x.user" sourceUnit="qu11x" sourceParam="qo13x"/>
+    <ContextPropagation targetParam="scu27x.userScore" sourceUnit="qu11x" sourceParam="qo14x"/>
+  </ContextPropagations>
+</Descriptor>

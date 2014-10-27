@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu17x</Target>
+  <Secure>false</Secure>
+  <Source>iju2x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu17x.icp16x" sourceUnit="iju2x" sourceParam="iji1x"/>
+    <ContextPropagation targetParam="miu17x.icp17x" sourceUnit="iju2x" sourceParam="iji2x"/>
+    <ContextPropagation targetParam="miu17x.icp13x" sourceUnit="iju2x" sourceParam="iji4x"/>
+    <ContextPropagation targetParam="miu17x.icp18x" sourceUnit="iju2x" sourceParam="iji6x"/>
+    <ContextPropagation targetParam="miu17x.icp21x" sourceUnit="iju2x" sourceParam="iji7x"/>
+    <ContextPropagation targetParam="miu17x.icp8x" sourceUnit="iju2x" sourceParam="iji10x"/>
+    <ContextPropagation targetParam="miu17x.icp14x" sourceUnit="iju2x" sourceParam="iji8x"/>
+    <ContextPropagation targetParam="miu17x.icp20x" sourceUnit="iju2x" sourceParam="iji9x"/>
+    <ContextPropagation targetParam="miu17x.icp19x" sourceUnit="iju2x" sourceParam="iji11x"/>
+    <ContextPropagation targetParam="miu17x.icp12x" sourceUnit="iju2x" sourceParam="iji13x"/>
+  </ContextPropagations>
+</Descriptor>

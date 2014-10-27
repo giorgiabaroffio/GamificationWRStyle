@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.store.scaleimageunit.ScaleImageUnitService" name="small image">
+  <Width>64</Width>
+  <Height>64</Height>
+  <Format>jpg</Format>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>small image</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="sim8q">sim8q.image</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln386q</Link>
+      <Link resultCode="success" transport="true">ln255q</Link>
+      <Link resultCode="error" transport="true">ln255q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

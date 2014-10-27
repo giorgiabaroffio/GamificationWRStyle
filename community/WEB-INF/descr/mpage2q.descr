@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="UserProfile">
+  <ParentContainer>sv1x</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <IsMasterPage>true</IsMasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="mpage2q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="mpage2q.link"/>
+    <Navigation name="2" links="mpage2q.auto-link"/>
+    <Navigation name="3" links="mpage2q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln11q|impl" postPropagatedLink="ln11q"/>
+    <Navigation name="5" links="ln11q|oln51q" effects="#pr#"/>
+    <Navigation name="6" links="ln2q|impl" postPropagatedLink="ln2q"/>
+    <Navigation name="7" links="ln2q|oln51q" effects="#pr#"/>
+    <Navigation name="8" links="ln47q|impl" postPropagatedLink="ln47q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|7|6|5|4|8" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln38q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="gtu2q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau1q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln47q</ManualLink>
+    <ManualLink>ln2q</ManualLink>
+    <ManualLink>ln11q</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="mpage2q_customlocation_0">
+      <Layout id="mpage2q_grid_0">
+        <Layout id="mpage2q_cell_0">
+          <Layout id="dau1q_0" unitId="dau1q"></Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>UserProfile</ModelName>
+    <NavigationAncestors>sv1x</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau1q">kcond2q.userOID</PageParam>
+      <PageParam>miu30q.icp206q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

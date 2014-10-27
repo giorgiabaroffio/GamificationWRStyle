@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="reedemUserRewardResponse">
+  <Response name="reedemUserRewardResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>XML</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp6q" name="userAvailablePoints" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf9q" name="userEmail" minCard="1" maxCard="1"/>
+      <SimpleParameterFragment id="spf10q" name="availablePoints" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}float[SimpleType]"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>reedemUserRewardResponse</ModelName>
+    <ParentContainer>port4q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu8q">rsp6q.userAvailablePoints$userEmail</OperationParam>
+      <OperationParam unit="rsu8q">rsp6q.userAvailablePoints$availablePoints</OperationParam>
+      <Params>eru8q.faultException|eru8q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln6q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

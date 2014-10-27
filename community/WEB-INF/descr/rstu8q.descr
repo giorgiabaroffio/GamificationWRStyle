@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.ResetUnitService" name="Reset2">
+  <ContextParameters>CountryISOCtxParam|LanguageISOCtxParam</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Reset2</ModelName>
+    <ParentContainer>opm54q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rstu8q">rstu8q.LanguageISOCtxParam</OperationParam>
+      <OperationParam unit="rstu8q">rstu8q.CountryISOCtxParam</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln399q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="go to my position">
+  <MaxResults>1</MaxResults>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond3q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <HQL>select a_communityUser.OID from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>order by a_communityUser.OID asc
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>go to my position</ModelName>
+    <ParentContainer>opm4q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu5q">kcond3q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln29q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln35q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

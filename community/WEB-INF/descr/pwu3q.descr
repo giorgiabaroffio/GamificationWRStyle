@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Thematic Area">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent5q">
+    <Output id="att21q" name="oid" index="0"/>
+    <Output id="att22q" name="areaName" index="1"/>
+    <HQL>select a_thematicArea.oid, a_thematicArea.areaName from ThematicArea a_thematicArea order by $$SORT_CRITERIA$$</HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att22q" dynamic="true" order="asc">a_thematicArea.areaName</Attribute>
+    <Attribute id="att22q" dynamic="false" order="asc">a_thematicArea.areaName</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu3q" linkId="ln86q" action="validate"/>
+    <wr:ValidationLink elementId="pwu3q" linkId="ln87q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

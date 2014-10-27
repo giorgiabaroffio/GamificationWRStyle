@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getUserRewardsResponse">
+  <Response name="getUserRewardsResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>JSON</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp10q" name="JSON" minCard="1" maxCard="1">
+      <ComplexParameterFragment id="cpf3q" name="rewards" minCard="1" maxCard="-1"/>
+    </ResponseBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserRewardsResponse</ModelName>
+    <ParentContainer>port8q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu3q">rsp10q.JSON$rewards</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

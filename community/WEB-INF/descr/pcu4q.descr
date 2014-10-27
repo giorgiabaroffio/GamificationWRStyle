@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.ParameterCollectorUnitService" name="UserRanking">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>UserRanking</ModelName>
+    <ParentContainer>area1x</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area1x</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>mssu16p.shownMessages|scu22p.levelmax|hinu3q.blockFactor|pcp4o|acond15p|kcond3p.userOID|scu22p.geo_area|mssu9p.shownMessages|scu22p.name|hinu2q.block|acond35q|slot16p|hinu3q.block|acond10p|hinu2q.blockFactor|hinu3q.current.userOID|mssu11p.shownMessages|sfld15p_output|slot15p|kcond4p.userOID|mssu15p.shownMessages|scu22p.area|scu22p.levelmin|hinu2q.current.userOID|acond20p|sfld15p_label|acond31q|acond6p</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln87q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

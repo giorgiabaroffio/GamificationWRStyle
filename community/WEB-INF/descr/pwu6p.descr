@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Users">
+  <Results maxResults="" blockFactor="20" blockWindow="10"/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent15x">
+    <Input id="p0" param="acond31p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att113p"/>
+    <Input id="p1" param="acond46p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att114p"/>
+    <Input id="p2" param="acond47p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="email"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att113p" name="firstName" index="1"/>
+    <Output id="att114p" name="lastName" index="2"/>
+    <Output id="att319x" name="participation7Days" index="3"/>
+    <Output id="att110p" name="creditsAvailable" index="4"/>
+    <Output id="att56x" name="participation" index="5"/>
+    <Output id="att96p" name="creditsSpent" index="6"/>
+    <Output id="att57x" name="totalCredit" index="7"/>
+    <HQL>select a_communityUser.OID, a_communityUser.firstName, a_communityUser.lastName, a_communityUser.participation7Days, d_creditsAvailable.value, a_communityUser.participation, d_creditsSpent.value, a_communityUser.totalCredit from CommunityUser a_communityUser left join a_communityUser.creditsAvailableBean d_creditsAvailable left join a_communityUser.creditsSpentBean d_creditsSpent
+      <Where defaultPolicy="fill" allImplied="true">(({[p0]upper(safe_cast(a_communityUser.firstName)) like upper(safe_cast(?))})) and (({[p1]upper(safe_cast(a_communityUser.lastName)) like upper(safe_cast(?))})) and (({[p2]upper(safe_cast(a_communityUser.email)) like upper(safe_cast(?))}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="userOID" dynamic="true" order="asc">a_communityUser.OID</Attribute>
+    <Attribute id="att113p" dynamic="true" order="asc">a_communityUser.firstName</Attribute>
+    <Attribute id="att114p" dynamic="true" order="asc">a_communityUser.lastName</Attribute>
+    <Attribute id="att56x" dynamic="true" order="asc">a_communityUser.participation</Attribute>
+    <Attribute id="att319x" dynamic="true" order="asc">a_communityUser.participation7Days</Attribute>
+    <Attribute id="att110p" dynamic="true" order="asc">d_creditsAvailable.value</Attribute>
+    <Attribute id="att96p" dynamic="true" order="asc">d_creditsSpent.value</Attribute>
+    <Attribute id="att57x" dynamic="true" order="asc">a_communityUser.totalCredit</Attribute>
+    <Attribute id="userOID" dynamic="false" order="asc">a_communityUser.OID</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu6p" linkId="ln119q" action="validate"/>
+    <wr:ValidationLink elementId="pwu6p" linkId="ln48p" action="validate"/>
+    <wr:ValidationLink elementId="pwu6p" linkId="ln49p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

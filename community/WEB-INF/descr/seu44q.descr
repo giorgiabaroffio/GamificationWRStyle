@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Action Instances">
+  <MaxResults/>
+  <Query entity="ent14x">
+    <Input id="p0" param="rcond20q.att38x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att49x" name="oid" index="0"/>
+    <HQL>select a_actionInstance.oid from ActionInstance a_actionInstance
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_actionInstance.actionInstanceToActionType.oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select Action Instances</ModelName>
+    <ParentContainer>opm34q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu44q">rcond20q.att38x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln293q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

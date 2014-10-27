@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="HQ.MyDashboard ">
+  <ParentContainer>area4p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page20p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page20p.link"/>
+    <Navigation name="2" links="page20p.auto-link"/>
+    <Navigation name="3" links="page20p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="ln112p"/>
+    <Navigation name="5" links="miu5ohinu14qBlock"/>
+    <Navigation name="6" links="miu5ohinu14qFirst"/>
+    <Navigation name="7" links="miu5ohinu14qLast"/>
+    <Navigation name="8" links="miu5ohinu14qNext"/>
+    <Navigation name="9" links="miu5ohinu14qPrevious"/>
+    <Navigation name="10" links="miu5ohinu15qatt319x"/>
+    <Navigation name="11" links="miu5ohinu15quserOID"/>
+    <Navigation name="12" links="miu5ohinu16qatt319x"/>
+    <Navigation name="13" links="miu5ohinu16quserOID"/>
+    <Navigation name="14" links="miu5ohinu17qBlock"/>
+    <Navigation name="15" links="miu5ohinu17qFirst"/>
+    <Navigation name="16" links="miu5ohinu17qLast"/>
+    <Navigation name="17" links="miu5ohinu17qNext"/>
+    <Navigation name="18" links="miu5ohinu17qPrevious"/>
+    <Navigation name="19" links="miu5ohinu18qatt56x"/>
+    <Navigation name="20" links="miu5ohinu18quserOID"/>
+    <Navigation name="21" links="miu5ohinu19qatt56x"/>
+    <Navigation name="22" links="miu5ohinu19quserOID"/>
+    <Navigation name="23" links="miu5oln280q|impl" postPropagatedLink="miu5oln280q"/>
+    <Navigation name="24" links="miu5oln281q|impl" postPropagatedLink="miu5oln281q"/>
+    <Navigation name="25" links="miu5oln284q|impl" postPropagatedLink="miu5oln284q"/>
+    <Navigation name="26" links="miu5oln285q|impl" postPropagatedLink="miu5oln285q"/>
+    <Navigation name="27" links="miu5oln286q|impl" postPropagatedLink="miu5oln286q"/>
+    <Navigation name="28" links="miu5oln287q|impl" postPropagatedLink="miu5oln287q"/>
+    <Navigation name="29" links="miu5oln288q|impl" postPropagatedLink="miu5oln288q"/>
+    <Navigation name="30" links="miu5oln289q|impl" postPropagatedLink="miu5oln289q"/>
+    <Navigation name="31" links="miu5oln290q|impl" postPropagatedLink="miu5oln290q"/>
+    <Navigation name="32" links="miu5oln291q|impl" postPropagatedLink="miu5oln291q"/>
+    <Navigation name="33" interPage="always" links="pcu1o.enter|oln14o" effects="#pr#"/>
+    <Navigation name="34" interPage="always" links="pcu1q.link|oln14o" effects="#pr#"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="19|17|18|15|16|13|14|11|12|21|20|22|23|24|25|26|27|28|29|10|7|30|6|5|32|31|9|8" futile=""/>
+    <UselessPreserve navs="2" effects="UserCtxParam" futile="miu5oacond103q" renewed="miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|kcond27o.userOID|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="3" effects="LanguageISOCtxParam" futile="var31p" renewed="miu5oacond103q"/>
+    <UselessPreserve navs="3" effects="UserCtxParam" futile="var31p" renewed="miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|kcond27o.userOID|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="3" effects="#pr#" futile="miu5oacond103q|miu5ohinu15q.newSortAttribute|miu5ohinu18q.newSortAttribute|miu5ohinu17q.block|miu5ohinu18q.sortCriteria|kcond27o.userOID|miu5ohinu16q.newSortAttribute|var31p|miu5ohinu19q.sortCriteria|miu5ohinu15q.sortCriteria|miu5ohinu19q.newSortAttribute|miu5ohinu16q.sortCriteria|miu5ohinu14q.block" renewed="miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="2" effects="-" futile="miu5oacond103q|kcond27o.userOID" renewed="miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="2" effects="LanguageISOCtxParam" futile="kcond27o.userOID" renewed="miu5oacond103q|miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="2" effects="#pr#" futile="miu5oacond103q|miu5ohinu15q.newSortAttribute|miu5ohinu18q.newSortAttribute|miu5ohinu17q.block|miu5ohinu18q.sortCriteria|kcond27o.userOID|miu5ohinu16q.newSortAttribute|miu5ohinu19q.sortCriteria|miu5ohinu15q.sortCriteria|miu5ohinu19q.newSortAttribute|miu5ohinu16q.sortCriteria|miu5ohinu14q.block" renewed="miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|miu5oacond115q|miu5oacond113q|miu5oacond112q"/>
+    <UselessPreserve navs="3" effects="-" futile="miu5oacond103q|miu5oacond121q|miu5ohinu15q.newSortAttribute|miu5oacond120q|miu5ohinu18q.newSortAttribute|miu5oacond119q|miu5ohinu17q.block|miu5oacond122q|miu5ohinu18q.sortCriteria|miu5ohinu14q.current.userOID|kcond27o.userOID|miu5ohinu16q.newSortAttribute|var31p|miu5ohinu19q.sortCriteria|miu5ohinu15q.sortCriteria|miu5oacond114q|miu5ohinu19q.newSortAttribute|miu5ohinu16q.sortCriteria|miu5oacond115q|miu5oacond113q|miu5oacond112q|miu5ohinu14q.block"/>
+  </UselessPreserves>
+  <LinkSequence>ln39p|ln66o|ln71o|miu5oln270q|miu5oln271q|miu5oln272q|miu5oln273q|miu5oln274q|miu5oln275q|miu5oln276q|miu5oln277q|ln72o|miu5oln283q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="gtu5p">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau48p">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="scu4o">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu6o">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5odau6q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5omdu2q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5oocu3q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5oocu4q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ogctu2q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5odau8q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ogtu11q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu4q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu13q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu14q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu15q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu16q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu17q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu18q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5ohinu19q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="miu5omdu3q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>miu5oln278q</ManualLink>
+    <ManualLink>miu5oln280q</ManualLink>
+    <ManualLink>miu5oln281q</ManualLink>
+    <ManualLink>miu5oln282q</ManualLink>
+    <ManualLink>miu5oln284q</ManualLink>
+    <ManualLink>miu5oln285q</ManualLink>
+    <ManualLink>miu5oln286q</ManualLink>
+    <ManualLink>miu5ohinu14qFirst</ManualLink>
+    <ManualLink>miu5ohinu14qPrevious</ManualLink>
+    <ManualLink>miu5ohinu14qNext</ManualLink>
+    <ManualLink>miu5ohinu14qLast</ManualLink>
+    <ManualLink>miu5ohinu14qBlock</ManualLink>
+    <ManualLink>miu5oln287q</ManualLink>
+    <ManualLink>miu5ohinu15qatt319x</ManualLink>
+    <ManualLink>miu5ohinu15quserOID</ManualLink>
+    <ManualLink>miu5oln288q</ManualLink>
+    <ManualLink>miu5ohinu16qatt319x</ManualLink>
+    <ManualLink>miu5ohinu16quserOID</ManualLink>
+    <ManualLink>miu5oln289q</ManualLink>
+    <ManualLink>miu5ohinu17qFirst</ManualLink>
+    <ManualLink>miu5ohinu17qPrevious</ManualLink>
+    <ManualLink>miu5ohinu17qNext</ManualLink>
+    <ManualLink>miu5ohinu17qLast</ManualLink>
+    <ManualLink>miu5ohinu17qBlock</ManualLink>
+    <ManualLink>miu5oln290q</ManualLink>
+    <ManualLink>miu5ohinu18qatt56x</ManualLink>
+    <ManualLink>miu5ohinu18quserOID</ManualLink>
+    <ManualLink>miu5oln291q</ManualLink>
+    <ManualLink>miu5ohinu19qatt56x</ManualLink>
+    <ManualLink>miu5ohinu19quserOID</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables>
+    <Variable id="var26p" name="partecipationPosition"></Variable>
+    <Variable id="var27p" name="partecipationScore"></Variable>
+    <Variable id="var28p" name="reputationPosition"></Variable>
+    <Variable id="var29p" name="reputationScore"></Variable>
+    <Variable id="var30p" name="Post"></Variable>
+    <Variable id="var31p" name="User"></Variable>
+    <Variable id="var32p" name="Component"></Variable>
+    <Variable id="var33p" name="NickDashboard"></Variable>
+    <Variable id="var34p" name="useroid" type="integer" unitId="gtu5p" parameter="gtu5p.UserCtxParam" sessionParameter="UserCtxParam" value="0"></Variable>
+    <Variable id="miu5ovar6q" name="currentUser" type="integer" unitId="miu5odau6q" parameter="data.userOID">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </Variable>
+    <Variable id="miu5ovar7q" name="internal" type="boolean" unitId="miu5odau6q" parameter="data.att99x">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </Variable>
+    <Variable id="miu5ovar8q" name="participationMonthly" type="decimal" unitId="miu5odau6q" parameter="data.att319x">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr17p" name="ExsistPost?" variables="var30p" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(Post)){
+	return true
+}
+else{
+	return false
+}</Condition>
+    <Condition id="cexpr18p" name="ExsistComponent?" variables="var32p" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(Component)){
+	return true
+}
+else{
+	return false
+}</Condition>
+    <Condition id="cexpr20p" name="AreYouLogged?" variables="var34p" xml:space="preserve">if(useroid==0){
+	return false
+}else{
+	return true
+}
+</Condition>    <Condition id="miu5ocexpr4q" name="isCurrentUser" variables="miu5ovar6q" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+return BeanHelper.asString(currentUser).equals(BeanHelper.asString(UserCtxParam))</Condition>
+    <Condition id="cexpr_miu5ovar7q" name="internal" variables="miu5ovar7q" xml:space="preserve">com.webratio.rtx.core.BeanHelper.asObject(miu5ovar7q)</Condition>
+    <Condition id="miu5ocexpr5q" name="isInternal?" variables="miu5ovar7q" xml:space="preserve">return (internal)</Condition>
+    <Condition id="miu5ocexpr6q" name="internalOrEmptyParticipation" variables="miu5ovar8q|miu5ovar7q" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+if(BeanHelper.isNullOrEmptyString(participationMonthly)){
+	return true
+}else{
+	return (internal || participationMonthly==0)
+}</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page20p_grid_0">
+      <Layout id="page20p_cell_0">
+        <Layout id="page20p_grid_1">
+          <Layout id="page20p_cell_1">
+            <Layout id="page20p_grid_2">
+              <Layout id="page20p_cell_2">
+                <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+              </Layout>
+            </Layout>
+          </Layout>
+          <Layout id="page20p_cell_6">
+            <Layout id="page20p_grid_3">
+              <Layout id="page20p_cell_7">
+                <Layout id="page20p_grid_4">
+                  <Layout id="page20p_cell_8">
+                    <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+                  </Layout>
+                </Layout>
+              </Layout>
+            </Layout>
+          </Layout>
+          <Layout id="page20p_cell_14">
+            <Layout id="page20p_grid_7">
+              <Layout id="page20p_cell_15">
+                <Layout id="page20p_grid_8">
+                  <Layout id="page20p_cell_16">
+                    <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+                  </Layout>
+                </Layout>
+              </Layout>
+            </Layout>
+          </Layout>
+          <Layout id="page20p_cell_22">
+            <Layout id="page20p_grid_11">
+              <Layout id="page20p_cell_23">
+                <Layout id="miu5omdu2q_0" unitId="miu5omdu2q"></Layout>
+              </Layout>
+            </Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>miu5ohinu14q.block|miu5ohinu18q.newSortAttribute|miu5ohinu18q.sortCriteria|miu5ohinu19q.sortCriteria|miu5ohinu19q.newSortAttribute|miu5ohinu15q.newSortAttribute|miu5ohinu15q.sortCriteria|miu5ohinu17q.block|miu5ohinu16q.newSortAttribute|miu5ohinu16q.sortCriteria|var31p</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>miu5ohinu14q.block|miu5ohinu18q.newSortAttribute|miu5ohinu18q.sortCriteria|miu5ohinu15q.newSortAttribute|miu5ohinu15q.sortCriteria|miu5ohinu19q.sortCriteria|miu5ohinu19q.newSortAttribute|miu5ohinu17q.block|miu5ohinu16q.newSortAttribute|miu5ohinu16q.sortCriteria|miu5oacond103q|miu5oacond121q|miu5oacond120q|miu5oacond119q|miu5oacond122q|miu5ohinu14q.current.userOID|miu5oacond114q|miu5oacond115q|miu5oacond113q|miu5oacond112q|kcond27o.userOID</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>HQ.MyDashboard</ModelName>
+    <URLFragment>var31p</URLFragment>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu6o">kcond27o.userOID</PageParam>
+      <PageParam unit="miu5odau6q">miu5oacond88q</PageParam>
+      <PageParam unit="dau48p">acond40p</PageParam>
+      <PageParam unit="scu4o">scu4o.nickname</PageParam>
+      <PageParam unit="scu4o">scu4o.isPublic</PageParam>
+      <PageParam unit="miu5omdu2q">miu5oacond89q</PageParam>
+      <PageParam unit="miu5odau8q">miu5oacond103q</PageParam>
+      <PageParam unit="miu5ohinu14q">miu5ohinu14q.current.userOID</PageParam>
+      <PageParam unit="miu5ohinu14q">miu5ohinu14q.block</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5ohinu15q.newSortAttribute</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5ohinu15q.sortCriteria</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5oacond114q</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5oacond115q</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5oacond113q</PageParam>
+      <PageParam unit="miu5ohinu15q">miu5oacond112q</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5oacond121q</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5oacond120q</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5oacond119q</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5oacond122q</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5ohinu16q.sortCriteria</PageParam>
+      <PageParam unit="miu5ohinu16q">miu5ohinu16q.newSortAttribute</PageParam>
+      <PageParam unit="miu5ohinu17q">miu5ohinu17q.block</PageParam>
+      <PageParam unit="miu5ohinu17q">miu5ohinu17q.current.userOID</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5ohinu18q.newSortAttribute</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5ohinu18q.sortCriteria</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5oacond128q</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5oacond129q</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5oacond130q</PageParam>
+      <PageParam unit="miu5ohinu18q">miu5oacond131q</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5oacond135q</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5oacond134q</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5ohinu19q.sortCriteria</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5ohinu19q.newSortAttribute</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5oacond136q</PageParam>
+      <PageParam unit="miu5ohinu19q">miu5oacond137q</PageParam>
+      <PageParam unit="miu5omdu3q">miu5orcond28q.userOID</PageParam>
+      <PageParam>var31p</PageParam>
+      <PageParam>miu5oocp74q</PageParam>
+      <PageParam>acond7p</PageParam>
+      <PageParam>acond168p</PageParam>
+      <PageParam>pwu20p.newSortAttribute</PageParam>
+      <PageParam>pwu20p.block</PageParam>
+      <PageParam>pwu20p.sortCriteria</PageParam>
+      <PageParam>pwu5p.sortCriteria</PageParam>
+      <PageParam>pwu5p.newSortAttribute</PageParam>
+      <PageParam>rcond6p.userOID</PageParam>
+      <PageParam>pwu5p.block</PageParam>
+      <PageParam>acond17p</PageParam>
+      <PageParam>pwu10p.newSortAttribute</PageParam>
+      <PageParam>acond82p</PageParam>
+      <PageParam>pwu10p.sortCriteria</PageParam>
+      <PageParam>acond85p</PageParam>
+      <PageParam>pwu11p.newSortAttribute</PageParam>
+      <PageParam>pwu11p.sortCriteria</PageParam>
+      <PageParam>acond71p</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

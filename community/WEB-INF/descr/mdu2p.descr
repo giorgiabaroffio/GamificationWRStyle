@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiDataUnitService" name="User overall position">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond3p.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="acond15p" type="integer" implied="true" impliedText="1 = 1" expandStyle="in" attribute="userOID"/>
+    <Input id="p2" param="acond66p" type="boolean" implied="false" expandStyle="in" value="true" attribute="att12p"/>
+    <Input id="p3" param="acond114p" type="boolean" implied="false" expandStyle="in" value="false" attribute="att99x"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <HQL>select a_communityUser.OID from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)})) and (({[p1]a_communityUser.OID in(?)})) and (({[p2]a_communityUser.publicProfile in(?)})) and (({[p3]a_communityUser.internal in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

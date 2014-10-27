@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.CreateUnitService" name="Create User">
+  <Entity>User</Entity>
+  <BulkInsert>false</BulkInsert>
+  <SkipBlankRecords>false</SkipBlankRecords>
+  <Field param="cru3q.userOID" type="integer" attribute="userOID">OID</Field>
+  <Field param="cru3q.userName" type="string" attribute="userName">userName</Field>
+  <Field param="cru3q.password" type="password" attribute="password">password</Field>
+  <Field param="cru3q.email" type="string" attribute="email">email</Field>
+  <Field param="cru3q.att99x" type="boolean" attribute="att99x">internal</Field>
+  <Association name="groups" direct="true" inverseName="users" oneToOne="false" maxCardMany="true">
+    <QueryInput id="OID" param="cru3q.User2Group.groupOID" type="integer"/>
+    <Query>from Group _e where _e.OID = :OID</Query>
+  </Association>
+  <Association name="defaultGroup" direct="true" inverseName="defaultUsers" oneToOne="false" maxCardMany="false">
+    <QueryInput id="OID" param="cru3q.User2DefaultGroup.groupOID" type="integer"/>
+    <Query>from Group _e where _e.OID = :OID</Query>
+  </Association>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create User</ModelName>
+    <ParentContainer>opm18q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="cru3q">cru3q.User2DefaultGroup.groupOID</OperationParam>
+      <OperationParam unit="cru3q">cru3q.password</OperationParam>
+      <OperationParam unit="cru3q">cru3q.att99x</OperationParam>
+      <OperationParam unit="cru3q">cru3q.userName</OperationParam>
+      <OperationParam unit="cru3q">cru3q.email</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln111q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

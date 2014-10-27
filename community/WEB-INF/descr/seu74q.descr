@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Selector74">
+  <MaxResults/>
+  <Query entity="ent5q">
+    <Input id="p0" param="kcond94q.att21q" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att21q" name="oid" index="0"/>
+    <Output id="att22q" name="areaName" index="1"/>
+    <HQL>select a_thematicArea.oid, a_thematicArea.areaName from ThematicArea a_thematicArea
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_thematicArea.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Selector74</ModelName>
+    <ParentContainer>opg31q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu74q">kcond94q.att21q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln199q</Link>
+      <Link resultCode="error">kln79q</Link>
+      <Link resultCode="error.opg31q">kln79q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

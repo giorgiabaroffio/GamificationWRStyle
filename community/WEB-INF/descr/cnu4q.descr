@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ConnectUnitService" name="Connect application thematic">
+  <Role useHQL="false">role8q</Role>
+  <Source id="ent5q">
+    <Query entity="ent5q">
+      <Input id="p0" param="kcond31q.att21q" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from ThematicArea a_thematicArea
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_thematicArea.oid in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Source>
+  <Target id="ent2q">
+    <Query entity="ent2q">
+      <Input id="p0" param="kcond33q.att6q" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from GamifiedApplication a_gamifiedApplication
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_gamifiedApplication.oid in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Connect application thematic</ModelName>
+    <ParentContainer>opg3q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="cnu4q">kcond33q.att6q</OperationParam>
+      <OperationParam unit="cnu4q">kcond31q.att21q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln91q</Link>
+      <Link resultCode="error">kln17q</Link>
+      <Link resultCode="error.opg3q">kln17q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

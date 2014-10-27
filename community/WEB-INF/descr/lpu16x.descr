@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.LoopUnitService" name="Loop">
+  <IterationSize/>
+  <SecondaryArray id="lsa31x"/>
+  <SecondaryArray id="lsa50x"/>
+  <SecondaryArray id="lsa51x"/>
+  <SecondaryArray id="lsa52x"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Loop</ModelName>
+    <ParentContainer>opm5x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="lpu16x">lpu16x.array</OperationParam>
+      <OperationParam unit="lpu16x">lsa50x</OperationParam>
+      <OperationParam unit="lpu16x">lsa51x</OperationParam>
+      <OperationParam unit="lpu16x">lsa52x</OperationParam>
+      <OperationParam unit="lpu16x">lsa31x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.next">oln434x</Link>
+      <Link resultCode="success.end">oln435x</Link>
+      <Link resultCode="success.end" transport="true">ln267x</Link>
+      <Link resultCode="success.next" transport="true">ln267x</Link>
+      <Link resultCode="error" transport="true">ln267x</Link>
+      <Link resultCode="success.end" transport="true">ln268x</Link>
+      <Link resultCode="success.next" transport="true">ln268x</Link>
+      <Link resultCode="error" transport="true">ln268x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

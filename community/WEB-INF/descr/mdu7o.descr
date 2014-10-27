@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiDataUnitService" name="Most Important Badges">
+  <MaxResults/>
+  <Query entity="ent1p">
+    <Input id="p0" param="acond45p" type="integer" implied="false" expandStyle="in" attribute="att1c"/>
+    <Output id="att4p" name="oid" index="0"/>
+    <Output id="att6p" name="area" index="1"/>
+    <Output id="att7p" name="title" index="2"/>
+    <Output id="att1c" name="useroid" index="3"/>
+    <Output id="att9p" name="checkedImage" blob="true" index="4"/>
+    <Output id="att8p" name="importance" index="5"/>
+    <HQL>select a_mostimportantBadge.oid, a_mostimportantBadge.area, a_mostimportantBadge.title, a_mostimportantBadge.useroid, a_mostimportantBadge.checkedImageRef, a_mostimportantBadge.importance from MostimportantBadge a_mostimportantBadge
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_mostimportantBadge.useroid in(?)}))</Where>order by a_mostimportantBadge.area asc, a_mostimportantBadge.title asc
+    </HQL>
+  </Query>
+</Descriptor>

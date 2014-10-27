@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Manage Badge">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page22x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page22x.link"/>
+    <Navigation name="2" links="page22x.auto-link"/>
+    <Navigation name="3" links="page22x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="ln178x"/>
+    <Navigation name="5" interPage="always" links="ln183x|oln321q"/>
+    <Navigation name="6" interPage="always" links="ln185x"/>
+    <Navigation name="7" interPage="always" links="ln188x|oln327q"/>
+    <Navigation name="8" interPage="always" links="ln194x|oln334q"/>
+    <Navigation name="9" links="ln199x"/>
+    <Navigation name="10" links="ln214x|impl" postPropagatedLink="ln214x"/>
+    <Navigation name="11" links="ln214x|oln318q"/>
+    <Navigation name="12" interPage="always" links="ln223x"/>
+    <Navigation name="13" interPage="always" links="ln231x"/>
+    <Navigation name="14" links="pwu9xatt43x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="10|9|14|11" effects="#pr#" futile=""/>
+    <UselessPreserve navs="2|10|9|14|11" effects="-" futile=""/>
+    <UselessPreserve navs="3|2" effects="#pr#" futile="pwu9x.newSortAttribute|pwu9x.sortCriteria"/>
+    <UselessPreserve navs="3" effects="-" futile="pwu9x.current.att42x|pwu9x.newSortAttribute|acond122x|pwu9x.sortCriteria"/>
+  </UselessPreserves>
+  <LinkSequence>ln199x</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="pwu9x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="10|1|0|6|5|4|13|11|12"/>
+      <RefreshFormAll navs="7|8" inputs="pwu9x.current.att42x|acond122x"/>
+      <RefreshForm navs="9" inputs="acond122x"/>
+      <RefreshForm navs="14" inputs="pwu9x.newSortAttribute|pwu9x.sortCriteria"/>
+    </UnitComputation>
+    <UnitComputation unit="inu11x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln209x</ManualLink>
+    <ManualLink>ln168x</ManualLink>
+    <ManualLink>ln214x</ManualLink>
+    <ManualLink>pwu9xatt43x</ManualLink>
+    <ManualLink>ln199x</ManualLink>
+    <ManualLink>ln25x</ManualLink>
+    <ManualLink>ln220x</ManualLink>
+  </ManualLinks>
+  <Variables>
+    <Variable id="var10x" name="type" type="string">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr8x" name="area" variables="var10x" xml:space="preserve">return(type!="Certification")</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page22x_grid_0">
+      <Layout id="page22x_cell_0">
+        <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      </Layout>
+      <Layout id="page22x_cell_1">
+        <Layout id="pwu9x_0" unitId="pwu9x"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu9x.current.att42x|acond122x|pwu9x.newSortAttribute|pwu9x.sortCriteria</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>pwu9x.current.att42x|acond122x</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Manage Badge</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="pwu9x">pwu9x.current.att42x</PageParam>
+      <PageParam unit="pwu9x">pwu9x.newSortAttribute</PageParam>
+      <PageParam unit="pwu9x">acond122x</PageParam>
+      <PageParam unit="pwu9x">pwu9x.sortCriteria</PageParam>
+      <PageParam>kcond46x.att42x</PageParam>
+      <PageParam>kcond51x.att42x</PageParam>
+      <PageParam>miu68q.icp150q</PageParam>
+      <PageParam>kcond52x.att38x</PageParam>
+      <PageParam>acond123x</PageParam>
+      <PageParam>scu25x.block</PageParam>
+      <PageParam>rcond23x.att42x</PageParam>
+      <PageParam>scu25x.scroller.att38x</PageParam>
+      <PageParam>kcond54x.att38x</PageParam>
+      <PageParam>rcond26x.att42x</PageParam>
+      <PageParam>pwu8x.sortCriteria</PageParam>
+      <PageParam>pwu8x.newSortAttribute</PageParam>
+      <PageParam>pwu8x.block</PageParam>
+      <PageParam>kcond67x.att42x</PageParam>
+      <PageParam>miu75q.icp169q</PageParam>
+      <PageParam>miu75q.icp170q</PageParam>
+      <PageParam>miu76q.icp171q</PageParam>
+      <PageParam>miu76q.icp172q</PageParam>
+      <PageParam>miu74q.icp168q</PageParam>
+      <PageParam preservedByForm="true">sfld7x_label</PageParam>
+      <PageParam preservedByForm="true">sfld7x_output</PageParam>
+      <PageParam>miu71q.icp156q</PageParam>
+      <PageParam>miu71q.icp155q</PageParam>
+      <PageParam>miu71q.icp153q</PageParam>
+      <PageParam>miu71q.icp158q</PageParam>
+      <PageParam>miu71q.icp157q</PageParam>
+      <PageParam>miu71q.icp154q</PageParam>
+      <PageParam>miu71q.icp159q</PageParam>
+      <PageParam preservedByForm="true">fld45x_slot</PageParam>
+      <PageParam preservedByForm="true">fld42x_slot</PageParam>
+      <PageParam preservedByForm="true">fld47x_slot</PageParam>
+      <PageParam preservedByForm="true">fld24q_slot</PageParam>
+      <PageParam preservedByForm="true">enu13x.att42x</PageParam>
+      <PageParam preservedByForm="true">fld46x_slot</PageParam>
+      <PageParam>sfld8x_presel</PageParam>
+      <PageParam preservedByForm="true">fld39x_slot</PageParam>
+      <PageParam>miu73q.icp160q</PageParam>
+      <PageParam>miu73q.icp162q</PageParam>
+      <PageParam>miu73q.icp161q</PageParam>
+      <PageParam>miu73q.icp167q</PageParam>
+      <PageParam>miu73q.icp166q</PageParam>
+      <PageParam>miu73q.icp165q</PageParam>
+      <PageParam>miu73q.icp163q</PageParam>
+      <PageParam>miu73q.icp164q</PageParam>
+      <PageParam preservedByForm="true">fld43x_slot</PageParam>
+      <PageParam preservedByForm="true">fld44x_slot</PageParam>
+      <PageParam>miu69q.icp151q</PageParam>
+      <PageParam>miu69q.icp152q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

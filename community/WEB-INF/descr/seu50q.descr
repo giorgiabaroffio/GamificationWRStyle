@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Text Email">
+  <MaxResults/>
+  <Query entity="ent19x">
+    <Input id="p0" param="kcond66q.att1x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att1x" name="oid" index="0"/>
+    <Output id="att67x" name="subject" index="1"/>
+    <Output id="att34x" name="languageCode" index="2"/>
+    <Output id="att54x" name="body" index="3"/>
+    <Output id="att33x" name="code" index="4"/>
+    <Output id="att66x" name="description" index="5"/>
+    <Output id="role8x_att31x" name="textMailToContainersHeader_oid" index="6" useId="true"/>
+    <Output id="role10x_att31x" name="textMailToContainersFooter_oid" index="7" useId="true"/>
+    <HQL>select a_textMail.oid, a_textMail.subject, a_textMail.languageCode, a_textMail.body, a_textMail.code, a_textMail.description, a_textMail.textMailToContainersHeader.oid, a_textMail.textMailToContainersFooter.oid from TextMail a_textMail
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_textMail.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

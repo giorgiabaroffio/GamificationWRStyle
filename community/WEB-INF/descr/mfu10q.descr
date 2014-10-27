@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Update Administrator User">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>User</Entity>
+  <ModifiedAttributes>email|password</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond6q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Update Administrator User</ModelName>
+    <ParentContainer>opm19q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu10q">mfu10q.email</OperationParam>
+      <OperationParam unit="mfu10q">kcond6q.userOID</OperationParam>
+      <OperationParam unit="mfu10q">mfu10q.password</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln118q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

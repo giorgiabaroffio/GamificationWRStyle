@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.LoopUnitService" name="Loop">
+  <IterationSize/>
+  <SecondaryArray id="lsa53x"/>
+  <SecondaryArray id="lsa54x"/>
+  <SecondaryArray id="lsa55x"/>
+  <SecondaryArray id="lsa56x"/>
+  <SecondaryArray id="lsa57x"/>
+  <SecondaryArray id="lsa1q"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Loop</ModelName>
+    <ParentContainer>opm8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="lpu17x">lsa56x</OperationParam>
+      <OperationParam unit="lpu17x">lsa57x</OperationParam>
+      <OperationParam unit="lpu17x">lsa55x</OperationParam>
+      <OperationParam unit="lpu17x">lsa54x</OperationParam>
+      <OperationParam unit="lpu17x">lsa53x</OperationParam>
+      <OperationParam unit="lpu17x">lsa1q</OperationParam>
+      <OperationParam unit="lpu17x">lpu17x.array</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.end">oln449x</Link>
+      <Link resultCode="success.next">oln139x</Link>
+      <Link resultCode="success.next" transport="true">ln273x</Link>
+      <Link resultCode="success.end" transport="true">ln273x</Link>
+      <Link resultCode="error" transport="true">ln273x</Link>
+      <Link resultCode="success.next" transport="true">ln274x</Link>
+      <Link resultCode="success.end" transport="true">ln274x</Link>
+      <Link resultCode="error" transport="true">ln274x</Link>
+      <Link resultCode="success.next" transport="true">ln276x</Link>
+      <Link resultCode="success.end" transport="true">ln276x</Link>
+      <Link resultCode="error" transport="true">ln276x</Link>
+      <Link resultCode="success.next" transport="true">ln75x</Link>
+      <Link resultCode="success.end" transport="true">ln75x</Link>
+      <Link resultCode="error" transport="true">ln75x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

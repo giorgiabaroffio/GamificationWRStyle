@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page25q</Target>
+  <Secure>false</Secure>
+  <Source>pwu3q</Source>
+  <SourcePage>page25q</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>pwu3q.current.att21q|pwu3q.sortCriteria|pwu3q.newSortAttribute</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="pwu3q.newSortAttribute" value="att22q"/>
+    <ContextPropagation targetParam="pwu3q.sortCriteria" sourceUnit="pwu3q" sourceParam="sortCriteria"/>
+  </ContextPropagations>
+</Descriptor>

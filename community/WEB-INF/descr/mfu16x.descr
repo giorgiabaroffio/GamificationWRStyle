@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Reset 7 Days Participation">
+  <BulkUpdate>true</BulkUpdate>
+  <Entity>ent15x</Entity>
+  <ModifiedAttributes>att319x</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond43x">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Reset 7 Days Participation</ModelName>
+    <ParentContainer>opg42x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu16x">mfu16x.att319x</OperationParam>
+      <OperationParam unit="mfu16x">kcond43x.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln56x</Link>
+      <Link resultCode="error.opg42x">kln56x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

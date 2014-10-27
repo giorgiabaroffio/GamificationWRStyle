@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page2o</Target>
+  <Secure>false</Secure>
+  <Source>miu6odau6q</Source>
+  <SourcePage>page2o</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu6oacond119q" sourceUnit="miu6odau6q" sourceParam="data.att319x"/>
+    <ContextPropagation targetParam="miu6oacond121q" sourceUnit="miu6odau6q" sourceParam="data.att319x"/>
+    <ContextPropagation targetParam="miu6oacond120q" sourceUnit="miu6odau6q" sourceParam="data.userOID"/>
+    <ContextPropagation targetParam="miu6oacond122q" sourceUnit="miu6odau6q" sourceParam="data.userOID"/>
+  </ContextPropagations>
+</Descriptor>

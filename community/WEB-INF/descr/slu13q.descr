@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="getUserCredits">
+  <Operation name="getUserCredits" nsURI="http://www.webratio.com/webservices/getUserCredit" stateful="false" invocationStyle="SOAP" requestMethod="GET" contentType="XML"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp11q" name="userEmail" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserCredits</ModelName>
+    <ParentContainer>port13q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu13q.icp246q|rsp13q.userCredits$userEmail|rsp13q.userCredits$totalCredit|rsp13q.userCredits$creditsSpent|rsp13q.userCredits$creditsAvailable|eru13q.faultException|eru13q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln48q</Link>
+      <Link resultCode="error">kln25q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

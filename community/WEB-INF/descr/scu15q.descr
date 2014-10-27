@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="user's logged dashboard?">
+  <Script xml:space="preserve">#input Integer nickname, Integer nickname2
+import org.apache.commons.lang.StringUtils
+if(nickname==nickname2){
+	return true;
+}
+else 
+	return false;
+		</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>user's logged dashboard?</ModelName>
+    <ParentContainer>opm5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu15q">scu15q.nickname</OperationParam>
+      <OperationParam unit="scu15q">scu15q.nickname2</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln53q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln44q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

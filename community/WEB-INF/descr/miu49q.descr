@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm27q</Module>
+  <InputCollectorId>icu30q</InputCollectorId>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area1p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area1p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>acond56p|acond59p|fld31p_slot|sp|pwu7p.block|pwu7p.current.att95p|link|fld30p_slot|sfld19p_presel|fld33p_slot|fld48p_slot|fld32p_slot|enu13p.att95p|cmplink|acond67p|smc|acond68p</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln246q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

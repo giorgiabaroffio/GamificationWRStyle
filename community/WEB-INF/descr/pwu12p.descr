@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Events">
+  <Results maxResults="" blockFactor="10" blockWindow="20"/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent22x">
+    <Input id="p0" param="acond8p" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="email"/>
+    <Input id="p1" param="acond25p" type="timestamp" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att84x"/>
+    <Input id="p2" param="acond33p" type="timestamp" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="att89x"/>
+    <Input id="p3" param="acond41p" type="string" implied="true" impliedText="1 = 1" expandStyle="in" attribute="att88x"/>
+    <Input id="p4" param="acond44p" type="string" implied="true" impliedText="1 = 1" expandStyle="in" attribute="att66x"/>
+    <Output id="att32x" name="oid" index="0"/>
+    <Output id="att88x" name="status" index="1"/>
+    <Output id="att89x" name="deliveryDate" index="2"/>
+    <Output id="att84x" name="creationDate" index="3"/>
+    <Output id="role17x$att66x" name="notificationToTextMail_description" index="4" useId="true"/>
+    <Output id="role21x$email" name="notificationToCommunityUser_email" index="5" useId="true"/>
+    <HQL>select a_notification.oid, a_notification.status, a_notification.deliveryDate, a_notification.creationDate, a_textMail_role17x.description, a_communityUser_role21x.email from Notification a_notification left join a_notification.notificationToCommunityUser a_communityUser_role21x left join a_notification.notificationToTextMail a_textMail_role17x
+      <Where defaultPolicy="fill" allImplied="true">([(a_notification.oid in( select a_notification_2.oid from Notification a_notification_2 inner join a_notification_2.notificationToCommunityUser s_communityUser_role21x where ({[p0]upper(safe_cast(s_communityUser_role21x.email)) like upper(safe_cast(?))})))]) and (({[p1]a_notification.creationDate like ?})) and (({[p2]a_notification.deliveryDate like ?})) and (({[p3]safe_cast(a_notification.status) in(?)})) and ([(a_notification.oid in( select a_notification_2.oid from Notification a_notification_2 inner join a_notification_2.notificationToTextMail s_textMail_role17x where ({[p4]safe_cast(s_textMail_role17x.description) in(?)})))])</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att89x" dynamic="true" order="asc">a_notification.deliveryDate</Attribute>
+    <Attribute id="att84x" dynamic="true" order="asc">a_notification.creationDate</Attribute>
+    <Attribute id="att89x" dynamic="false" order="asc">a_notification.deliveryDate</Attribute>
+    <Attribute id="att84x" dynamic="false" order="asc">a_notification.creationDate</Attribute>
+  </SortAttributes>
+</Descriptor>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Modify Action Type">
+  <Module operation="false" singleLayout="false">hym4q</Module>
+  <InputCollectorId>icu35q</InputCollectorId>
+  <InputParameter>icp106q</InputParameter>
+  <InputParameter>icp107q</InputParameter>
+  <InputParameter>icp108q</InputParameter>
+  <InputParameter>icp109q</InputParameter>
+  <InputParameter>icp110q</InputParameter>
+  <InputParameter>icp111q</InputParameter>
+  <InputParameter>icp112q</InputParameter>
+  <InputParameter>icp113q</InputParameter>
+  <InputParameter>icp114q</InputParameter>
+  <InputParameter>icp115q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Action Type</ModelName>
+    <ParentContainer>area2p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu33q">miu33q.icp108q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp110q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp106q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp114q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp111q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp107q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp115q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp113q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp112q</OperationParam>
+      <OperationParam unit="miu33q">miu33q.icp109q</OperationParam>
+      <Params>pwu7x.newSortAttribute|sp|inu3x.current.att21q|miu31q.icp116q|rcond25q.att21q|cmplink|pwu7x.sortCriteria|link|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln106q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

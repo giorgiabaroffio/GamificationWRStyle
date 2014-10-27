@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Modify Badge">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page24x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page24x.link"/>
+    <Navigation name="2" links="page24x.auto-link"/>
+    <Navigation name="3" links="page24x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln194x|validation-failed"/>
+    <Navigation name="5" interPage="always" links="ln168x"/>
+    <Navigation name="6" links="ln194x|impl" postPropagatedLink="ln194x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="4" futile="" renewed="miu73q.icp160q"/>
+    <UselessPreserve navs="3|2|6" effects="#pr#" futile=""/>
+    <UselessPreserve navs="2|6" effects="-" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="kcond51x.att42x"/>
+  </UselessPreserves>
+  <LinkSequence>ln211x|ln217q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu13x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="5" inputs="fld45x_slot|fld42x_slot|fld47x_slot|fld24q_slot|enu13x.att42x|fld46x_slot|sfld8x_presel|fld39x_slot"/>
+      <RefreshFormAll navs="1|0|6"/>
+    </UnitComputation>
+    <UnitComputation unit="seu92x">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln178x</ManualLink>
+    <ManualLink>ln194x</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page24x_grid_0">
+      <Layout id="page24x_cell_0">
+        <Layout id="enu13x_0" unitId="enu13x"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>kcond51x.att42x</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>kcond51x.att42x</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Modify Badge</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu92x">kcond51x.att42x</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld45x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld42x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld47x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld24q_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">enu13x.att42x</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld46x_slot</PageParam>
+      <PageParam unit="enu13x">sfld8x_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu13x">fld39x_slot</PageParam>
+      <PageParam>miu73q.icp160q</PageParam>
+      <PageParam>miu73q.icp162q</PageParam>
+      <PageParam>miu73q.icp161q</PageParam>
+      <PageParam>miu73q.icp167q</PageParam>
+      <PageParam>miu73q.icp166q</PageParam>
+      <PageParam>miu73q.icp165q</PageParam>
+      <PageParam>miu73q.icp163q</PageParam>
+      <PageParam>miu73q.icp164q</PageParam>
+      <PageParam>pwu9x.current.att42x</PageParam>
+      <PageParam>pwu9x.newSortAttribute</PageParam>
+      <PageParam>acond122x</PageParam>
+      <PageParam>pwu9x.sortCriteria</PageParam>
+      <PageParam>kcond46x.att42x</PageParam>
+      <PageParam>miu68q.icp150q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

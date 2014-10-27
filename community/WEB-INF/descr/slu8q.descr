@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="redeemUserReward">
+  <Operation name="redeemUserReward" nsURI="" stateful="false" invocationStyle="REST" requestMethod="POST" contentType="JSON"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp15q" name="JSON" minCard="1" maxCard="1">
+      <SimpleParameterFragment id="spf15q" name="idReward" minCard="1" maxCard="1" xsdType="{http://www.w3.org/2001/XMLSchema}integer[SimpleType]"/>
+      <SimpleParameterFragment id="spf16q" name="userEmail" minCard="1" maxCard="1"/>
+    </RequestBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>redeemUserReward</ModelName>
+    <ParentContainer>port7q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>eru7q.faultException|rsp11q.userAvailablePoints$availablePoints|miu22q.icp250q|miu22q.icp249q|eru7q.faultMessage|rsp11q.userAvailablePoints$userEmail</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln102q</Link>
+      <Link resultCode="error">kln32q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

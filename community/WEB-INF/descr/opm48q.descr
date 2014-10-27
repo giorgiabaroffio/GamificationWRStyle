@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu56q">
+    <InputParameter id="icp184q" name="Mail Header"/>
+    <InputParameter id="icp185q" name="Mail Footer"/>
+    <InputParameter id="icp186q" name="Mail Text"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu54q</OKCollectorUnits>
+  <KOCollectorUnits>kocu36q</KOCollectorUnits>
+  <OperationUnits>icu56q|scu12q|okcu54q|kocu36q</OperationUnits>
+</Descriptor>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>adu2q</Target>
+  <Secure>false</Secure>
+  <Source>miu9q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="adu2q.action" sourceUnit="miu9q" sourceParam="ocp87q"/>
+    <ContextPropagation targetParam="adu2q.actionOid" sourceUnit="miu9q" sourceParam="ocp85q"/>
+    <ContextPropagation targetParam="adu2q.gamifiedApplication" sourceUnit="miu9q" sourceParam="ocp86q"/>
+  </ContextPropagations>
+</Descriptor>

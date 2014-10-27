@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Action Type">
+  <FormFields>
+    <Field id="fld12q" name="Action Oid" type="string" localized="false">
+      <Slot id="fld12q_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu5q" linkId="ln161q" action="validate"/>
+    <wr:ValidationLink elementId="enu5q" linkId="ln163q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

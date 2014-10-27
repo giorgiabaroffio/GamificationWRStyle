@@ -1,0 +1,23 @@
+#?delimiters [%, %], [%=, %]
+<wr:Input name="oid"/>
+<wr:Input name="rewardName"/>
+<wr:Input name="neededPoints"/>
+<wr:Input name="userEmail"/>
+<getUserRewardsResponse>
+	[% inputParams.oid.eachWithIndex(){obj,idx -> %]
+	<reward>
+		<rewardId>
+			[%= inputParams.oid[idx] %]
+		</rewardId>
+		<rewardName>
+			[%= inputParams.rewardName[idx] %]
+		</rewardName>
+		<neededPoints>
+			[%= inputParams.neededPoints[idx] %]
+		</neededPoints>
+		<userEmail>
+			[%= inputParams.userEmail %]
+		</userEmail>				
+	</reward>	
+	[%}%]
+</getUserRewardsResponse>

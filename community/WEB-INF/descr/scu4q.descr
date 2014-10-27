@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Check permission">
+  <Script xml:space="preserve">#input Integer score_needed,Integer score_available
+import com.webratio.rtx.RTXConstants
+import com.webratio.rtx.core.BeanHelper
+
+if(score_available&gt;=score_needed){
+	return [ "resultCode" : RTXConstants.SUCCESS_CODE ]
+}else{
+	 return [ "resultCode" : RTXConstants.ERROR_CODE ]
+}</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Check permission</ModelName>
+    <ParentContainer>opg12q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu4q">scu4q.score_needed</OperationParam>
+      <OperationParam unit="scu4q">scu4q.score_available</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln113q</Link>
+      <Link resultCode="error">kln39q</Link>
+      <Link resultCode="error.opg12q">kln40q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

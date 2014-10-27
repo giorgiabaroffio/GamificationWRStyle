@@ -1,0 +1,127 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="urn:actions"
+            xmlns:bks="urn:actions"> 
+            
+  <xsd:complexType name="UserManagement">
+    <xsd:sequence>
+      <xsd:element name="userdata" 
+                  type="bks:User" 
+                  minOccurs="1" 
+                  maxOccurs="1"/>
+      </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="User">
+            <xsd:sequence>
+              <xsd:element type="xsd:string" name="firstname"/>
+              <xsd:element type="xsd:string" name="lastname"/>
+              <xsd:element type="xsd:string" name="username"/>
+              <xsd:element type="xsd:string" name="password"/>
+              <xsd:element type="xsd:string" name="city"/>
+              <xsd:element type="xsd:string" name="birthdate"/>
+              <xsd:element type="xsd:string" name="isocode"/>
+              <xsd:element type="xsd:string" name="country"/>
+              <xsd:element type="xsd:string" name="geoarea"/>
+              <xsd:element type="xsd:string" name="publicprofile"/>
+              <xsd:element type="xsd:string" name="email"/>
+              <xsd:element type="xsd:string" name="internal"/>
+              <xsd:element name="photo" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="code"/>
+                    <xsd:element type="xsd:string" name="name"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+     </xsd:complexType>
+     
+  <xsd:complexType name="Action">
+    <xsd:sequence>
+      <xsd:element name="action" 
+                  type="bks:ActionDefinition" 
+                  minOccurs="1" 
+                  maxOccurs="unbounded"/>
+      </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="ActionDefinition">
+    <xsd:sequence>
+    	<xsd:element name="email"   type="xsd:string"/>
+    	<xsd:element name="time"   type="xsd:string"/>
+      	<xsd:element name="area"   type="xsd:string"/>
+      	<xsd:element name="name"    type="xsd:string"/>
+      	<xsd:element name="description"   type="xsd:string"/>
+       	<xsd:element name="tag"   type="xsd:string"/>
+       	<xsd:element name="link"   type="xsd:string"/>
+        <xsd:element name="executor"   type="xsd:string"/>
+        <xsd:element name="objectkey"   type="xsd:integer"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   
+  <xsd:complexType name="GetUserCredits">
+    <xsd:sequence>
+      <xsd:element name="getUserCredits" 
+                  type="bks:GetUserCreditsDefinition" 
+                  minOccurs="1" 
+                  maxOccurs="1"/>
+      </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="GetUserCreditsDefinition">
+    <xsd:sequence>
+    	<xsd:element name="userEmail"   type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>     
+   
+  <xsd:complexType name="GetUserCreditsResponse">
+    <xsd:sequence>
+      <xsd:element name="getUserCreditsResponse" 
+                  type="bks:GetUserCreditsDefinitionResponse" 
+                  minOccurs="1" 
+                  maxOccurs="1"/>
+      </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="GetUserCreditsDefinitionResponse">
+    <xsd:sequence>
+    	<xsd:element name="userEmail"   type="xsd:string"/>
+    	<xsd:element name="creditsAvailable"   type="xsd:string"/>
+    	<xsd:element name="creditsSpent"   type="xsd:string"/>
+    	<xsd:element name="totalCredit"   type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType> 
+   
+  <xsd:complexType name="ReedemUserReward">
+    <xsd:sequence>
+      <xsd:element name="reedemUserReward" 
+                  type="bks:ReedemUserRewardDefinition" 
+                  minOccurs="1" 
+                  maxOccurs="1"/>
+      </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="ReedemUserRewardDefinition">
+    <xsd:sequence>
+    	<xsd:element name="userEmail"   type="xsd:string"/>
+    	<xsd:element name="reward"   type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   
+  <xsd:complexType name="GetActionsResponse">
+    <xsd:sequence>
+      <xsd:element name="getActionsResponse" 
+                  type="bks:GetActionsDefinitionResponse" 
+                  minOccurs="1" 
+                  maxOccurs="unbounded"/>
+      </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="GetActionsDefinitionResponse">
+    <xsd:sequence>
+    	<xsd:element name="gamifiedApplication"   type="xsd:string"/>
+    	<xsd:element name="action"   type="xsd:string"/>
+    </xsd:sequence>
+   </xsd:complexType>                  
+     
+</xsd:schema>

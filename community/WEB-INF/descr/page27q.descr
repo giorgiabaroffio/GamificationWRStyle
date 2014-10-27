@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Modify Gamified Application">
+  <ParentContainer>hym1q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page27q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page27q.link"/>
+    <Navigation name="2" links="page27q.auto-link"/>
+    <Navigation name="3" links="page27q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln118q|validation-failed"/>
+    <Navigation name="5" interPage="always" links="icu12q.enter|oln166q"/>
+    <Navigation name="6" links="ln118q|impl" postPropagatedLink="ln118q"/>
+    <Navigation name="7" links="ln127q|impl" postPropagatedLink="ln127q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="2|7|6|4" effects="-" futile=""/>
+    <UselessPreserve navs="3|2|7|6|4" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="rcond16q.att6q"/>
+  </UselessPreserves>
+  <LinkSequence>ln129q|ln124q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu15q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="5" inputs="msfld6q_presel|fld38q_slot|fld37q_slot"/>
+      <RefreshFormAll navs="1|0|7|6"/>
+    </UnitComputation>
+    <UnitComputation unit="seu37q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu38q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln118q</ManualLink>
+    <ManualLink>ln127q</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page27q_grid_0">
+      <Layout id="page27q_cell_0">
+        <Layout id="enu15q_0" unitId="enu15q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>rcond16q.att6q|mc</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>rcond16q.att6q|mc</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Modify Gamified Application</ModelName>
+    <ParentModule>hym1q</ParentModule>
+    <NavigationAncestors/>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu38q">rcond16q.att6q</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="msfld6q_presel" unit="enu15q">msfld6q_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu15q">msfld6q_output</PageParam>
+      <PageParam preservedByForm="true" unit="enu15q">fld38q_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu15q">msfld6q_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu15q">fld37q_slot</PageParam>
+      <PageParam>miu36q.icp118q</PageParam>
+      <PageParam>miu36q.icp119q</PageParam>
+      <PageParam>miu36q.icp17q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>mc</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

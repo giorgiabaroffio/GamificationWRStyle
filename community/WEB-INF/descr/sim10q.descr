@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.store.scaleimageunit.ScaleImageUnitService" name="big image">
+  <Width>196</Width>
+  <Height>196</Height>
+  <Format>jpg</Format>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>big image</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="sim10q">sim10q.image</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln388q</Link>
+      <Link resultCode="success" transport="true">ln257q</Link>
+      <Link resultCode="error" transport="true">ln257q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

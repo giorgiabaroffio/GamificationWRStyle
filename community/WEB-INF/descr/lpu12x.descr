@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.LoopUnitService" name="LoopOnBadges">
+  <IterationSize/>
+  <SecondaryArray id="lsa42x"/>
+  <SecondaryArray id="lsa43x"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>LoopOnBadges</ModelName>
+    <ParentContainer>opg25x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="lpu12x">lsa42x</OperationParam>
+      <OperationParam unit="lpu12x">lsa43x</OperationParam>
+      <OperationParam unit="lpu12x">lpu12x.array</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.next">oln106x</Link>
+      <Link resultCode="success.end">oln218x</Link>
+      <Link resultCode="error">kln42x</Link>
+      <Link resultCode="success.end" transport="true">ln179x</Link>
+      <Link resultCode="success.next" transport="true">ln179x</Link>
+      <Link resultCode="error" transport="true">ln179x</Link>
+      <Link resultCode="success.end" transport="true">ln180x</Link>
+      <Link resultCode="success.next" transport="true">ln180x</Link>
+      <Link resultCode="error" transport="true">ln180x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

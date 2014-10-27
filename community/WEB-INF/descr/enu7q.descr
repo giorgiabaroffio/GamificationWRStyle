@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="New Action">
+  <FormFields>
+    <Field id="fld13q" name="Score" type="decimal" localized="true"></Field>
+    <Field id="fld14q" name="Name" type="string" localized="false"></Field>
+    <Field id="fld21q" name="Description" type="string" localized="false"></Field>
+    <Field id="fld22q" name="Time Elapsed (minutes)" type="integer" localized="true"></Field>
+    <Field id="fld25q" name="Active" type="boolean" localized="true"></Field>
+    <SelectionField id="sfld5q" name="Participation" type="boolean" localized="true" value="true" splitOutput="">
+      <Slot id="sfld5q_label" label="true" output="false"/>
+      <Slot id="sfld5q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld6q" name="Reputation" type="boolean" localized="true" value="true" splitOutput="">
+      <Slot id="sfld6q_label" label="true" output="false"/>
+      <Slot id="sfld6q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld7q" name="Repeatable" type="boolean" localized="true" value="true" splitOutput="">
+      <Slot id="sfld7q_label" label="true" output="false"/>
+      <Slot id="sfld7q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld17q" name="Check Time Elapsed" type="boolean" localized="true" value="false" splitOutput="">
+      <Slot id="sfld17q_label" label="true" output="false"/>
+      <Slot id="sfld17q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld18q" name="Thematic Area" type="string" localized="false" value="" splitOutput="true">
+      <Slot id="slot1q" label="true" output="false" value=""/>
+      <Slot id="slot2q" label="false" output="true" value=""/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu7q" linkId="ln165q" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld5q" id="mnd8q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld6q" id="mnd9q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld14q" id="mnd10q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld7q" id="mnd12q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld18q" id="mnd13q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

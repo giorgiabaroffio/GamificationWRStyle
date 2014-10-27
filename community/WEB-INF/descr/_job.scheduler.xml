@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_2_0.xsd" version="2.0">
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+  <schedule>
+    <job>
+      <name>job17x</name>
+      <group>${GROUP_NAME}</group>
+      <description>Reset Participation 7 Days</description>
+      <job-class>com.webratio.rtx.jobs.QuartzJob</job-class>
+      <durability>false</durability>
+      <recover>false</recover>
+      <job-data-map>
+        <entry>
+          <key>jobInstanceId</key>
+          <value>job17x</value>
+        </entry>
+      </job-data-map>
+    </job>
+    <trigger>
+      <cron>
+        <name>trg1q</name>
+        <group>${GROUP_NAME}</group>
+        <job-name>job17x</job-name>
+        <job-group>${GROUP_NAME}</job-group>
+        <cron-expression>00 00 1 * * ?</cron-expression>
+      </cron>
+    </trigger>
+  </schedule>
+</job-scheduling-data>

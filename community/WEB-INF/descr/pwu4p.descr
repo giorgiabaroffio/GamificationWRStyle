@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Mails">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent19x">
+    <Input id="p0" param="acond1p" type="string" implied="false" expandStyle="in" attribute="att34x"/>
+    <Output id="att1x" name="oid" index="0"/>
+    <Output id="att54x" name="body" index="1"/>
+    <Output id="att33x" name="code" index="2"/>
+    <Output id="att66x" name="description" index="3"/>
+    <Output id="role10x$att80x" name="textMailToContainersFooter_text" index="4" useId="true"/>
+    <Output id="role8x$att80x" name="textMailToContainersHeader_text" index="5" useId="true"/>
+    <HQL>select a_textMail.oid, a_textMail.body, a_textMail.code, a_textMail.description, a_containers_role10x.text, a_containers_role8x.text from TextMail a_textMail left join a_textMail.textMailToContainersFooter a_containers_role10x left join a_textMail.textMailToContainersHeader a_containers_role8x
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_textMail.languageCode) in(?)}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att33x" dynamic="true" order="asc">a_textMail.code</Attribute>
+    <Attribute id="att33x" dynamic="false" order="asc">a_textMail.code</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu4p" linkId="ln159p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

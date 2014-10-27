@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.QueryUnitService" name="User Score">
+  <Database>db1</Database>
+  <Language>SQL</Language>
+  <Mode>select</Mode>
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <QueryOutput name="oidUser" label="oidUser" id="qo13x" type="java.lang.Integer"/>
+  <QueryOutput name="scoreUser" label="scoreUser" id="qo14x" type="java.math.BigDecimal"/>
+  <QueryInput name="user" id="qi7x" type="java.lang.Integer" required="true"/>
+  <QueryInput name="action" id="qi5x" type="java.lang.Integer" required="true"/>
+  <QueryFile>WEB-INF/query/BadgeUserScore.sql</QueryFile>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>User Score</ModelName>
+    <ParentContainer>opg25x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="qu11x">qu11x.qi7x</OperationParam>
+      <OperationParam unit="qu11x">qu11x.qi5x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln277x</Link>
+      <Link resultCode="error">kln42x</Link>
+      <Link resultCode="success" transport="true">ln184x</Link>
+      <Link resultCode="error" transport="true">ln184x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

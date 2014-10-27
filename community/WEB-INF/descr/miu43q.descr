@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm24q</Module>
+  <InputCollectorId>icu27q</InputCollectorId>
+  <InputParameter>icp88q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area3p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area3p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu43q">miu43q.icp88q</OperationParam>
+      <Params>pwu6p.block|pwu13p.block|acond106p|sfld29p_label|link|acond46p|pwu13p.sortCriteria|miu40q.icp83q|acond112p|pwu13p.current.att101p|cmplink|pwu6p.sortCriteria|rcond10p.userOID|acond31p|pwu13p.newSortAttribute|sp|pwu6p.newSortAttribute|acond113p|acond47p|kcond27p.userOID|miu44q.icp88q|sfld30p_presel|smc|acond109p|sfld29p_output</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln177q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

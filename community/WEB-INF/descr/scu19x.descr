@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="create body email">
+  <Script path="WEB-INF/groovy/CreateEmailTemplate.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>create body email</ModelName>
+    <ParentContainer>opg8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu19x">scu19x.mailText</OperationParam>
+      <OperationParam unit="scu19x">scu19x.mailFooter</OperationParam>
+      <OperationParam unit="scu19x">scu19x.mailHeader</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln316x</Link>
+      <Link resultCode="error">kln62x</Link>
+      <Link resultCode="success" transport="true">ln227x</Link>
+      <Link resultCode="error" transport="true">ln227x</Link>
+      <Link resultCode="error.opg8x">kln96x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>rstu8q</Target>
+  <Secure>false</Secure>
+  <Source>icu62q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="rstu8q.CountryISOCtxParam" value="$$NULL$$"/>
+    <ContextPropagation targetParam="rstu8q.LanguageISOCtxParam" sourceUnit="icu62q" sourceParam="icp206q"/>
+  </ContextPropagations>
+</Descriptor>

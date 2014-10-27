@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm49q</Module>
+  <InputCollectorId>icu57q</InputCollectorId>
+  <InputParameter>icp187q</InputParameter>
+  <InputParameter>icp188q</InputParameter>
+  <InputParameter>icp189q</InputParameter>
+  <InputParameter>icp190q</InputParameter>
+  <InputParameter>icp191q</InputParameter>
+  <InputParameter>icp192q</InputParameter>
+  <InputParameter>icp193q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area7p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu85q">miu85q.icp187q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp188q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp193q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp191q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp190q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp189q</OperationParam>
+      <OperationParam unit="miu85q">miu85q.icp192q</OperationParam>
+      <Params>fld24p_slot|fld39p_slot|sfld14p_presel|sp|miu84q.icp184q|sfld16p_label|link|miu84q.icp185q|sfld14p_label|fld25p_slot|sfld16p_presel|pwu4p.newSortAttribute|kcond66q.att1x|fld28p_slot|sfld16p_output|pwu4p.current.att1x|miu84q.icp186q|sfld14p_output|cmplink|fld43p_slot|pwu4p.sortCriteria|acond1p|smc|acond3p</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln367q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

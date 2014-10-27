@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.db.AccessService" name="Access Service">
+  <Database>db1</Database>
+  <AccessQueries>
+    <!-- group module query using group2module relationship -->
+    <Query>SELECT m.moduleID FROM Module m JOIN m.groups g WHERE g.OID = :groupOid and m.moduleDomainName = :moduleDomainName</Query>
+    <!-- group module query using group2defaultmodule relationship -->
+    <Query>SELECT m.moduleID FROM Module m JOIN m.defaultGroups g WHERE g.OID = :groupOid and m.moduleDomainName = :moduleDomainName</Query>
+  </AccessQueries>
+  <GroupQueries>
+    <!--group query using user2group and group2module relationships-->
+    <Query>SELECT g.OID, m.moduleID FROM Group g JOIN g.modules m JOIN g.users u WHERE u.OID = :userOid and m.moduleDomainName = :moduleDomainName</Query>
+    <!--group query using user2defaultgroup and group2module relationships-->
+    <Query>SELECT g.OID, m.moduleID FROM Group g JOIN g.modules m JOIN g.defaultUsers u WHERE u.OID = :userOid and m.moduleDomainName = :moduleDomainName</Query>
+    <!--group query using user2group and group2defaultmodule relationships-->
+    <Query>SELECT g.OID, m.moduleID FROM Group g JOIN g.defaultModule m JOIN g.users u WHERE u.OID = :userOid and m.moduleDomainName = :moduleDomainName</Query>
+    <!--group query using user2defaultgroup and group2defaultmodule relationships-->
+    <Query>SELECT g.OID, m.moduleID FROM Group g JOIN g.defaultModule m JOIN g.defaultUsers u WHERE u.OID = :userOid and m.moduleDomainName = :moduleDomainName</Query>
+  </GroupQueries>
+  <StrictModuleAccess/>
+</Descriptor>

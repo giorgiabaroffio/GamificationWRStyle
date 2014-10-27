@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru38x</Target>
+  <Secure>false</Secure>
+  <Source>tmu10x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru38x.att84x" sourceUnit="tmu10x" sourceParam="currentTimestamp"/>
+    <ContextPropagation targetParam="cru38x.att87x" value="community.newBadge"/>
+    <ContextPropagation targetParam="cru38x.att88x" value="Created"/>
+  </ContextPropagations>
+</Descriptor>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu39q">
+    <InputParameter id="icp131q" name="Action OID"/>
+    <InputParameter id="icp132q" name="Description"/>
+    <InputParameter id="icp133q" name="Check Time Elapsed"/>
+    <InputParameter id="icp134q" name="Active"/>
+    <InputParameter id="icp135q" name="Name"/>
+    <InputParameter id="icp136q" name="Participation"/>
+    <InputParameter id="icp137q" name="Time Elapsed"/>
+    <InputParameter id="icp138q" name="Score"/>
+    <InputParameter id="icp139q" name="Repeatable"/>
+    <InputParameter id="icp140q" name="Reputation"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu38q</OKCollectorUnits>
+  <KOCollectorUnits>kocu22q</KOCollectorUnits>
+  <OperationUnits>icu39q|okcu38q|kocu22q|mfu19q</OperationUnits>
+</Descriptor>

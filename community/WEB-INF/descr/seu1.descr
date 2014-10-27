@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Users">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="userName" name="userName" index="1"/>
+    <Output id="att57x" name="totalCredit" index="2"/>
+    <HQL>select a_communityUser.OID, a_communityUser.userName, a_communityUser.totalCredit from CommunityUser a_communityUser order by a_communityUser.totalCredit desc</HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Users</ModelName>
+    <ParentContainer>opm1</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln3</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get area">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Output id="att62x" name="area" index="0"/>
+    <HQL>select distinct a_thematicArea_role10q.areaName from ActionType a_actionType left join a_actionType.actionTypeToThematicArea a_thematicArea_role10q</HQL>
+  </Query>
+</Descriptor>

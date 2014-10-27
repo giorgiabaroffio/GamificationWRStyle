@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>scu19x</Target>
+  <Secure>false</Secure>
+  <Source>seu66x</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="scu19x.mailFooter" sourceUnit="seu66x" sourceParam="role10x$att80xArray"/>
+    <ContextPropagation targetParam="scu19x.mailHeader" sourceUnit="seu66x" sourceParam="role8x$att80xArray"/>
+    <ContextPropagation targetParam="scu19x.mailText" sourceUnit="seu66x" sourceParam="att54xArray"/>
+  </ContextPropagations>
+</Descriptor>

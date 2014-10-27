@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Change Language">
+  <Module operation="true" singleLayout="false">opm54q</Module>
+  <InputCollectorId>icu62q</InputCollectorId>
+  <InputParameter>icp206q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Change Language</ModelName>
+    <ParentContainer>sv1x</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu30q">miu30q.icp206q</OperationParam>
+      <Params>kcond2q.userOID|sp|cmplink|link|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln51q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

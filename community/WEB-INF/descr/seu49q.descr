@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Action Type">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Input id="p0" param="rcond23q.att42x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att38x" name="oid" index="0"/>
+    <HQL>select a_actionType.oid from ActionType a_actionType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.oid in(select a_actionType_p0.source_oid from Rel_ActionType_to_actionTypeToGamificationDictionary a_actionType_p0 where a_actionType_p0.target_oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select Action Type</ModelName>
+    <ParentContainer>opg32q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu49q">rcond23q.att42x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln335q</Link>
+      <Link resultCode="error">kln80q</Link>
+      <Link resultCode="error.opg32q">kln80q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

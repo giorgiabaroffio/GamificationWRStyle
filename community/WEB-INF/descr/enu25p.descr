@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Search">
+  <FormFields>
+    <Field id="fld57p" name="To" type="date" localized="true"></Field>
+    <Field id="fld58p" name="From" type="date" localized="true"></Field>
+    <SelectionField id="sfld29p" name="Name" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld29p_label" label="true" output="false"/>
+      <Slot id="sfld29p_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld30p" name="Language" type="string" localized="false" value="" splitOutput="">
+      <Slot id="slot34p" label="true" output="" value="Italiano|English|Francais|Espanol"/>
+      <Slot id="slot33p" label="" output="true" value="it|en|fr|es"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu25p" linkId="ln216p" action="validate"/>
+    <wr:ValidationLink elementId="enu25p" linkId="ln217p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

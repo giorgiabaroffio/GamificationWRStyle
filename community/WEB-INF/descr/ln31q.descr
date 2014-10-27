@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru3q</Target>
+  <Secure>false</Secure>
+  <Source>icu21q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru3q.email" sourceUnit="icu21q" sourceParam="icp75q"/>
+    <ContextPropagation targetParam="cru3q.password" sourceUnit="icu21q" sourceParam="icp76q"/>
+    <ContextPropagation targetParam="cru3q.userName" sourceUnit="icu21q" sourceParam="icp77q"/>
+  </ContextPropagations>
+</Descriptor>

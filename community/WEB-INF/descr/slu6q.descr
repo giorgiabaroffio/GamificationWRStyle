@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="userRegistration">
+  <Operation name="userRegistration" nsURI="http://www.webratio.com/webservices/userRegistration" stateful="false" invocationStyle="REST" requestMethod="POST" contentType="JSON"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp64q" name="JSON" minCard="1" maxCard="1">
+      <ComplexParameterFragment id="cpf1q" name="user" minCard="1" maxCard="-1"/>
+    </RequestBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>userRegistration</ModelName>
+    <ParentContainer>port10q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu3q.icp221q|scu6q.json|miu3q.icp233q|miu3q.icp232q|scu9q.photoImage|miu3q.icp222q|miu3q.icp223q|miu3q.icp225q|miu3q.icp230q|miu3q.icp231q|scu9q.photoName|miu3q.icp229q|miu3q.icp224q|rsp1q.success$success|miu3q.icp228q|miu3q.icp227q|miu3q.icp226q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln4q</Link>
+      <Link resultCode="error">kln3q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

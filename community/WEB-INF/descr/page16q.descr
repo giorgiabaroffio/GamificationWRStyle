@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Text Chunks">
+  <ParentContainer>area3q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page16q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page16q.link"/>
+    <Navigation name="2" links="page16q.auto-link"/>
+    <Navigation name="3" links="page16q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln222q|impl" postPropagatedLink="ln222q"/>
+    <Navigation name="5" links="ln222q|impl" selectiveRefresh="true" postPropagatedLink="ln222q"/>
+    <Navigation name="6" links="ln222q|oln348q" effects="#pr#"/>
+    <Navigation name="7" links="ln222q|oln348q" selectiveRefresh="true" effects="#pr#"/>
+    <Navigation name="8" links="ln223q|impl" postPropagatedLink="ln223q"/>
+    <Navigation name="9" links="ln223q|oln346q"/>
+    <Navigation name="10" interPage="always" links="miu77q.enter|oln346q"/>
+    <Navigation name="11" links="pwu6qBlock"/>
+    <Navigation name="12" links="pwu6qBlock" selectiveRefresh="true"/>
+    <Navigation name="13" links="pwu6qFirst"/>
+    <Navigation name="14" links="pwu6qFirst" selectiveRefresh="true"/>
+    <Navigation name="15" links="pwu6qLast"/>
+    <Navigation name="16" links="pwu6qLast" selectiveRefresh="true"/>
+    <Navigation name="17" links="pwu6qNext"/>
+    <Navigation name="18" links="pwu6qNext" selectiveRefresh="true"/>
+    <Navigation name="19" links="pwu6qPrevious"/>
+    <Navigation name="20" links="pwu6qPrevious" selectiveRefresh="true"/>
+    <Navigation name="21" links="pwu6qatt16p"/>
+    <Navigation name="22" links="pwu6qatt16p" selectiveRefresh="true"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="21|19|17|15|13|11" futile="" renewed="acond66q"/>
+    <UselessPreserve navs="20|5|4|22|18|9|16|14|12" effects="#pr#" futile=""/>
+    <UselessPreserve navs="2|20|5|4|22|18|9|16|14|12" effects="-" futile=""/>
+    <UselessPreserve navs="3|7|6" effects="-" futile="pwu6q.newSortAttribute|pwu6q.block|pwu6q.sortCriteria"/>
+    <UselessPreserve navs="3|2|7|6" effects="#pr#" futile="pwu6q.newSortAttribute|pwu6q.block|pwu6q.sortCriteria"/>
+    <UselessPreserve navs="8" futile="sfld19q_presel"/>
+  </UselessPreserves>
+  <LinkSequence>ln221q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu8q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="3|7|5" effects="#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="7|5" effects="-"/>
+      <RefreshFormAll navs="10|9" inputs="sfld19q_presel"/>
+      <RefreshFormAll navs="1|0|4|8"/>
+    </UnitComputation>
+    <UnitComputation unit="pwu6q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="20|7|5|22|18|16|14|12" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="10|9" inputs="acond66q"/>
+      <RefreshFormAll navs="1|0|4|8"/>
+      <RefreshForm selectiveRefresh="true" navs="22" inputs="pwu6q.newSortAttribute|pwu6q.sortCriteria"/>
+      <RefreshForm navs="21" inputs="pwu6q.newSortAttribute|pwu6q.sortCriteria"/>
+      <RefreshForm selectiveRefresh="true" navs="20|18|16|14|12" inputs="pwu6q.block"/>
+      <RefreshForm navs="19|17|15|13|11" inputs="pwu6q.block"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln222q</ManualLink>
+    <ManualLink>ln223q</ManualLink>
+    <ManualLink>pwu6qatt16p</ManualLink>
+    <ManualLink>pwu6qFirst</ManualLink>
+    <ManualLink>pwu6qPrevious</ManualLink>
+    <ManualLink>pwu6qNext</ManualLink>
+    <ManualLink>pwu6qLast</ManualLink>
+    <ManualLink>pwu6qBlock</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page16q_grid_0">
+      <Layout id="page16q_cell_8">
+        <Layout id="enu8q_0" unitId="enu8q"></Layout>
+      </Layout>
+      <Layout id="page16q_cell_12">
+        <Layout id="pwu6q_0" unitId="pwu6q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu6q.newSortAttribute|pwu6q.sortCriteria|pwu6q.block</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Text Chunks</ModelName>
+    <NavigationAncestors>sv2x|area3q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld19q_presel" unit="enu8q">sfld19q_presel</PageParam>
+      <PageParam unit="pwu6q">acond66q</PageParam>
+      <PageParam unit="pwu6q">pwu6q.newSortAttribute</PageParam>
+      <PageParam unit="pwu6q">pwu6q.block</PageParam>
+      <PageParam unit="pwu6q">pwu6q.sortCriteria</PageParam>
+      <PageParam>miu77q.icp178q</PageParam>
+      <PageParam>miu77q.icp177q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

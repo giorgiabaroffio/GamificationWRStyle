@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Thematic Area">
+  <FormFields>
+    <Field id="fld36q" name="Area Name" type="string" localized="false"></Field>
+    <MultiSelectionField id="msfld3q" name="Applications Associated" type="string" localized="false" value="" splitOutput="">
+      <Slot id="msfld3q_label" label="true" output="false"/>
+      <Slot id="msfld3q_output" label="false" output="true"/>
+    </MultiSelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu14q" linkId="ln81q" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld36q" id="mnd19q" name="Mandatory23">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

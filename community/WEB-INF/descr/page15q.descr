@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="New Action">
+  <ParentContainer>hym6q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page15q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page15q.link"/>
+    <Navigation name="2" links="page15q.auto-link"/>
+    <Navigation name="3" links="page15q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln165q|validation-failed"/>
+    <Navigation name="5" interPage="always" links="icu37q.enter|oln270q" effects="#pr#"/>
+    <Navigation name="6" links="ln165q|impl" postPropagatedLink="ln165q"/>
+    <Navigation name="7" links="ln165q|kln61q"/>
+    <Navigation name="8" links="ln166q|impl" postPropagatedLink="ln166q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="2|7|6|4|8" effects="-" futile=""/>
+    <UselessPreserve navs="3|2|7|6|4|8" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="mssu4q.shownMessages"/>
+  </UselessPreserves>
+  <LinkSequence>ln142q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu7q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|7|6|5|8"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu4q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu43q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln165q</ManualLink>
+    <ManualLink>ln166q</ManualLink>
+  </ManualLinks>
+  <Variables>
+    <Variable id="var1q" name="showMilliseconds" type="boolean" value="false"></Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr_var1q" name="showMilliseconds" variables="var1q" xml:space="preserve">com.webratio.rtx.core.BeanHelper.asObject(var1q)</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page15q_grid_0">
+      <Layout id="page15q_cell_0">
+        <Layout id="enu7q_0" unitId="enu7q"></Layout>
+      </Layout>
+      <Layout id="page15q_cell_12">
+        <Layout id="mssu4q_0" unitId="mssu4q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>mssu4q.shownMessages|mc</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>mssu4q.shownMessages|mc</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>New Action</ModelName>
+    <ParentModule>hym6q</ParentModule>
+    <NavigationAncestors/>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld18q" unit="enu7q">slot2q</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld18q_label" unit="enu7q">slot1q</PageParam>
+      <PageParam unit="mssu4q">mssu4q.shownMessages</PageParam>
+      <PageParam>miu61q.icp129q</PageParam>
+      <PageParam>miu61q.icp128q</PageParam>
+      <PageParam>miu61q.icp120q</PageParam>
+      <PageParam>miu61q.icp124q</PageParam>
+      <PageParam>miu61q.icp121q</PageParam>
+      <PageParam>miu61q.icp122q</PageParam>
+      <PageParam>miu61q.icp127q</PageParam>
+      <PageParam>miu61q.icp130q</PageParam>
+      <PageParam>miu61q.icp126q</PageParam>
+      <PageParam>miu61q.icp125q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>mc</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

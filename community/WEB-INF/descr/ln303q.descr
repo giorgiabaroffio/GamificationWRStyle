@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru22q</Target>
+  <Secure>false</Secure>
+  <Source>icu66q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>true</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru22q.att115p" sourceUnit="icu66q" sourceParam="icp227q"/>
+    <ContextPropagation targetParam="cru22q.att99x" sourceUnit="icu66q" sourceParam="icp229q"/>
+    <ContextPropagation targetParam="cru22q.userName" sourceUnit="icu66q" sourceParam="icp233q"/>
+    <ContextPropagation targetParam="cru22q.att113p" sourceUnit="icu66q" sourceParam="icp224q"/>
+    <ContextPropagation targetParam="cru22q.att127p" sourceUnit="icu66q" sourceParam="icp221q"/>
+    <ContextPropagation targetParam="cru22q.att85x" sourceUnit="icu66q" sourceParam="icp231q"/>
+    <ContextPropagation targetParam="cru22q.att12p" sourceUnit="icu66q" sourceParam="icp223q"/>
+    <ContextPropagation targetParam="cru22q.password" sourceUnit="icu66q" sourceParam="icp232q"/>
+    <ContextPropagation targetParam="cru22q.att131p" sourceUnit="icu66q" sourceParam="icp228q"/>
+    <ContextPropagation targetParam="cru22q.email" sourceUnit="icu66q" sourceParam="icp225q"/>
+    <ContextPropagation targetParam="cru22q.att114p" sourceUnit="icu66q" sourceParam="icp226q"/>
+    <ContextPropagation targetParam="cru22q.att4q" sourceUnit="icu66q" sourceParam="icp230q"/>
+  </ContextPropagations>
+</Descriptor>

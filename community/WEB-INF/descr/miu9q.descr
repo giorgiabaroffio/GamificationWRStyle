@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm61q</Module>
+  <InputCollectorId>icu70q</InputCollectorId>
+  <InputParameter>icp247q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port12q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>adu2q.action|rsp18q|adu2q.gamifiedApplication|adu2q.actionOid</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln75q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BundleKeys>
+  <Global>
+    <Key>error.check.minChecked</Key>
+    <Key>DateValidation</Key>
+    <Key>BooleanValidation</Key>
+    <Key>error.check.maxChecked</Key>
+    <Key>DecimalValidation</Key>
+    <Key>errors.footer</Key>
+    <Key>FloatValidation</Key>
+    <Key>linkConfirmMessage</Key>
+    <Key>error.check.eqChecked</Key>
+    <Key>error.stacktrace</Key>
+    <Key>errors.header</Key>
+    <Key>error.validation.exception</Key>
+    <Key>error.button.not.pressed</Key>
+    <Key>multiselectionfield.selectAll</Key>
+    <Key>error.security</Key>
+    <Key>IntegerValidation</Key>
+    <Key>error.empty</Key>
+    <Key>multiselectionfield.deselectAll</Key>
+    <Key>ajax.computingRequest</Key>
+    <Key>TimeValidation</Key>
+    <Key>TimestampValidation</Key>
+    <Key>emptyUnitMessage</Key>
+    <Key>selectionfield.noselection</Key>
+  </Global>
+  <Units>
+    <Unit name="PowerIndexUnit">
+      <Key>PowerIndex.To</Key>
+      <Key>PowerIndex.Previous</Key>
+      <Key>PowerIndex.Of</Key>
+      <Key>PowerIndex.NoItemsShownOf</Key>
+      <Key>PowerIndex.Jump</Key>
+      <Key>PowerIndex.Next</Key>
+      <Key>PowerIndex.First</Key>
+      <Key>PowerIndex.Last</Key>
+      <Key>PowerIndex.From</Key>
+    </Unit>
+    <Unit name="GoogleMapUnit">
+      <Key>GoogleMapUnit.user.marker.title</Key>
+    </Unit>
+    <Unit name="QueryUnit">
+      <Key>QueryUnit.wrongGrouping</Key>
+      <Key>Query.From</Key>
+      <Key>QueryUnit.noDiplayAtrributes</Key>
+      <Key>Query.Next</Key>
+      <Key>Query.To</Key>
+      <Key>Query.NoItemsShownOf</Key>
+      <Key>Query.First</Key>
+      <Key>QueryUnit.wrongExtAttributeCondition</Key>
+      <Key>Query.Last</Key>
+      <Key>Query.Jump</Key>
+      <Key>Query.Previous</Key>
+      <Key>Query.Of</Key>
+    </Unit>
+    <Unit name="CropImageUnit">
+      <Key>CropImageUnit.noImage</Key>
+    </Unit>
+    <Unit name="JobStatusUnit">
+      <Key>JobStatus.JobDescription</Key>
+      <Key>JobStatus.TriggerId</Key>
+      <Key>JobStatus.TriggerDescription</Key>
+      <Key>JobStatus.JobId</Key>
+      <Key>JobStatus.JobGroup</Key>
+      <Key>JobStatus.TriggerGroup</Key>
+      <Key>JobStatus.TriggerNextFireTimestamp</Key>
+    </Unit>
+    <Unit name="ScrollerUnit">
+      <Key>Scroller.To</Key>
+      <Key>Scroller.First</Key>
+      <Key>Scroller.Of</Key>
+      <Key>Scroller.From</Key>
+      <Key>Scroller.Jump</Key>
+      <Key>Scroller.NoItemsShownOf</Key>
+      <Key>Scroller.Last</Key>
+      <Key>Scroller.Previous</Key>
+      <Key>Scroller.Next</Key>
+    </Unit>
+    <Unit name="HierarchicalIndexUnit">
+      <Key>HierarchicalIndex.NoItemsShownOf</Key>
+      <Key>HierarchicalIndex.First</Key>
+      <Key>HierarchicalIndex.Of</Key>
+      <Key>HierarchicalIndex.From</Key>
+      <Key>HierarchicalIndex.Last</Key>
+      <Key>HierarchicalIndex.Jump</Key>
+      <Key>HierarchicalIndex.To</Key>
+      <Key>HierarchicalIndex.Next</Key>
+      <Key>HierarchicalIndex.Previous</Key>
+    </Unit>
+  </Units>
+  <ValidationRules name="Validation Rules">
+    <ValidationRule name="RegularExpressionValidationRule">
+      <Key>RegularExpressionValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="CompareValidationRule">
+      <Key>CompareValidationRule.neq</Key>
+      <Key>CompareValidationRule.eq</Key>
+      <Key>CompareValidationRule.lt.field</Key>
+      <Key>CompareValidationRule.eq.field</Key>
+      <Key>CompareValidationRule.neq.field</Key>
+      <Key>CompareValidationRule.gt.field</Key>
+      <Key>CompareValidationRule.gteq</Key>
+      <Key>CompareValidationRule.lteq.field</Key>
+      <Key>CompareValidationRule.lt</Key>
+      <Key>CompareValidationRule.lteq</Key>
+      <Key>CompareValidationRule.gt</Key>
+      <Key>CompareValidationRule.gteq.field</Key>
+    </ValidationRule>
+    <ValidationRule name="CheckedFieldItemsValidationRule">
+      <Key>CheckedItemsValidationRule.max</Key>
+      <Key>CheckedItemsValidationRule.eq</Key>
+      <Key>CheckedItemsValidationRule.min</Key>
+    </ValidationRule>
+    <ValidationRule name="EMailValidationRule">
+      <Key>EMailValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="XsdTypeValidationRule">
+      <Key>XsdTypeValidationRule.min.exclusive</Key>
+      <Key>XsdTypeValidationRule.invalid.date</Key>
+      <Key>XsdTypeValidationRule.max.inclusive</Key>
+      <Key>XsdTypeValidationRule.invalid.timestamp</Key>
+      <Key>XsdTypeValidationRule.max.exclusive</Key>
+      <Key>XsdTypeValidationRule.max.length</Key>
+      <Key>XsdTypeValidationRule.invalid.boolean</Key>
+      <Key>XsdTypeValidationRule.invalid.time</Key>
+      <Key>XsdTypeValidationRule.min.inclusive</Key>
+      <Key>XsdTypeValidationRule.invalid.length</Key>
+      <Key>XsdTypeValidationRule.invalid.pattern</Key>
+      <Key>XsdTypeValidationRule.positive.value</Key>
+      <Key>XsdTypeValidationRule.min.length</Key>
+      <Key>XsdTypeValidationRule.invalid.float</Key>
+      <Key>XsdTypeValidationRule.invalid.decimal</Key>
+      <Key>XsdTypeValidationRule.invalid.integer</Key>
+      <Key>XsdTypeValidationRule.negative.value</Key>
+      <Key>XsdTypeValidationRule.mandatory</Key>
+      <Key>XsdTypeValidationRule.fraction.digits</Key>
+      <Key>XsdTypeValidationRule.total.digits</Key>
+      <Key>XsdTypeValidationRule.invalid.enum</Key>
+    </ValidationRule>
+    <ValidationRule name="ValueLengthValidationRule">
+      <Key>ValueLengthValidationRule.max</Key>
+      <Key>ValueLengthValidationRule.blob.max</Key>
+      <Key>ValueLengthValidationRule.blob.neq</Key>
+      <Key>ValueLengthValidationRule.min</Key>
+      <Key>ValueLengthValidationRule.neq</Key>
+      <Key>ValueLengthValidationRule.blob.min</Key>
+      <Key>ValueLengthValidationRule.eq</Key>
+      <Key>ValueLengthValidationRule.blob.eq</Key>
+    </ValidationRule>
+    <ValidationRule name="LikeValidationRule">
+      <Key>LikeValidationRule.contains.field</Key>
+      <Key>LikeValidationRule.endsWith.field</Key>
+      <Key>LikeValidationRule.notStartsWith</Key>
+      <Key>LikeValidationRule.startsWith.field</Key>
+      <Key>LikeValidationRule.notEndsWith</Key>
+      <Key>LikeValidationRule.notContains.field</Key>
+      <Key>LikeValidationRule.startsWith</Key>
+      <Key>LikeValidationRule.notEndsWith.field</Key>
+      <Key>LikeValidationRule.notContains</Key>
+      <Key>LikeValidationRule.notStartsWith.field</Key>
+      <Key>LikeValidationRule.endsWith</Key>
+      <Key>LikeValidationRule.contains</Key>
+    </ValidationRule>
+    <ValidationRule name="CollectionValidationRule">
+      <Key>CollectionValidationRule.in.query</Key>
+      <Key>CollectionValidationRule.notIn</Key>
+      <Key>CollectionValidationRule.notIn.query</Key>
+      <Key>CollectionValidationRule.in</Key>
+    </ValidationRule>
+    <ValidationRule name="TypeValidationRule">
+      <Key>TypeValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="CreditCardValidationRule">
+      <Key>CreditCardValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="FormNotEmptyValidationRule">
+      <Key>FormNotEmptyValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="CheckedUnitItemsValidationRule">
+      <Key>CheckedItemsValidationRule.max</Key>
+      <Key>CheckedItemsValidationRule.eq</Key>
+      <Key>CheckedItemsValidationRule.min</Key>
+    </ValidationRule>
+    <ValidationRule name="MandatoryValidationRule">
+      <Key>MandatoryValidationRule.error</Key>
+    </ValidationRule>
+    <ValidationRule name="CaptchaValidationRule">
+      <Key>CaptchaValidationRule.error</Key>
+    </ValidationRule>
+  </ValidationRules>
+  <Custom>
+    <Key>store</Key>
+    <Key>HQ.YourBadges</Key>
+    <Key>YouGotPublishStore</Key>
+    <Key>User last topics</Key>
+    <Key>noActionBadge</Key>
+    <Key>05_Monthly</Key>
+    <Key>HQ.no.badges</Key>
+    <Key>HQ.Credits</Key>
+    <Key>No results</Key>
+    <Key>11_Monthly</Key>
+    <Key>community.all.rewards</Key>
+    <Key>Latest Published Store Components</Key>
+    <Key>YouGotReadingWiki</Key>
+    <Key>community.slider.step2p2</Key>
+    <Key>HQ.UsersList.Search</Key>
+    <Key>Rewards</Key>
+    <Key>04_topMonthly</Key>
+    <Key>10_Monthly</Key>
+    <Key>HQ.RankNoResults</Key>
+    <Key>06_topMonthly</Key>
+    <Key>09_topMonthly</Key>
+    <Key>HQ.PersonalBadges</Key>
+    <Key>community.slider.step2p1</Key>
+    <Key>11_topMonthly</Key>
+    <Key>YouGotVoteStore</Key>
+    <Key>HQ.PersonalCredits</Key>
+    <Key>community.slider.step1p1</Key>
+    <Key>community.slider.step1p2</Key>
+    <Key>HQ.rank.monthly</Key>
+    <Key>YouGotAnswerApproved</Key>
+    <Key>HQ.rank.7Days</Key>
+    <Key>HQ.YourActions</Key>
+    <Key>HQ.UserDashboard.AllActions</Key>
+    <Key>YouGotAnswerVoteup</Key>
+    <Key>HQ.UserOf</Key>
+    <Key>HQ.YourProfile.ProfileUnknown</Key>
+    <Key>YouGotPostSubscription</Key>
+    <Key>forum.action.points</Key>
+    <Key>Reputation</Key>
+    <Key>HQ.YourProfile.Work</Key>
+    <Key>community.total.points</Key>
+    <Key>03_Monthly</Key>
+    <Key>Welcome</Key>
+    <Key>HQ.NoForumActivity</Key>
+    <Key>NotPublicProfile.Private</Key>
+    <Key>postedAnswer</Key>
+    <Key>HQ.YourProfile.Private</Key>
+    <Key>HQ.YourProfile.Developer</Key>
+    <Key>Position</Key>
+    <Key>HQ.no.certificates</Key>
+    <Key>HQ.UsersList.Users</Key>
+    <Key>HQ.NicknameNull</Key>
+    <Key>Nickname_Crm</Key>
+    <Key>All badges</Key>
+    <Key>YouGotLogin</Key>
+    <Key>of</Key>
+    <Key>HQ.RankCompanyNoResults</Key>
+    <Key>08_topMonthly</Key>
+    <Key>HQ.ParticipationTab</Key>
+    <Key>userPartner</Key>
+    <Key>HQ.UsersList.AnyLevel</Key>
+    <Key>NotPublicProfile.Message</Key>
+    <Key>YouGotPostTopic</Key>
+    <Key>YouGotMonthly</Key>
+    <Key>go to homepage</Key>
+    <Key>HQ.ReputationTab</Key>
+    <Key>User last readings</Key>
+    <Key>01_Monthly</Key>
+    <Key>01_topMonthly</Key>
+    <Key>Points</Key>
+    <Key>YouBecome</Key>
+    <Key>HQ.UsersList.FilterLevel</Key>
+    <Key>YouGotsetData</Key>
+    <Key>HQ.View</Key>
+    <Key>HQ.YourProfile.Student</Key>
+    <Key>HQ.YourProfile.Certificate</Key>
+    <Key>07_Monthly</Key>
+    <Key>community.slider.step3p1</Key>
+    <Key>community.slider.step3p2</Key>
+    <Key>HQ.slider.error</Key>
+    <Key>YouGotActivingClient</Key>
+    <Key>YouGotAnswerTopic</Key>
+    <Key>community.available.points</Key>
+    <Key>HQ.PersonalCertificates</Key>
+    <Key>07_topMonthly</Key>
+    <Key>HQ.Back</Key>
+    <Key>sortByLevel</Key>
+    <Key>getting-start-link</Key>
+    <Key>YouGotQuestionVoteup</Key>
+    <Key>HQ.YourProfile.Public</Key>
+    <Key>certification</Key>
+    <Key>Level</Key>
+    <Key>HQ.UsersList.AnyArea</Key>
+    <Key>12_Monthly</Key>
+    <Key>HQ.Answer</Key>
+    <Key>approved</Key>
+    <Key>Certification</Key>
+    <Key>History points</Key>
+    <Key>Participation</Key>
+    <Key>Certification Score</Key>
+    <Key>HQ.TotalCredits</Key>
+    <Key>HQ.UsersList.FilterArea</Key>
+    <Key>Go Back</Key>
+    <Key>YouGotReviewStore</Key>
+    <Key>HQ.NotFromSite</Key>
+    <Key>HQ.Ranking7Days</Key>
+    <Key>community.users</Key>
+    <Key>YouGotApproveAnswer</Key>
+    <Key>10_topMonthly</Key>
+    <Key>noRewards</Key>
+    <Key>03_topMonthly</Key>
+    <Key>Latest Forum Topics</Key>
+    <Key>12_topMonthly</Key>
+    <Key>YouGotDownloadStore</Key>
+    <Key>lms</Key>
+    <Key>YouGotCoursePassed</Key>
+    <Key>answerOf</Key>
+    <Key>02_topMonthly</Key>
+    <Key>noNews</Key>
+    <Key>User last downloads</Key>
+    <Key>community.slider.step1title</Key>
+    <Key>HQ.UsersList.Filter</Key>
+    <Key>HQ.UsersList.SearchField</Key>
+    <Key>HQ.YourProfile.Professor</Key>
+    <Key>08_Monthly</Key>
+    <Key>HQ.ErrorLogin</Key>
+    <Key>05_topMonthly</Key>
+    <Key>go-to-lms</Key>
+    <Key>forum</Key>
+    <Key>community.slider.step2title</Key>
+    <Key>HQ.UsersMonthly</Key>
+    <Key>selectionfield.world</Key>
+    <Key>YouGotActiving</Key>
+    <Key>Rewards History</Key>
+    <Key>02_Monthly</Key>
+    <Key>no my actions</Key>
+    <Key>HQ.YourLastAction</Key>
+    <Key>HQ.store.authorBy</Key>
+    <Key>HQ.store.download</Key>
+    <Key>community.slider.step3title</Key>
+    <Key>SecondMenuLevel</Key>
+    <Key>YouGotApprovedAnswer</Key>
+    <Key>09_Monthly</Key>
+    <Key>YouGotClassroom</Key>
+    <Key>My Points</Key>
+    <Key>HQ.UserDashboard</Key>
+    <Key>Leaderboards</Key>
+    <Key>UserOf</Key>
+    <Key>HQ.GoToMyPosition</Key>
+    <Key>HQ.rank.overall</Key>
+    <Key>community.comingsoon</Key>
+    <Key>06_Monthly</Key>
+    <Key>HQ.UsersList.Profile</Key>
+    <Key>HQ.YourProfile.NoData</Key>
+    <Key>getting-start</Key>
+    <Key>Actions History</Key>
+    <Key>HQ.UsersList.GoTo</Key>
+    <Key>HQ.rank.7Days.home</Key>
+    <Key>HQ.store.vote</Key>
+    <Key>HQ.YourProfile.PrintPdf</Key>
+    <Key>HQ.YourProfile.At</Key>
+    <Key>HQ.YourProfile.NoDeveloper</Key>
+    <Key>counter7DaysLeaderboard</Key>
+    <Key>HQ.store.update</Key>
+    <Key>go-to-store</Key>
+    <Key>users</Key>
+    <Key>HQ.CreditsTab</Key>
+    <Key>User no actions</Key>
+    <Key>Logout</Key>
+    <Key>All</Key>
+    <Key>HQ.YouAre</Key>
+    <Key>latest-badges</Key>
+    <Key>userPartnerCert</Key>
+    <Key>community.goToDashboard</Key>
+    <Key>go-to-forum</Key>
+    <Key>community.spent.points</Key>
+    <Key>HQ.CertificateTab</Key>
+    <Key>community.possible.reward</Key>
+    <Key>YouGotSignUp</Key>
+    <Key>YouGotShareTwitter</Key>
+    <Key>HQ.YourProfile.Professional</Key>
+    <Key>YouGotShareGooglePlus</Key>
+    <Key>community.slider.step1p3</Key>
+    <Key>HQ.NoStoreActivity</Key>
+    <Key>YouGotShareFacebook</Key>
+    <Key>HQ.Of</Key>
+    <Key>HQ.is</Key>
+    <Key>YouGotWebinar</Key>
+    <Key>HQ.ManageProfile</Key>
+    <Key>counterOverallLeaderboard</Key>
+    <Key>HQ.PersonalData</Key>
+    <Key>04_Monthly</Key>
+    <Key>actionAlreadyInvolved</Key>
+  </Custom>
+  <DataModel name="Gamification">
+    <Package name="Gamification Community">
+      <Entity name="Badge Type" keys="Badge Type">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Level" keys="Level"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Checked Image" keys="Checked Image"/>
+        <Attribute name="Title" keys="Title"/>
+        <Attribute name="Needed Score" keys="Needed Score"/>
+        <Attribute name="Area" keys="Area"/>
+        <Attribute name="HD Image" keys="HD Image"/>
+        <Attribute name="Sort Number" keys="Sort Number"/>
+        <Attribute name="HD Checked Image" keys="HD Checked Image"/>
+        <Attribute name="Image" keys="Image"/>
+        <Attribute name="Key" keys="Key"/>
+        <Attribute name="SortCombination" keys="SortCombination"/>
+        <Attribute name="Active" keys="Active"/>
+        <Attribute name="Thematic Area" keys="Thematic Area"/>
+      </Entity>
+      <Entity name="Action Instance" keys="Action Instance">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Date" keys="Date"/>
+        <Attribute name="Score" keys="Score"/>
+        <Attribute name="Action Area" keys="Action Area"/>
+        <Attribute name="Reputation" keys="Reputation"/>
+        <Attribute name="Participation" keys="Participation"/>
+        <Attribute name="Name" keys="Name"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Tag" keys="Tag"/>
+        <Attribute name="Link" keys="Link"/>
+        <Attribute name="Executor" keys="Executor"/>
+        <Attribute name="Object Key" keys="Object Key"/>
+      </Entity>
+      <Entity name="Community User" keys="Community User">
+        <Attribute name="Participation" keys="Participation"/>
+        <Attribute name="Total Credit" keys="Total Credit"/>
+        <Attribute name="Participation 7 Days" keys="Participation 7 Days"/>
+        <Attribute name="Company Name" keys="Company Name"/>
+        <Attribute name="First Name" keys="First Name"/>
+        <Attribute name="Last Name" keys="Last Name"/>
+        <Attribute name="City" keys="City"/>
+        <Attribute name="Small Photo" keys="Small Photo"/>
+        <Attribute name="Twitter" keys="Twitter"/>
+        <Attribute name="Country" keys="Country"/>
+        <Attribute name="Geographical Area" keys="Geographical Area"/>
+        <Attribute name="WebSite" keys="WebSite"/>
+        <Attribute name="Big Photo" keys="Big Photo"/>
+        <Attribute name="Bio" keys="Bio"/>
+        <Attribute name="Linkedin" keys="Linkedin"/>
+        <Attribute name="Public profile" keys="Public profile"/>
+        <Attribute name="Facebook" keys="Facebook"/>
+        <Attribute name="Google" keys="Google"/>
+        <Attribute name="Iso Code" keys="Iso Code"/>
+        <Attribute name="Credits Available" keys="Credits Available"/>
+        <Attribute name="Credits Spent" keys="Credits Spent"/>
+        <Attribute name="BirthDate" keys="BirthDate"/>
+        <Attribute name="Registration Date" keys="Registration Date"/>
+      </Entity>
+      <Entity name="Badge Instance" keys="Badge Instance">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Date" keys="Date"/>
+        <Attribute name="Score" keys="Score"/>
+      </Entity>
+      <Entity name="Action Type" keys="Action Type">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Name" keys="Name"/>
+        <Attribute name="Score" keys="Score"/>
+        <Attribute name="Reputation" keys="Reputation"/>
+        <Attribute name="Participation" keys="Participation"/>
+        <Attribute name="Area" keys="Area"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Check Time Elapsed" keys="Check Time Elapsed"/>
+        <Attribute name="Time Elapsed" keys="Time Elapsed"/>
+        <Attribute name="Repeatable" keys="Repeatable"/>
+        <Attribute name="Active" keys="Active"/>
+      </Entity>
+      <Entity name="Positions" keys="Positions">
+        <Attribute name="Nickname" keys="Nickname"/>
+        <Attribute name="Participation" keys="Participation"/>
+        <Attribute name="Reputation" keys="Reputation"/>
+        <Attribute name="Participation Monthly" keys="Participation Monthly"/>
+        <Attribute name="Participation Company" keys="Participation Company"/>
+      </Entity>
+      <Entity name="Community Participation" keys="Community Participation">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Participation" keys="Participation"/>
+      </Entity>
+      <Entity name="Community Participation Seven Days" keys="Community Participation Seven Days">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Participation Seven Days" keys="Participation Seven Days"/>
+      </Entity>
+      <Entity name="Text Mail" keys="Text Mail">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Code" keys="Code"/>
+        <Attribute name="Language Code" keys="Language Code"/>
+        <Attribute name="Body" keys="Body"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Subject" keys="Subject"/>
+      </Entity>
+      <Entity name="Containers" keys="Containers">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Language Code" keys="Language Code"/>
+        <Attribute name="Text" keys="Text"/>
+        <Attribute name="Alias" keys="Alias"/>
+      </Entity>
+      <Entity name="Notification" keys="Notification">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Creation Date" keys="Creation Date"/>
+        <Attribute name="Code" keys="Code"/>
+        <Attribute name="Status" keys="Status"/>
+        <Attribute name="Delivery Date" keys="Delivery Date"/>
+        <Attribute name="Language Code" keys="Language Code"/>
+        <Attribute name="Reward Title" keys="Reward Title"/>
+      </Entity>
+      <Entity name="Reward Type" keys="Reward Type">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Title" keys="Title"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Needed Points" keys="Needed Points"/>
+        <Attribute name="Available" keys="Available"/>
+        <Attribute name="Image" keys="Image"/>
+        <Attribute name="Language Code" keys="Language Code"/>
+      </Entity>
+      <Entity name="Reward Instance" keys="Reward Instance">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Date" keys="Date"/>
+        <Attribute name="Score" keys="Score"/>
+      </Entity>
+      <Entity name="Notification LeaderBoards" keys="Notification LeaderBoards">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="LeaderBoards" keys="LeaderBoards"/>
+      </Entity>
+      <Entity name="Notification Monthly" keys="Notification Monthly">
+        <Attribute name="user oid" keys="user oid"/>
+        <Attribute name="Overall Position" keys="Overall Position"/>
+        <Attribute name="Overall Participation" keys="Overall Participation"/>
+        <Attribute name="Seven Days Position" keys="Seven Days Position"/>
+        <Attribute name="Seven Days Participation" keys="Seven Days Participation"/>
+        <Attribute name="First Name" keys="First Name"/>
+        <Attribute name="Email" keys="Email"/>
+        <Attribute name="Monthly Points" keys="Monthly Points"/>
+        <Attribute name="Photo" keys="Photo"/>
+      </Entity>
+      <Entity name="Presences" keys="Presences">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Useroid" keys="Useroid"/>
+        <Attribute name="Description" keys="Description"/>
+        <Attribute name="Timestamp" keys="Timestamp"/>
+        <Attribute name="WROWNERID" keys="WROWNERID"/>
+      </Entity>
+      <Entity name="GamifiedApplication" keys="GamifiedApplication">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="name" keys="name"/>
+        <Attribute name="api key" keys="api key"/>
+      </Entity>
+      <Entity name="Max Date Action Instance" keys="Max Date Action Instance">
+        <Attribute name="actionTypeOid" keys="actionTypeOid"/>
+        <Attribute name="rankOid" keys="rankOid"/>
+        <Attribute name="maxDate" keys="maxDate"/>
+      </Entity>
+      <Entity name="Thematic Area" keys="Thematic Area">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="Area Name" keys="Area Name"/>
+      </Entity>
+    </Package>
+    <Package name="Community Badges Area">
+      <Entity name="MostimportantBadge" keys="MostimportantBadge">
+        <Attribute name="Oid" keys="Oid"/>
+        <Attribute name="Area" keys="Area"/>
+        <Attribute name="Title" keys="Title"/>
+        <Attribute name="Importance" keys="Importance"/>
+        <Attribute name="Checked Image" keys="Checked Image"/>
+        <Attribute name="Sort Number" keys="Sort Number"/>
+        <Attribute name="HD Checked Image" keys="HD Checked Image"/>
+        <Attribute name="useroid" keys="useroid"/>
+      </Entity>
+      <Entity name="Last Badge" keys="Last Badge">
+        <Attribute name="oid" keys="oid"/>
+        <Attribute name="nickname" keys="nickname"/>
+        <Attribute name="area" keys="area"/>
+        <Attribute name="title" keys="title"/>
+        <Attribute name="date" keys="date"/>
+        <Attribute name="Image" keys="Image"/>
+        <Attribute name="WROWNERID" keys="WROWNERID"/>
+      </Entity>
+    </Package>
+    <Entity name="User" keys="User">
+      <Attribute name="OID" keys="OID"/>
+      <Attribute name="UserName" keys="UserName"/>
+      <Attribute name="Password" keys="Password"/>
+      <Attribute name="Email" keys="Email"/>
+      <Attribute name="Internal" keys="Internal"/>
+    </Entity>
+    <Entity name="Group" keys="Group">
+      <Attribute name="OID" keys="OID"/>
+      <Attribute name="GroupName" keys="GroupName"/>
+    </Entity>
+    <Entity name="Module" keys="Module">
+      <Attribute name="OID" keys="OID"/>
+      <Attribute name="ModuleID" keys="ModuleID"/>
+      <Attribute name="ModuleName" keys="ModuleName"/>
+      <Attribute name="moduleDomainName" keys="moduleDomainName"/>
+    </Entity>
+    <Entity name="Bundle Data" keys="Bundle Data">
+      <Attribute name="OID" keys="OID"/>
+      <Attribute name="Locale" keys="Locale"/>
+      <Attribute name="Key" keys="Key"/>
+      <Attribute name="Message" keys="Message"/>
+    </Entity>
+    <Entity name="Text Chunk" keys="Text Chunk">
+      <Attribute name="oid" keys="oid"/>
+      <Attribute name="Key" keys="Key"/>
+      <Attribute name="Message" keys="Message"/>
+      <Attribute name="languageCode" keys="languageCode"/>
+    </Entity>
+    <Entity name="Geographical Area" keys="Geographical Area">
+      <Attribute name="oid" keys="oid"/>
+      <Attribute name="name" keys="name"/>
+    </Entity>
+  </DataModel>
+  <WebModel name="Gamification">
+    <SiteView name="Private" keys="Private">
+      <Area name="Leaderboards" keys="Leaderboards">
+        <Area name="Leaderboards" keys="Leaderboards">
+          <Page name="HQ.NotPublicProfile" keys="HQ.NotPublicProfile">
+            <DataUnit name="Generic Message" keys="Generic Message"/>
+            <Grid/>
+          </Page>
+          <Page name="HQ.UserDashboard.Public" keys="HQ.UserDashboard.Public">
+            <ModuleInstanceUnit name="Dashboard" keys="Dashboard">
+              <Link name="Link145" keys="Link145"/>
+            </ModuleInstanceUnit>
+            <ScriptUnit name="Check private" keys="Check private"/>
+            <Grid/>
+          </Page>
+        </Area>
+        <Page name="Leaderboards" keys="Leaderboards">
+          <EntryUnit name="Monthly Form" keys="Monthly Form">
+            <MultiSelectionField name="Areas" keys="Areas"/>
+            <Field name="searchUser" keys="searchUser"/>
+            <SelectionField name="Select a region" keys="Select a region"/>
+            <Field name="MaxLevel" keys="MaxLevel"/>
+            <Field name="LowLevel" keys="LowLevel"/>
+            <Link name="Set" keys="Set"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Clear" keys="Clear"/>
+          </EntryUnit>
+          <ScriptUnit name="Filter" keys="Filter"/>
+          <MultiMessageUnit name="n.User 7 Days Total" keys="n.User 7 Days Total"/>
+          <MultiMessageUnit name="n.User 7 Days filtered" keys="n.User 7 Days filtered"/>
+          <MultiMessageUnit name="n.User total overall" keys="n.User total overall"/>
+          <MultiMessageUnit name="n.User overall" keys="n.User overall"/>
+          <MultiDataUnit name="User overall position" keys="User overall position">
+            <Link name="Go to participation" keys="Go to participation"/>
+          </MultiDataUnit>
+          <MultiDataUnit name="User monthly position" keys="User monthly position">
+            <Link name="Go to participation" keys="Go to participation"/>
+          </MultiDataUnit>
+          <HierarchicalIndexUnit name="Overall Participation" keys="Overall Participation|Level2">
+            <Link name="Link1" keys="Link1"/>
+          </HierarchicalIndexUnit>
+          <HierarchicalIndexUnit name="Monthly Participation" keys="Level3|Monthly Participation">
+            <Link name="Link5" keys="Link5"/>
+          </HierarchicalIndexUnit>
+          <Grid>
+            <Row>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell>
+                      <Grid>
+                        <Row>
+                          <Cell>
+                            <Grid>
+                              <Row>
+                                <Cell keys="HQ.Ranking7Days"/>
+                              </Row>
+                            </Grid>
+                          </Cell>
+                          <Cell>
+                            <Grid>
+                              <Row>
+                                <Cell keys="HQ.RankingOverall"/>
+                              </Row>
+                            </Grid>
+                          </Cell>
+                        </Row>
+                      </Grid>
+                    </Cell>
+                  </Row>
+                </Grid>
+              </Cell>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="Search bar">
+                      <Unit keys="Filter by region"/>
+                      <Unit keys="Filter by badge type"/>
+                      <Unit keys="Filter by badge level"/>
+                      <Grid>
+                        <Row>
+                          <Cell>
+                            <Unit keys="keyword"/>
+                          </Cell>
+                        </Row>
+                      </Grid>
+                    </Cell>
+                  </Row>
+                </Grid>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+      </Area>
+      <Area name="Rewards" keys="Rewards">
+        <Page name="Reward Details" keys="Reward Details">
+          <DataUnit name="Reward" keys="Reward">
+            <Link name="Get Reward" keys="Get Reward"/>
+          </DataUnit>
+          <MultiMessageUnit name="NoReward" keys="NoReward"/>
+          <NoOpContentUnit name="Back" keys="Back">
+            <Link name="Go Back" keys="Go Back"/>
+          </NoOpContentUnit>
+          <Grid/>
+        </Page>
+        <Page name="Rewards" keys="Rewards">
+          <PowerIndexUnit name="Rewards" keys="Rewards">
+            <Link name="View Reward" keys="View Reward"/>
+          </PowerIndexUnit>
+          <DataUnit name="Rewards Area" keys="Rewards Area"/>
+          <Grid/>
+        </Page>
+        <Page name="Error" keys="Error">
+          <MultiMessageUnit name="Attention" keys="Attention"/>
+          <NoOpContentUnit name="Back" keys="Back">
+            <Link name="Go Back" keys="Go Back"/>
+          </NoOpContentUnit>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="HQ.UserDashboard " keys="HQ.UserDashboard ">
+        <Page name="History badges" keys="History badges">
+          <PowerIndexUnit name="my badges" keys="my badges"/>
+          <Grid>
+            <Row>
+              <Cell>
+                <Unit>
+                  <Attribute keys="Area"/>
+                  <Attribute keys="Badge"/>
+                  <Attribute keys="Level"/>
+                </Unit>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="History points" keys="History points">
+          <PowerIndexUnit name="all actions" keys="all actions"/>
+          <DataUnit name="User Data" keys="User Data"/>
+          <PowerIndexUnit name="Rewards" keys="Rewards"/>
+          <PowerIndexUnit name="Possible Rewards" keys="Possible Rewards"/>
+          <PowerIndexUnit name="Next Rewards" keys="Next Rewards"/>
+          <NoOpContentUnit name="Back" keys="Back">
+            <Link name="Go Back" keys="Go Back"/>
+          </NoOpContentUnit>
+          <DataUnit name="Text Chunk" keys="Text Chunk">
+            <Link name="See Your Rewards" keys="See Your Rewards"/>
+          </DataUnit>
+          <Grid>
+            <Row>
+              <Cell>
+                <Unit keys="Points"/>
+              </Cell>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="Actions History"/>
+                  </Row>
+                </Grid>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>
+                <Unit keys="Rewards History">
+                  <Attribute keys="Title"/>
+                </Unit>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="Rewards"/>
+                  </Row>
+                </Grid>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="HQ.UserDashboard.Private" keys="HQ.UserDashboard.Private">
+          <DataUnit name="Contact" keys="Contact"/>
+          <ScriptUnit name="Check private" keys="Check private"/>
+          <MultiDataUnit name="Most Important Badges" keys="Most Important Badges"/>
+          <DataUnit name="Private Message" keys="Private Message"/>
+          <Grid/>
+        </Page>
+        <Page name="HQ.MyDashboard " keys="HQ.MyDashboard ">
+          <DataUnit name="congratulations" keys="congratulations"/>
+          <ModuleInstanceUnit keys="">
+            <Link name="History actions" keys="History actions"/>
+            <Link name="Link49" keys="Link49"/>
+            <Link name="HQ.YourBadges" keys="HQ.YourBadges"/>
+          </ModuleInstanceUnit>
+          <ScriptUnit name="Check private" keys="Check private"/>
+          <Grid/>
+        </Page>
+      </Area>
+      <Page name="Getting Started" keys="Getting Started">
+        <DataUnit name="Getting Started" keys="Getting Started"/>
+        <Grid/>
+      </Page>
+      <Page name="HQ.Message" keys="HQ.Message">
+        <DataUnit name="Generic Message" keys="Generic Message"/>
+        <Grid/>
+      </Page>
+      <MasterPage name="UserProfile">
+        <DataUnit name="Welcome" keys="Welcome">
+          <Link name="Logout" keys="Logout"/>
+          <Link name="Italian" keys="Italian"/>
+          <Link name="English" keys="English"/>
+        </DataUnit>
+      </MasterPage>
+    </SiteView>
+    <SiteView name="Public" keys="Public">
+      <Page name="Getting Started" keys="Getting Started">
+        <DataUnit name="Getting Started" keys="Getting Started"/>
+        <Grid/>
+      </Page>
+      <Page name="Headquarter" keys="Headquarter">
+        <DataUnit name="Getting Started" keys="Getting Started">
+          <Link name="Getting Started" keys="Getting Started"/>
+        </DataUnit>
+        <IndexUnit name="Latest Badge" keys="Latest Badge">
+          <Link name="User Dashboard" keys="User Dashboard"/>
+          <Link name="Go to ranking" keys="Go to ranking"/>
+        </IndexUnit>
+        <NoOpContentUnit name="LinkParticipation" keys="LinkParticipation">
+          <Link name="go to monthly" keys="go to monthly"/>
+        </NoOpContentUnit>
+        <DataUnit name="7 Days Message" keys="7 Days Message"/>
+        <HierarchicalIndexUnit name="Rank 7 Days" keys="Rank 7 Days|Most Important Badges">
+          <Link name="Link95" keys="Link95"/>
+        </HierarchicalIndexUnit>
+        <Grid>
+          <Row>
+            <Cell>
+              <Grid>
+                <Row>
+                  <Cell keys="HQ.rank.7Days.home"/>
+                </Row>
+              </Grid>
+            </Cell>
+            <Cell>
+              <Unit>
+                <Attribute keys="Title"/>
+                <Attribute keys="Checked Image"/>
+                <Attribute keys="First Name"/>
+                <Attribute keys="Last Name"/>
+                <Attribute keys="Area"/>
+                <Attribute keys="Level"/>
+              </Unit>
+            </Cell>
+          </Row>
+        </Grid>
+      </Page>
+      <MasterPage name="UserLogin">
+        <NoOpContentUnit name="Login" keys="Login">
+          <Link name="Login" keys="Login"/>
+          <Link name="Italian" keys="Italian"/>
+          <Link name="English" keys="English"/>
+        </NoOpContentUnit>
+      </MasterPage>
+    </SiteView>
+    <SiteView name="Administration" keys="Administration">
+      <Area name="Rewards Area" keys="Rewards Area">
+        <Page name="Edit reward" keys="Edit reward">
+          <EntryUnit name="Edit reward" keys="Edit reward">
+            <Field name="Title" keys="Title"/>
+            <Field name="Description" keys="Description"/>
+            <Field name="Needed Points" keys="Needed Points"/>
+            <Field name="Available" keys="Available"/>
+            <Field name="Image" keys="Image"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Manage Rewards" keys="Manage Rewards">
+          <EntryUnit name="Search" keys="Search">
+            <SelectionField name="language" keys="language"/>
+            <Field name="Keyword" keys="Keyword"/>
+            <Field name="Needed points" keys="Needed points"/>
+            <MultiSelectionField name="Availability" keys="Availability"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Flow150" keys="Flow150"/>
+          </EntryUnit>
+          <PowerIndexUnit name="Rewards" keys="Rewards">
+            <Link name="Modify" keys="Modify"/>
+          </PowerIndexUnit>
+          <Link name="Add reward" keys="Add reward"/>
+          <Grid/>
+        </Page>
+        <Page name="Add reward" keys="Add reward">
+          <EntryUnit name="New reward" keys="New reward">
+            <Field name="Title" keys="Title">
+              <MandatoryValidationRule name="Mandatory1"/>
+            </Field>
+            <Field name="Description" keys="Description"/>
+            <Field name="Needed Points" keys="Needed Points">
+              <MandatoryValidationRule name="Mandatory3"/>
+            </Field>
+            <Field name="Available" keys="Available"/>
+            <SelectionField name="language" keys="language">
+              <MandatoryValidationRule name="Mandatory5"/>
+            </SelectionField>
+            <Field name="Image" keys="Image">
+              <MandatoryValidationRule name="Mandatory16"/>
+            </Field>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="Administrator Users Area" keys="Administrator Users Area">
+        <Page name="Manage Administrator Users" keys="Manage Administrator Users">
+          <PowerIndexUnit name="Administrator Users" keys="Administrator Users">
+            <Link name="Modify" keys="Modify"/>
+          </PowerIndexUnit>
+          <Link name="Add New Administrator User" keys="Add New Administrator User"/>
+          <Grid/>
+        </Page>
+        <Page name="Modify Adminstrator User" keys="Modify Adminstrator User">
+          <EntryUnit name="Modify" keys="Modify">
+            <Field name="Email" keys="Email"/>
+            <Field name="Password" keys="Password"/>
+            <Field name="OID"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Update" keys="Update"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Create New Administrator User" keys="Create New Administrator User">
+          <EntryUnit name="New" keys="New">
+            <Field name="Email" keys="Email">
+              <MandatoryValidationRule name="Mandatory15"/>
+            </Field>
+            <Field name="Password" keys="Password">
+              <MandatoryValidationRule name="Mandatory11"/>
+            </Field>
+            <Field name="Username" keys="Username">
+              <MandatoryValidationRule name="Mandatory14"/>
+            </Field>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="Gamification Area" keys="Gamification Area">
+        <Page name="Manage Badge Area" keys="Manage Badge Area">
+          <PowerIndexUnit name="List of Badge Areas" keys="List of Badge Areas">
+            <Link name="Modify" keys="Modify"/>
+          </PowerIndexUnit>
+          <IndexUnit name="Type of Action" keys="Type of Action">
+            <Link name="Flow171" keys="Flow171"/>
+          </IndexUnit>
+          <Link name="Add Area" keys="Add Area"/>
+          <Grid/>
+        </Page>
+        <Page name="New Badge Area" keys="New Badge Area">
+          <EntryUnit name="New" keys="New">
+            <Field name="Name" keys="Name">
+              <MandatoryValidationRule name="Mandatory"/>
+            </Field>
+            <Field name="Sort Number" keys="Sort Number">
+              <MandatoryValidationRule name="Mandatory"/>
+            </Field>
+            <SelectionField name="Thematic Area" keys="Thematic Area"/>
+            <Link name="Save" keys="Save"/>
+            <Link name="Back" keys="Back"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Manage Badge" keys="Manage Badge">
+          <PowerIndexUnit name="List of Badges" keys="List of Badges">
+            <Link name="Manage actions" keys="Manage actions"/>
+            <Link name="Modify" keys="Modify"/>
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <IndexUnit name="Type of Badge" keys="Type of Badge">
+            <Link name="Link11" keys="Link11"/>
+          </IndexUnit>
+          <Link name="Choose the Display Sorting" keys="Choose the Display Sorting"/>
+          <Link name="Add Badge" keys="Add Badge"/>
+          <Grid/>
+        </Page>
+        <Page name="Manage Actions" keys="Manage Actions">
+          <ScrollerUnit name="Scrool Actions" keys="Scrool Actions">
+            <Link name="Link206" keys="Link206"/>
+          </ScrollerUnit>
+          <IndexUnit name="Type of Action" keys="Type of Action">
+            <Link name="Link11" keys="Link11"/>
+          </IndexUnit>
+          <MultiChoiceIndexUnit name="All Reputation Actions" keys="All Reputation Actions">
+            <Link name="Add" keys="Add"/>
+          </MultiChoiceIndexUnit>
+          <PowerIndexUnit name="Involved Actions Associated" keys="Involved Actions Associated">
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <DataUnit name="Badge Selected" keys="Badge Selected">
+            <Link name="Back" keys="Back"/>
+            <Link name="Delete All" keys="Delete All"/>
+          </DataUnit>
+          <Grid>
+            <Row>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="All Reputation Actions"/>
+                  </Row>
+                </Grid>
+              </Cell>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="Involved Actions Associated"/>
+                  </Row>
+                </Grid>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="New Thematic Area" keys="New Thematic Area">
+          <EntryUnit name="Thematic Area" keys="Thematic Area">
+            <Field name="Area Name" keys="Area Name">
+              <MandatoryValidationRule name="Mandatory23"/>
+            </Field>
+            <MultiSelectionField name="Applications Associated" keys="Applications Associated"/>
+            <Link name="Save" keys="Save"/>
+            <Link name="Back" keys="Back"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Manage Thematic Area" keys="Manage Thematic Area">
+          <PowerIndexUnit name="Thematic Area" keys="Thematic Area">
+            <Link name="Modify" keys="Modify"/>
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <Link name="New Thematic Area" keys="New Thematic Area"/>
+          <Grid/>
+        </Page>
+        <Page name="Modify Badge Area" keys="Modify Badge Area">
+          <EntryUnit name="Modify" keys="Modify">
+            <Field name="Name" keys="Name"/>
+            <Field name="Sort Number" keys="Sort Number"/>
+            <Field name="oid"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Update" keys="Update"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Manage Gamified Application" keys="Manage Gamified Application">
+          <PowerIndexUnit name="List of Gamified Applications" keys="List of Gamified Applications">
+            <Link name="Modify" keys="Modify"/>
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <Link name="Add Gamified Application" keys="Add Gamified Application"/>
+          <Grid/>
+        </Page>
+        <Page name="New Gamified Application" keys="New Gamified Application">
+          <EntryUnit name="New Gamified Application" keys="New Gamified Application">
+            <Field name="Name" keys="Name">
+              <MandatoryValidationRule name="Mandatory"/>
+            </Field>
+            <MultiSelectionField name="Thematic Area Associated" keys="Thematic Area Associated"/>
+            <Link name="Save" keys="Save"/>
+            <Link name="Back" keys="Back"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="New Badge" keys="New Badge">
+          <EntryUnit name="New Badge" keys="New Badge">
+            <Field name="Image (png)" keys="Image (png)"/>
+            <Field name="Level" keys="Level">
+              <MandatoryValidationRule name="Mandatory6" keys="Mandatory6"/>
+            </Field>
+            <Field name="Needed Score" keys="Needed Score">
+              <MandatoryValidationRule name="Mandatory5" keys="Mandatory5"/>
+            </Field>
+            <Field name="Title" keys="Title">
+              <MandatoryValidationRule name="Mandatory4" keys="Mandatory4"/>
+            </Field>
+            <Field name="Description" keys="Description">
+              <MandatoryValidationRule name="Mandatory4"/>
+            </Field>
+            <SelectionField name="Area" keys="Area">
+              <MandatoryValidationRule name="Mandatory3" keys="Mandatory3"/>
+            </SelectionField>
+            <Field name="Active" keys="Active"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Attention" keys="Attention">
+          <MultiMessageUnit name="Attention" keys="Attention"/>
+          <NoOpContentUnit name="Button" keys="Button">
+            <Link name="Ok " keys="Ok "/>
+          </NoOpContentUnit>
+          <Grid/>
+        </Page>
+        <Page name="Modify Badge" keys="Modify Badge">
+          <EntryUnit name="Modify Badge" keys="Modify Badge">
+            <Field name="Image (png)" keys="Image (png)"/>
+            <Field name="Level" keys="Level">
+              <MandatoryValidationRule name="Mandatory6" keys="Mandatory6"/>
+            </Field>
+            <Field name="Needed Score" keys="Needed Score">
+              <MandatoryValidationRule name="Mandatory5" keys="Mandatory5"/>
+            </Field>
+            <Field name="Title" keys="Title">
+              <MandatoryValidationRule name="Mandatory4" keys="Mandatory4"/>
+            </Field>
+            <Field name="Description" keys="Description">
+              <MandatoryValidationRule name="Mandatory3"/>
+            </Field>
+            <Field name="Active" keys="Active"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Update" keys="Update"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Sort Badges Area" keys="Sort Badges Area">
+          <MultiEntryUnit name="Choose the Display Sorting" keys="Choose the Display Sorting">
+            <Field name="Area" keys="Area"/>
+            <Field name="Sort Number" keys="Sort Number"/>
+            <Link name="Update" keys="Update"/>
+            <Link name="Back" keys="Back"/>
+          </MultiEntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Manage Action" keys="Manage Action">
+          <PowerIndexUnit name="List of Actions" keys="List of Actions">
+            <Link name="Modify" keys="Modify"/>
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <IndexUnit name="Type of Action" keys="Type of Action">
+            <Link name="Link11" keys="Link11"/>
+          </IndexUnit>
+          <Link name="Add Action" keys="Add Action"/>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="Community Users Area" keys="Community Users Area">
+        <Page name="Action" keys="Action">
+          <EntryUnit name="New action" keys="New action">
+            <Field name="Date" keys="Date">
+              <MandatoryValidationRule name="Mandatory2"/>
+            </Field>
+            <SelectionField name="Action" keys="Action">
+              <MandatoryValidationRule name="Mandatory1"/>
+            </SelectionField>
+            <Field name="Score" keys="Score">
+              <MandatoryValidationRule name="Mandatory4"/>
+            </Field>
+            <Field name="Description" keys="Description">
+              <MandatoryValidationRule name="Mandatory3"/>
+            </Field>
+            <Link name="Save" keys="Save"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Flow97" keys="Flow97"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Reward" keys="Reward">
+          <EntryUnit name="New Reward" keys="New Reward">
+            <Field name="Date" keys="Date">
+              <MandatoryValidationRule name="Mandatory"/>
+            </Field>
+            <SelectionField name="Reward" keys="Reward">
+              <MandatoryValidationRule name="Mandatory"/>
+            </SelectionField>
+            <Field name="Score" keys="Score">
+              <MandatoryValidationRule name="Mandatory"/>
+            </Field>
+            <SelectionField name="Language" keys="Language"/>
+            <Link name="OnChange User Reward" keys="OnChange User Reward"/>
+            <Link name="Save" keys="Save"/>
+            <Link name="Back" keys="Back"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Rewards History" keys="Rewards History">
+          <PowerIndexUnit name="Rewards" keys="Rewards"/>
+          <EntryUnit name="Search" keys="Search">
+            <Field name="To" keys="To"/>
+            <Field name="From" keys="From"/>
+            <SelectionField name="Name" keys="Name"/>
+            <SelectionField name="Language" keys="Language"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Flow127" keys="Flow127"/>
+          </EntryUnit>
+          <Link name="Back" keys="Back"/>
+          <Link name="Assign new reward" keys="Assign new reward"/>
+          <Grid>
+            <Row>
+              <Cell>
+                <Unit>
+                  <Attribute keys="Title"/>
+                </Unit>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="Error" keys="Error">
+          <MultiMessageUnit name="Attention" keys="Attention"/>
+          <Link name="Back" keys="Back"/>
+          <Grid/>
+        </Page>
+        <Page name="Actions History" keys="Actions History">
+          <PowerIndexUnit name="Actions" keys="Actions">
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <EntryUnit name="Search" keys="Search">
+            <Field name="To" keys="To"/>
+            <Field name="From" keys="From"/>
+            <Field name="Description" keys="Description"/>
+            <SelectionField name="Name" keys="Name"/>
+            <SelectionField name="Area" keys="Area"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Flow120" keys="Flow120"/>
+            <Link name="Flow122" keys="Flow122"/>
+          </EntryUnit>
+          <DataUnit name="User" keys="User"/>
+          <Link name="Back" keys="Back"/>
+          <Link name="Assign new action" keys="Assign new action"/>
+          <Grid/>
+        </Page>
+        <Page name="Users list" keys="Users list">
+          <PowerIndexUnit name="Users" keys="Users">
+            <Link name="View Rewards History" keys="View Rewards History"/>
+            <Link name="View Actions History" keys="View Actions History"/>
+            <Link name="Delete" keys="Delete"/>
+          </PowerIndexUnit>
+          <EntryUnit name="Search" keys="Search">
+            <Field name="Email" keys="Email"/>
+            <Field name="Last Name" keys="Last Name"/>
+            <Field name="First Name" keys="First Name"/>
+            <Link name="Search" keys="Search"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="Text Management Area" keys="Text Management Area">
+        <Page name="Text Labels" keys="Text Labels">
+          <EntryUnit name="Search" keys="Search">
+            <Field name="Key" keys="Key"/>
+            <Field name="Message" keys="Message"/>
+            <SelectionField name="language" keys="language"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Flow64" keys="Flow64"/>
+          </EntryUnit>
+          <ScrollerUnit name="Labels" keys="Labels">
+            <Link name="Flow65" keys="Flow65"/>
+          </ScrollerUnit>
+          <MultiEntryUnit name="Edit labels" keys="Edit labels">
+            <Field name="Key" keys="Key"/>
+            <Field name="Message" keys="Message"/>
+            <Link name="Save" keys="Save"/>
+          </MultiEntryUnit>
+          <Grid>
+            <Row>
+              <Cell>
+                <Grid>
+                  <Row>
+                    <Cell keys="Labels"/>
+                  </Row>
+                </Grid>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="Text Chunks" keys="Text Chunks">
+          <EntryUnit name="Language" keys="Language">
+            <SelectionField name="language" keys="language"/>
+            <Link name="Flow42" keys="Flow42"/>
+          </EntryUnit>
+          <PowerIndexUnit name="Chunks" keys="Chunks">
+            <Link name="Edit" keys="Edit"/>
+          </PowerIndexUnit>
+          <Grid/>
+        </Page>
+      </Area>
+      <Area name="Notification Area" keys="Notification Area">
+        <Page name="Edit Container" keys="Edit Container">
+          <EntryUnit name="Container" keys="Container">
+            <Field name="Text" keys="Text"/>
+            <Field name="Alias" keys="Alias">
+              <MandatoryValidationRule name="Mandatory5"/>
+            </Field>
+            <SelectionField name="language" keys="language">
+              <MandatoryValidationRule name="Mandatory10"/>
+            </SelectionField>
+            <Field name="id"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Text Mail" keys="Text Mail">
+          <PowerIndexUnit name="Mails" keys="Mails">
+            <Link name="Modify" keys="Modify"/>
+            <Link name="Preview" keys="Preview"/>
+          </PowerIndexUnit>
+          <EntryUnit name="Language" keys="Language">
+            <SelectionField name="language" keys="language"/>
+            <Link name="Flow42" keys="Flow42"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Edit Mail" keys="Edit Mail">
+          <EntryUnit name="Mail" keys="Mail">
+            <Field name="Code" keys="Code"/>
+            <Field name="Body" keys="Body"/>
+            <Field name="Description" keys="Description">
+              <MandatoryValidationRule name="Mandatory16"/>
+            </Field>
+            <Field name="Subject" keys="Subject">
+              <MandatoryValidationRule name="Mandatory17"/>
+            </Field>
+            <SelectionField name="Footer" keys="Footer"/>
+            <SelectionField name="Header" keys="Header"/>
+            <Field name="id"/>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Attention" keys="Attention">
+          <MultiMessageUnit name="Error" keys="Error">
+            <Link name="Ok" keys="Ok"/>
+          </MultiMessageUnit>
+          <Grid/>
+        </Page>
+        <Page name="New Container" keys="New Container">
+          <EntryUnit name="Container" keys="Container">
+            <Field name="Text" keys="Text"/>
+            <Field name="Alias" keys="Alias">
+              <MandatoryValidationRule name="Mandatory5"/>
+            </Field>
+            <SelectionField name="language" keys="language">
+              <MandatoryValidationRule name="Mandatory10"/>
+            </SelectionField>
+            <Link name="Back" keys="Back"/>
+            <Link name="Save" keys="Save"/>
+          </EntryUnit>
+          <Grid/>
+        </Page>
+        <Page name="Notification Events" keys="Notification Events">
+          <PowerIndexUnit name="Events" keys="Events"/>
+          <EntryUnit name="Search" keys="Search">
+            <Field name="email" keys="email"/>
+            <Field name="Delivery date" keys="Delivery date"/>
+            <Field name="Creation date" keys="Creation date"/>
+            <SelectionField name="Status" keys="Status"/>
+            <SelectionField name="Event" keys="Event"/>
+            <Link name="Search" keys="Search"/>
+            <Link name="Flow143" keys="Flow143"/>
+            <Link name="Flow148" keys="Flow148"/>
+          </EntryUnit>
+          <Grid>
+            <Row>
+              <Cell>
+                <Unit>
+                  <Attribute keys="Email"/>
+                  <Attribute keys="Description"/>
+                </Unit>
+              </Cell>
+            </Row>
+          </Grid>
+        </Page>
+        <Page name="Manage Containers" keys="Manage Containers">
+          <PowerIndexUnit name="Containers" keys="Containers">
+            <Link name="Delete" keys="Delete"/>
+            <Link name="Modify" keys="Modify"/>
+          </PowerIndexUnit>
+          <EntryUnit name="Language" keys="Language">
+            <SelectionField name="language" keys="language"/>
+            <Link name="Flow42" keys="Flow42"/>
+          </EntryUnit>
+          <Link name="Add container" keys="Add container"/>
+          <Grid/>
+        </Page>
+        <Page name="Notification Preview" keys="Notification Preview">
+          <MultiMessageUnit name="mail template" keys="mail template"/>
+          <Grid/>
+        </Page>
+      </Area>
+      <MasterPage name="UserProfile">
+        <DataUnit name="Welcome" keys="Welcome">
+          <Link name="Logout" keys="Logout"/>
+        </DataUnit>
+      </MasterPage>
+    </SiteView>
+    <ModuleView name="Modules">
+      <ModulePackage name="Loyalty Program WS">
+        <ModulePackage name="User Registration Web Service Modules"/>
+        <ModulePackage name="User Activity Credit Web Service Modules"/>
+      </ModulePackage>
+      <ModulePackage name="Behavior Platform Logic">
+        <HybridModule name="Dashboard">
+          <Page name="HQ.UserDashboard " keys="HQ.UserDashboard ">
+            <DataUnit name="User Data" keys="User Data"/>
+            <MultiDataUnit name="Points" keys="Points">
+              <Link name="Credit history" keys="Credit history"/>
+            </MultiDataUnit>
+            <NoOpContentUnit name="Go to ranking" keys="Go to ranking">
+              <Link name="Go to monthly" keys="Go to monthly"/>
+              <Link name="Go to participation" keys="Go to participation"/>
+              <Link name="HQ.YourBadges" keys="HQ.YourBadges"/>
+            </NoOpContentUnit>
+            <DataUnit name="Monthly Message" keys="Monthly Message"/>
+            <HierarchicalIndexUnit name="Rank Participation Monthly" keys="Rank Participation Monthly|Badges">
+              <Link name="Flow46" keys="Flow46"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Rank Participation Overall" keys="Rank Participation Overall|Badges">
+              <Link name="Flow41" keys="Flow41"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Monthly Partecipation User" keys="Badges|Monthly Partecipation User">
+              <Link name="Flow41" keys="Flow41"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Monthly Partecipation up" keys="Badges|Monthly Partecipation up">
+              <Link name="Flow42" keys="Flow42"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Monthly Partecipation down" keys="Monthly Partecipation down|Badges">
+              <Link name="Flow40" keys="Flow40"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Partecipation User" keys="Partecipation User|Badges">
+              <Link name="Flow38" keys="Flow38"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Partecipation up" keys="Badges|Partecipation up">
+              <Link name="Flow39" keys="Flow39"/>
+            </HierarchicalIndexUnit>
+            <HierarchicalIndexUnit name="Partecipation down" keys="Partecipation down|Badges">
+              <Link name="Flow37" keys="Flow37"/>
+            </HierarchicalIndexUnit>
+            <MultiDataUnit name="Latest Badges" keys="Latest Badges"/>
+            <Grid>
+              <Row>
+                <Cell>
+                  <Grid>
+                    <Row>
+                      <Cell keys="User"/>
+                    </Row>
+                  </Grid>
+                </Cell>
+                <Cell>
+                  <Grid>
+                    <Row>
+                      <Cell keys="Participation">
+                        <Grid>
+                          <Row>
+                            <Cell keys="Participation">
+                              <Grid>
+                                <Row>
+                                  <Cell keys="HQ.Ranking7Days"/>
+                                </Row>
+                              </Grid>
+                              <Grid>
+                                <Row>
+                                  <Cell keys="HQ.rank.7Days">
+                                    <Unit keys="userDash"/>
+                                  </Cell>
+                                </Row>
+                              </Grid>
+                            </Cell>
+                          </Row>
+                        </Grid>
+                      </Cell>
+                    </Row>
+                  </Grid>
+                </Cell>
+                <Cell>
+                  <Grid>
+                    <Row>
+                      <Cell>
+                        <Grid>
+                          <Row>
+                            <Cell keys="Participation Overall">
+                              <Grid>
+                                <Row>
+                                  <Cell keys="HQ.RankingOverall"/>
+                                </Row>
+                              </Grid>
+                              <Grid>
+                                <Row>
+                                  <Cell keys="HQ.rank.overall">
+                                    <Unit keys="userDash"/>
+                                  </Cell>
+                                </Row>
+                              </Grid>
+                            </Cell>
+                          </Row>
+                        </Grid>
+                      </Cell>
+                    </Row>
+                  </Grid>
+                </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                  <Grid>
+                    <Row>
+                      <Cell keys="Points">
+                        <Unit>
+                          <Attribute keys="OID"/>
+                          <Attribute keys="Total Credit"/>
+                        </Unit>
+                      </Cell>
+                    </Row>
+                  </Grid>
+                </Cell>
+              </Row>
+            </Grid>
+          </Page>
+        </HybridModule>
+      </ModulePackage>
+      <ModulePackage name="Badges Logic"/>
+      <ModulePackage name="Notification Email"/>
+      <ModulePackage name="Administration Site View Modules">
+        <ModulePackage name="Text Management Modules">
+          <HybridModule name="Edit Text Chunk">
+            <Page name="Edit" keys="Edit">
+              <EntryUnit name="Edit Text" keys="Edit Text">
+                <Field name="Key" keys="Key"/>
+                <Field name="Message" keys="Message"/>
+                <Field name="languageCode"/>
+                <Link name="Back" keys="Back"/>
+                <Link name="Save" keys="Save"/>
+              </EntryUnit>
+              <Grid/>
+            </Page>
+          </HybridModule>
+        </ModulePackage>
+        <ModulePackage name="Notification Area Modules"/>
+        <ModulePackage name="Administration Users Area Modules"/>
+        <ModulePackage name="Community Users Area Modules"/>
+        <ModulePackage name="Rewards Area Modules"/>
+        <ModulePackage name="Gamification Area Modules">
+          <HybridModule name="Edit Gamified Application">
+            <Page name="Modify Gamified Application" keys="Modify Gamified Application">
+              <EntryUnit name="Modify" keys="Modify">
+                <Field name="oid"/>
+                <Field name="Name" keys="Name">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </Field>
+                <MultiSelectionField name="Thematic Area Associated" keys="Thematic Area Associated"/>
+                <Link name="Update" keys="Update"/>
+                <Link name="Back" keys="Back"/>
+              </EntryUnit>
+              <Grid/>
+            </Page>
+          </HybridModule>
+          <HybridModule name="Edit Thematic Area">
+            <Page name="Edit Thematic Area" keys="Edit Thematic Area">
+              <EntryUnit name="Thematic Area" keys="Thematic Area">
+                <Field name="Area Name" keys="Area Name">
+                  <MandatoryValidationRule name="Mandatory20"/>
+                </Field>
+                <Field name="oid"/>
+                <MultiSelectionField name="Applications Associated" keys="Applications Associated"/>
+                <Link name="Save" keys="Save"/>
+                <Link name="Back" keys="Back"/>
+              </EntryUnit>
+              <Grid/>
+            </Page>
+          </HybridModule>
+          <HybridModule name="Modify Action Type">
+            <Page name="Modify Actions" keys="Modify Actions">
+              <EntryUnit name="Modify" keys="Modify">
+                <Field name="Score" keys="Score"/>
+                <SelectionField name="Participation" keys="Participation"/>
+                <SelectionField name="Reputation" keys="Reputation"/>
+                <Field name="Name" keys="Name"/>
+                <Field name="Description" keys="Description"/>
+                <SelectionField name="Repeatable" keys="Repeatable">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </SelectionField>
+                <SelectionField name="Check Time Elapsed" keys="Check Time Elapsed"/>
+                <Field name="Time Elapsed (minutes)" keys="Time Elapsed (minutes)"/>
+                <Field name="Active" keys="Active"/>
+                <Link name="Update" keys="Update"/>
+                <Link name="Back" keys="Back"/>
+              </EntryUnit>
+              <Grid/>
+            </Page>
+          </HybridModule>
+          <HybridModule name="Delete Action Type">
+            <Page name="Delete Not Possible" keys="Delete Not Possible">
+              <MultiMessageUnit name="Delete not possible" keys="Delete not possible"/>
+              <EntryUnit name="Action Type" keys="Action Type">
+                <Field name="Action Oid"/>
+                <Link name="Yes" keys="Yes"/>
+                <Link name="No" keys="No"/>
+              </EntryUnit>
+              <Grid/>
+            </Page>
+          </HybridModule>
+          <HybridModule name="Create Action Type">
+            <Page name="New Action" keys="New Action">
+              <EntryUnit name="New Action" keys="New Action">
+                <Field name="Score" keys="Score"/>
+                <SelectionField name="Participation" keys="Participation">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </SelectionField>
+                <SelectionField name="Reputation" keys="Reputation">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </SelectionField>
+                <Field name="Name" keys="Name">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </Field>
+                <Field name="Description" keys="Description"/>
+                <SelectionField name="Repeatable" keys="Repeatable">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </SelectionField>
+                <SelectionField name="Check Time Elapsed" keys="Check Time Elapsed"/>
+                <SelectionField name="Thematic Area" keys="Thematic Area">
+                  <MandatoryValidationRule name="Mandatory"/>
+                </SelectionField>
+                <Field name="Time Elapsed (minutes)" keys="Time Elapsed (minutes)"/>
+                <Field name="Active" keys="Active"/>
+                <Link name="Save" keys="Save"/>
+                <Link name="Back" keys="Back"/>
+              </EntryUnit>
+              <MultiMessageUnit name="Error" keys="Error"/>
+              <Grid/>
+            </Page>
+          </HybridModule>
+        </ModulePackage>
+      </ModulePackage>
+      <ModulePackage name="Utility Modules"/>
+    </ModuleView>
+  </WebModel>
+</BundleKeys>

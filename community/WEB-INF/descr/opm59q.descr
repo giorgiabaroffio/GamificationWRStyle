@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu68q">
+    <InputParameter id="icp237q" name="description"/>
+    <InputParameter id="icp238q" name="executor"/>
+    <InputParameter id="icp239q" name="time"/>
+    <InputParameter id="icp240q" name="email"/>
+    <InputParameter id="icp241q" name="name"/>
+    <InputParameter id="icp242q" name="tag"/>
+    <InputParameter id="icp243q" name="link"/>
+    <InputParameter id="icp244q" name="area"/>
+    <InputParameter id="icp245q" name="object key"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu64q</OKCollectorUnits>
+  <KOCollectorUnits>kocu45q</KOCollectorUnits>
+  <OperationUnits>icu68q|kocu45q|okcu64q|miu93q|miu94q|miu95q|lpu1q|pcu18q|seu58q|inn21q|cru23q|seu59q|inn22q|switch13q|seu60q|inn23q|switch14q|rstu12q|switch15q|miu96q|seu61q|inn26q|seu62q|gtu13q|seu63q</OperationUnits>
+</Descriptor>

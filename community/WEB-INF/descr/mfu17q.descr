@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify Gamified Application">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent2q</Entity>
+  <ModifiedAttributes>att7q</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond38q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Gamified Application</ModelName>
+    <ParentContainer>opg21q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu17q">kcond38q.att6q</OperationParam>
+      <OperationParam unit="mfu17q">mfu17q.att7q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln278q</Link>
+      <Link resultCode="error">kln56q</Link>
+      <Link resultCode="error.opg21q">kln56q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

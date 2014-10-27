@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu46q">
+    <InputParameter id="icp153q" name="Badge Area"/>
+    <InputParameter id="icp154q" name="Image"/>
+    <InputParameter id="icp155q" name="Title"/>
+    <InputParameter id="icp156q" name="Active"/>
+    <InputParameter id="icp157q" name="Description"/>
+    <InputParameter id="icp158q" name="Level"/>
+    <InputParameter id="icp159q" name="Needed Score"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu45q</OKCollectorUnits>
+  <KOCollectorUnits>kocu29q</KOCollectorUnits>
+  <OperationUnits>icu46q|okcu45q|kocu29q|cru20q|seu47q|inn7q|miu70q|seu76q</OperationUnits>
+</Descriptor>

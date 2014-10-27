@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="check email address">
+  <Script xml:space="preserve">#input email
+
+Properties props = rtx.getVariableProperties()
+def sendEmail = "false"
+sendEmail = props.getProperty("sendNotificationEmail")
+def emailAdmin = props.getProperty("emailAdmin")
+
+if(sendEmail=="true"){
+	return (email)
+}
+return (emailAdmin)</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>check email address</ModelName>
+    <ParentContainer>opg8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu6x">scu6x.email</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln147x</Link>
+      <Link resultCode="error">kln96x</Link>
+      <Link resultCode="error.opg8x">kln96x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="read next gifts">
+  <MaxResults>5</MaxResults>
+  <Query entity="ent12p">
+    <Input id="p0" param="acond110x" type="decimal" implied="false" expandStyle="aggregate" function="min" attribute="att100p"/>
+    <Input id="p1" param="acond113x" type="string" implied="false" expandStyle="in" attribute="att68x"/>
+    <Input id="p2" param="acond114x" type="boolean" implied="false" expandStyle="in" value="true" attribute="att106p"/>
+    <Output id="att95p" name="oid" index="0"/>
+    <Output id="att100p" name="neededPoints" index="1"/>
+    <Output id="att99p" name="description" index="2"/>
+    <Output id="att98p" name="title" index="3"/>
+    <HQL>select a_rewardType.oid, a_rewardType.neededPoints, a_rewardType.description, a_rewardType.title from RewardType a_rewardType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_rewardType.neededPoints &gt; ?})) and (({[p1]safe_cast(a_rewardType.languageCode) in(?)})) and (({[p2]a_rewardType.available in(?)}))</Where>order by a_rewardType.neededPoints asc
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>read next gifts</ModelName>
+    <ParentContainer>opm9x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu97x">acond113x</OperationParam>
+      <OperationParam unit="seu97x">acond110x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln349x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

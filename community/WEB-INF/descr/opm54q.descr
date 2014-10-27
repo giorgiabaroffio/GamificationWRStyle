@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu62q">
+    <InputParameter id="icp206q" name="Language"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu60q</OKCollectorUnits>
+  <KOCollectorUnits/>
+  <OperationUnits>icu62q|rstu8q|okcu60q</OperationUnits>
+</Descriptor>

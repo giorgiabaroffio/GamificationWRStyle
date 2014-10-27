@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="assignActionsToUsers">
+  <Operation name="assignActionsToUsers" nsURI="http://www.webratio.com/webservices/assignActionsToUsers" stateful="false" invocationStyle="REST" requestMethod="POST" contentType="JSON"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp13q" name="JSON" minCard="1" maxCard="1">
+      <ComplexParameterFragment id="cpf5q" name="actions" minCard="1" maxCard="-1"/>
+    </RequestBodyParameter>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>assignActionsToUsers</ModelName>
+    <ParentContainer>port1q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu11q.icp244q|miu11q.icp240q|rsp5q.success$success|miu11q.icp239q|miu11q.icp241q|miu11q.icp238q|miu11q.icp245q|miu11q.icp243q|miu11q.icp242q|scu5q.json|miu11q.icp237q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln1q</Link>
+      <Link resultCode="error">kln1q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

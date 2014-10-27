@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="History badges">
+  <ParentContainer>area4p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page17p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page17p.link"/>
+    <Navigation name="2" links="page17p.auto-link"/>
+    <Navigation name="3" links="page17p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="miu5oln282q|ln11p" effects="#pr#"/>
+    <Navigation name="5" links="pwu2qatt27x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2" effects="#pr#" futile="pwu2q.sortCriteria|pwu2q.newSortAttribute"/>
+    <UselessPreserve navs="3" effects="-" futile="pwu2q.sortCriteria|pwu2q.newSortAttribute"/>
+    <UselessPreserve navs="5" effects="#pr#" futile=""/>
+    <UselessPreserve navs="2|5" effects="-" futile=""/>
+    <UselessPreserve navs="3|2|5" effects="UserCtxParam" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln1p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="gtu1p">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="pwu2q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+      <RefreshFormAll navs="1|0|4"/>
+      <RefreshForm selectiveRefresh="true" navs="3" effects="UserCtxParam" inputs="acond11q"/>
+      <RefreshForm navs="2" effects="UserCtxParam" inputs="acond11q"/>
+      <RefreshForm navs="5" inputs="pwu2q.sortCriteria|pwu2q.newSortAttribute"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>pwu2qatt27x</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page17p_grid_0">
+      <Layout id="page17p_cell_0">
+        <Layout id="pwu2q_0" unitId="pwu2q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu2q.sortCriteria|pwu2q.newSortAttribute</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>pwu2q.sortCriteria|pwu2q.newSortAttribute</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>History badges</ModelName>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="pwu2q">pwu2q.sortCriteria</PageParam>
+      <PageParam unit="pwu2q">acond11q</PageParam>
+      <PageParam unit="pwu2q">pwu2q.newSortAttribute</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

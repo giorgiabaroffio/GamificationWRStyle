@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Modify">
+  <FormFields>
+    <Field id="fld15q" name="Email" type="string" localized="false">
+      <Slot id="fld15q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld16q" name="Password" type="password" localized="false">
+      <Slot id="fld16q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld17q" name="OID" type="string" localized="false">
+      <Slot id="fld17q_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu6q" linkId="ln110q" action="validate"/>
+    <wr:ValidationLink elementId="enu6q" linkId="ln114q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

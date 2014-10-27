@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm51q</Module>
+  <InputCollectorId>icu59q</InputCollectorId>
+  <InputParameter>icp196q</InputParameter>
+  <InputParameter>icp197q</InputParameter>
+  <InputParameter>icp198q</InputParameter>
+  <InputParameter>icp199q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area7p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu87q">miu87q.icp199q</OperationParam>
+      <OperationParam unit="miu87q">miu87q.icp198q</OperationParam>
+      <OperationParam unit="miu87q">miu87q.icp197q</OperationParam>
+      <OperationParam unit="miu87q">miu87q.icp196q</OperationParam>
+      <Params>pwu16p.current.att31x|sfld10p_presel|acond29p|sp|link|sfld12p_presel|fld16p_slot|pwu16p.sortCriteria|cmplink|fld44p_slot|miu86q.icp195q|pwu16p.newSortAttribute|smc|fld12p_slot</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln379q</Link>
+      <Link resultCode="success" transport="true">ln241q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

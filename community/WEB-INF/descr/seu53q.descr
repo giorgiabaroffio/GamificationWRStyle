@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get user">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond72q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att12p" name="publicProfile" index="1"/>
+    <HQL>select a_communityUser.OID, a_communityUser.publicProfile from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get user</ModelName>
+    <ParentContainer>opm55q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu53q">kcond72q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln293q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln401q</Link>
+      <Link resultCode="success" transport="true">ln292q</Link>
+      <Link resultCode="error" transport="true">ln292q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Name">icp143q</Parameter>
+  <Parameter name="Image">icp144q</Parameter>
+  <Parameter name="Sort Number">icp145q</Parameter>
+  <Parameter name="Thematic Area Oid">icp24q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm36q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu42q">icp145q</OperationParam>
+      <OperationParam unit="icu42q">icp24q</OperationParam>
+      <OperationParam unit="icu42q">icp144q</OperationParam>
+      <OperationParam unit="icu42q">icp143q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln306q</Link>
+      <Link resultCode="success" transport="true">ln182q</Link>
+      <Link resultCode="error" transport="true">ln182q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

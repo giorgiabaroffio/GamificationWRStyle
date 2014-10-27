@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu1x">
+    <InputParameter id="icp3x" name="lang"/>
+    <InputParameter id="icp8x" name="gift_description"/>
+    <InputParameter id="icp12x" name="gift points"/>
+    <InputParameter id="icp13x" name="email"/>
+    <InputParameter id="icp14x" name="gift_image"/>
+    <InputParameter id="icp15x" name="code"/>
+    <InputParameter id="icp16x" name="firstname"/>
+    <InputParameter id="icp17x" name="overall_points"/>
+    <InputParameter id="icp18x" name="badge"/>
+    <InputParameter id="icp19x" name="next_gifts"/>
+    <InputParameter id="icp20x" name="gift_title"/>
+    <InputParameter id="icp21x" name="other_actions"/>
+    <InputParameter id="icp22x" name="notification_oid"/>
+    <InputParameter id="icp24x" name="leaderboards"/>
+    <InputParameter id="icp25x" name="seven_days_position"/>
+    <InputParameter id="icp26x" name="overall_position"/>
+    <InputParameter id="icp27x" name="seven_days_points"/>
+    <InputParameter id="icp29x" name="user_photo"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu11x</OKCollectorUnits>
+  <KOCollectorUnits>kocu8x</KOCollectorUnits>
+  <OperationUnits>icu1x|okcu11x|mfu28x|kocu8x|seu66x|scu19x|mlu2x|tmu7x|scu20x|scu6x</OperationUnits>
+</Descriptor>

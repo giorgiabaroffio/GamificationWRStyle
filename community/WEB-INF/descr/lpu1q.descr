@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.LoopUnitService" name="LoopUnit">
+  <IterationSize/>
+  <SecondaryArray id="lsa2q"/>
+  <SecondaryArray id="lsa3q"/>
+  <SecondaryArray id="lsa4q"/>
+  <SecondaryArray id="lsa5q"/>
+  <SecondaryArray id="lsa6q"/>
+  <SecondaryArray id="lsa7q"/>
+  <SecondaryArray id="lsa8q"/>
+  <SecondaryArray id="lsa17q"/>
+  <SecondaryArray id="lsa18q"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>LoopUnit</ModelName>
+    <ParentContainer>opg43q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="lpu1q">lsa8q</OperationParam>
+      <OperationParam unit="lpu1q">lsa4q</OperationParam>
+      <OperationParam unit="lpu1q">lsa5q</OperationParam>
+      <OperationParam unit="lpu1q">lsa6q</OperationParam>
+      <OperationParam unit="lpu1q">lsa7q</OperationParam>
+      <OperationParam unit="lpu1q">lpu1q.array</OperationParam>
+      <OperationParam unit="lpu1q">lsa2q</OperationParam>
+      <OperationParam unit="lpu1q">lsa18q</OperationParam>
+      <OperationParam unit="lpu1q">lsa3q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success.next">oln437q</Link>
+      <Link resultCode="success.end">oln438q</Link>
+      <Link resultCode="error">kln130q</Link>
+      <Link resultCode="success.end" transport="true">ln312q</Link>
+      <Link resultCode="success.next" transport="true">ln312q</Link>
+      <Link resultCode="error" transport="true">ln312q</Link>
+      <Link resultCode="success.end" transport="true">ln313q</Link>
+      <Link resultCode="success.next" transport="true">ln313q</Link>
+      <Link resultCode="error" transport="true">ln313q</Link>
+      <Link resultCode="error.opg43q">kln130q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

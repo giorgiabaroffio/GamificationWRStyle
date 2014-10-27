@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify Community User">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent15x</Entity>
+  <ModifiedAttributes>att99x|att4q|att12p|att134p|att85x|password|att115p|att123p|att113p|att114p|att131p|att127p|email|userName</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode>ENTITY</FetchMode>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond73q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Community User</ModelName>
+    <ParentContainer>opg41q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu37q">mfu37q.att12p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.email</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att99x</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att85x</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.userName</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att4q</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att134p_name</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att115p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att131p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att114p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att113p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att127p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att123p</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att134p</OperationParam>
+      <OperationParam unit="mfu37q">kcond73q.userOID</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.password</OperationParam>
+      <OperationParam unit="mfu37q">mfu37q.att123p_name</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln407q</Link>
+      <Link resultCode="error">kln116q</Link>
+      <Link resultCode="success" transport="true">ln299q</Link>
+      <Link resultCode="error" transport="true">ln299q</Link>
+      <Link resultCode="error.opg41q">kln116q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

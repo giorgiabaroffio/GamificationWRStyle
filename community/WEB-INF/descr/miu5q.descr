@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm56q</Module>
+  <InputCollectorId>icu65q</InputCollectorId>
+  <InputParameter>icp208q</InputParameter>
+  <InputParameter>icp209q</InputParameter>
+  <InputParameter>icp210q</InputParameter>
+  <InputParameter>icp211q</InputParameter>
+  <InputParameter>icp212q</InputParameter>
+  <InputParameter>icp213q</InputParameter>
+  <InputParameter>icp214q</InputParameter>
+  <InputParameter>icp215q</InputParameter>
+  <InputParameter>icp216q</InputParameter>
+  <InputParameter>icp217q</InputParameter>
+  <InputParameter>icp218q</InputParameter>
+  <InputParameter>icp219q</InputParameter>
+  <InputParameter>icp220q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>port11q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu5q">miu5q.icp219q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp218q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp216q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp217q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp213q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp209q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp212q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp214q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp208q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp215q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp220q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp210q</OperationParam>
+      <OperationParam unit="miu5q">miu5q.icp211q</OperationParam>
+      <Params>eru11q.faultException|eru11q.faultMessage|rsp7q.success$success</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln13q</Link>
+      <Link resultCode="error">kln11q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

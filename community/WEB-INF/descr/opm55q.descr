@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu64q"></InputCollectorUnit>
+  <OKCollectorUnits>okcu61q</OKCollectorUnits>
+  <KOCollectorUnits>kocu41q|kocu42q</KOCollectorUnits>
+  <OperationUnits>icu64q|seu53q|inn12q|rstu9q|gtu12q|okcu61q|kocu41q|kocu42q|scu13q</OperationUnits>
+</Descriptor>

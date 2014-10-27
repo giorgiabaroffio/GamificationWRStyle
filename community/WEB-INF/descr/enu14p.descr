@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntityBasedEntryUnitService" name="New reward">
+  <Entity>ent12p</Entity>
+  <Query entity="ent12p">
+    <Input id="p0" param="enu14p.att95p" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from RewardType a_rewardType
+      <Where defaultPolicy="" allImplied="false">(({[p0]a_rewardType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <FormFields>
+    <Field id="fld35p" name="Title" type="string" localized="false" attributeId="att98p"></Field>
+    <Field id="fld36p" name="Description" type="text" localized="false" attributeId="att99p"></Field>
+    <Field id="fld37p" name="Needed Points" type="decimal" localized="true" attributeId="att100p"></Field>
+    <Field id="fld38p" name="Available" type="boolean" localized="true"></Field>
+    <Field id="fld47p" name="Image" type="blob" localized="false"></Field>
+    <SelectionField id="sfld20p" name="language" type="string" localized="false" value="" splitOutput="">
+      <Slot id="slot21p" label="true" output="" value="Italiano|English"/>
+      <Slot id="slot20p" label="" output="true" value="it|en"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu14p" linkId="ln76p" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld35p" id="mnd8p" name="Mandatory1">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld37p" id="mnd9p" name="Mandatory3">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld20p" id="mnd5p" name="Mandatory5">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld47p" id="mnd16q" name="Mandatory16">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

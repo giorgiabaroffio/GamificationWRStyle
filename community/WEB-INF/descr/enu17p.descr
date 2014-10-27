@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Mail">
+  <FormFields>
+    <Field id="fld24p" name="Code" type="string" localized="false">
+      <Slot id="fld24p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld25p" name="Body" type="text" localized="false">
+      <Slot id="fld25p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld28p" name="Description" type="string" localized="false">
+      <Slot id="fld28p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld39p" name="Subject" type="string" localized="false">
+      <Slot id="fld39p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld43p" name="id" type="string" localized="false">
+      <Slot id="fld43p_slot" label="true" output="true"/>
+    </Field>
+    <SelectionField id="sfld16p" name="Footer" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld16p_label" label="true" output="false"/>
+      <Slot id="sfld16p_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld14p" name="Header" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld14p_label" label="true" output="false"/>
+      <Slot id="sfld14p_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu17p" linkId="ln162p" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld28p" id="mnd16p" name="Mandatory16">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld39p" id="mnd17p" name="Mandatory17">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

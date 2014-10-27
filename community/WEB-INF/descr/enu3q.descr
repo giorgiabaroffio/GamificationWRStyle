@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntityBasedEntryUnitService" name="Modify">
+  <Entity>ent16x</Entity>
+  <Query entity="ent16x">
+    <Input id="p0" param="enu3q.att38x" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from ActionType a_actionType
+      <Where defaultPolicy="" allImplied="false">(({[p0]a_actionType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <FormFields>
+    <Field id="fld4q" name="Score" type="decimal" localized="true" attributeId="att41x">
+      <Slot id="fld4q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld5q" name="Name" type="string" localized="false" attributeId="att39x">
+      <Slot id="fld5q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld6q" name="Description" type="string" localized="false" attributeId="att71x">
+      <Slot id="fld6q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld10q" name="Time Elapsed (minutes)" type="integer" localized="true">
+      <Slot id="fld10q_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld11q" name="Active" type="boolean" localized="true" attributeId="att9q">
+      <Slot id="fld11q_slot" label="true" output="true"/>
+    </Field>
+    <SelectionField id="sfld1q" name="Participation" type="boolean" localized="true" value="" splitOutput="" attributeId="att60x">
+      <Slot id="sfld1q_label" label="true" output="false"/>
+      <Slot id="sfld1q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld2q" name="Reputation" type="boolean" localized="true" value="" splitOutput="" attributeId="att50x">
+      <Slot id="sfld2q_label" label="true" output="false"/>
+      <Slot id="sfld2q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld3q" name="Repeatable" type="boolean" localized="true" value="true" splitOutput="">
+      <Slot id="sfld3q_label" label="true" output="false"/>
+      <Slot id="sfld3q_output" label="false" output="true"/>
+    </SelectionField>
+    <SelectionField id="sfld4q" name="Check Time Elapsed" type="boolean" localized="true" value="false" splitOutput="">
+      <Slot id="sfld4q_label" label="true" output="false"/>
+      <Slot id="sfld4q_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu3q" linkId="ln146q" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld3q" id="mnd7q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

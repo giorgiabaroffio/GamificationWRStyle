@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Badge">
+  <MaxResults/>
+  <Query entity="ent13x">
+    <Input id="p0" param="kcond51x.att42x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att42x" name="oid" index="0"/>
+    <Output id="att48x" name="title" index="1"/>
+    <Output id="att46x" name="description" index="2"/>
+    <Output id="att63x" name="HDCheckedImage" blob="true" index="3"/>
+    <Output id="att43x" name="level" index="4"/>
+    <Output id="att20x" name="neededScore" index="5"/>
+    <Output id="att8q" name="active" index="6"/>
+    <Output id="role12q_att21q" name="badgeTypeToThematicArea_oid" index="7" useId="true"/>
+    <HQL>select a_badgeType.oid, a_badgeType.title, a_badgeType.description, a_badgeType.HDCheckedImageRef, a_badgeType.level, a_badgeType.neededScore, a_badgeType.active, a_badgeType.badgeTypeToThematicArea.oid from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

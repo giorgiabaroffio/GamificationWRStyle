@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm40q</Module>
+  <InputCollectorId>icu46q</InputCollectorId>
+  <InputParameter>icp153q</InputParameter>
+  <InputParameter>icp154q</InputParameter>
+  <InputParameter>icp155q</InputParameter>
+  <InputParameter>icp156q</InputParameter>
+  <InputParameter>icp157q</InputParameter>
+  <InputParameter>icp158q</InputParameter>
+  <InputParameter>icp159q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area2p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu71q">miu71q.icp159q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp154q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp156q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp155q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp153q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp158q</OperationParam>
+      <OperationParam unit="miu71q">miu71q.icp157q</OperationParam>
+      <Params>miu68q.icp150q|sp|link|pwu9x.current.att42x|pwu9x.newSortAttribute|kcond51x.att42x|kcond46x.att42x|sfld7x_output|cmplink|acond122x|pwu9x.sortCriteria|sfld7x_label|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln327q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

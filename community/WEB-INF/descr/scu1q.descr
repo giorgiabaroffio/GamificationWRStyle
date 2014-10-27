@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Elapsed Time">
+  <Script path="WEB-INF/groovy/ElapsedTime.groovy"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Elapsed Time</ModelName>
+    <ParentContainer>opm1q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu1q">scu1q.date</OperationParam>
+      <OperationParam unit="scu1q">scu1q.elapsedActionTime</OperationParam>
+      <OperationParam unit="scu1q">scu1q.max_date</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln33q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.AdapterUnitService" name="Get User Rewards">
+  <AdapterUnit inputDocCount="" transformer="WEB-INF/webservice/GetUserRewards.xml.template">
+    <InputParameters>
+      <InputParameter>oid</InputParameter>
+      <InputParameter>rewardName</InputParameter>
+      <InputParameter>neededPoints</InputParameter>
+      <InputParameter>userEmail</InputParameter>
+    </InputParameters>
+  </AdapterUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Get User Rewards</ModelName>
+    <ParentContainer>port5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="adu3q">adu3q.userEmail</OperationParam>
+      <OperationParam unit="adu3q">adu3q.neededPoints</OperationParam>
+      <OperationParam unit="adu3q">adu3q.oid</OperationParam>
+      <OperationParam unit="adu3q">adu3q.rewardName</OperationParam>
+      <Params>eru9q.faultException|rsp8q|eru9q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln78q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

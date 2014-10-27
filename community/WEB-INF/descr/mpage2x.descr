@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="UserProfile">
+  <ParentContainer>sv2x</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <IsMasterPage>true</IsMasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="mpage2x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="mpage2x.link"/>
+    <Navigation name="2" links="mpage2x.auto-link"/>
+    <Navigation name="3" links="mpage2x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln54x|impl" postPropagatedLink="ln54x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln53x</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="gtu1x">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau6x">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln54x</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="mpage2x_customlocation_0">
+      <Layout id="mpage2x_grid_0">
+        <Layout id="mpage2x_cell_0">
+          <Layout id="dau6x_0" unitId="dau6x"></Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>UserProfile</ModelName>
+    <NavigationAncestors>sv2x</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau6x">kcond24x.userOID</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

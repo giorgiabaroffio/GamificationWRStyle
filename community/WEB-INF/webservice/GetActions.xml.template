@@ -1,0 +1,19 @@
+#?delimiters [%, %], [%=, %]
+<wr:Input name="gamifiedApplication"/>
+<wr:Input name="action"/>
+<wr:Input name="actionOid"/>
+<getActionsResponse>
+		[% inputParams.action.eachWithIndex(){obj,idx -> %]
+		<action>
+			<gamifiedApplication>
+				[%= inputParams.gamifiedApplication[idx] %]
+			</gamifiedApplication>
+			<actionName>
+				[%= inputParams.action[idx] %]
+			</actionName>
+			<actionOid>
+				[%= inputParams.actionOid[idx] %]
+			</actionOid>		
+		</action>	
+		[%}%]
+</getActionsResponse>

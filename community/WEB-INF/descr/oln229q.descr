@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page8p</Target>
+  <Secure>false</Secure>
+  <Source>miu48q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="fld3p_slot" sourceUnit="miu48q" sourceParam="ocp23q"/>
+    <ContextPropagation targetParam="fld4p_slot" sourceUnit="miu48q" sourceParam="ocp24q"/>
+  </ContextPropagations>
+</Descriptor>

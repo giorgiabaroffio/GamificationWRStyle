@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu2q">
+    <InputParameter id="icp5q" name="Gamified Application OID"/>
+    <InputParameter id="icp11q" name="Area name"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu3q</OKCollectorUnits>
+  <KOCollectorUnits>kocu4q</KOCollectorUnits>
+  <OperationUnits>icu2q|okcu3q|kocu4q|cnu4q|cru4q</OperationUnits>
+</Descriptor>

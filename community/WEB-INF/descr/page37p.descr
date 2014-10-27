@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Notification Events">
+  <ParentContainer>area7p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page37p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page37p.link"/>
+    <Navigation name="2" links="page37p.auto-link"/>
+    <Navigation name="3" links="page37p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln136p|validation-failed"/>
+    <Navigation name="5" links="ln143p|validation-failed"/>
+    <Navigation name="6" links="ln143p|validation-failed" selectiveRefresh="true"/>
+    <Navigation name="7" links="ln148p|validation-failed"/>
+    <Navigation name="8" links="ln148p|validation-failed" selectiveRefresh="true"/>
+    <Navigation name="9" links="ln136p"/>
+    <Navigation name="10" links="ln143p"/>
+    <Navigation name="11" links="ln143p" selectiveRefresh="true"/>
+    <Navigation name="12" links="ln148p"/>
+    <Navigation name="13" links="ln148p" selectiveRefresh="true"/>
+    <Navigation name="14" links="pwu12pBlock"/>
+    <Navigation name="15" links="pwu12pBlock" selectiveRefresh="true"/>
+    <Navigation name="16" links="pwu12pFirst"/>
+    <Navigation name="17" links="pwu12pFirst" selectiveRefresh="true"/>
+    <Navigation name="18" links="pwu12pLast"/>
+    <Navigation name="19" links="pwu12pLast" selectiveRefresh="true"/>
+    <Navigation name="20" links="pwu12pNext"/>
+    <Navigation name="21" links="pwu12pNext" selectiveRefresh="true"/>
+    <Navigation name="22" links="pwu12pPrevious"/>
+    <Navigation name="23" links="pwu12pPrevious" selectiveRefresh="true"/>
+    <Navigation name="24" links="pwu12patt84x"/>
+    <Navigation name="25" links="pwu12patt84x" selectiveRefresh="true"/>
+    <Navigation name="26" links="pwu12patt89x"/>
+    <Navigation name="27" links="pwu12patt89x" selectiveRefresh="true"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="19|22|17|18|23|24|15|16|25|26|13|14|27|11|12|21|2|20|10|7|5|4|9" effects="-" futile=""/>
+    <UselessPreserve navs="19|22|17|18|23|24|15|16|25|26|13|14|27|11|12|21|20|10|7|5|4|9" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3|2|6|8" effects="#pr#" futile="acond44p|pwu12p.block|acond8p|acond41p|acond33p|pwu12p.sortCriteria|acond25p|pwu12p.newSortAttribute"/>
+    <UselessPreserve navs="3|6|8" effects="-" futile="acond44p|pwu12p.block|acond8p|acond41p|acond33p|pwu12p.sortCriteria|acond25p|pwu12p.newSortAttribute"/>
+  </UselessPreserves>
+  <LinkSequence>ln138p|ln141p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="pwu12p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="21|3|19|17|23|15|25|13|27|11" effects="#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="21|19|17|23|15|25|13|27|11" effects="-"/>
+      <RefreshFormAll navs="1|0"/>
+      <RefreshForm selectiveRefresh="true" navs="21|19|17|23|15" inputs="pwu12p.block"/>
+      <RefreshForm navs="20|22|18|16|14" inputs="pwu12p.block"/>
+      <RefreshForm selectiveRefresh="true" navs="13" inputs="acond41p"/>
+      <RefreshForm navs="12" inputs="acond41p"/>
+      <RefreshForm selectiveRefresh="true" navs="11" inputs="acond44p"/>
+      <RefreshForm navs="10" inputs="acond44p"/>
+      <RefreshForm navs="9" inputs="acond8p|acond33p|acond25p"/>
+      <RefreshForm selectiveRefresh="true" navs="25|27" inputs="pwu12p.sortCriteria|pwu12p.newSortAttribute"/>
+      <RefreshForm navs="24|26" inputs="pwu12p.sortCriteria|pwu12p.newSortAttribute"/>
+    </UnitComputation>
+    <UnitComputation unit="enu19p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="3|6|8|13|11" effects="#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="6|8|13|11" effects="-"/>
+      <RefreshFormAll navs="1|0"/>
+    </UnitComputation>
+    <UnitComputation unit="seu34p">
+      <NavigationCondition selectiveRefresh="true" navs="3" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu35p">
+      <NavigationCondition selectiveRefresh="true" navs="3" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>pwu12patt89x</ManualLink>
+    <ManualLink>pwu12patt84x</ManualLink>
+    <ManualLink>pwu12pFirst</ManualLink>
+    <ManualLink>pwu12pPrevious</ManualLink>
+    <ManualLink>pwu12pNext</ManualLink>
+    <ManualLink>pwu12pLast</ManualLink>
+    <ManualLink>pwu12pBlock</ManualLink>
+    <ManualLink>ln136p</ManualLink>
+    <ManualLink>ln143p</ManualLink>
+    <ManualLink>ln148p</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page37p_grid_0">
+      <Layout id="page37p_cell_0">
+        <Layout id="enu19p_0" unitId="enu19p"></Layout>
+      </Layout>
+      <Layout id="page37p_cell_12">
+        <Layout id="pwu12p_0" unitId="pwu12p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>pwu12p.block|acond8p|acond33p|acond25p|acond41p|acond44p|pwu12p.sortCriteria|pwu12p.newSortAttribute</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Notification Events</ModelName>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="pwu12p">acond44p</PageParam>
+      <PageParam unit="pwu12p">pwu12p.block</PageParam>
+      <PageParam unit="pwu12p">acond8p</PageParam>
+      <PageParam unit="pwu12p">acond41p</PageParam>
+      <PageParam unit="pwu12p">pwu12p.sortCriteria</PageParam>
+      <PageParam unit="pwu12p">acond33p</PageParam>
+      <PageParam unit="pwu12p">acond25p</PageParam>
+      <PageParam unit="pwu12p">pwu12p.newSortAttribute</PageParam>
+      <PageParam preservedByForm="true" unit="enu19p">sfld8p_output</PageParam>
+      <PageParam preservedByForm="true" unit="enu19p">sfld18p_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu19p">sfld8p_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu19p">sfld18p_output</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.InitJobUnitService" name="Init Job">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Init Job</ModelName>
+    <ParentContainer>job2x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu17x.icp18x|kcond44x.att32x|miu17x.icp16x|miu17x.icp17x|miu17x.icp8x|kcond7x.att32x|mfu33x.att88x|miu17x.icp20x|miu17x.icp21x|miu17x.icp14x|miu17x.icp22x|miu17x.icp15x|miu17x.icp3x|miu17x.icp19x|miu17x.icp13x|miu17x.icp12x</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln5q</Link>
+      <Link resultCode="success" transport="true">ln63x</Link>
+      <Link resultCode="error" transport="true">ln63x</Link>
+      <Link resultCode="success" transport="true">ln242x</Link>
+      <Link resultCode="error" transport="true">ln242x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

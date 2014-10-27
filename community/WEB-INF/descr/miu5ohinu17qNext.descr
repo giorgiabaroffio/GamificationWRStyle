@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page20p</Target>
+  <Secure>false</Secure>
+  <Source>miu5ohinu17q</Source>
+  <SourcePage>page20p</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>miu5ohinu14q.block|miu5ohinu18q.newSortAttribute|miu5ohinu18q.sortCriteria|miu5ohinu19q.sortCriteria|miu5ohinu19q.newSortAttribute|miu5ohinu15q.newSortAttribute|miu5ohinu15q.sortCriteria|miu5ohinu17q.block|miu5ohinu16q.newSortAttribute|miu5ohinu16q.sortCriteria|var31p</Params>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu5ohinu17q.block" sourceUnit="miu5ohinu17q" sourceParam="scroller.next"/>
+  </ContextPropagations>
+</Descriptor>

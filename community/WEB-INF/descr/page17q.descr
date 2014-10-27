@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Text Labels">
+  <ParentContainer>area3q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page17q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page17q.link"/>
+    <Navigation name="2" links="page17q.auto-link"/>
+    <Navigation name="3" links="page17q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln224q"/>
+    <Navigation name="5" links="ln225q"/>
+    <Navigation name="6" links="ln225q" selectiveRefresh="true"/>
+    <Navigation name="7" links="ln227q|impl" postPropagatedLink="ln227q"/>
+    <Navigation name="8" links="ln227q|oln359q"/>
+    <Navigation name="9" links="scu10qBlock"/>
+    <Navigation name="10" links="scu10qBlock" selectiveRefresh="true"/>
+    <Navigation name="11" links="scu10qFirst"/>
+    <Navigation name="12" links="scu10qFirst" selectiveRefresh="true"/>
+    <Navigation name="13" links="scu10qLast"/>
+    <Navigation name="14" links="scu10qLast" selectiveRefresh="true"/>
+    <Navigation name="15" links="scu10qNext"/>
+    <Navigation name="16" links="scu10qNext" selectiveRefresh="true"/>
+    <Navigation name="17" links="scu10qPrevious"/>
+    <Navigation name="18" links="scu10qPrevious" selectiveRefresh="true"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="17|18|15|16|13|14|11|12|2|10|7|6|5|4|9|8" effects="-" futile=""/>
+    <UselessPreserve navs="17|18|15|16|13|14|11|12|10|7|6|5|4|9|8" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3|2" effects="#pr#" futile="acond67q|scu10q.block|acond86q|acond87q"/>
+    <UselessPreserve navs="3" effects="-" futile="acond67q|scu10q.scroller.bundleDataOID|scu10q.block|acond86q|acond87q"/>
+  </UselessPreserves>
+  <LinkSequence>ln226q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu10q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="6" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|6" effects="#pr#"/>
+      <RefreshFormAll navs="1|0|7|8"/>
+    </UnitComputation>
+    <UnitComputation unit="scu10q">
+      <NavigationCondition selectiveRefresh="true" navs="10|6|18|16|14|12" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="meu1q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="10|6|18|16|14|12" effects="-"/>
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="8" inputs="meu1q.bundleDataOID"/>
+      <RefreshFormAll navs="1|0|7"/>
+      <RefreshForm selectiveRefresh="true" navs="10|6|18|16|14|12" inputs="meu1q.bundleDataOID"/>
+      <RefreshForm navs="5|4|17|15|9|13|11" inputs="meu1q.bundleDataOID"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln224q</ManualLink>
+    <ManualLink>ln225q</ManualLink>
+    <ManualLink>scu10qFirst</ManualLink>
+    <ManualLink>scu10qPrevious</ManualLink>
+    <ManualLink>scu10qNext</ManualLink>
+    <ManualLink>scu10qLast</ManualLink>
+    <ManualLink>scu10qBlock</ManualLink>
+    <ManualLink>ln227q</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page17q_grid_0">
+      <Layout id="page17q_cell_8">
+        <Layout id="enu10q_0" unitId="enu10q"></Layout>
+      </Layout>
+      <Layout id="page17q_cell_12">
+        <Layout id="page17q_grid_1">
+          <Layout id="page17q_cell_13">
+            <Layout id="scu10q_0" unitId="scu10q"></Layout>
+            <Layout id="meu1q_0" unitId="meu1q"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>scu10q.scroller.bundleDataOID|scu10q.block|acond86q|acond87q|acond67q</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>scu10q.scroller.bundleDataOID</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Text Labels</ModelName>
+    <NavigationAncestors>sv2x|area3q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="scu10q">acond67q</PageParam>
+      <PageParam unit="scu10q">scu10q.scroller.bundleDataOID</PageParam>
+      <PageParam unit="scu10q">acond86q</PageParam>
+      <PageParam unit="scu10q">scu10q.block</PageParam>
+      <PageParam unit="scu10q">acond87q</PageParam>
+      <PageParam preservedByForm="true" unit="meu1q">meu1q.bundleDataOID</PageParam>
+      <PageParam>miu81q.icp181q</PageParam>
+      <PageParam>miu81q.icp182q</PageParam>
+      <PageParam>miu81q.icp183q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

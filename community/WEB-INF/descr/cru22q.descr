@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.CreateUnitService" name="Create New User">
+  <Entity>ent15x</Entity>
+  <BulkInsert>false</BulkInsert>
+  <SkipBlankRecords>false</SkipBlankRecords>
+  <Field param="cru22q.userOID" type="integer" attribute="userOID">OID</Field>
+  <Field param="cru22q.userName" type="string" attribute="userName">userName</Field>
+  <Field param="cru22q.password" type="password" attribute="password">password</Field>
+  <Field param="cru22q.email" type="string" attribute="email">email</Field>
+  <Field param="cru22q.att99x" type="boolean" attribute="att99x">internal</Field>
+  <Field param="cru22q.att56x" type="decimal" attribute="att56x">participation</Field>
+  <Field param="cru22q.att57x" type="decimal" attribute="att57x">totalCredit</Field>
+  <Field param="cru22q.att319x" type="decimal" attribute="att319x">participation7Days</Field>
+  <Field param="cru22q.att103p" type="string" attribute="att103p">companyName</Field>
+  <Field param="cru22q.att113p" type="string" attribute="att113p">firstName</Field>
+  <Field param="cru22q.att114p" type="string" attribute="att114p">lastName</Field>
+  <Field param="cru22q.att115p" type="string" attribute="att115p">city</Field>
+  <Field param="cru22q.att123p" type="blob" attribute="att123p">smallPhoto</Field>
+  <Field param="cru22q.att124p" type="string" attribute="att124p">twitter</Field>
+  <Field param="cru22q.att127p" type="string" attribute="att127p">country</Field>
+  <Field param="cru22q.att131p" type="string" attribute="att131p">geographicalArea</Field>
+  <Field param="cru22q.att132p" type="string" attribute="att132p">webSite</Field>
+  <Field param="cru22q.att134p" type="blob" attribute="att134p">bigPhoto</Field>
+  <Field param="cru22q.att136p" type="text" attribute="att136p">bio</Field>
+  <Field param="cru22q.att138p" type="string" attribute="att138p">linkedin</Field>
+  <Field param="cru22q.att12p" type="boolean" attribute="att12p">publicProfile</Field>
+  <Field param="cru22q.att75p" type="string" attribute="att75p">facebook</Field>
+  <Field param="cru22q.att76p" type="string" attribute="att76p">google</Field>
+  <Field param="cru22q.att85x" type="string" attribute="att85x">isoCode</Field>
+  <Field param="cru22q.att4q" type="date" attribute="att4q">birthDate</Field>
+  <Field param="cru22q.att10q" type="timestamp" attribute="att10q">registrationDate</Field>
+  <Association name="groups" direct="true" inverseName="users" oneToOne="false" maxCardMany="true">
+    <QueryInput id="OID" param="cru22q.User2Group.groupOID" type="integer"/>
+    <Query>from Group _e where _e.OID = :OID</Query>
+  </Association>
+  <Association name="defaultGroup" direct="true" inverseName="defaultUsers" oneToOne="false" maxCardMany="false">
+    <QueryInput id="OID" param="cru22q.User2DefaultGroup.groupOID" type="integer"/>
+    <Query>from Group _e where _e.OID = :OID</Query>
+  </Association>
+  <Association name="userHeadQuarterToAction" direct="false" inverseName="actionToUserHeadQuarter" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru22q.role7p.att49x" type="integer"/>
+    <Query>from ActionInstance _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="userHeadQuarterToBadgeAcquired" direct="false" inverseName="badgeAcquiredToUserHeadQuarter" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru22q.role6x.att21x" type="integer"/>
+    <Query>from BadgeInstance _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="communityUserToNotification" direct="false" inverseName="notificationToCommunityUser" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru22q.role22x.att32x" type="integer"/>
+    <Query>from Notification _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="communityUserToRewardInstance" direct="false" inverseName="rewardInstanceToCommunityUser" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru22q.role51p.att101p" type="integer"/>
+    <Query>from RewardInstance _e where _e.oid = :oid</Query>
+  </Association>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create New User</ModelName>
+    <ParentContainer>opg42q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="cru22q">cru22q.att123p_name</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att4q</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att134p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att85x</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att57x</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att10q</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att134p_name</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att12p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att56x</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att319x</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att99x</OperationParam>
+      <OperationParam unit="cru22q">cru22q.userName</OperationParam>
+      <OperationParam unit="cru22q">cru22q.password</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att127p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.email</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att113p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.User2DefaultGroup.groupOID</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att131p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att114p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att115p</OperationParam>
+      <OperationParam unit="cru22q">cru22q.att123p</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln425q</Link>
+      <Link resultCode="success" transport="true">ln309q</Link>
+      <Link resultCode="error" transport="true">ln309q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

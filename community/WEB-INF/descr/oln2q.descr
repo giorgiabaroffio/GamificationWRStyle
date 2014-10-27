@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu24q</Target>
+  <Secure>false</Secure>
+  <Source>adu4q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu24q.icp233q" sourceUnit="adu4q" sourceParam="map(userid)"/>
+    <ContextPropagation targetParam="miu24q.icp227q" sourceUnit="adu4q" sourceParam="map(city)"/>
+    <ContextPropagation targetParam="miu24q.icp231q" sourceUnit="adu4q" sourceParam="map(isocode)"/>
+    <ContextPropagation targetParam="miu24q.icp224q" sourceUnit="adu4q" sourceParam="map(firstname)"/>
+    <ContextPropagation targetParam="miu24q.icp232q" sourceUnit="adu4q" sourceParam="map(password)"/>
+    <ContextPropagation targetParam="miu24q.icp230q" sourceUnit="adu4q" sourceParam="map(birthdate)"/>
+    <ContextPropagation targetParam="miu24q.icp223q" sourceUnit="adu4q" sourceParam="map(publicprofile)"/>
+    <ContextPropagation targetParam="miu24q.icp229q" sourceUnit="adu4q" sourceParam="map(internal)"/>
+    <ContextPropagation targetParam="miu24q.icp228q" sourceUnit="adu4q" sourceParam="map(geoarea)"/>
+    <ContextPropagation targetParam="miu24q.icp225q" sourceUnit="adu4q" sourceParam="map(email)"/>
+    <ContextPropagation targetParam="miu24q.icp222q" sourceUnit="adu4q" sourceParam="map(photo)"/>
+    <ContextPropagation targetParam="miu24q.icp221q" sourceUnit="adu4q" sourceParam="map(country)"/>
+    <ContextPropagation targetParam="miu24q.icp226q" sourceUnit="adu4q" sourceParam="map(lastname)"/>
+  </ContextPropagations>
+</Descriptor>

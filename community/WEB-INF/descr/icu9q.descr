@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Area Name">icp13q</Parameter>
+  <Parameter name="Thematic Area Oid">icp14q</Parameter>
+  <Parameter name="GamifiedApplication Oid">icp15q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm9q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu9q">icp15q</OperationParam>
+      <OperationParam unit="icu9q">icp13q</OperationParam>
+      <OperationParam unit="icu9q">icp14q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln132q</Link>
+      <Link resultCode="success" transport="true">ln99q</Link>
+      <Link resultCode="error" transport="true">ln99q</Link>
+      <Link resultCode="success" transport="true">ln141q</Link>
+      <Link resultCode="error" transport="true">ln141q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

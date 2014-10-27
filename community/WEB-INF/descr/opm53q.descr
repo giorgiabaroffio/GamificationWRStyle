@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu61q">
+    <InputParameter id="icp204q" name="image"/>
+    <InputParameter id="icp205q" name="username"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu59q</OKCollectorUnits>
+  <KOCollectorUnits/>
+  <OperationUnits>icu61q|sim7q|sim8q|sim9q|sim10q|okcu59q|sfu7q|pwu7q|sfu8q|sfu9q|sfu10q|sfu11q|sfu12q|sim11q|sim12q</OperationUnits>
+</Descriptor>

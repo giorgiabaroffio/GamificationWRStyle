@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="getRank">
+  <Operation name="getRank" nsURI="" stateful="false" invocationStyle="REST" requestMethod="GET"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters></BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getRank</ModelName>
+    <ParentContainer>port2</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>scu1.user_name|rsp1|scu1.user_totalcredits|scu1.user_OID</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln4</Link>
+      <Link resultCode="error">kln1</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>
+ 

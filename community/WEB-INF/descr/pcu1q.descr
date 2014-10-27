@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.ParameterCollectorUnitService" name="HQ.UserDashboard ">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>HQ.UserDashboard</ModelName>
+    <ParentContainer>area4p</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu5oacond128q|acond58p|miu5oacond137q|miu5oacond135q|miu5oacond88q|miu5oacond120q|miu5ohinu18q.newSortAttribute|miu5oocp74q|miu5oacond122q|pcp46x|miu5ohinu18q.sortCriteria|miu5oacond114q|miu5oacond131q|scu4o.nickname|acond40p|miu5oacond112q|scu4o.isPublic|var18p|var31p|scu5o.nickname|miu5ohinu15q.sortCriteria|scu5o.isPublic|kcond43p.userOID|kcond27o.userOID|miu5oacond129q|miu5ohinu16q.newSortAttribute|miu5oacond136q|miu5oacond89q|miu5oacond134q|miu5oacond121q|miu5oacond103q|acond45p|miu5orcond28q.userOID|miu5ohinu15q.newSortAttribute|miu5oacond119q|miu5ohinu17q.block|miu5ohinu14q.current.userOID|miu5ohinu19q.newSortAttribute|miu5oacond130q|miu5ohinu16q.sortCriteria|miu5oacond115q|miu5oacond113q|miu5ohinu14q.block|miu5ohinu19q.sortCriteria|miu5ohinu17q.current.userOID</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln53q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

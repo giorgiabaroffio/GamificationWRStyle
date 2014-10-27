@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="lang">icp3x</Parameter>
+  <Parameter name="gift_description">icp8x</Parameter>
+  <Parameter name="gift points">icp12x</Parameter>
+  <Parameter name="email">icp13x</Parameter>
+  <Parameter name="gift_image">icp14x</Parameter>
+  <Parameter name="code">icp15x</Parameter>
+  <Parameter name="firstname">icp16x</Parameter>
+  <Parameter name="overall_points">icp17x</Parameter>
+  <Parameter name="badge">icp18x</Parameter>
+  <Parameter name="next_gifts">icp19x</Parameter>
+  <Parameter name="gift_title">icp20x</Parameter>
+  <Parameter name="other_actions">icp21x</Parameter>
+  <Parameter name="notification_oid">icp22x</Parameter>
+  <Parameter name="leaderboards">icp24x</Parameter>
+  <Parameter name="seven_days_position">icp25x</Parameter>
+  <Parameter name="overall_position">icp26x</Parameter>
+  <Parameter name="seven_days_points">icp27x</Parameter>
+  <Parameter name="user_photo">icp29x</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm1x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu1x">icp12x</OperationParam>
+      <OperationParam unit="icu1x">icp8x</OperationParam>
+      <OperationParam unit="icu1x">icp13x</OperationParam>
+      <OperationParam unit="icu1x">icp24x</OperationParam>
+      <OperationParam unit="icu1x">icp3x</OperationParam>
+      <OperationParam unit="icu1x">icp27x</OperationParam>
+      <OperationParam unit="icu1x">icp26x</OperationParam>
+      <OperationParam unit="icu1x">icp17x</OperationParam>
+      <OperationParam unit="icu1x">icp18x</OperationParam>
+      <OperationParam unit="icu1x">icp19x</OperationParam>
+      <OperationParam unit="icu1x">icp25x</OperationParam>
+      <OperationParam unit="icu1x">icp16x</OperationParam>
+      <OperationParam unit="icu1x">icp14x</OperationParam>
+      <OperationParam unit="icu1x">icp22x</OperationParam>
+      <OperationParam unit="icu1x">icp21x</OperationParam>
+      <OperationParam unit="icu1x">icp29x</OperationParam>
+      <OperationParam unit="icu1x">icp15x</OperationParam>
+      <OperationParam unit="icu1x">icp20x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln363x</Link>
+      <Link resultCode="success" transport="true">ln219x</Link>
+      <Link resultCode="error" transport="true">ln219x</Link>
+      <Link resultCode="success" transport="true">ln250x</Link>
+      <Link resultCode="error" transport="true">ln250x</Link>
+      <Link resultCode="success" transport="true">ln241x</Link>
+      <Link resultCode="error" transport="true">ln241x</Link>
+      <Link resultCode="success" transport="true">ln121x</Link>
+      <Link resultCode="error" transport="true">ln121x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

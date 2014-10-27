@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get action instance">
+  <MaxResults/>
+  <Query entity="ent14x">
+    <Input id="p0" param="kcond29q.att49x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att49x" name="oid" index="0"/>
+    <Output id="role8p_userOID" name="actionToUserHeadQuarter_OID" index="1" useId="true"/>
+    <HQL>select a_actionInstance.oid, a_actionInstance.actionToUserHeadQuarter.OID from ActionInstance a_actionInstance
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionInstance.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get action instance</ModelName>
+    <ParentContainer>opg7q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu22q">kcond29q.att49x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln208q</Link>
+      <Link resultCode="error">kln38q</Link>
+      <Link resultCode="success" transport="true">ln126q</Link>
+      <Link resultCode="error" transport="true">ln126q</Link>
+      <Link resultCode="success" transport="true">ln137q</Link>
+      <Link resultCode="error" transport="true">ln137q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ResponseUnitService" name="getUserRewardsResponse">
+  <Response name="getUserRewardsResponse" nsUri=""/>
+  <StatusCode>200</StatusCode>
+  <ContentType>XML</ContentType>
+  <BodyParameters>
+    <ResponseBodyParameter id="rsp8q" name="rewards" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserRewardsResponse</ModelName>
+    <ParentContainer>port5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="rsu9q">rsp8q</OperationParam>
+      <Params>eru9q.faultException|eru9q.faultMessage</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln20q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

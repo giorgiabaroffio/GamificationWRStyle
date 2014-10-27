@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="New action">
+  <FormFields>
+    <Field id="fld2p" name="Date" type="timestamp" localized="true"></Field>
+    <Field id="fld4p" name="Score" type="decimal" localized="true">
+      <Slot id="fld4p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld3p" name="Description" type="string" localized="false">
+      <Slot id="fld3p_slot" label="true" output="true"/>
+    </Field>
+    <SelectionField id="sfld1p" name="Action" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld1p_label" label="true" output="false"/>
+      <Slot id="sfld1p_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu2p" linkId="ln55p" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld2p" id="mnd2p" name="Mandatory2">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld1p" id="mnd1p" name="Mandatory1">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld4p" id="mnd4p" name="Mandatory4">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld3p" id="mnd3p" name="Mandatory3">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>

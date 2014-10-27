@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.CreateUnitService" name="Create Action Type">
+  <Entity>ent16x</Entity>
+  <BulkInsert>false</BulkInsert>
+  <SkipBlankRecords>false</SkipBlankRecords>
+  <Field param="cru18q.att38x" type="integer" attribute="att38x">oid</Field>
+  <Field param="cru18q.att39x" type="string" attribute="att39x">name</Field>
+  <Field param="cru18q.att41x" type="decimal" attribute="att41x">score</Field>
+  <Field param="cru18q.att50x" type="boolean" attribute="att50x">reputation</Field>
+  <Field param="cru18q.att60x" type="boolean" attribute="att60x">participation</Field>
+  <Field param="cru18q.att71x" type="string" attribute="att71x">description</Field>
+  <Field param="cru18q.att1q" type="boolean" attribute="att1q">checkTimeElapsed</Field>
+  <Field param="cru18q.att2q" type="integer" attribute="att2q">timeElapsed</Field>
+  <Field param="cru18q.att3q" type="boolean" attribute="att3q">repeatable</Field>
+  <Field param="cru18q.att9q" type="boolean" attribute="att9q">active</Field>
+  <Association name="actionTypeToGamificationDictionary" direct="false" inverseName="gamificationDictionaryToActionType" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru18q.role14x.att42x" type="integer"/>
+    <Query>from BadgeType _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="actionTypeToActionInstance" direct="false" inverseName="actionInstanceToActionType" oneToOne="false" maxCardMany="true">
+    <QueryInput id="oid" param="cru18q.role15x.att49x" type="integer"/>
+    <Query>from ActionInstance _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="actionTypeToThematicArea" direct="true" inverseName="thematicAreaToActionType" oneToOne="false" maxCardMany="false">
+    <QueryInput id="oid" param="cru18q.role10q.att21q" type="integer"/>
+    <Query>from ThematicArea _e where _e.oid = :oid</Query>
+  </Association>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create Action Type</ModelName>
+    <ParentContainer>opg22q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="cru18q">cru18q.att2q</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att1q</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att60x</OperationParam>
+      <OperationParam unit="cru18q">cru18q.role10q.att21q</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att50x</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att71x</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att39x</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att3q</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att41x</OperationParam>
+      <OperationParam unit="cru18q">cru18q.att9q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln288q</Link>
+      <Link resultCode="error">kln58q</Link>
+      <Link resultCode="error.opg22q">kln58q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

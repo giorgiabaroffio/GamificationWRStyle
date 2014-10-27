@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu45q">
+    <InputParameter id="icp150q" name="Badge OID"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu43q</OKCollectorUnits>
+  <KOCollectorUnits>kocu27q</KOCollectorUnits>
+  <OperationUnits>icu45q|okcu43q|kocu27q|dcnu2q|seu46q|dlu8q</OperationUnits>
+</Descriptor>

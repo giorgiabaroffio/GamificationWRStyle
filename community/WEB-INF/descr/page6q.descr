@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Delete Not Possible">
+  <ParentContainer>hym5q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page6q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page6q.link"/>
+    <Navigation name="2" links="page6q.auto-link"/>
+    <Navigation name="3" links="page6q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="icu36q.enter|kln65q"/>
+    <Navigation name="5" links="ln161q|impl" postPropagatedLink="ln161q"/>
+    <Navigation name="6" links="ln163q|impl" postPropagatedLink="ln163q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|6|5" effects="#pr#" futile=""/>
+    <UselessPreserve navs="2|6|5" effects="-" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="mssu1q.shownMessages"/>
+  </UselessPreserves>
+  <LinkSequence/>
+  <UnitComputations>
+    <UnitComputation unit="mssu1q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="enu5q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="4" inputs="fld12q_slot"/>
+      <RefreshFormAll navs="1|0|6|5"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln161q</ManualLink>
+    <ManualLink>ln163q</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page6q_grid_0">
+      <Layout id="page6q_cell_0">
+        <Layout id="mssu1q_0" unitId="mssu1q"></Layout>
+      </Layout>
+      <Layout id="page6q_cell_12">
+        <Layout id="enu5q_0" unitId="enu5q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>mssu1q.shownMessages|mc</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>mssu1q.shownMessages|mc</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Delete Not Possible</ModelName>
+    <ParentModule>hym5q</ParentModule>
+    <NavigationAncestors/>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mssu1q">mssu1q.shownMessages</PageParam>
+      <PageParam preservedByForm="true" unit="enu5q">fld12q_slot</PageParam>
+      <PageParam>miu65q.icp142q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>mc</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

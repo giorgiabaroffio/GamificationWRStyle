@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiDataUnitService" name="Points">
+  <MaxResults>1</MaxResults>
+  <Query entity="ent14x">
+    <Input id="p0" param="miu6oacond89q" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="att49x" name="oid" index="0"/>
+    <Output id="att73x" name="description" index="1"/>
+    <Output id="att72x" name="name" index="2"/>
+    <Output id="att83x" name="link" index="3"/>
+    <Output id="att58x" name="actionArea" index="4"/>
+    <Output id="att51x" name="date" index="5"/>
+    <Output id="att52x" name="score" index="6"/>
+    <Output id="role8p$att57x" name="actionToUserHeadQuarter_totalCredit" index="7" useId="true"/>
+    <Output id="role8p$userOID" name="actionToUserHeadQuarter_OID" index="8" useId="true"/>
+    <HQL>select a_actionInstance.oid, a_actionInstance.description, d_name.value, a_actionInstance.link, d_actionArea.value, a_actionInstance.date, a_actionInstance.score, a_communityUser_role8p.totalCredit, a_communityUser_role8p.OID from ActionInstance a_actionInstance left join a_actionInstance.actionAreaBean d_actionArea left join a_actionInstance.actionToUserHeadQuarter a_communityUser_role8p left join a_actionInstance.nameBean d_name
+      <Where defaultPolicy="fill" allImplied="false">([(a_actionInstance.oid in( select a_actionInstance_2.oid from ActionInstance a_actionInstance_2 inner join a_actionInstance_2.actionToUserHeadQuarter s_communityUser_role8p where ({[p0]s_communityUser_role8p.OID in(?)})))])</Where>order by a_actionInstance.date desc, d_name.value asc, a_actionInstance.description asc
+    </HQL>
+  </Query>
+</Descriptor>

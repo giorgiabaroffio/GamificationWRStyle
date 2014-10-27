@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DisconnectUnitService" name="Disconnect Notification">
+  <Role useHQL="true">role24x</Role>
+  <Source id="ent22x" keyCondition="kcond26q"></Source>
+  <Target id="ent12p" keyCondition="kcond27q"></Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Disconnect Notification</ModelName>
+    <ParentContainer>opg6q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="dcnu1q">kcond26q.att32x</OperationParam>
+      <OperationParam unit="dcnu1q">kcond27q.att95p</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln170q</Link>
+      <Link resultCode="error">kln34q</Link>
+      <Link resultCode="error.opg6q">kln34q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

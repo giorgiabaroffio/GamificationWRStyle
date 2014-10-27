@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm46q</Module>
+  <InputCollectorId>icu52q</InputCollectorId>
+  <InputParameter>icp175q</InputParameter>
+  <InputParameter>icp176q</InputParameter>
+  <InputParameter>icp179q</InputParameter>
+  <InputParameter>icp180q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym8q</ParentContainer>
+    <ParentModule>hym8q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu80q">miu80q.icp176q</OperationParam>
+      <OperationParam unit="miu80q">miu80q.icp179q</OperationParam>
+      <OperationParam unit="miu80q">miu80q.icp175q</OperationParam>
+      <OperationParam unit="miu80q">miu80q.icp180q</OperationParam>
+      <Params>ocp49q|mc|sp|ocp50q|cmplink|link|enu12q.att15p|fld35q_slot|smc</Params>
+    </OperationParams>
+    <SecondaryIncomingLinks>ln233q</SecondaryIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln356q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

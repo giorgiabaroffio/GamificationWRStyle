@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.ParameterCollectorUnitService" name="Public Dashboard">
+  <Parameter value="">pcp4o</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Public Dashboard</ModelName>
+    <URLFragment>pcp4o</URLFragment>
+    <ParentContainer>area1x</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area1x</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="pcu8o">pcp4o</OperationParam>
+      <Params>miu6ohinu14q.current.userOID|miu8q.icp4q|miu6ohinu17q.block|miu6ohinu14q.block|miu6ohinu19q.sortCriteria|link|pcp4o|miu6ohinu16q.newSortAttribute|miu6oacond136q|miu6oacond103q|ln56qmiu6oicp207q|miu6ohinu16q.sortCriteria|pcp46x|miu6oocp74q|miu6oacond130q|scu2o.isPublic|miu6oacond134q|miu6oacond121q|miu6oacond115q|var5x|miu6ohinu15q.sortCriteria|cmplink|acond23o|miu6ohinu18q.newSortAttribute|miu6oacond129q|acond19o|miu6oacond113q|miu6oacond119q|miu6oacond112q|sp|miu6ohinu15q.newSortAttribute|miu6oacond89q|miu6orcond28q.userOID|miu6oacond137q|miu6oacond131q|miu6oacond135q|miu6oacond122q|miu6ohinu17q.current.userOID|miu6oacond114q|miu6oacond120q|miu6oacond88q|miu6ohinu19q.newSortAttribute|miu6oacond128q|miu6ohinu18q.sortCriteria|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln50q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Reward Details">
+  <ParentContainer>area2q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page13q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page13q.link"/>
+    <Navigation name="2" links="page13q.auto-link"/>
+    <Navigation name="3" links="page13q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln151q|impl" postPropagatedLink="ln151q"/>
+    <Navigation name="5" interPage="always" links="ln155q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="2|4" effects="-" futile=""/>
+    <UselessPreserve navs="3|2|4" effects="UserCtxParam|#pr#" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="kcond11q.att95p"/>
+  </UselessPreserves>
+  <LinkSequence>ln154q|ln162q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau5q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu24q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu6q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu2q">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gctu3q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln151q</ManualLink>
+    <ManualLink>ln158q</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables>
+    <Variable id="var2q" name="availableCredits" type="integer" unitId="seu24q" parameter="att110pArray">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </Variable>
+    <Variable id="var5q" name="neededPoints" type="decimal" unitId="dau5q" parameter="data.att100p">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr1q" name="isRedeemable" variables="var5q|var2q" xml:space="preserve">return (availableCredits[0] &gt;= neededPoints)</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page13q_grid_0">
+      <Layout id="page13q_cell_0">
+        <Layout id="page13q_grid_1">
+          <Layout id="page13q_cell_1">
+            <Layout id="att98p_0" unitId="dau5q"></Layout>
+          </Layout>
+          <Layout id="page13q_cell_13">
+            <Layout id="att55x_0" unitId="dau5q"></Layout>
+          </Layout>
+          <Layout id="page13q_cell_17">
+            <Layout id="att99p_0" unitId="dau5q"></Layout>
+          </Layout>
+          <Layout id="page13q_cell_25">
+            <Layout id="att100p_0" unitId="dau5q"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page13q_cell_48">
+        <Layout id="ln151q_0" unitId="dau5q"></Layout>
+      </Layout>
+      <Layout id="page13q_cell_60">
+        <Layout id="mssu2q_0" unitId="mssu2q"></Layout>
+      </Layout>
+      <Layout id="page13q_cell_83">
+        <Layout id="gctu3q_0" unitId="gctu3q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>kcond11q.att95p</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>kcond11q.att95p</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Reward Details</ModelName>
+    <NavigationAncestors>sv1x|area2q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu24q">kcond12q.userOID</PageParam>
+      <PageParam unit="dau5q">kcond11q.att95p</PageParam>
+      <PageParam>miu7q.icp7q</PageParam>
+      <PageParam>miu7q.icp6q</PageParam>
+      <PageParam>miu7q.icp9q</PageParam>
+      <PageParam>miu7q.icp8q</PageParam>
+      <PageParam>kcond10q.userOID</PageParam>
+      <PageParam>acond49q</PageParam>
+      <PageParam>acond5q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

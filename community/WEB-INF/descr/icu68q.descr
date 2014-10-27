@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="description">icp237q</Parameter>
+  <Parameter name="executor">icp238q</Parameter>
+  <Parameter name="time">icp239q</Parameter>
+  <Parameter name="email">icp240q</Parameter>
+  <Parameter name="name">icp241q</Parameter>
+  <Parameter name="tag">icp242q</Parameter>
+  <Parameter name="link">icp243q</Parameter>
+  <Parameter name="area">icp244q</Parameter>
+  <Parameter name="object key">icp245q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm59q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu68q">icp242q</OperationParam>
+      <OperationParam unit="icu68q">icp238q</OperationParam>
+      <OperationParam unit="icu68q">icp245q</OperationParam>
+      <OperationParam unit="icu68q">icp244q</OperationParam>
+      <OperationParam unit="icu68q">icp243q</OperationParam>
+      <OperationParam unit="icu68q">icp237q</OperationParam>
+      <OperationParam unit="icu68q">icp241q</OperationParam>
+      <OperationParam unit="icu68q">icp240q</OperationParam>
+      <OperationParam unit="icu68q">icp239q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln433q</Link>
+      <Link resultCode="success" transport="true">ln310q</Link>
+      <Link resultCode="error" transport="true">ln310q</Link>
+      <Link resultCode="success" transport="true">ln311q</Link>
+      <Link resultCode="error" transport="true">ln311q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

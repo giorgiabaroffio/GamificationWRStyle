@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="User Data">
+  <Query entity="ent15x">
+    <Input id="p0" param="acond7p" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att110p" name="creditsAvailable" index="1"/>
+    <Output id="att85x" name="isoCode" index="2"/>
+    <Output id="att96p" name="creditsSpent" index="3"/>
+    <Output id="att57x" name="totalCredit" index="4"/>
+    <HQL>select a_communityUser.OID, d_creditsAvailable.value, a_communityUser.isoCode, d_creditsSpent.value, a_communityUser.totalCredit from CommunityUser a_communityUser left join a_communityUser.creditsAvailableBean d_creditsAvailable left join a_communityUser.creditsSpentBean d_creditsSpent
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

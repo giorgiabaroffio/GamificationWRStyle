@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.BadgeType" table="`badge_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="level" column="`importance`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="description" column="`description`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="checkedImageRef" column="`checked_image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="checkedImageBinary" column="`checked_imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="title" column="`title`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="neededScore" column="`needed_score`" type="java.math.BigDecimal" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="area" column="`area`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDImageRef" column="`hd_image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDImageBinary" column="`hd_imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="sortNumber" column="`sort_number`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDCheckedImageRef" column="`hd_checked_image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDCheckedImageBinary" column="`hd_checked_imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="imageRef" column="`image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="imageBinary" column="`imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="key" column="`key`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="active" column="`active`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="gamificationDictionaryToBadgeAcquired" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`badge_type_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.gamificationCommunity.BadgeInstance" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="gamificationDictionaryToActionType" table="`badge_action`" inverse="false" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`badge_type_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.gamificationCommunity.ActionType" not-found="exception" embed-xml="true" unique="false">
+        <column name="`action_type_oid`"/>
+      </many-to-many>
+    </set>
+    <many-to-one name="badgeTypeToThematicArea" class="com.webratio.webapp.gamificationCommunity.ThematicArea" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`thematic_area_oid`"/>
+    </many-to-one>
+    <many-to-one name="sortCombinationBean" class="com.webratio.webapp.gamificationCommunity.BadgeType_SortCombinationBean" insert="false" update="false" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`oid`"/>
+    </many-to-one>
+  </class>
+  <!-- mapping for derived attribute 'SortCombination[att34p]' -->
+  <class name="com.webratio.webapp.gamificationCommunity.BadgeType_SortCombinationBean" table="`badgetype_sortco`" mutable="true" polymorphism="implicit" dynamic-update="false" dynamic-insert="false" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="value" column="`der_attr`" type="java.lang.String" insert="false" update="false" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Gamification DictionaryToBadge Acquired [role12x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_BadgeType_to_gamificationDictionaryToBadgeAcquired" table="`badge_instance`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`badge_type_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'Gamification DictionaryToAction Type[role13x]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_BadgeType_to_gamificationDictionaryToActionType" table="`badge_action`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`badge_type_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`action_type_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'Badge TypeToThematic Area[role12q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_BadgeType_to_badgeTypeToThematicArea" table="`badge_type`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`thematic_area_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

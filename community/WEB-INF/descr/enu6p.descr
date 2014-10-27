@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Monthly Form">
+  <FormFields>
+    <Field id="fld7p" name="searchUser" type="string" localized="false"></Field>
+    <Field id="fld1o" name="MaxLevel" type="string" localized="false"></Field>
+    <Field id="fld2o" name="LowLevel" type="string" localized="false"></Field>
+    <SelectionField id="sfld15p" name="Select a region" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld15p_label" label="true" output="false"/>
+      <Slot id="sfld15p_output" label="false" output="true"/>
+    </SelectionField>
+    <MultiSelectionField id="msfld3p" name="Areas" type="string" localized="false" value="" splitOutput="">
+      <Slot id="slot16p" label="true" output="" value=" "/>
+      <Slot id="slot15p" label="" output="true" value=" "/>
+    </MultiSelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu6p" linkId="ln88p" action="validate"/>
+    <wr:ValidationLink elementId="enu6p" linkId="ln89p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

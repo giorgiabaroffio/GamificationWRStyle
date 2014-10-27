@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm25q</Module>
+  <InputCollectorId>icu28q</InputCollectorId>
+  <InputParameter>icp89q</InputParameter>
+  <InputParameter>icp90q</InputParameter>
+  <InputParameter>icp91q</InputParameter>
+  <InputParameter>icp92q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area3p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area3p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu47q">miu47q.icp91q</OperationParam>
+      <OperationParam unit="miu47q">miu47q.icp89q</OperationParam>
+      <OperationParam unit="miu47q">miu47q.icp92q</OperationParam>
+      <OperationParam unit="miu47q">miu47q.icp90q</OperationParam>
+      <Params>miu48q.icp93q|fld3p_slot|acond51p|link|acond61p|sfld1p_label|sfld4p_label|kcond15x.userOID|cmplink|acond53p|sfld4p_output|sfld6p_output|miu34q.icp81q|pwu8p.newSortAttribute|fld4p_slot|sp|pwu8p.block|pwu8p.sortCriteria|pwu8p.current.att49x|acond52p|acond54p|sfld1p_output|rcond1p.userOID|sfld6p_label|miu34q.icp82q|smc</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln223q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

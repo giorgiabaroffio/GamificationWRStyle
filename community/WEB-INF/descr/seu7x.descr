@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Users Not in Rank">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond42x.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="acond42x" type="decimal" implied="false" expandStyle="aggregate" function="min" value="0" attribute="att319x"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <HQL>select a_communityUser.OID from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID not in(?)})) and (({[p1]a_communityUser.participation7Days &gt; ?}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select Users Not in Rank</ModelName>
+    <ParentContainer>opg42x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu7x">kcond42x.userOID</OperationParam>
+      <Params>mfu16x.att319x|kcond43x.userOID</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln386x</Link>
+      <Link resultCode="error">kln56x</Link>
+      <Link resultCode="error.opg42x">kln56x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

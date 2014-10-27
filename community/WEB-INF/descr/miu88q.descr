@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm52q</Module>
+  <InputCollectorId>icu60q</InputCollectorId>
+  <InputParameter>icp200q</InputParameter>
+  <InputParameter>icp201q</InputParameter>
+  <InputParameter>icp202q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area7p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu88q">miu88q.icp200q</OperationParam>
+      <OperationParam unit="miu88q">miu88q.icp201q</OperationParam>
+      <OperationParam unit="miu88q">miu88q.icp202q</OperationParam>
+      <Params>pwu16p.current.att31x|sfld10p_presel|acond29p|sp|link|sfld12p_presel|fld16p_slot|pwu16p.sortCriteria|cmplink|fld44p_slot|miu86q.icp195q|pwu16p.newSortAttribute|smc|fld12p_slot</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln383q</Link>
+      <Link resultCode="success" transport="true">ln240q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

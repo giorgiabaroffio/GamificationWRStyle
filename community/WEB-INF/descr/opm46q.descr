@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu52q">
+    <InputParameter id="icp175q" name="Key"/>
+    <InputParameter id="icp176q" name="Language"/>
+    <InputParameter id="icp179q" name="Message"/>
+    <InputParameter id="icp180q" name="Text Chunk OID"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu52q</OKCollectorUnits>
+  <KOCollectorUnits>kocu34q</KOCollectorUnits>
+  <OperationUnits>icu52q|okcu52q|kocu34q|mfu29q</OperationUnits>
+</Descriptor>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="Create Rank JSON">
+  <Script xml:space="preserve">#input String[] user_name, Integer[] user_OID, Double[] user_totalcredits
+#output String json
+
+
+import com.fasterxml.jackson.core.JsonEncoding
+import com.fasterxml.jackson.core.JsonFactory
+import com.fasterxml.jackson.core.JsonGenerationException
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.databind.JsonMappingException
+
+import java.io.OutputStream
+import java.io.ByteArrayOutputStream
+
+def json = null
+
+try {
+
+    OutputStream out = new ByteArrayOutputStream()
+    
+    JsonFactory jfactory = new JsonFactory();
+
+    /*** write to file ***/
+    JsonGenerator jGenerator = jfactory.createJsonGenerator(out, JsonEncoding.UTF8);
+ 
+    jGenerator.writeStartArray(); 
+	user_OID.eachWithIndex{obj, idx -&gt;
+	    jGenerator.writeStartObject(); 
+	
+	    jGenerator.writeStringField("user_name", user_name[idx]);  
+	 
+	    jGenerator.writeNumberField("user_totalcredits", user_totalcredits[idx]);  
+	   
+	    jGenerator.writeNumberField("user_OID", obj); 
+	   
+	    jGenerator.writeEndObject(); 
+	   
+	}
+	 jGenerator.writeEndArray();
+
+    jGenerator.close();
+ 
+    json = out.toString()
+
+} catch (JsonGenerationException e) {
+
+    e.printStackTrace();
+
+} catch (JsonMappingException e) {
+
+    e.printStackTrace();
+
+} catch (IOException e) {
+
+    e.printStackTrace();
+
+}
+
+return ["json": json]</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Create Rank JSON</ModelName>
+    <ParentContainer>port2</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu1">scu1.user_name</OperationParam>
+      <OperationParam unit="scu1">scu1.user_totalcredits</OperationParam>
+      <OperationParam unit="scu1">scu1.user_OID</OperationParam>
+      <Params>rsp1</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln6</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>
+ 

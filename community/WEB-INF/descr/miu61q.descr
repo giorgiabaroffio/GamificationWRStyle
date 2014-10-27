@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm32q</Module>
+  <InputCollectorId>icu38q</InputCollectorId>
+  <InputParameter>icp120q</InputParameter>
+  <InputParameter>icp121q</InputParameter>
+  <InputParameter>icp122q</InputParameter>
+  <InputParameter>icp124q</InputParameter>
+  <InputParameter>icp125q</InputParameter>
+  <InputParameter>icp126q</InputParameter>
+  <InputParameter>icp127q</InputParameter>
+  <InputParameter>icp128q</InputParameter>
+  <InputParameter>icp129q</InputParameter>
+  <InputParameter>icp130q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym6q</ParentContainer>
+    <ParentModule>hym6q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu61q">miu61q.icp127q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp130q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp120q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp126q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp125q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp124q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp121q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp122q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp129q</OperationParam>
+      <OperationParam unit="miu61q">miu61q.icp128q</OperationParam>
+      <Params>mc|sp|cmplink|link|smc|slot1q|mssu4q.shownMessages|slot2q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln289q</Link>
+      <Link resultCode="error">kln61q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

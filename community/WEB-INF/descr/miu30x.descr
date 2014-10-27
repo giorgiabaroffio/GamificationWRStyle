@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm9x</Module>
+  <InputCollectorId>icu10x</InputCollectorId>
+  <InputParameter>icp28x</InputParameter>
+  <InputParameter>icp30x</InputParameter>
+  <InputParameter>icp31x</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm5x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu30x">miu30x.icp30x</OperationParam>
+      <OperationParam unit="miu30x">miu30x.icp31x</OperationParam>
+      <OperationParam unit="miu30x">miu30x.icp28x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln438x</Link>
+      <Link resultCode="error">kln117x</Link>
+      <Link resultCode="success" transport="true">ln269x</Link>
+      <Link resultCode="error" transport="true">ln269x</Link>
+      <Link resultCode="success" transport="true">ln270x</Link>
+      <Link resultCode="error" transport="true">ln270x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

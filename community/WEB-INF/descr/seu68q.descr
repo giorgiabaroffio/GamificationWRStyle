@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select User Oid">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="kcond74q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="email" name="email" index="1"/>
+    <Output id="att110p" name="creditsAvailable" index="2"/>
+    <HQL>select a_communityUser.OID, a_communityUser.email, d_creditsAvailable.value from CommunityUser a_communityUser left join a_communityUser.creditsAvailableBean d_creditsAvailable
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select User Oid</ModelName>
+    <ParentContainer>opm63q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu68q">kcond74q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln474q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

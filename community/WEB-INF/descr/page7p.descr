@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Leaderboards">
+  <ParentContainer>area1x</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|ctx4x|ctx3x|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page7p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page7p.link"/>
+    <Navigation name="2" links="page7p.auto-link"/>
+    <Navigation name="3" links="page7p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="hinu2qBlock"/>
+    <Navigation name="5" links="hinu2qBlock" selectiveRefresh="true"/>
+    <Navigation name="6" links="hinu2qFirst"/>
+    <Navigation name="7" links="hinu2qFirst" selectiveRefresh="true"/>
+    <Navigation name="8" links="hinu2qLast"/>
+    <Navigation name="9" links="hinu2qLast" selectiveRefresh="true"/>
+    <Navigation name="10" links="hinu2qNext"/>
+    <Navigation name="11" links="hinu2qNext" selectiveRefresh="true"/>
+    <Navigation name="12" links="hinu2qPrevious"/>
+    <Navigation name="13" links="hinu2qPrevious" selectiveRefresh="true"/>
+    <Navigation name="14" links="hinu3qBlock"/>
+    <Navigation name="15" links="hinu3qBlock" selectiveRefresh="true"/>
+    <Navigation name="16" links="hinu3qFirst"/>
+    <Navigation name="17" links="hinu3qFirst" selectiveRefresh="true"/>
+    <Navigation name="18" links="hinu3qLast"/>
+    <Navigation name="19" links="hinu3qLast" selectiveRefresh="true"/>
+    <Navigation name="20" links="hinu3qNext"/>
+    <Navigation name="21" links="hinu3qNext" selectiveRefresh="true"/>
+    <Navigation name="22" links="hinu3qPrevious"/>
+    <Navigation name="23" links="hinu3qPrevious" selectiveRefresh="true"/>
+    <Navigation name="24" links="ln63p"/>
+    <Navigation name="25" links="ln63p" selectiveRefresh="true"/>
+    <Navigation name="26" links="ln69p"/>
+    <Navigation name="27" links="ln69p" selectiveRefresh="true"/>
+    <Navigation name="28" links="ln70q|impl" postPropagatedLink="ln70q"/>
+    <Navigation name="29" links="ln71q|impl" postPropagatedLink="ln71q"/>
+    <Navigation name="30" links="ln88p|impl" postPropagatedLink="ln88p"/>
+    <Navigation name="31" links="ln88p|impl" selectiveRefresh="true" postPropagatedLink="ln88p"/>
+    <Navigation name="32" links="ln88p|oln19q" effects="#pr#"/>
+    <Navigation name="33" links="ln88p|oln19q" selectiveRefresh="true" effects="#pr#"/>
+    <Navigation name="34" links="ln89p|impl" postPropagatedLink="ln89p"/>
+    <Navigation name="35" links="ln89p|impl" selectiveRefresh="true" postPropagatedLink="ln89p"/>
+    <Navigation name="36" links="ln89p|oln19q" effects="#pr#"/>
+    <Navigation name="37" links="ln89p|oln19q" selectiveRefresh="true" effects="#pr#"/>
+    <Navigation name="38" links="ln90p|impl" postPropagatedLink="ln90p"/>
+    <Navigation name="39" links="ln90p|impl" selectiveRefresh="true" postPropagatedLink="ln90p"/>
+    <Navigation name="40" links="ln90p|oln6q" effects="#pr#"/>
+    <Navigation name="41" links="ln90p|oln6q" selectiveRefresh="true" effects="#pr#"/>
+    <Navigation name="42" interPage="always" links="pcu4q.link|oln25q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="31|35|39|28|29" futile=""/>
+    <UselessPreserve navs="3" effects="UserCtxParam" futile="" renewed="kcond3p.userOID|kcond4p.userOID"/>
+    <UselessPreserve navs="2" effects="UserCtxParam" futile="hinu3q.blockFactor|hinu2q.blockFactor" renewed="acond15p|acond20p|acond31q|kcond3p.userOID|acond35q|kcond4p.userOID"/>
+    <UselessPreserve navs="10|6|4|24|8|12" futile="hinu2q.blockFactor|kcond3p.userOID" renewed="acond15p|acond31q"/>
+    <UselessPreserve navs="3" effects="ctx3x" futile="hinu2q.current.userOID|acond15p|hinu2q.blockFactor|acond31q|kcond3p.userOID|hinu2q.block" renewed="hinu3q.blockFactor"/>
+    <UselessPreserve navs="21|19|17|23|15|27" futile="hinu2q.current.userOID|hinu2q.block"/>
+    <UselessPreserve navs="7|5|9|25|13|11" futile="hinu3q.current.userOID|hinu3q.block"/>
+    <UselessPreserve navs="3" effects="-" futile="hinu3q.blockFactor|acond15p|hinu2q.blockFactor|hinu3q.current.userOID|hinu3q.block|hinu2q.current.userOID|acond20p|acond31q|kcond3p.userOID|hinu2q.block|acond35q|kcond4p.userOID"/>
+    <UselessPreserve navs="20|22|18|16|26|14" futile="hinu3q.blockFactor|kcond4p.userOID" renewed="acond20p|acond35q"/>
+    <UselessPreserve navs="2" effects="ctx4x" futile="hinu3q.blockFactor|kcond3p.userOID|kcond4p.userOID" renewed="acond15p|hinu2q.blockFactor|acond20p|acond31q|acond35q"/>
+    <UselessPreserve navs="32|41|40|36|33|37" futile="hinu3q.blockFactor|hinu2q.blockFactor|hinu3q.block|kcond3p.userOID|hinu2q.block|kcond4p.userOID" renewed="mssu9p.shownMessages|mssu15p.shownMessages"/>
+    <UselessPreserve navs="3|2" effects="#pr#" futile="hinu3q.blockFactor|hinu2q.blockFactor|kcond3p.userOID|hinu3q.block|hinu2q.block|kcond4p.userOID" renewed="acond15p|acond20p|acond31q|acond35q"/>
+    <UselessPreserve navs="3" effects="ctx4x" futile="hinu3q.blockFactor|acond20p|hinu3q.current.userOID|hinu3q.block|acond35q|kcond4p.userOID" renewed="hinu2q.blockFactor"/>
+    <UselessPreserve navs="30|34|38" futile="hinu3q.blockFactor|hinu2q.blockFactor|kcond3p.userOID|kcond4p.userOID" renewed="mssu9p.shownMessages|mssu15p.shownMessages"/>
+    <UselessPreserve navs="2" effects="-" futile="hinu3q.blockFactor|hinu2q.blockFactor|kcond3p.userOID|kcond4p.userOID" renewed="acond15p|acond20p|acond31q|acond35q"/>
+    <UselessPreserve navs="2" effects="ctx3x" futile="hinu2q.blockFactor|kcond3p.userOID|kcond4p.userOID" renewed="hinu3q.blockFactor|acond15p|acond20p|acond31q|acond35q"/>
+  </UselessPreserves>
+  <LinkSequence>ln10p|ln22p|ln8o|ln10o|ln33p|ln3o|ln118p|ln121p|ln155p|ln4o|ln7o|ln201p|ln6p|ln21p|ln169p|ln202p|ln48q|ln3o|ln118p|ln121p|ln155p|ln4o|ln7o|ln201p|ln6p|ln21p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="seu46p">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu3p">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|ctx4x|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="enu6p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+      <RefreshFormAll selectiveRefresh="true" navs="41"/>
+      <RefreshFormAll navs="1|0|30|42|40|34|28|38|29"/>
+    </UnitComputation>
+    <UnitComputation unit="scu22p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu47p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu50p">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu9p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu11p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu56p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu57p">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu15p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mssu16p">
+      <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu2o">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|UserCtxParam"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="ctx4x|ctx3x|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mdu2p">
+      <NavigationCondition selectiveRefresh="true" navs="7|5|41|31|35|9|33|25|39|13|11|37" effects="-|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="35|33|25|13|39|37|11|3|7|41|5|31|9" effects="UserCtxParam|ctx4x|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mdu3p">
+      <NavigationCondition selectiveRefresh="true" navs="19|17|35|23|33|15|39|27|37|3|21|41|31" effects="UserCtxParam|ctx3x|#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="21|19|41|31|35|17|23|15|33|39|27|37" effects="-|ctx4x"/>
+    </UnitComputation>
+    <UnitComputation unit="seu8q">
+      <NavigationCondition selectiveRefresh="true" navs="41|33|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="3|41|33|37" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="hinu2q">
+      <NavigationCondition selectiveRefresh="true" navs="7|5|41|31|35|9|33|25|39|13|11|37" effects="-|ctx3x"/>
+      <NavigationCondition selectiveRefresh="true" navs="35|33|25|13|39|37|11|3|7|41|5|31|9" effects="UserCtxParam|ctx4x|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="hinu3q">
+      <NavigationCondition selectiveRefresh="true" navs="19|17|35|23|33|15|39|27|37|3|21|41|31" effects="UserCtxParam|ctx3x|#pr#"/>
+      <NavigationCondition selectiveRefresh="true" navs="21|19|41|31|35|17|23|15|33|39|27|37" effects="-|ctx4x"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln88p</ManualLink>
+    <ManualLink>ln89p</ManualLink>
+    <ManualLink>ln90p</ManualLink>
+    <ManualLink>ln63p</ManualLink>
+    <ManualLink>ln69p</ManualLink>
+    <ManualLink>ln70q</ManualLink>
+    <ManualLink>hinu2qFirst</ManualLink>
+    <ManualLink>hinu2qPrevious</ManualLink>
+    <ManualLink>hinu2qNext</ManualLink>
+    <ManualLink>hinu2qLast</ManualLink>
+    <ManualLink>hinu2qBlock</ManualLink>
+    <ManualLink>ln71q</ManualLink>
+    <ManualLink>hinu3qFirst</ManualLink>
+    <ManualLink>hinu3qPrevious</ManualLink>
+    <ManualLink>hinu3qNext</ManualLink>
+    <ManualLink>hinu3qLast</ManualLink>
+    <ManualLink>hinu3qBlock</ManualLink>
+  </ManualLinks>
+  <PropagationModes client="true" server="true"/>
+  <Variables>
+    <Variable id="var1p" name="privateProfi" type="boolean" unitId="gtu3p" parameter="gtu3p.ctx5p" sessionParameter="ctx5p"></Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr_var1p" name="privateProfi" variables="var1p" xml:space="preserve">com.webratio.rtx.core.BeanHelper.asObject(var1p)</Condition>
+    <Condition id="cexpr2p" name="isPrivate?" xml:space="preserve">import org.apache.commons.lang.StringUtils
+import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(privateProfile)){
+	return false
+}
+else{
+	return privateProfile
+}
+/*else{
+	if(privateProfile=="true"){
+		println(privateProfile)
+		return false
+	}
+	else{
+		return true
+	}
+	
+}*/</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page7p_grid_0">
+      <Layout id="page7p_cell_0">
+        <Layout id="page7p_grid_1">
+          <Layout id="page7p_cell_1">
+            <Layout id="page7p_grid_2">
+              <Layout id="page7p_cell_2">
+                <Layout id="page7p_grid_3">
+                  <Layout id="page7p_cell_3">
+                    <NavigationCondition selectiveRefresh="true" navs="19|17|35|23|33|15|39|27|37|3|21|41|31" effects="UserCtxParam|ctx3x|#pr#"/>
+                    <NavigationCondition selectiveRefresh="true" navs="21|19|41|31|35|17|23|15|33|39|27|37" effects="-|ctx4x"/>
+                  </Layout>
+                </Layout>
+              </Layout>
+              <Layout id="page7p_cell_9">
+                <Layout id="page7p_grid_4">
+                  <Layout id="page7p_cell_10">
+                    <NavigationCondition selectiveRefresh="true" navs="7|5|41|31|35|9|33|25|39|13|11|37" effects="-|ctx3x"/>
+                    <NavigationCondition selectiveRefresh="true" navs="35|33|25|13|39|37|11|3|7|41|5|31|9" effects="UserCtxParam|ctx4x|#pr#"/>
+                  </Layout>
+                </Layout>
+              </Layout>
+            </Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page7p_cell_24">
+        <Layout id="page7p_grid_5">
+          <Layout id="page7p_cell_25">
+            <Layout id="page7p_grid_6">
+              <Layout id="page7p_cell_26">
+                <NavigationCondition selectiveRefresh="true" navs="41|31|35|33|39|37" effects="-|ctx4x|UserCtxParam|ctx3x"/>
+                <NavigationCondition selectiveRefresh="true" navs="3|41|31|35|33|39|37" effects="#pr#"/>
+              </Layout>
+            </Layout>
+            <Layout id="enu6p_1" unitId="enu6p"></Layout>
+            <Layout id="enu6p_2" unitId="enu6p"></Layout>
+            <Layout id="enu6p_3" unitId="enu6p"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>hinu3q.current.userOID|hinu3q.block|hinu2q.current.userOID|hinu2q.block</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>hinu2q.current.userOID|acond31q|hinu2q.block|kcond3p.userOID|acond15p|acond20p|hinu3q.block|hinu3q.current.userOID|hinu2q.blockFactor|hinu3q.blockFactor|acond35q|kcond4p.userOID</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Leaderboards</ModelName>
+    <NavigationAncestors>sv1x|area1x</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="enu6p">sfld15p_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu6p">sfld15p_output</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="msfld3p_label" unit="enu6p">slot16p</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="msfld3p" unit="enu6p">slot15p</PageParam>
+      <PageParam unit="scu22p">scu22p.levelmin</PageParam>
+      <PageParam unit="scu22p">scu22p.area</PageParam>
+      <PageParam unit="scu22p">scu22p.geo_area</PageParam>
+      <PageParam unit="scu22p">scu22p.name</PageParam>
+      <PageParam unit="scu22p">scu22p.levelmax</PageParam>
+      <PageParam unit="seu47p">acond10p</PageParam>
+      <PageParam unit="seu56p">acond6p</PageParam>
+      <PageParam unit="mssu9p">mssu9p.shownMessages</PageParam>
+      <PageParam unit="mssu11p">mssu11p.shownMessages</PageParam>
+      <PageParam unit="mssu15p">mssu15p.shownMessages</PageParam>
+      <PageParam unit="mssu16p">mssu16p.shownMessages</PageParam>
+      <PageParam unit="mdu2p">acond15p</PageParam>
+      <PageParam unit="mdu2p">kcond3p.userOID</PageParam>
+      <PageParam unit="mdu3p">acond20p</PageParam>
+      <PageParam unit="mdu3p">kcond4p.userOID</PageParam>
+      <PageParam unit="hinu2q">hinu2q.current.userOID</PageParam>
+      <PageParam unit="hinu2q">hinu2q.blockFactor</PageParam>
+      <PageParam unit="hinu2q">acond31q</PageParam>
+      <PageParam unit="hinu2q">hinu2q.block</PageParam>
+      <PageParam unit="hinu3q">hinu3q.blockFactor</PageParam>
+      <PageParam unit="hinu3q">hinu3q.current.userOID</PageParam>
+      <PageParam unit="hinu3q">hinu3q.block</PageParam>
+      <PageParam unit="hinu3q">acond35q</PageParam>
+      <PageParam>pcp4o</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

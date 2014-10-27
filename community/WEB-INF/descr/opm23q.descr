@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu26q">
+    <InputParameter id="icp85q" name="Date"/>
+    <InputParameter id="icp86q" name="Reward"/>
+    <InputParameter id="icp87q" name="Score"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu25q</OKCollectorUnits>
+  <KOCollectorUnits>kocu12q</KOCollectorUnits>
+  <OperationUnits>icu26q|kocu12q|okcu25q|seu7q|cru5q|scu2q|seu9q|gtu8q|dcnu1q</OperationUnits>
+</Descriptor>

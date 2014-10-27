@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.MultiEntryUnitService" name="Choose the Display Sorting">
+  <MinLength>1</MinLength>
+  <FormFields>
+    <Field id="meu2xChecked" name="CheckedObjects" type="string"/>
+    <Field id="meu2xDataSize" name="DataSize" type="integer"/>
+    <Field id="key" indexedListProperty="meu2x" name="key" type="string" splitOutput="false">
+      <Slot id="key.set" output="true"/>
+    </Field>
+    <Field id="fld43x" name="Area" indexedListProperty="meu2x" type="string" localized="false">
+      <Slot id="fld43x_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld44x" name="Sort Number" indexedListProperty="meu2x" type="integer" localized="true">
+      <Slot id="fld44x_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="meu2x" linkId="ln183x" action="validate"/>
+    <wr:ValidationLink elementId="meu2x" linkId="ln185x" action="validate"/>
+  </wr:Validation>
+</Descriptor>

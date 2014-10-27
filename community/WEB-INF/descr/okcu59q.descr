@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="image scaled">
+  <Type>OK</Type>
+  <Parameter name="16x" value="">ocp60q</Parameter>
+  <Parameter name="32x" value="">ocp61q</Parameter>
+  <Parameter name="small" value="">ocp62q</Parameter>
+  <Parameter name="big" value="">ocp65q</Parameter>
+  <Parameter name="16x file name" value="">ocp66q</Parameter>
+  <Parameter name="32x file name" value="">ocp67q</Parameter>
+  <Parameter name="big file name" value="">ocp68q</Parameter>
+  <Parameter name="small file name" value="">ocp69q</Parameter>
+  <Parameter name="40x" value="">ocp70q</Parameter>
+  <Parameter name="40x file name" value="">ocp71q</Parameter>
+  <Parameter name="60x" value="">ocp72q</Parameter>
+  <Parameter name="60x file name" value="">ocp73q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>image scaled</ModelName>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="okcu59q">ocp60q</OperationParam>
+      <OperationParam unit="okcu59q">ocp61q</OperationParam>
+      <OperationParam unit="okcu59q">ocp65q</OperationParam>
+      <OperationParam unit="okcu59q">ocp71q</OperationParam>
+      <OperationParam unit="okcu59q">ocp69q</OperationParam>
+      <OperationParam unit="okcu59q">ocp66q</OperationParam>
+      <OperationParam unit="okcu59q">ocp67q</OperationParam>
+      <OperationParam unit="okcu59q">ocp68q</OperationParam>
+      <OperationParam unit="okcu59q">ocp70q</OperationParam>
+      <OperationParam unit="okcu59q">ocp62q</OperationParam>
+      <OperationParam unit="okcu59q">ocp73q</OperationParam>
+      <OperationParam unit="okcu59q">ocp72q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

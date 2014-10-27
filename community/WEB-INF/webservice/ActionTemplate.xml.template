@@ -1,0 +1,41 @@
+#?delimiters [%, %], [%=, %]
+<wr:Output name="nickname"/>
+<wr:Output name="name"/>
+<wr:Output name="area"/>
+<wr:Output name="description"/>
+<wr:Output name="time"/>
+<wr:Output name="tag"/>
+<wr:Output name="link"/>
+<wr:Output name="executor"/>
+ 
+[% 
+ 
+def actions=document.selectNodes("DATA/action")
+ 
+def nickname=[]
+def area=[]
+def name=[]
+def description=[]
+def time=[]
+def tag=[]
+def link=[]
+def executor=[]
+for(action in actions){
+	nickname.add(action.selectSingleNode("email").getText())
+	area.add(action.selectSingleNode("area").getText())
+	name.add(action.selectSingleNode("name").getText())
+	description.add(action.selectSingleNode("description").getText())
+	time.add(action.selectSingleNode("time").getText())
+	link.add(action.selectSingleNode("link").getText())
+	tag.add(action.selectSingleNode("tag").getText())
+	executor.add(action.selectSingleNode("executor").getText())
+	}
+outputParams.nickname=nickname
+outputParams.area=area
+outputParams.description=description
+outputParams.time=time
+outputParams.name=name
+outputParams.tag=tag
+outputParams.link=link
+outputParams.executor=executor
+ %]

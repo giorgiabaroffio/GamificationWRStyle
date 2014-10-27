@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="OK">
+  <Type>OK</Type>
+  <JumpToModuleInstance>true</JumpToModuleInstance>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>OK</ModelName>
+    <ParentContainer>hym4q</ParentContainer>
+    <ParentModule>hym4q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>fld4q_slot|miu62q.icp138q|fld6q_slot|link|sfld1q_label|miu62q.icp140q|sfld2q_label|fld11q_slot|sfld2q_presel|miu62q.icp135q|mc|miu62q.icp133q|cmplink|sfld4q_presel|miu62q.icp137q|fld5q_slot|miu62q.icp139q|sp|sfld3q_output|miu62q.icp131q|sfld4q_label|sfld1q_output|sfld2q_output|enu3q.att38x|fld10q_slot|miu62q.icp132q|sfld1q_presel|miu62q.icp134q|miu62q.icp136q|sfld4q_output|sfld3q_label|smc|sfld3q_presel</Params>
+    </OperationParams>
+    <OutgoingLinks></OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

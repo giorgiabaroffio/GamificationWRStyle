@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page24x</Target>
+  <Secure>false</Secure>
+  <Source>seu92x</Source>
+  <SourcePage>page24x</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="sfld8x_presel" sourceUnit="seu92x" sourceParam="role12q_att21qArray"/>
+    <ContextPropagation targetParam="fld47x_slot" sourceUnit="seu92x" sourceParam="att46xArray"/>
+    <ContextPropagation targetParam="fld39x_slot" sourceUnit="seu92x" sourceParam="att63xArray"/>
+    <ContextPropagation targetParam="fld42x_slot" sourceUnit="seu92x" sourceParam="att43xArray"/>
+    <ContextPropagation targetParam="enu13x.att42x" sourceUnit="seu92x" sourceParam="att42xArray"/>
+    <ContextPropagation targetParam="fld45x_slot" sourceUnit="seu92x" sourceParam="att20xArray"/>
+    <ContextPropagation targetParam="fld46x_slot" sourceUnit="seu92x" sourceParam="att48xArray"/>
+    <ContextPropagation targetParam="fld24q_slot" sourceUnit="seu92x" sourceParam="att8qArray"/>
+  </ContextPropagations>
+</Descriptor>

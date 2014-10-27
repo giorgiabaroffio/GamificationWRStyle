@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="HQ.NotPublicProfile">
+  <ParentContainer>area1o</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page1o"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page1o.link"/>
+    <Navigation name="2" links="page1o.auto-link"/>
+    <Navigation name="3" links="page1o.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="miu6oln284q|kln10q" effects="#pr#"/>
+    <Navigation name="5" interPage="always" links="miu6oln285q|kln10q" effects="#pr#"/>
+    <Navigation name="6" interPage="always" links="miu6oln286q|kln10q" effects="#pr#"/>
+    <Navigation name="7" interPage="always" links="miu6oln287q|kln10q" effects="#pr#"/>
+    <Navigation name="8" interPage="always" links="miu6oln288q|kln10q" effects="#pr#"/>
+    <Navigation name="9" interPage="always" links="miu6oln289q|kln10q" effects="#pr#"/>
+    <Navigation name="10" interPage="always" links="miu6oln290q|kln10q" effects="#pr#"/>
+    <Navigation name="11" interPage="always" links="miu6oln291q|kln10q" effects="#pr#"/>
+    <Navigation name="12" interPage="always" links="pcu8o.enter|kln10q" effects="#pr#"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln14o</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau1o">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu4o">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks></ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page1o_grid_0">
+      <Layout id="page1o_cell_3">
+        <Layout id="dau1o_0" unitId="dau1o"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>HQ.NotPublicProfile</ModelName>
+    <NavigationAncestors>sv1x|area1x|area1o</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau1o">acond19o</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

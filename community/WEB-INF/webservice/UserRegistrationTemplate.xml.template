@@ -1,0 +1,101 @@
+#?delimiters [%, %], [%=, %]
+<wr:Output name="firstname"/>
+<wr:Output name="lastname"/>
+<wr:Output name="email"/>
+<wr:Output name="birthdate"/>
+<wr:Output name="city"/>
+<wr:Output name="country"/>
+<wr:Output name="geoarea"/>
+<wr:Output name="isocode"/>
+<wr:Output name="publicprofile"/>
+<wr:Output name="userid"/>
+<wr:Output name="password"/>
+<wr:Output name="internal"/>
+<wr:Output name="photo"/>
+ 
+[% 
+
+import org.apache.commons.io.IOUtils
+
+import org.apache.commons.lang.StringUtils
+import com.webratio.rtx.blob.ExternalBLOBData
+import com.webratio.rtx.RTXBLOBData
+import sun.misc.BASE64Decoder
+
+
+import com.webratio.rtx.core.BeanHelper
+ 
+def action = document.selectSingleNode("DATA/userdata")
+ 
+def firstname = null
+def lastname = null
+def email = null
+def birthdate = null
+def city = null
+def country = null
+def geoarea = null
+def isocode = null
+def publicprofile = null
+def userid = null
+def password = null
+def internal = null
+def photo = null
+
+ 
+	firstname = action.selectSingleNode("firstname")?.getText()
+	lastname = action.selectSingleNode("lastname")?.getText()
+	email = action.selectSingleNode("email")?.getText()
+	birthdate = action.selectSingleNode("birthdate")?.getText()
+	city = action.selectSingleNode("city")?.getText()
+	country = action.selectSingleNode("country")?.getText()
+	geoarea = action.selectSingleNode("geoarea")?.getText()
+	isocode = action.selectSingleNode("isocode")?.getText()
+	publicprofile = action.selectSingleNode("publicprofile")?.getText()
+	userid = action.selectSingleNode("username")?.getText()
+	password = action.selectSingleNode("password")?.getText()
+	internal = action.selectSingleNode("internal")?.getText()
+	//repeatable.add(action.selectSingleNode("repeatable").getText())
+	try{
+		def photoName = action.selectSingleNode("photo/name")?.getText()
+		def photoImage = action.selectSingleNode("photo/code")?.getText()
+		
+		if (!BeanHelper.isNullOrEmptyString(photoName) && !BeanHelper.isNullOrEmptyString(photoImage)) {
+    		OutputStream out = null
+    		try{
+      			BASE64Decoder bd = new BASE64Decoder()
+      			byte[] by = bd.decodeBuffer(photoImage)
+      			def ext = StringUtils.substringAfterLast(photoName, ".")
+      			File tempFile = File.createTempFile("photo", "." + ext)
+      			tempFile.deleteOnExit()
+      			out = new FileOutputStream(tempFile)
+      			out.write(by)
+      
+     		 	photo = new ExternalBLOBData(photoName, tempFile, rtx)
+    		}catch(Exception e) {
+     			e.printStackTrace()
+    		}finally {
+      			IOUtils.closeQuietly(out)
+    		}
+  		}
+  	    if (!BeanHelper.isNullOrEmptyString(photoName) && BeanHelper.isNullOrEmptyString(photoImage)) {
+   			photo = null
+  		}	
+	}catch(Exception er){
+  		er.printStackTrace();
+	}
+ 
+outputParams.firstname=firstname
+outputParams.lastname=lastname
+outputParams.email=email
+outputParams.birthdate=birthdate
+outputParams.city=city
+outputParams.country=country
+outputParams.geoarea=geoarea
+outputParams.isocode=isocode
+outputParams.publicprofile=publicprofile
+outputParams.userid=userid
+outputParams.password=password
+outputParams.internal=internal
+outputParams.photo=photo
+
+ %]

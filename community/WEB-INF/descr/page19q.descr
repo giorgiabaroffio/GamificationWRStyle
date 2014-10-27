@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Edit">
+  <ParentContainer>hym8q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page19q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page19q.link"/>
+    <Navigation name="2" links="page19q.auto-link"/>
+    <Navigation name="3" links="page19q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="icu55q.enter|oln352q"/>
+    <Navigation name="5" links="ln231q|impl" postPropagatedLink="ln231q"/>
+    <Navigation name="6" links="ln232q|impl" postPropagatedLink="ln232q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|6|5" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln233q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu12q" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="4" inputs="fld35q_slot|enu12q.att15p"/>
+      <RefreshFormAll navs="1|0|6|5"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln231q</ManualLink>
+    <ManualLink>ln232q</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page19q_grid_0">
+      <Layout id="page19q_cell_12">
+        <Layout id="enu12q_0" unitId="enu12q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>mc</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>mc</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Edit</ModelName>
+    <ParentModule>hym8q</ParentModule>
+    <NavigationAncestors/>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="enu12q">fld35q_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu12q">enu12q.att15p</PageParam>
+      <PageParam>miu80q.icp176q</PageParam>
+      <PageParam>ocp49q</PageParam>
+      <PageParam>miu80q.icp179q</PageParam>
+      <PageParam>miu80q.icp175q</PageParam>
+      <PageParam>ocp50q</PageParam>
+      <PageParam>miu80q.icp180q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>mc</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

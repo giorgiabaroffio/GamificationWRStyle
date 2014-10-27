@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Needed_Points">icp6q</Parameter>
+  <Parameter name="Points Available">icp7q</Parameter>
+  <Parameter name="Oid">icp8q</Parameter>
+  <Parameter name="User Oid">icp9q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm3q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu3q">icp7q</OperationParam>
+      <OperationParam unit="icu3q">icp6q</OperationParam>
+      <OperationParam unit="icu3q">icp8q</OperationParam>
+      <OperationParam unit="icu3q">icp9q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln107q</Link>
+      <Link resultCode="success" transport="true">ln123q</Link>
+      <Link resultCode="error" transport="true">ln123q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

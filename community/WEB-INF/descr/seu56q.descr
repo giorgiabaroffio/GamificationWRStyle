@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Community Group">
+  <MaxResults/>
+  <Query entity="Group">
+    <Input id="p0" param="acond142q" type="string" implied="false" expandStyle="in" value="Community User" attribute="groupName"/>
+    <Output id="groupOID" name="OID" index="0"/>
+    <HQL>select a_group.OID from Group a_group
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_group.groupName) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select Community Group</ModelName>
+    <ParentContainer>opg42q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln424q</Link>
+      <Link resultCode="success" transport="true">ln308q</Link>
+      <Link resultCode="error" transport="true">ln308q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

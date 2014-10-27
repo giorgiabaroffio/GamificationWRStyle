@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ConnectUnitService" name="Add Action to Badge">
+  <Role useHQL="false">role14x</Role>
+  <Source id="ent16x">
+    <Query entity="ent16x">
+      <Input id="p0" param="kcond52q.att38x" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from ActionType a_actionType
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.oid in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Source>
+  <Target id="ent13x">
+    <Query entity="ent13x">
+      <Input id="p0" param="kcond53q.att42x" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from BadgeType a_badgeType
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Add Action to Badge</ModelName>
+    <ParentContainer>opg33q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="cnu2q">kcond53q.att42x</OperationParam>
+      <OperationParam unit="cnu2q">kcond52q.att38x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln339q</Link>
+      <Link resultCode="error">kln81q</Link>
+      <Link resultCode="error.opg33q">kln81q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

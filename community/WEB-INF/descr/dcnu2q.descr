@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DisconnectUnitService" name="Delete All">
+  <Role useHQL="true">role14x</Role>
+  <Source id="ent16x" keyCondition="kcond44q"></Source>
+  <Target id="ent13x" keyCondition="kcond45q"></Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Delete All</ModelName>
+    <ParentContainer>opg28q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="dcnu2q">kcond44q.att38x</OperationParam>
+      <OperationParam unit="dcnu2q">kcond45q.att42x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln313q</Link>
+      <Link resultCode="error">kln74q</Link>
+      <Link resultCode="error.opg28q">kln74q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

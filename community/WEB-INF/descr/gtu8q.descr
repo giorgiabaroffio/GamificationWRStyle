@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.GetUnitService" name="get user">
+  <ContextParameters>ctx9p</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get user</ModelName>
+    <ParentContainer>opg6q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>true</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="error">kln34q</Link>
+      <Link resultCode="success" transport="true">ln35q</Link>
+      <Link resultCode="error" transport="true">ln35q</Link>
+      <Link resultCode="success" transport="true">ln39q</Link>
+      <Link resultCode="error" transport="true">ln39q</Link>
+      <Link resultCode="success" transport="true">ln41q</Link>
+      <Link resultCode="error" transport="true">ln41q</Link>
+      <Link resultCode="error.opg6q">kln34q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

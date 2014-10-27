@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.ScrollerUnitService" name="Labels">
+  <Results maxResults="" blockFactor="20" blockWindow=""/>
+  <Query entity="BundleData">
+    <Input id="p0" param="acond67q" type="string" implied="false" expandStyle="in" attribute="bundleDataLocale"/>
+    <Input id="p1" param="acond86q" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="bundleDataKey"/>
+    <Input id="p2" param="acond87q" type="string" implied="true" impliedText="1 = 1" expandStyle="or" prefixValue="%" suffixValue="%" attribute="bundleDataMessage"/>
+    <Output id="bundleDataOID" name="OID" index="0"/>
+    <HQL>select a_bundleData.OID from BundleData a_bundleData
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_bundleData.locale) in(?)})) and (({[p1]upper(safe_cast(a_bundleData.key)) like upper(safe_cast(?))})) and (({[p2]upper(safe_cast(a_bundleData.message)) like upper(safe_cast(?))}))</Where>order by a_bundleData.OID asc
+    </HQL>
+  </Query>
+</Descriptor>

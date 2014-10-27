@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="read badge acquired">
+  <MaxResults/>
+  <Query entity="ent5x">
+    <Input id="p0" param="kcond49x.att21x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att21x" name="oid" index="0"/>
+    <Output id="role11x$att48x" name="badgeAcquiredToGamificationDictionary_title" index="1" useId="true"/>
+    <Output id="role5x$att113p" name="badgeAcquiredToUserHeadQuarter_firstName" index="2" useId="true"/>
+    <Output id="role11x$att43x" name="badgeAcquiredToGamificationDictionary_level" index="3" useId="true"/>
+    <Output id="role11x$att117x" name="badgeAcquiredToGamificationDictionary_area" index="4" useId="true"/>
+    <Output id="role5x_userOID" name="badgeAcquiredToUserHeadQuarter_OID" index="5" useId="true"/>
+    <Output id="role5x$email" name="badgeAcquiredToUserHeadQuarter_email" index="6" useId="true"/>
+    <Output id="role5x$att85x" name="badgeAcquiredToUserHeadQuarter_isoCode" index="7" useId="true"/>
+    <HQL>select a_badgeInstance.oid, a_badgeType_role11x.title, a_communityUser_role5x.firstName, a_badgeType_role11x.level, a_badgeType_role11x.area, a_badgeInstance.badgeAcquiredToUserHeadQuarter.OID, a_communityUser_role5x.email, a_communityUser_role5x.isoCode from BadgeInstance a_badgeInstance left join a_badgeInstance.badgeAcquiredToGamificationDictionary a_badgeType_role11x left join a_badgeInstance.badgeAcquiredToUserHeadQuarter a_communityUser_role5x
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeInstance.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>read badge acquired</ModelName>
+    <ParentContainer>opm8x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu99x">kcond49x.att21x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln445x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

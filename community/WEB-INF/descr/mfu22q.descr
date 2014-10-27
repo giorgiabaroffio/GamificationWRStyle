@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify Area Badge">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent13x</Entity>
+  <ModifiedAttributes>att64x|att28x</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode>ENTITY</FetchMode>
+  <Query entity="ent13x">
+    <Input id="p0" param="kcond43q.att42x" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Area Badge</ModelName>
+    <ParentContainer>opg26q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu22q">mfu22q.att64x</OperationParam>
+      <OperationParam unit="mfu22q">mfu22q.att28x</OperationParam>
+      <OperationParam unit="mfu22q">kcond43q.att42x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln308q</Link>
+      <Link resultCode="error">kln73q</Link>
+      <Link resultCode="success" transport="true">ln185q</Link>
+      <Link resultCode="error" transport="true">ln185q</Link>
+      <Link resultCode="error.opg26q">kln73q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

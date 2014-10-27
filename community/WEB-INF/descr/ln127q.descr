@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>okcu15q</Target>
+  <Secure>false</Secure>
+  <Source>enu15q</Source>
+  <SourcePage>page27q</SourcePage>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params>miu36q.icp118q|miu36q.icp119q|miu36q.icp17q|rcond16q.att6q|mc</Params>
+  </PreservedContextParams>
+  <ContextPropagations></ContextPropagations>
+</Descriptor>

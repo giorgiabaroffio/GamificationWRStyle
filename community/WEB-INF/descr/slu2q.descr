@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="getUserRegistration">
+  <Operation name="getUserRegistration" nsURI="http://www.webratio.com/webservices/getUserRegistration" stateful="false" invocationStyle="SOAP" requestMethod="POST" contentType="XML"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp2q" name="DATA" xsdProvider="xsdp2x" xsdType="{urn:actions}UserManagement[ComplexType]" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>getUserRegistration</ModelName>
+    <ParentContainer>port2q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu24q.icp229q|miu24q.icp226q|eru2q.faultMessage|eru2q.faultException|miu24q.icp228q|miu24q.icp227q|miu24q.icp225q|miu24q.icp224q|adu4q.inputDocument|miu24q.icp230q|miu24q.icp223q|miu24q.icp231q|miu24q.icp222q|miu24q.icp221q|miu24q.icp232q|miu24q.icp233q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln47q</Link>
+      <Link resultCode="error">kln12q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

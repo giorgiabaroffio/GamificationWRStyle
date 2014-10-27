@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select User Oid">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="acond143q" type="string" implied="false" expandStyle="in" function="upper" attribute="userName"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <HQL>select a_communityUser.OID from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]upper(safe_cast(a_communityUser.userName)) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select User Oid</ModelName>
+    <ParentContainer>opg42q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu57q">acond143q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln431q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

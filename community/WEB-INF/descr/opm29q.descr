@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu32q">
+    <InputParameter id="icp100q" name="Title"/>
+    <InputParameter id="icp101q" name="Available"/>
+    <InputParameter id="icp102q" name="Image"/>
+    <InputParameter id="icp103q" name="Description"/>
+    <InputParameter id="icp104q" name="Needed Points"/>
+    <InputParameter id="icp105q" name="Oid"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu31q</OKCollectorUnits>
+  <KOCollectorUnits>kocu15q</KOCollectorUnits>
+  <OperationUnits>icu32q|okcu31q|kocu15q|miu55q|mfu12q</OperationUnits>
+</Descriptor>

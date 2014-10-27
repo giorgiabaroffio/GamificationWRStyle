@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Modify Badge Area">
+  <ParentContainer>area2p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page18x"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page18x.link"/>
+    <Navigation name="2" links="page18x.auto-link"/>
+    <Navigation name="3" links="page18x.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln136x|impl" postPropagatedLink="ln136x"/>
+    <Navigation name="5" interPage="always" links="ln62x"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence/>
+  <UnitComputations>
+    <UnitComputation unit="enu15x" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="5" inputs="fld52x_slot|fld55x_slot|fld53x_slot"/>
+      <RefreshFormAll navs="1|0|4"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln66x</ManualLink>
+    <ManualLink>ln136x</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page18x_grid_0">
+      <Layout id="page18x_cell_0">
+        <Layout id="enu15x_0" unitId="enu15x"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Modify Badge Area</ModelName>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam preservedByForm="true" unit="enu15x">fld52x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu15x">fld55x_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu15x">fld53x_slot</PageParam>
+      <PageParam>pwu6x.current.att42x</PageParam>
+      <PageParam>miu67q.icp147q</PageParam>
+      <PageParam>miu67q.icp148q</PageParam>
+      <PageParam>miu67q.icp149q</PageParam>
+      <PageParam>rcond36q.att21q</PageParam>
+      <PageParam>inu2q.current.att21q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

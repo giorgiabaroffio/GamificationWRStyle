@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu3q">
+    <InputParameter id="icp6q" name="Needed_Points"/>
+    <InputParameter id="icp7q" name="Points Available"/>
+    <InputParameter id="icp8q" name="Oid"/>
+    <InputParameter id="icp9q" name="User Oid"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu4q</OKCollectorUnits>
+  <KOCollectorUnits>kocu1q|kocu2q</KOCollectorUnits>
+  <OperationUnits>icu3q|okcu4q|kocu1q|kocu2q|cru9q|tmu2q|opu4q|scu4q</OperationUnits>
+</Descriptor>

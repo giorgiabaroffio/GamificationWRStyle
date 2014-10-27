@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.AdapterUnitService" name="Actions">
+  <AdapterUnit inputDocCount="" transformer="WEB-INF/webservice/GetActions.xml.template">
+    <InputParameters>
+      <InputParameter>gamifiedApplication</InputParameter>
+      <InputParameter>action</InputParameter>
+      <InputParameter>actionOid</InputParameter>
+    </InputParameters>
+  </AdapterUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Actions</ModelName>
+    <ParentContainer>port12q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="adu2q">adu2q.action</OperationParam>
+      <OperationParam unit="adu2q">adu2q.gamifiedApplication</OperationParam>
+      <OperationParam unit="adu2q">adu2q.actionOid</OperationParam>
+      <Params>rsp18q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln77q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

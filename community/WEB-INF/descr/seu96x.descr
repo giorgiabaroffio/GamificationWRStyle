@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="read notificaton email">
+  <MaxResults/>
+  <Query entity="ent22x">
+    <Input id="p0" param="rcond15x.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="rcond21x.att95p" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att32x" name="oid" index="0"/>
+    <HQL>select a_notification.oid from Notification a_notification
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_notification.notificationToCommunityUser.OID in(?))})) and (({[p1](a_notification.notificationToRewardType.oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>read notificaton email</ModelName>
+    <ParentContainer>opm9x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu96x">rcond21x.att95p</OperationParam>
+      <OperationParam unit="seu96x">rcond15x.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln348x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

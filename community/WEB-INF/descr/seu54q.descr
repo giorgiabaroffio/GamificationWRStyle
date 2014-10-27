@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select User Oid">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="acond140q" type="string" implied="false" expandStyle="in" function="upper" attribute="email"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att12p" name="publicProfile" index="1"/>
+    <HQL>select a_communityUser.OID, a_communityUser.publicProfile from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]upper(safe_cast(a_communityUser.email)) in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Select User Oid</ModelName>
+    <ParentContainer>opg41q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu54q">acond140q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln414q</Link>
+      <Link resultCode="error">kln116q</Link>
+      <Link resultCode="success" transport="true">ln301q</Link>
+      <Link resultCode="error" transport="true">ln301q</Link>
+      <Link resultCode="success" transport="true">ln302q</Link>
+      <Link resultCode="error" transport="true">ln302q</Link>
+      <Link resultCode="error.opg41q">kln116q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

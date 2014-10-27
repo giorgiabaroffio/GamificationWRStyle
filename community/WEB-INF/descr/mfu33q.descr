@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Update Mail">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent19x</Entity>
+  <ModifiedAttributes>att67x|att54x|att33x|att66x</ModifiedAttributes>
+  <ModifiedRoles>role10x|role8x</ModifiedRoles>
+  <FetchMode keyCondition="kcond65q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Update Mail</ModelName>
+    <ParentContainer>opg37q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu33q">kcond65q.att1x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.role10x.att31x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.att54x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.role8x.att31x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.att67x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.att66x</OperationParam>
+      <OperationParam unit="mfu33q">mfu33q.att33x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln366q</Link>
+      <Link resultCode="error">kln105q</Link>
+      <Link resultCode="error.opg37q">kln105q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

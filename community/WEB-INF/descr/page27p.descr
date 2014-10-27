@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Edit Mail">
+  <ParentContainer>area7p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>false</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv2x</PermissionElement>
+  <MasterPage>mpage2x</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page27p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page27p.link"/>
+    <Navigation name="2" links="page27p.auto-link"/>
+    <Navigation name="3" links="page27p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln162p|validation-failed"/>
+    <Navigation name="5" interPage="always" links="ln159p"/>
+    <Navigation name="6" links="ln162p|impl" postPropagatedLink="ln162p"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="2|6|4" effects="-" futile=""/>
+    <UselessPreserve navs="3|2|6|4" effects="#pr#" futile=""/>
+    <UselessPreserve navs="3" effects="-" futile="kcond66q.att1x"/>
+  </UselessPreserves>
+  <LinkSequence>ln235q|ln164p|ln236q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="enu17p" formBased="true">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+      <RefreshFormAll navs="5" inputs="sfld14p_label|fld25p_slot|sfld16p_presel|sfld16p_output|fld28p_slot|fld24p_slot|fld39p_slot|sfld14p_presel|sfld16p_label|sfld14p_output|fld43p_slot"/>
+      <RefreshFormAll navs="1|0|6"/>
+    </UnitComputation>
+    <UnitComputation unit="seu33p">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="seu50q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln161p</ManualLink>
+    <ManualLink>ln162p</ManualLink>
+  </ManualLinks>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <Layouts>
+    <Layout id="page27p_grid_0">
+      <Layout id="page27p_cell_0">
+        <Layout id="enu17p_0" unitId="enu17p"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>kcond66q.att1x</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params>kcond66q.att1x</Params>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Edit Mail</ModelName>
+    <NavigationAncestors>sv2x|area7p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="seu33p">acond3p</PageParam>
+      <PageParam unit="seu50q">kcond66q.att1x</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">sfld14p_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">fld25p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld16p_presel" unit="enu17p">sfld16p_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">sfld16p_output</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">fld28p_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">fld24p_slot</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">fld39p_slot</PageParam>
+      <PageParam preservedByForm="true" formPreserveGroup="sfld14p_presel" unit="enu17p">sfld14p_presel</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">sfld16p_label</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">sfld14p_output</PageParam>
+      <PageParam preservedByForm="true" unit="enu17p">fld43p_slot</PageParam>
+      <PageParam>pwu4p.current.att1x</PageParam>
+      <PageParam>miu85q.icp191q</PageParam>
+      <PageParam>miu85q.icp190q</PageParam>
+      <PageParam>miu85q.icp189q</PageParam>
+      <PageParam>miu85q.icp192q</PageParam>
+      <PageParam>miu85q.icp187q</PageParam>
+      <PageParam>miu85q.icp188q</PageParam>
+      <PageParam>miu85q.icp193q</PageParam>
+      <PageParam>pwu4p.sortCriteria</PageParam>
+      <PageParam>acond1p</PageParam>
+      <PageParam>pwu4p.newSortAttribute</PageParam>
+      <PageParam>miu84q.icp185q</PageParam>
+      <PageParam>miu84q.icp186q</PageParam>
+      <PageParam>miu84q.icp184q</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

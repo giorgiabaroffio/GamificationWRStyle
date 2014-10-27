@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get status">
+  <MaxResults/>
+  <Query entity="ent22x">
+    <Output id="att88x" name="status" index="0"/>
+    <HQL>select distinct a_notification.status from Notification a_notification order by a_notification.status asc</HQL>
+  </Query>
+</Descriptor>

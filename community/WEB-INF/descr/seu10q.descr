@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="get user">
+  <MaxResults/>
+  <Query entity="ent15x">
+    <Input id="p0" param="acond1q" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att113p" name="firstName" index="1"/>
+    <Output id="att114p" name="lastName" index="2"/>
+    <Output id="att12p" name="publicProfile" index="3"/>
+    <HQL>select a_communityUser.OID, a_communityUser.firstName, a_communityUser.lastName, a_communityUser.publicProfile from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get user</ModelName>
+    <ParentContainer>opm5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu10q">acond1q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln42q</Link>
+      <Link resultCode="success" transport="true">ln30q</Link>
+      <Link resultCode="error" transport="true">ln30q</Link>
+      <Link resultCode="success" transport="true">ln45q</Link>
+      <Link resultCode="error" transport="true">ln45q</Link>
+      <Link resultCode="success" transport="true">ln46q</Link>
+      <Link resultCode="error" transport="true">ln46q</Link>
+      <Link resultCode="success" transport="true">ln54q</Link>
+      <Link resultCode="error" transport="true">ln54q</Link>
+      <Link resultCode="success" transport="true">ln57q</Link>
+      <Link resultCode="error" transport="true">ln57q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm5q</Module>
+  <InputCollectorId>icu5q</InputCollectorId>
+  <InputParameter>icp4q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area1o</ParentContainer>
+    <MasterPage>mpage2q</MasterPage>
+    <NavigationAncestors>sv1x|area1x|area1o</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>true</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv1x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu8q">miu8q.icp4q</OperationParam>
+      <Params>miu6ohinu14q.current.userOID|miu6ohinu17q.block|miu6ohinu14q.block|miu6ohinu19q.sortCriteria|link|miu6ohinu16q.newSortAttribute|miu6oacond136q|miu6oacond103q|ln56qmiu6oicp207q|miu6ohinu16q.sortCriteria|miu6oocp74q|pcp46x|miu6oacond130q|miu6oacond134q|miu6oacond121q|miu6oacond115q|scu2o.isPublic|var5x|miu6ohinu15q.sortCriteria|cmplink|acond23o|miu6ohinu18q.newSortAttribute|miu6oacond129q|acond19o|miu6oacond113q|miu6oacond119q|miu6oacond112q|sp|miu6ohinu15q.newSortAttribute|miu6orcond28q.userOID|miu6oacond89q|miu6oacond137q|miu6oacond131q|miu6oacond135q|miu6oacond122q|miu6ohinu17q.current.userOID|miu6oacond114q|miu6oacond120q|miu6oacond88q|miu6oacond128q|miu6ohinu19q.newSortAttribute|miu6ohinu18q.sortCriteria|smc</Params>
+    </OperationParams>
+    <FollowingCollectorUnits>ln56qmiu6oicu63q</FollowingCollectorUnits>
+    <OutgoingLinks>
+      <Link resultCode="success.okcu6q">oln49q</Link>
+      <Link resultCode="success.okcu7q">oln52q</Link>
+      <Link resultCode="error">kln10q</Link>
+      <Link resultCode="success.okcu6q" transport="true">ln55q</Link>
+      <Link resultCode="success.okcu6q" transport="true">ln56q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>
+ 

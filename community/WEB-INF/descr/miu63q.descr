@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm34q</Module>
+  <InputCollectorId>icu40q</InputCollectorId>
+  <InputParameter>icp141q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>hym5q</ParentContainer>
+    <ParentModule>hym5q</ParentModule>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu63q">miu63q.icp141q</OperationParam>
+      <Params>fld12q_slot|mc|miu65q.icp142q|mssu1q.shownMessages</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln297q</Link>
+      <Link resultCode="error">kln65q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

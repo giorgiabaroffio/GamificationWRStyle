@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="false" singleLayout="false">hym2q</Module>
+  <InputCollectorId>icu13q</InputCollectorId>
+  <InputParameter>icp22q</InputParameter>
+  <InputParameter>icp23q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area2p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area2p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu38q">miu38q.icp22q</OperationParam>
+      <OperationParam unit="miu38q">miu38q.icp23q</OperationParam>
+      <Params>sp|pwu3q.newSortAttribute|cmplink|link|pwu3q.sortCriteria|miu25q.icp12q|smc|pwu3q.current.att21q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln181q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

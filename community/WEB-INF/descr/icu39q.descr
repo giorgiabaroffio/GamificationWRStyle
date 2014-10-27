@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Action OID">icp131q</Parameter>
+  <Parameter name="Description">icp132q</Parameter>
+  <Parameter name="Check Time Elapsed">icp133q</Parameter>
+  <Parameter name="Active">icp134q</Parameter>
+  <Parameter name="Name">icp135q</Parameter>
+  <Parameter name="Participation">icp136q</Parameter>
+  <Parameter name="Time Elapsed">icp137q</Parameter>
+  <Parameter name="Score">icp138q</Parameter>
+  <Parameter name="Repeatable">icp139q</Parameter>
+  <Parameter name="Reputation">icp140q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm33q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu39q">icp131q</OperationParam>
+      <OperationParam unit="icu39q">icp140q</OperationParam>
+      <OperationParam unit="icu39q">icp139q</OperationParam>
+      <OperationParam unit="icu39q">icp138q</OperationParam>
+      <OperationParam unit="icu39q">icp137q</OperationParam>
+      <OperationParam unit="icu39q">icp133q</OperationParam>
+      <OperationParam unit="icu39q">icp134q</OperationParam>
+      <OperationParam unit="icu39q">icp135q</OperationParam>
+      <OperationParam unit="icu39q">icp132q</OperationParam>
+      <OperationParam unit="icu39q">icp136q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln291q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

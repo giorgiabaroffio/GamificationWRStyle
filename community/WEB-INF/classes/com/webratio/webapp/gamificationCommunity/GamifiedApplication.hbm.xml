@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.gamificationCommunity.GamifiedApplication" table="`gamified_application`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="name" column="`name`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="apiKey" column="`api_key`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="gamifiedApplicationToThematicArea" table="`gamifiedapplication_thematic_a`" inverse="false" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`gamified_application_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.gamificationCommunity.ThematicArea" not-found="exception" embed-xml="true" unique="false">
+        <column name="`thematic_area_oid`"/>
+      </many-to-many>
+    </set>
+  </class>
+  <!-- mapping for relationship 'GamifiedApplicationToThematic Area[role7q]' -->
+  <class entity-name="com.webratio.webapp.gamificationCommunity.Rel_GamifiedApplication_to_gamifiedApplicationToThematicArea" table="`gamifiedapplication_thematic_a`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`gamified_application_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`thematic_area_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+</hibernate-mapping>

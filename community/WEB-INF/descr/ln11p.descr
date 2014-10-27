@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page17p</Target>
+  <Secure>false</Secure>
+  <Source>miu5oocu5q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations></ContextPropagations>
+  <PageActions>
+    <Close pages=""/>
+    <Open page="page17p"/>
+    <WindowConfiguration title="Badge history" width="850" height="550" resizable="false" autoResizing="false" closable="true" maximizable="false" minimizable="false" draggable="false" modal="true" className="" showEffect="fade" hideEffect="fade"/>
+  </PageActions>
+</Descriptor>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.HierarchicalIndexUnitService" name="Overall Participation">
+  <Level id="hinu2q">
+    <Parent/>
+    <Results maxResults="" blockFactor="10" blockWindow=""/>
+    <ChildLevels>hiulvl2q</ChildLevels>
+    <Entity>ent15x</Entity>
+    <Query entity="ent15x">
+      <Input id="p0" param="acond31q" type="integer" implied="true" impliedText="1 = 1" expandStyle="in" attribute="userOID"/>
+      <Input id="p1" param="acond32q" type="boolean" implied="false" expandStyle="in" value="true" attribute="att12p"/>
+      <Input id="p2" param="acond33q" type="boolean" implied="false" expandStyle="in" value="false" attribute="att99x"/>
+      <Output id="userOID" name="OID" index="0"/>
+      <Output id="att113p" name="firstName" index="1"/>
+      <Output id="att114p" name="lastName" index="2"/>
+      <Output id="att56x" name="participation" index="3"/>
+      <Output id="att123p" name="smallPhoto" blob="true" index="4"/>
+      <HQL>select a_communityUser.OID, a_communityUser.firstName, a_communityUser.lastName, a_communityUser.participation, a_communityUser.smallPhotoRef from CommunityUser a_communityUser
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)})) and (({[p1]a_communityUser.publicProfile in(?)})) and (({[p2]a_communityUser.internal in(?)}))</Where>order by a_communityUser.participation desc, a_communityUser.OID asc
+      </HQL>
+    </Query>
+    <SortAttributes>
+      <Attribute id="att56x" dynamic="false" order="desc">a_communityUser.participation</Attribute>
+      <Attribute id="userOID" dynamic="false" order="asc">a_communityUser.OID</Attribute>
+    </SortAttributes>
+  </Level>
+  <Level id="hiulvl2q">
+    <Parent>hinu2q</Parent>
+    <Results maxResults=""/>
+    <ChildLevels/>
+    <Entity>ent1p</Entity>
+    <ParentEntity>ent15x</ParentEntity>
+    <Query entity="ent1p">
+      <Input id="q1" param="hinu2q.userOID" type="integer" implied="false" expandStyle="in"/>
+      <Output id="att4p" name="oid" index="0"/>
+      <Output id="att7p" name="title" index="1"/>
+      <Output id="att9p" name="checkedImage" blob="true" index="2"/>
+      <Output id="att8p" name="importance" index="3"/>
+      <Output id="role5p_userOID" name="mostimportantBadgeToUsercrm_OID" index="4" useId="true"/>
+      <HQL>select a_mostimportantBadge.oid, a_mostimportantBadge.title, a_mostimportantBadge.checkedImageRef, a_mostimportantBadge.importance, a_mostimportantBadge.mostimportantBadgeToUsercrm.OID from MostimportantBadge a_mostimportantBadge
+        <Where defaultPolicy="empty" allImplied="false">(({[q1](a_mostimportantBadge.mostimportantBadgeToUsercrm.OID in(?))}))</Where>
+      </HQL>
+    </Query>
+  </Level>
+</Descriptor>

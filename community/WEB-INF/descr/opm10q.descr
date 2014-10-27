@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu10q">
+    <InputParameter id="icp18q" name="gamified app oid"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu14q</OKCollectorUnits>
+  <KOCollectorUnits>kocu8q</KOCollectorUnits>
+  <OperationUnits>icu10q|okcu14q|kocu8q|seu36q|dcnu10q|dlu12q</OperationUnits>
+</Descriptor>

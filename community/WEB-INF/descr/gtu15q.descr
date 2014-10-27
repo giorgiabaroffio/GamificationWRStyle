@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.GetUnitService" name="get profile">
+  <ContextParameters>ctx5p|UserCtxParam</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get profile</ModelName>
+    <ParentContainer>opg2q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success" transport="true">ln58q</Link>
+      <Link resultCode="error" transport="true">ln58q</Link>
+      <Link resultCode="success" transport="true">ln59q</Link>
+      <Link resultCode="error" transport="true">ln59q</Link>
+      <Link resultCode="success" transport="true">ln63q</Link>
+      <Link resultCode="error" transport="true">ln63q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

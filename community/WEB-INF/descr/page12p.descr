@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="HQ.UserDashboard.Private">
+  <ParentContainer>area4p</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1x</PermissionElement>
+  <MasterPage>mpage2q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="UserCtxParam|LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page12p"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page12p.link"/>
+    <Navigation name="2" links="page12p.auto-link"/>
+    <Navigation name="3" links="page12p.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" interPage="always" links="pcu1q.link|oln58q" effects="#pr#"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="2" futile=""/>
+    <UselessPreserve navs="3" futile="var18p"/>
+  </UselessPreserves>
+  <LinkSequence>ln1o|ln75o|ln79o|ln27p</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau5p">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu1o">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="scu5o">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="mdu7o">
+      <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau4p">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks></ManualLinks>
+  <Variables>
+    <Variable id="var5p" name="Component"></Variable>
+    <Variable id="var18p" name="User"></Variable>
+    <Variable id="var25p" name="Topic"></Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr5p" name="ExisitComponent?" variables="var5p" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(Component)){
+	return true
+}
+else{
+	return false
+}</Condition>
+    <Condition id="cexpr11p" name="ExsistTopic?" variables="var25p" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(Topic)){
+	return true
+}
+else{
+	return false
+}</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page12p_grid_0">
+      <Layout id="page12p_cell_0">
+        <Layout id="page12p_grid_1">
+          <Layout id="page12p_cell_1">
+            <NavigationCondition selectiveRefresh="true" effects="UserCtxParam|#pr#"/>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page12p_cell_5">
+        <Layout id="page12p_grid_2">
+          <Layout id="page12p_cell_6">
+            <Layout id="page12p_grid_3">
+              <Layout id="page12p_cell_7">
+                <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+              </Layout>
+            </Layout>
+            <Layout id="page12p_grid_4"></Layout>
+          </Layout>
+        </Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params>var18p</Params>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>HQ.UserDashboard.Private</ModelName>
+    <URLFragment>var18p</URLFragment>
+    <NavigationAncestors>sv1x|area4p</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau5p">kcond43p.userOID</PageParam>
+      <PageParam unit="scu5o">scu5o.nickname</PageParam>
+      <PageParam unit="scu5o">scu5o.isPublic</PageParam>
+      <PageParam unit="mdu7o">acond45p</PageParam>
+      <PageParam unit="dau4p">acond58p</PageParam>
+      <PageParam>var18p</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

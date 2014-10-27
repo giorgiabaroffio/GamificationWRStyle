@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.ws.WSService" name="WS Service">
+  <WebServiceProviders></WebServiceProviders>
+  <WebServicesModel tnsURI="" soapVersion="1.1" soapBindingStyle="rcpLiteral">
+    <Port id="port1q" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="AssignActionsToUsers" path="UserActivityCreditWebServiceREST/AssignActionsToUsers">
+      <Operation id="slu1q" name="assignActionsToUsers" soapAware="false" restAware="true" contentType="JSON" requestMethod="POST" key="POST|assignActionsToUsers">
+        <NamespaceUri>http://www.webratio.com/webservices/assignActionsToUsers</NamespaceUri>
+        <Output id="rsu1q" name="assignActionsToUsersResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru1q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port2" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="GetRank" path="UserActivityCreditWebServiceREST/GetRank">
+      <Operation id="slu2" name="getRank" soapAware="false" restAware="true" contentType="XML" requestMethod="GET" key="GET|getRank">
+        <Output id="rsu1" name="getRankResponce" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru1" name="ErrorResponseRank" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port6q" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="GetUserCredits" path="UserActivityCreditWebServiceREST/GetUserCredits">
+      <Operation id="slu7q" name="getUserCredits" soapAware="false" restAware="true" contentType="XML" requestMethod="GET" key="GET|getUserCredits">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserCredit</NamespaceUri>
+        <Output id="rsu5q" name="getUserCreditsResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru4q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port7q" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="RedeemUserReward" path="UserActivityCreditWebServiceREST/RedeemUserReward">
+      <Operation id="slu8q" name="redeemUserReward" soapAware="false" restAware="true" contentType="JSON" requestMethod="POST" key="POST|redeemUserReward">
+        <Output id="rsu7q" name="reedemUserRewardResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru7q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port8q" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="GetUserRewards" path="UserActivityCreditWebServiceREST/GetUserRewards">
+      <Operation id="slu9q" name="getUserRewards" soapAware="false" restAware="true" contentType="XML" requestMethod="GET" key="GET|getUserRewards">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserRewards</NamespaceUri>
+        <Output id="rsu3q" name="getUserRewardsResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru6q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port9q" serviceViewId="wsv1q" serviceViewName="UserActivityCreditWebServiceREST" name="GetActions" path="UserActivityCreditWebServiceREST/GetActions">
+      <Operation id="slu10q" name="getActions" soapAware="false" restAware="true" contentType="XML" requestMethod="GET" key="GET|getActions">
+        <NamespaceUri>http://www.webratio.com/webservices/getActions</NamespaceUri>
+        <Output id="rsu6q" name="getActionsResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru5q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port2q" serviceViewId="wsv2q" serviceViewName="UserRegistrationWebServiceSOAP" name="UserRegistration" path="UserRegistrationWebServiceSOAP/UserRegistration">
+      <Operation id="slu2q" name="getUserRegistration" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/getUserRegistration}getUserRegistration">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserRegistration</NamespaceUri>
+        <Output id="rsu2q" name="getUserRegistrationResponse" nsURI="" contentType="XML" statusCode=""/>
+        <Fault id="eru2q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port3q" serviceViewId="wsv2q" serviceViewName="UserRegistrationWebServiceSOAP" name="UserUpdate" path="UserRegistrationWebServiceSOAP/UserUpdate">
+      <Operation id="slu3q" name="getUserUpdate" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/getUserUpdate}getUserUpdate">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserUpdate</NamespaceUri>
+        <Output id="rsu4q" name="getUserUpdateResponse" nsURI="" contentType="XML" statusCode=""/>
+        <Fault id="eru3q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port10q" serviceViewId="wsv3q" serviceViewName="UserRegistrationWebServiceREST" name="UserRegistration" path="UserRegistrationWebServiceREST/UserRegistration">
+      <Operation id="slu6q" name="userRegistration" soapAware="false" restAware="true" contentType="JSON" requestMethod="POST" key="POST|userRegistration">
+        <NamespaceUri>http://www.webratio.com/webservices/userRegistration</NamespaceUri>
+        <Output id="rsu10q" name="getUserRegistrationResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru10q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port11q" serviceViewId="wsv3q" serviceViewName="UserRegistrationWebServiceREST" name="UserUpdate" path="UserRegistrationWebServiceREST/UserUpdate">
+      <Operation id="slu11q" name="userUpdate" soapAware="false" restAware="true" contentType="JSON" requestMethod="POST" key="POST|userUpdate">
+        <NamespaceUri>http://www.webratio.com/webservices/userUpdate</NamespaceUri>
+        <Output id="rsu11q" name="getUserUpdateResponse" nsURI="" contentType="JSON" statusCode="200"/>
+        <Fault id="eru11q" name="ErrorResponse" contentType="JSON" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port12q" serviceViewId="wsv4q" serviceViewName="UserActivityCreditWebServiceSOAP" name="GetActions" path="UserActivityCreditWebServiceSOAP/GetActions">
+      <Operation id="slu12q" name="getActions" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/getActions}getActions">
+        <NamespaceUri>http://www.webratio.com/webservices/getActions</NamespaceUri>
+        <Output id="rsu12q" name="getActionsResponse" nsURI="" contentType="XML" statusCode="200"/>
+        <Fault id="eru12q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port13q" serviceViewId="wsv4q" serviceViewName="UserActivityCreditWebServiceSOAP" name="GetUserCredits" path="UserActivityCreditWebServiceSOAP/GetUserCredits">
+      <Operation id="slu13q" name="getUserCredits" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/getUserCredit}getUserCredits">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserCredit</NamespaceUri>
+        <Output id="rsu13q" name="getUserCreditsResponse" nsURI="" contentType="XML" statusCode="200"/>
+        <Fault id="eru13q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port14q" serviceViewId="wsv4q" serviceViewName="UserActivityCreditWebServiceSOAP" name="AssignActionsToUsers" path="UserActivityCreditWebServiceSOAP/AssignActionsToUsers">
+      <Operation id="slu14q" name="assignActionsToUsers" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/assignActionsToUsers}assignActionsToUsers">
+        <NamespaceUri>http://www.webratio.com/webservices/assignActionsToUsers</NamespaceUri>
+        <Output id="rsu14q" name="assignActionsToUsersResponse" nsURI="" contentType="XML" statusCode="200"/>
+        <Fault id="eru14q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port4q" serviceViewId="wsv4q" serviceViewName="UserActivityCreditWebServiceSOAP" name="RedeemUserReward" path="UserActivityCreditWebServiceSOAP/RedeemUserReward">
+      <Operation id="slu4q" name="redeemUserReward" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{}redeemUserReward">
+        <Output id="rsu8q" name="reedemUserRewardResponse" nsURI="" contentType="XML" statusCode="200"/>
+        <Fault id="eru8q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+    <Port id="port5q" serviceViewId="wsv4q" serviceViewName="UserActivityCreditWebServiceSOAP" name="GetUserRewards" path="UserActivityCreditWebServiceSOAP/GetUserRewards">
+      <Operation id="slu5q" name="getUserRewards" soapAware="true" restAware="false" contentType="XML" requestMethod="POST" key="{http://www.webratio.com/webservices/getUserRewards}getUserRewards">
+        <NamespaceUri>http://www.webratio.com/webservices/getUserRewards</NamespaceUri>
+        <Output id="rsu9q" name="getUserRewardsResponse" nsURI="" contentType="XML" statusCode="200"/>
+        <Fault id="eru9q" name="ErrorResponse" contentType="XML" statusCode="400"/>
+      </Operation>
+    </Port>
+  </WebServicesModel>
+</Descriptor>
+ 

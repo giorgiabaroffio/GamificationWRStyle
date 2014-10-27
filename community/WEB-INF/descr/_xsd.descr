@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.xsd.XsdService" name="XSD Service">
+  <XsdProviders>
+    <XsdProvider id="xsdp2x" name="CommunityWS">
+      <XsdResource id="xsdr3x" name="Community" file="true">Gamification/WebContent/WEB-INF/webservice/Community.xsd</XsdResource>
+    </XsdProvider>
+  </XsdProviders>
+  <XsdMapping></XsdMapping>
+</Descriptor>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="assignActionsToUsers">
+  <Operation name="assignActionsToUsers" nsURI="http://www.webratio.com/webservices/assignActionsToUsers" stateful="false" invocationStyle="SOAP" requestMethod="POST" contentType="XML"/>
+  <QueryStringParameters></QueryStringParameters>
+  <BodyParameters>
+    <RequestBodyParameter id="slp12q" name="DATA" xsdProvider="xsdp2x" xsdType="{urn:actions}ActionDefinition[ComplexType]" minCard="1" maxCard="1"/>
+  </BodyParameters>
+  <Headers></Headers>
+  <SoapHeaders></SoapHeaders>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>assignActionsToUsers</ModelName>
+    <ParentContainer>port14q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params>miu14q.icp244q|miu14q.icp238q|miu14q.icp237q|miu14q.icp239q|miu14q.icp242q|miu14q.icp240q|miu14q.icp243q|adu1q.inputDocument|miu14q.icp241q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln71q</Link>
+      <Link resultCode="error">kln28q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

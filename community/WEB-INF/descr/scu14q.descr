@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.ScriptUnitService" name="compose url parameter">
+  <Script xml:space="preserve">#input String firstname, String lastname
+import org.apache.commons.lang.StringUtils
+
+String first = ""
+String last = ""
+
+if(StringUtils.isNotBlank(firstname) == true){
+	first = StringUtils.lowerCase(firstname)
+}
+if(StringUtils.isNotBlank(lastname) == true){
+	last = StringUtils.lowerCase(lastname)
+}
+
+return (StringUtils.trim(first.replaceAll("\\p{Z}","") + "." + last.replaceAll("\\p{Z}","")))
+		</Script>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>compose url parameter</ModelName>
+    <ParentContainer>opm5q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="scu14q">scu14q.lastname</OperationParam>
+      <OperationParam unit="scu14q">scu14q.firstname</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln46q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

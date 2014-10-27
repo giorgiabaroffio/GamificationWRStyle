@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Read Notification">
+  <MaxResults/>
+  <Query entity="ent22x">
+    <Input id="p0" param="rcond1q.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="rcond2q.att95p" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att32x" name="oid" index="0"/>
+    <HQL>select a_notification.oid from Notification a_notification
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_notification.notificationToCommunityUser.OID in(?))})) and (({[p1](a_notification.notificationToRewardType.oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Read Notification</ModelName>
+    <ParentContainer>opg6q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu7q">rcond2q.att95p</OperationParam>
+      <OperationParam unit="seu7q">rcond1q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln41q</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln151q</Link>
+      <Link resultCode="error">kln34q</Link>
+      <Link resultCode="error.opg6q">kln34q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

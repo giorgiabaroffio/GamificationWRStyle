@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="List of Actions">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent16x">
+    <Input id="p0" param="rcond25q.att21q" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att38x" name="oid" index="0"/>
+    <Output id="att1q" name="checkTimeElapsed" index="1"/>
+    <Output id="att71x" name="description" index="2"/>
+    <Output id="att2q" name="timeElapsed" index="3"/>
+    <Output id="att50x" name="reputation" index="4"/>
+    <Output id="att41x" name="score" index="5"/>
+    <Output id="att39x" name="name" index="6"/>
+    <Output id="att62x" name="area" index="7"/>
+    <Output id="att60x" name="participation" index="8"/>
+    <Output id="att9q" name="active" index="9"/>
+    <Output id="att3q" name="repeatable" index="10"/>
+    <HQL>select a_actionType.oid, a_actionType.checkTimeElapsed, a_actionType.description, a_actionType.timeElapsed, a_actionType.reputation, a_actionType.score, a_actionType.name, a_thematicArea_role10q.areaName, a_actionType.participation, a_actionType.active, a_actionType.repeatable from ActionType a_actionType left join a_actionType.actionTypeToThematicArea a_thematicArea_role10q
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_actionType.actionTypeToThematicArea.oid in(?))}))</Where>order by $$SORT_CRITERIA$$
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att41x" dynamic="true" order="asc">a_actionType.score</Attribute>
+    <Attribute id="att71x" dynamic="true" order="asc">a_actionType.description</Attribute>
+    <Attribute id="att60x" dynamic="true" order="asc">a_actionType.participation</Attribute>
+    <Attribute id="att50x" dynamic="true" order="asc">a_actionType.reputation</Attribute>
+    <Attribute id="att3q" dynamic="true" order="asc">a_actionType.repeatable</Attribute>
+    <Attribute id="att1q" dynamic="true" order="asc">a_actionType.checkTimeElapsed</Attribute>
+    <Attribute id="att2q" dynamic="true" order="asc">a_actionType.timeElapsed</Attribute>
+    <Attribute id="att9q" dynamic="true" order="asc">a_actionType.active</Attribute>
+    <Attribute id="att41x" dynamic="false" order="asc">a_actionType.score</Attribute>
+    <Attribute id="att71x" dynamic="false" order="asc">a_actionType.description</Attribute>
+    <Attribute id="att60x" dynamic="false" order="asc">a_actionType.participation</Attribute>
+    <Attribute id="att50x" dynamic="false" order="asc">a_actionType.reputation</Attribute>
+    <Attribute id="att3q" dynamic="false" order="asc">a_actionType.repeatable</Attribute>
+    <Attribute id="att1q" dynamic="false" order="asc">a_actionType.checkTimeElapsed</Attribute>
+  </SortAttributes>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="pwu7x" linkId="ln12x" action="validate"/>
+    <wr:ValidationLink elementId="pwu7x" linkId="ln61q" action="validate"/>
+  </wr:Validation>
+</Descriptor>

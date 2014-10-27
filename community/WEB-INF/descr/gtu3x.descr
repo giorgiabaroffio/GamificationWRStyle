@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.GetUnitService" name="get email type and points acquired">
+  <ContextParameters>ctx7x|ctx6x</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>get email type and points acquired</ModelName>
+    <ParentContainer>opm6x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success" transport="true">ln143x</Link>
+      <Link resultCode="error" transport="true">ln143x</Link>
+      <Link resultCode="success" transport="true">ln163x</Link>
+      <Link resultCode="error" transport="true">ln163x</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify Reward">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent12p</Entity>
+  <ModifiedAttributes>att106p|att100p|att55x|att99p|att98p</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode>ENTITY</FetchMode>
+  <Query entity="ent12p">
+    <Input id="p0" param="kcond32q.att95p" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from RewardType a_rewardType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_rewardType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Reward</ModelName>
+    <ParentContainer>opg17q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu12q">mfu12q.att55x_name</OperationParam>
+      <OperationParam unit="mfu12q">mfu12q.att106p</OperationParam>
+      <OperationParam unit="mfu12q">kcond32q.att95p</OperationParam>
+      <OperationParam unit="mfu12q">mfu12q.att98p</OperationParam>
+      <OperationParam unit="mfu12q">mfu12q.att99p</OperationParam>
+      <OperationParam unit="mfu12q">mfu12q.att100p</OperationParam>
+      <OperationParam unit="mfu12q">mfu12q.att55x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln258q</Link>
+      <Link resultCode="error">kln45q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

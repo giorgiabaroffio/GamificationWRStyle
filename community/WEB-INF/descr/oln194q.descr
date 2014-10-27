@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>rsu7q</Target>
+  <Secure>false</Secure>
+  <Source>miu22q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="rsp11q.userAvailablePoints$availablePoints" sourceUnit="miu22q" sourceParam="ocp93q"/>
+    <ContextPropagation targetParam="rsp11q.userAvailablePoints$userEmail" sourceUnit="miu22q" sourceParam="ocp94q"/>
+  </ContextPropagations>
+</Descriptor>

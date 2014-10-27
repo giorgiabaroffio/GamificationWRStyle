@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="Compute Badges">
+  <Module operation="true" singleLayout="false">opm2x</Module>
+  <InputCollectorId>icu4x</InputCollectorId>
+  <InputParameter>icp6x</InputParameter>
+  <InputParameter>icp7x</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Compute Badges</ModelName>
+    <ParentContainer>opm59q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu94q">miu94q.icp6x</OperationParam>
+      <OperationParam unit="miu94q">miu94q.icp7x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln435q</Link>
+      <Link resultCode="error">kln123q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

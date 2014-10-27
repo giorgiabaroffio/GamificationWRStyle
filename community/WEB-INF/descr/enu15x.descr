@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Modify">
+  <FormFields>
+    <Field id="fld52x" name="Name" type="string" localized="false">
+      <Slot id="fld52x_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld53x" name="Sort Number" type="string" localized="false">
+      <Slot id="fld53x_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld55x" name="oid" type="string" localized="false">
+      <Slot id="fld55x_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu15x" linkId="ln136x" action="validate"/>
+  </wr:Validation>
+</Descriptor>

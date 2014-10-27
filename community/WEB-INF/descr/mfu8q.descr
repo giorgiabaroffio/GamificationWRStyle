@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Update Participation">
+  <BulkUpdate>true</BulkUpdate>
+  <Entity>ent15x</Entity>
+  <ModifiedAttributes>att99x</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond19q">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Update Participation</ModelName>
+    <ParentContainer>opg1q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu8q">mfu8q.att99x</OperationParam>
+      <OperationParam unit="mfu8q">kcond19q.userOID</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln16q</Link>
+      <Link resultCode="error">kln2q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

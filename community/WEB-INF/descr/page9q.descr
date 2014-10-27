@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Headquarter">
+  <ParentContainer>sv2q</ParentContainer>
+  <Secure>false</Secure>
+  <Localized>true</Localized>
+  <CheckPermission>false</CheckPermission>
+  <MasterPage>mpage1q</MasterPage>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <Navigations knownEffects="LanguageISOCtxParam|#pr#">
+    <Navigation name="0" nonContextual="true" interPage="always" links="page9q"/>
+    <Navigation name="1" nonContextual="true" interPage="always" links="page9q.link"/>
+    <Navigation name="2" links="page9q.auto-link"/>
+    <Navigation name="3" links="page9q.auto-link" selectiveRefresh="true"/>
+    <Navigation name="4" links="ln23q|impl" postPropagatedLink="ln23q"/>
+    <Navigation name="5" links="ln43q|impl" postPropagatedLink="ln43q"/>
+    <Navigation name="6" links="ln44q|impl" postPropagatedLink="ln44q"/>
+    <Navigation name="7" links="ln69q|impl" postPropagatedLink="ln69q"/>
+  </Navigations>
+  <ContextInitServices/>
+  <ContextInits></ContextInits>
+  <UselessPreserves>
+    <UselessPreserve navs="3|2|7|6|5|4" futile=""/>
+  </UselessPreserves>
+  <LinkSequence>ln37q|ln40q</LinkSequence>
+  <UnitComputations>
+    <UnitComputation unit="dau3q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu5q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="inu1q">
+      <NavigationCondition selectiveRefresh="true" effects="#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="gctu1q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="dau4q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+    <UnitComputation unit="hinu1q">
+      <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+    </UnitComputation>
+  </UnitComputations>
+  <ManualLinks>
+    <ManualLink>ln33q</ManualLink>
+    <ManualLink>ln43q</ManualLink>
+    <ManualLink>ln23q</ManualLink>
+    <ManualLink>ln44q</ManualLink>
+    <ManualLink>ln69q</ManualLink>
+  </ManualLinks>
+  <Variables>
+    <Variable id="var3q" name="profilePriv" type="boolean" unitId="gtu5q" parameter="gtu5q.ctx5p" sessionParameter="ctx5p"></Variable>
+    <Variable id="var4q" name="var18p" unitId="gtu5q" parameter="gtu5q.ctx2p" sessionParameter="ctx2p" value="0"></Variable>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr2q" name="IsPrivate" variables="var3q" xml:space="preserve">import org.apache.commons.lang.StringUtils
+import com.webratio.rtx.core.BeanHelper
+
+if(BeanHelper.isNullOrEmptyArray(profilePriv)){
+	return false
+}
+else{
+	return profilePriv
+}
+/*else{
+	if(privateProfile=="true"){
+		println(privateProfile)
+		return false
+	}
+	else{
+		return true
+	}
+	
+}*/</Condition>
+    <Condition id="cexpr_var3q" name="profilePriv" variables="var3q" xml:space="preserve">com.webratio.rtx.core.BeanHelper.asObject(var3q)</Condition>
+    <Condition id="cexpr3q" name="areLogged?" variables="var4q" xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+import org.apache.commons.lang.StringUtils
+
+if(BeanHelper.isNullOrEmptyString(var18p)||var18p=="0"){
+	return false
+}
+else{
+	return true
+}
+return false</Condition>
+  </Conditions>
+  <Layouts>
+    <Layout id="page9q_grid_0">
+      <Layout id="page9q_cell_0">
+        <Layout id="page9q_grid_1">
+          <Layout id="page9q_cell_1">
+            <NavigationCondition selectiveRefresh="true" effects="LanguageISOCtxParam|#pr#"/>
+          </Layout>
+        </Layout>
+      </Layout>
+      <Layout id="page9q_cell_5">
+        <Layout id="inu1q_0" unitId="inu1q"></Layout>
+      </Layout>
+      <Layout id="page9q_cell_9">
+        <Layout id="dau3q_0" unitId="dau3q"></Layout>
+      </Layout>
+    </Layout>
+  </Layouts>
+  <AutoLinkInfo>
+    <PreservedContextParams>
+      <Params/>
+    </PreservedContextParams>
+    <PreservedContextParams selectiveRefresh="true">
+      <Params/>
+    </PreservedContextParams>
+  </AutoLinkInfo>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <ModelName>Headquarter</ModelName>
+    <NavigationAncestors>sv2q</NavigationAncestors>
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau3q">acond16q</PageParam>
+      <PageParam unit="dau4q">acond20q</PageParam>
+      <PageParam>pcp4o</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>nav</PageParam>
+      <PageParam>so</PageParam>
+      <PageParam>ajax</PageParam>
+      <PageParam>ajaxRefresh</PageParam>
+    </PageParams>
+  </WRParameterService>
+</Descriptor>

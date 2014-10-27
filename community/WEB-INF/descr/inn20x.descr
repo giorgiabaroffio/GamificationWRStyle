@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.controlflow.rtx.IsNotNullUnitService" name="send email?">
+  <Unit emptyStringAsNull=""/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>send email?</ModelName>
+    <ParentContainer>opm6x</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="inn20x">inn20x.isnotnull</OperationParam>
+      <Params/>
+    </OperationParams>
+    <PrecedingIncomingLinks>ln143x</PrecedingIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln219x</Link>
+      <Link resultCode="error">kln31x</Link>
+      <Link resultCode="success" transport="true">ln138x</Link>
+      <Link resultCode="error" transport="true">ln138x</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="mails associated">
+  <MaxResults/>
+  <Query entity="ent19x">
+    <Input id="p0" param="rcond26q.att31x" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="rcond27q.att31x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att1x" name="oid" index="0"/>
+    <HQL>select a_textMail.oid from TextMail a_textMail
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_textMail.textMailToContainersHeader.oid in(?))})) or (({[p1](a_textMail.textMailToContainersFooter.oid in(?))}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>mails associated</ModelName>
+    <ParentContainer>opg38q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="seu52q">rcond26q.att31x</OperationParam>
+      <OperationParam unit="seu52q">rcond27q.att31x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln375q</Link>
+      <Link resultCode="error">kln108q</Link>
+      <Link resultCode="error.opg38q">kln108q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Select Badges">
+  <MaxResults/>
+  <Query entity="ent13x">
+    <Input id="p0" param="acond58x" type="string" implied="false" expandStyle="in" value="area" attribute="att33p"/>
+    <Output id="att117x" name="area" index="0"/>
+    <Output id="att64x" name="sortNumber" index="1"/>
+    <HQL>select distinct a_badgeType.area, a_badgeType.sortNumber from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]safe_cast(a_badgeType.key) in(?)}))</Where>order by a_badgeType.sortNumber asc
+    </HQL>
+  </Query>
+</Descriptor>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntityBasedEntryUnitService" name="Edit reward">
+  <Entity>ent12p</Entity>
+  <Query entity="ent12p">
+    <Input id="p0" param="enu13p.att95p" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from RewardType a_rewardType
+      <Where defaultPolicy="" allImplied="false">(({[p0]a_rewardType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <FormFields>
+    <Field id="fld30p" name="Title" type="string" localized="false" attributeId="att98p">
+      <Slot id="fld30p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld31p" name="Description" type="text" localized="false" attributeId="att99p">
+      <Slot id="fld31p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld32p" name="Needed Points" type="decimal" localized="true" attributeId="att100p">
+      <Slot id="fld32p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld33p" name="Available" type="boolean" localized="true">
+      <Slot id="fld33p_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld48p" name="Image" type="blob" localized="false">
+      <Slot id="fld48p_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu13p" linkId="ln74p" action="validate"/>
+  </wr:Validation>
+</Descriptor>

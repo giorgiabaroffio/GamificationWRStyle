@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="image">icp204q</Parameter>
+  <Parameter name="username">icp205q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm53q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu61q">icp205q</OperationParam>
+      <OperationParam unit="icu61q">icp204q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln384q</Link>
+      <Link resultCode="success" transport="true">ln242q</Link>
+      <Link resultCode="error" transport="true">ln242q</Link>
+      <Link resultCode="success" transport="true">ln243q</Link>
+      <Link resultCode="error" transport="true">ln243q</Link>
+      <Link resultCode="success" transport="true">ln244q</Link>
+      <Link resultCode="error" transport="true">ln244q</Link>
+      <Link resultCode="success" transport="true">ln245q</Link>
+      <Link resultCode="error" transport="true">ln245q</Link>
+      <Link resultCode="success" transport="true">ln246q</Link>
+      <Link resultCode="error" transport="true">ln246q</Link>
+      <Link resultCode="success" transport="true">ln247q</Link>
+      <Link resultCode="error" transport="true">ln247q</Link>
+      <Link resultCode="success" transport="true">ln248q</Link>
+      <Link resultCode="error" transport="true">ln248q</Link>
+      <Link resultCode="success" transport="true">ln249q</Link>
+      <Link resultCode="error" transport="true">ln249q</Link>
+      <Link resultCode="success" transport="true">ln250q</Link>
+      <Link resultCode="error" transport="true">ln250q</Link>
+      <Link resultCode="success" transport="true">ln251q</Link>
+      <Link resultCode="error" transport="true">ln251q</Link>
+      <Link resultCode="success" transport="true">ln252q</Link>
+      <Link resultCode="error" transport="true">ln252q</Link>
+      <Link resultCode="success" transport="true">ln253q</Link>
+      <Link resultCode="error" transport="true">ln253q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

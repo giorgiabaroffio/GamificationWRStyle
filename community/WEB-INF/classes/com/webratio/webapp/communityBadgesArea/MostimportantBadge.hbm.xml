@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-cascade="none" default-access="property" default-lazy="true">
+  <class name="com.webratio.webapp.communityBadgesArea.MostimportantBadge" table="`mostimportant_badge`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="area" column="`area`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="title" column="`title`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="importance" column="`importance`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="checkedImageRef" column="`checked_image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="checkedImageBinary" column="`checked_imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="sortNumber" column="`sort_number`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDCheckedImageRef" column="`hd_checked_image_2`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="HDCheckedImageBinary" column="`hd_checked_imageblob`" type="blob" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="useroid" column="`rankoid`" type="java.lang.Integer" insert="false" update="false" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <many-to-one name="mostimportantBadgeToUsercrm" class="com.webratio.webapp.gamificationCommunity.CommunityUser" update="false" insert="false" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`rankoid`"/>
+    </many-to-one>
+    <sql-insert callable="false">empty</sql-insert>
+    <sql-update callable="false">empty</sql-update>
+    <sql-delete callable="false">empty</sql-delete>
+  </class>
+  <!-- mapping for relationship 'MostimportantBadgeToUsercrm[role5p]' -->
+  <class entity-name="com.webratio.webapp.communityBadgesArea.Rel_MostimportantBadge_to_mostimportantBadgeToUsercrm" table="`mostimportant_badge`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_OID" column="`rankoid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

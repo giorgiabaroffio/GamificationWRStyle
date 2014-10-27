@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="User Data">
+  <Query entity="ent15x">
+    <Input id="p0" param="miu6oacond88q" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="userOID" name="OID" index="0"/>
+    <Output id="att99x" name="internal" index="1"/>
+    <Output id="att4q" name="birthDate" index="2"/>
+    <Output id="att319x" name="participation7Days" index="3"/>
+    <Output id="att103p" name="companyName" index="4"/>
+    <Output id="att136p" name="bio" index="5"/>
+    <Output id="att138p" name="linkedin" index="6"/>
+    <Output id="att134p" name="bigPhoto" blob="true" index="7"/>
+    <Output id="att56x" name="participation" index="8"/>
+    <Output id="att115p" name="city" index="9"/>
+    <Output id="att57x" name="totalCredit" index="10"/>
+    <Output id="att124p" name="twitter" index="11"/>
+    <Output id="att113p" name="firstName" index="12"/>
+    <Output id="att114p" name="lastName" index="13"/>
+    <Output id="att127p" name="country" index="14"/>
+    <Output id="att76p" name="google" index="15"/>
+    <Output id="email" name="email" index="16"/>
+    <Output id="att132p" name="webSite" index="17"/>
+    <Output id="att75p" name="facebook" index="18"/>
+    <HQL>select a_communityUser.OID, a_communityUser.internal, a_communityUser.birthDate, a_communityUser.participation7Days, a_communityUser.companyName, a_communityUser.bio, a_communityUser.linkedin, a_communityUser.bigPhotoRef, a_communityUser.participation, a_communityUser.city, a_communityUser.totalCredit, a_communityUser.twitter, a_communityUser.firstName, a_communityUser.lastName, a_communityUser.country, a_communityUser.google, a_communityUser.email, a_communityUser.webSite, a_communityUser.facebook from CommunityUser a_communityUser
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_communityUser.OID in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

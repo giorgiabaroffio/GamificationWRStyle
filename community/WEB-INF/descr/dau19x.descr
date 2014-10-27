@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="Badge Selected">
+  <Query entity="ent13x">
+    <Input id="p0" param="kcond67x.att42x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att42x" name="oid" index="0"/>
+    <Output id="att48x" name="title" index="1"/>
+    <HQL>select a_badgeType.oid, a_badgeType.title from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

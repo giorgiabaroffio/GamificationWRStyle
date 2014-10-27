@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>scu8q</Target>
+  <Secure>false</Secure>
+  <Source>scu11q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="scu8q.photoImage" sourceUnit="scu11q" sourceParam="result(photocode)"/>
+    <ContextPropagation targetParam="scu8q.photoName" sourceUnit="scu11q" sourceParam="result(photoname)"/>
+  </ContextPropagations>
+</Descriptor>

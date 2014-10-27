@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.AdapterUnitService" name="Parser">
+  <AdapterUnit inputDocCount="" transformer="WEB-INF/webservice/UserRegistrationTemplate.xml.template">
+    <InputParameters></InputParameters>
+  </AdapterUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Parser</ModelName>
+    <ParentContainer>port3q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="adu5q">adu5q.inputDocument</OperationParam>
+      <Params>miu27q.icp209q|miu27q.icp218q|miu27q.icp219q|miu27q.icp220q|miu27q.icp217q|eru3q.faultException|miu27q.icp208q|miu27q.icp214q|eru3q.faultMessage|miu27q.icp211q|miu27q.icp212q|miu27q.icp210q|miu27q.icp216q|miu27q.icp215q|miu27q.icp213q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln243q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

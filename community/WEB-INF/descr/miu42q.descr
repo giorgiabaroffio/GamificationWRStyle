@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.ModuleInstanceUnitService" name="">
+  <Module operation="true" singleLayout="false">opm23q</Module>
+  <InputCollectorId>icu26q</InputCollectorId>
+  <InputParameter>icp85q</InputParameter>
+  <InputParameter>icp86q</InputParameter>
+  <InputParameter>icp87q</InputParameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>area3p</ParentContainer>
+    <MasterPage>mpage2x</MasterPage>
+    <NavigationAncestors>sv2x|area3p</NavigationAncestors>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv2x</PermissionElement>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="miu42q">miu42q.icp87q</OperationParam>
+      <OperationParam unit="miu42q">miu42q.icp86q</OperationParam>
+      <OperationParam unit="miu42q">miu42q.icp85q</OperationParam>
+      <Params>sfld26p_output|pwu13p.newSortAttribute|kcond24p.userOID|sp|pwu13p.block|sfld26p_label|acond96p|sfld29p_label|acond106p|link|acond113p|pwu13p.sortCriteria|acond112p|miu41q.icp84q|pwu13p.current.att101p|kcond27p.userOID|cmplink|sfld27p_presel|rcond10p.userOID|sfld30p_presel|fld56p_slot|smc|acond109p|sfld29p_output</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln172q</Link>
+      <Link resultCode="error">kln35q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

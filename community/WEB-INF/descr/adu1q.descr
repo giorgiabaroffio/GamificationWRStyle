@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.AdapterUnitService" name="Actions">
+  <AdapterUnit inputDocCount="" transformer="WEB-INF/webservice/ActionTemplate.xml.template">
+    <InputParameters></InputParameters>
+  </AdapterUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Actions</ModelName>
+    <ParentContainer>port14q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="adu1q">adu1q.inputDocument</OperationParam>
+      <Params>miu14q.icp244q|miu14q.icp238q|miu14q.icp237q|miu14q.icp239q|miu14q.icp242q|miu14q.icp240q|miu14q.icp243q|miu14q.icp241q</Params>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln72q</Link>
+    </OutgoingLinks>
+  </WRParameterService>
+</Descriptor>

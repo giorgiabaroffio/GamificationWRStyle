@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataModel packageName="com.webratio.webapp" volatileKeyPolicy="" useQualifiedEntities="">
+  <!-- DATABASES -->
+  <Database id="application_vdb" url="jdbc:h2:mem:application_vdb" schema="" duration="volatileApplication"/>
+  <Database id="db1" url="jdbc:mysql://localhost:3306/community" schema=""/>
+  <Database id="session_vdb" url="jdbc:h2:mem:session_vdb" schema="" duration="volatileSession"/>
+  <!-- ENTITIES -->
+  <Entity id="User" name="User" className="com.webratio.webapp.User" duration="persistent" database="db1">
+    <Attribute id="userOID" key="true" name="OID" fieldName="OID" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="userName" key="false" name="UserName" fieldName="userName" type="string" javaType="java.lang.String"/>
+    <Attribute id="password" key="false" name="Password" fieldName="password" type="password" javaType="java.lang.String" cryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation"/>
+    <Attribute id="email" key="false" name="Email" fieldName="email" type="string" javaType="java.lang.String"/>
+    <Attribute id="att99x" key="false" name="Internal" fieldName="internal" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <OutgoingRoles>User2Group|User2DefaultGroup</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="Group" name="Group" className="com.webratio.webapp.Group" duration="persistent" database="db1">
+    <Attribute id="groupOID" key="true" name="OID" fieldName="OID" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="groupName" key="false" name="GroupName" fieldName="groupName" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>Group2User|DefaultGroup2User|Group2DefaultModule|Group2Module</OutgoingRoles>
+    <InverseRoles>Group2User|DefaultGroup2User</InverseRoles>
+  </Entity>
+  <Entity id="Module" name="Module" className="com.webratio.webapp.Module" duration="persistent" database="db1">
+    <Attribute id="moduleOID" key="true" name="OID" fieldName="OID" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="moduleID" key="false" name="ModuleID" fieldName="moduleID" type="string" javaType="java.lang.String"/>
+    <Attribute id="moduleName" key="false" name="ModuleName" fieldName="moduleName" type="string" javaType="java.lang.String"/>
+    <Attribute id="moduleDomainName" key="false" name="moduleDomainName" fieldName="moduleDomainName" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>DefaultModule2Group|Module2Group</OutgoingRoles>
+    <InverseRoles>DefaultModule2Group|Module2Group</InverseRoles>
+  </Entity>
+  <Entity id="ent13x" name="Badge Type" className="com.webratio.webapp.gamificationCommunity.BadgeType" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att42x" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att43x" key="false" name="Level" fieldName="level" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att46x" key="false" name="Description" fieldName="description" type="string" javaType="java.lang.String"/>
+    <Attribute id="att47x" key="false" name="Checked Image" fieldName="checkedImage" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="checkedImageRef" useRefColumn="true" binaryFieldName="checkedImageBinary" entityName="BadgeType" defBlobName="" contentType="image"/>
+    <Attribute id="att48x" key="false" name="Title" fieldName="title" type="string" javaType="java.lang.String"/>
+    <Attribute id="att20x" key="false" name="Needed Score" fieldName="neededScore" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att117x" key="false" name="Area" fieldName="area" type="string" javaType="java.lang.String"/>
+    <Attribute id="att2p" key="false" name="HD Image" fieldName="HDImage" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="HDImageRef" useRefColumn="true" binaryFieldName="HDImageBinary" entityName="BadgeType" defBlobName="" contentType="image"/>
+    <Attribute id="att64x" key="false" name="Sort Number" fieldName="sortNumber" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att63x" key="false" name="HD Checked Image" fieldName="HDCheckedImage" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="HDCheckedImageRef" useRefColumn="true" binaryFieldName="HDCheckedImageBinary" entityName="BadgeType" defBlobName="" contentType="image"/>
+    <Attribute id="att28x" key="false" name="Image" fieldName="image" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="imageRef" useRefColumn="true" binaryFieldName="imageBinary" entityName="BadgeType" defBlobName="" contentType="image"/>
+    <Attribute id="att33p" key="false" name="Key" fieldName="key" type="string" javaType="java.lang.String"/>
+    <Attribute id="att34p" key="false" name="SortCombination" fieldName="sortCombination" type="string" javaType="java.lang.String" derived="true" modifiable="false"/>
+    <Attribute id="att8q" key="false" name="Active" fieldName="active" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att25q" key="false" name="Thematic Area" fieldName="thematicArea" type="string" javaType="java.lang.String" importPath="role12q.att22q" refAttribute="att22q" modifiable="false"/>
+    <OutgoingRoles>role12x|role13x|role12q</OutgoingRoles>
+    <InverseRoles>role12x</InverseRoles>
+  </Entity>
+  <Entity id="ent14x" name="Action Instance" className="com.webratio.webapp.gamificationCommunity.ActionInstance" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att49x" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att51x" key="false" name="Date" fieldName="date" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att52x" key="false" name="Score" fieldName="score" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att58x" key="false" name="Action Area" fieldName="actionArea" type="string" javaType="java.lang.String" derived="true" modifiable="false"/>
+    <Attribute id="att59x" key="false" name="Reputation" fieldName="reputation" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue="" importPath="role16x.att50x" refAttribute="att50x" modifiable="false"/>
+    <Attribute id="att61x" key="false" name="Participation" fieldName="participation" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue="" importPath="role16x.att60x" refAttribute="att60x" modifiable="false"/>
+    <Attribute id="att72x" key="false" name="Name" fieldName="name" type="string" javaType="java.lang.String" derived="true" modifiable="false"/>
+    <Attribute id="att73x" key="false" name="Description" fieldName="description" type="string" javaType="java.lang.String"/>
+    <Attribute id="att82x" key="false" name="Tag" fieldName="tag" type="string" javaType="java.lang.String"/>
+    <Attribute id="att83x" key="false" name="Link" fieldName="link" type="string" javaType="java.lang.String"/>
+    <Attribute id="att29x" key="false" name="Executor" fieldName="executor" type="string" javaType="java.lang.String"/>
+    <Attribute id="att5q" key="false" name="Object Key" fieldName="objectKey" type="integer" javaType="java.lang.Integer"/>
+    <OutgoingRoles>role8p|role16x</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent15x" name="Community User" className="com.webratio.webapp.gamificationCommunity.CommunityUser" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" superEntity="User" database="db1">
+    <Attribute id="att56x" key="false" name="Participation" fieldName="participation" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att57x" key="false" name="Total Credit" fieldName="totalCredit" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att319x" key="false" name="Participation 7 Days" fieldName="participation7Days" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att103p" key="false" name="Company Name" fieldName="companyName" type="string" javaType="java.lang.String"/>
+    <Attribute id="att113p" key="false" name="First Name" fieldName="firstName" type="string" javaType="java.lang.String"/>
+    <Attribute id="att114p" key="false" name="Last Name" fieldName="lastName" type="string" javaType="java.lang.String"/>
+    <Attribute id="att115p" key="false" name="City" fieldName="city" type="string" javaType="java.lang.String"/>
+    <Attribute id="att123p" key="false" name="Small Photo" fieldName="smallPhoto" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="no action" refFieldName="smallPhotoRef" useRefColumn="true" binaryFieldName="smallPhotoBinary" entityName="CommunityUser" defBlobName="" contentType="image"/>
+    <Attribute id="att124p" key="false" name="Twitter" fieldName="twitter" type="string" javaType="java.lang.String"/>
+    <Attribute id="att127p" key="false" name="Country" fieldName="country" type="string" javaType="java.lang.String"/>
+    <Attribute id="att131p" key="false" name="Geographical Area" fieldName="geographicalArea" type="string" javaType="java.lang.String"/>
+    <Attribute id="att132p" key="false" name="WebSite" fieldName="webSite" type="string" javaType="java.lang.String"/>
+    <Attribute id="att134p" key="false" name="Big Photo" fieldName="bigPhoto" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="no action" refFieldName="bigPhotoRef" useRefColumn="true" binaryFieldName="bigPhotoBinary" entityName="CommunityUser" defBlobName="" contentType="image"/>
+    <Attribute id="att136p" key="false" name="Bio" fieldName="bio" type="text" javaType="java.lang.String" clob="" clobFieldName="bioCLOB" contentType="text/html"/>
+    <Attribute id="att138p" key="false" name="Linkedin" fieldName="linkedin" type="string" javaType="java.lang.String"/>
+    <Attribute id="att12p" key="false" name="Public profile" fieldName="publicProfile" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att75p" key="false" name="Facebook" fieldName="facebook" type="string" javaType="java.lang.String"/>
+    <Attribute id="att76p" key="false" name="Google" fieldName="google" type="string" javaType="java.lang.String"/>
+    <Attribute id="att85x" key="false" name="Iso Code" fieldName="isoCode" type="string" javaType="java.lang.String"/>
+    <Attribute id="att110p" key="false" name="Credits Available" fieldName="creditsAvailable" type="integer" javaType="java.lang.Integer" derived="true" modifiable="false"/>
+    <Attribute id="att96p" key="false" name="Credits Spent" fieldName="creditsSpent" type="decimal" javaType="java.math.BigDecimal" derived="true" modifiable="false"/>
+    <Attribute id="att4q" key="false" name="BirthDate" fieldName="birthDate" type="date" javaType="java.sql.Date"/>
+    <Attribute id="att10q" key="false" name="Registration Date" fieldName="registrationDate" type="timestamp" javaType="java.sql.Timestamp"/>
+    <OutgoingRoles>User2Group|User2DefaultGroup|role7p|role6x|role6p|role22x|role51p</OutgoingRoles>
+    <InverseRoles>role7p|role6x|role6p|role22x|role51p</InverseRoles>
+  </Entity>
+  <Entity id="ent5x" name="Badge Instance" className="com.webratio.webapp.gamificationCommunity.BadgeInstance" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att21x" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att27x" key="false" name="Date" fieldName="date" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att118x" key="false" name="Score" fieldName="score" type="decimal" javaType="java.math.BigDecimal"/>
+    <OutgoingRoles>role5x|role11x</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent16x" name="Action Type" className="com.webratio.webapp.gamificationCommunity.ActionType" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att38x" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att39x" key="false" name="Name" fieldName="name" type="string" javaType="java.lang.String"/>
+    <Attribute id="att41x" key="false" name="Score" fieldName="score" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att50x" key="false" name="Reputation" fieldName="reputation" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att60x" key="false" name="Participation" fieldName="participation" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att62x" key="false" name="Area" fieldName="area" type="string" javaType="java.lang.String" importPath="role10q.att22q" refAttribute="att22q" modifiable="false"/>
+    <Attribute id="att71x" key="false" name="Description" fieldName="description" type="string" javaType="java.lang.String"/>
+    <Attribute id="att1q" key="false" name="Check Time Elapsed" fieldName="checkTimeElapsed" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att2q" key="false" name="Time Elapsed" fieldName="timeElapsed" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att3q" key="false" name="Repeatable" fieldName="repeatable" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att9q" key="false" name="Active" fieldName="active" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <OutgoingRoles>role14x|role15x|role10q</OutgoingRoles>
+    <InverseRoles>role14x|role15x</InverseRoles>
+  </Entity>
+  <Entity id="ent18x" name="Positions" className="com.webratio.webapp.gamificationCommunity.Positions" duration="volatileSession" packageName="com.webratio.webapp.gamificationCommunity">
+    <Attribute id="att147x" key="true" name="Nickname" fieldName="nickname" type="string" javaType="java.lang.String"/>
+    <Attribute id="att186x" key="false" name="Participation" fieldName="participation" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att257x" key="false" name="Reputation" fieldName="reputation" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att258x" key="false" name="Participation Monthly" fieldName="participationMonthly" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att142x" key="false" name="Participation Company" fieldName="participationCompany" type="integer" javaType="java.lang.Integer"/>
+  </Entity>
+  <Entity id="ent38x" name="Community Participation" className="com.webratio.webapp.gamificationCommunity.CommunityParticipation" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1" view="true" derived="true">
+    <Attribute id="att268x" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att269x" key="false" name="Participation" fieldName="participation" type="decimal" javaType="java.math.BigDecimal"/>
+  </Entity>
+  <Entity id="ent41x" name="Community Participation Seven Days" className="com.webratio.webapp.gamificationCommunity.CommunityParticipationSevenDays" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1" view="true" derived="true">
+    <Attribute id="att270x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att271x" key="false" name="Participation Seven Days" fieldName="participationSevenDays" type="decimal" javaType="java.math.BigDecimal"/>
+  </Entity>
+  <Entity id="ent19x" name="Text Mail" className="com.webratio.webapp.gamificationCommunity.TextMail" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att1x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att33x" key="false" name="Code" fieldName="code" type="string" javaType="java.lang.String"/>
+    <Attribute id="att34x" key="false" name="Language Code" fieldName="languageCode" type="string" javaType="java.lang.String"/>
+    <Attribute id="att54x" key="false" name="Body" fieldName="body" type="text" javaType="java.lang.String" clob="" clobFieldName="bodyCLOB" contentType="text/html"/>
+    <Attribute id="att66x" key="false" name="Description" fieldName="description" type="string" javaType="java.lang.String"/>
+    <Attribute id="att67x" key="false" name="Subject" fieldName="subject" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role8x|role10x|role18x</OutgoingRoles>
+    <InverseRoles>role18x</InverseRoles>
+  </Entity>
+  <Entity id="ent20x" name="Containers" className="com.webratio.webapp.gamificationCommunity.Containers" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att31x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att79x" key="false" name="Language Code" fieldName="languageCode" type="string" javaType="java.lang.String"/>
+    <Attribute id="att80x" key="false" name="Text" fieldName="text" type="text" javaType="java.lang.String" clob="" clobFieldName="textCLOB" contentType="text/html"/>
+    <Attribute id="att81x" key="false" name="Alias" fieldName="alias" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role7x|role9x</OutgoingRoles>
+    <InverseRoles>role7x|role9x</InverseRoles>
+  </Entity>
+  <Entity id="ent22x" name="Notification" className="com.webratio.webapp.gamificationCommunity.Notification" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att32x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att84x" key="false" name="Creation Date" fieldName="creationDate" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att87x" key="false" name="Code" fieldName="code" type="string" javaType="java.lang.String"/>
+    <Attribute id="att88x" key="false" name="Status" fieldName="status" type="string" javaType="java.lang.String"/>
+    <Attribute id="att89x" key="false" name="Delivery Date" fieldName="deliveryDate" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att91x" key="false" name="Language Code" fieldName="languageCode" type="string" javaType="java.lang.String"/>
+    <Attribute id="att97x" key="false" name="Reward Title" fieldName="rewardTitle" type="string" javaType="java.lang.String" importPath="role24x.att98p" refAttribute="att98p" modifiable="false"/>
+    <OutgoingRoles>role17x|role21x|role24x</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent12p" name="Reward Type" className="com.webratio.webapp.gamificationCommunity.RewardType" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att95p" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att98p" key="false" name="Title" fieldName="title" type="string" javaType="java.lang.String"/>
+    <Attribute id="att99p" key="false" name="Description" fieldName="description" type="text" javaType="java.lang.String" clob="" clobFieldName="descriptionCLOB" contentType="text/html"/>
+    <Attribute id="att100p" key="false" name="Needed Points" fieldName="neededPoints" type="decimal" javaType="java.math.BigDecimal"/>
+    <Attribute id="att106p" key="false" name="Available" fieldName="available" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <Attribute id="att55x" key="false" name="Image" fieldName="image" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="no action" refFieldName="imageRef" useRefColumn="true" binaryFieldName="imageBinary" entityName="RewardType" defBlobName="" contentType="image/jpg"/>
+    <Attribute id="att68x" key="false" name="Language Code" fieldName="languageCode" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role54p|role23x</OutgoingRoles>
+    <InverseRoles>role54p|role23x</InverseRoles>
+  </Entity>
+  <Entity id="ent14p" name="Reward Instance" className="com.webratio.webapp.gamificationCommunity.RewardInstance" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att101p" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att102p" key="false" name="Date" fieldName="date" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att107p" key="false" name="Score" fieldName="score" type="decimal" javaType="java.math.BigDecimal"/>
+    <OutgoingRoles>role52p|role53p</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent27x" name="Notification LeaderBoards" className="com.webratio.webapp.gamificationCommunity.NotificationLeaderBoards" duration="volatileApplication" packageName="com.webratio.webapp.gamificationCommunity" database="application_vdb">
+    <Attribute id="att100x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att101x" key="false" name="LeaderBoards" fieldName="leaderBoards" type="text" javaType="java.lang.String" clob="" clobFieldName="leaderBoardsCLOB"/>
+  </Entity>
+  <Entity id="ent28x" name="Notification Monthly" className="com.webratio.webapp.gamificationCommunity.NotificationMonthly" duration="volatileApplication" packageName="com.webratio.webapp.gamificationCommunity" database="application_vdb">
+    <Attribute id="att113x" key="true" name="user oid" fieldName="userOid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att114x" key="false" name="Overall Position" fieldName="overallPosition" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att115x" key="false" name="Overall Participation" fieldName="overallParticipation" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att119x" key="false" name="Seven Days Position" fieldName="sevenDaysPosition" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att120x" key="false" name="Seven Days Participation" fieldName="sevenDaysParticipation" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att121x" key="false" name="First Name" fieldName="firstName" type="string" javaType="java.lang.String"/>
+    <Attribute id="att122x" key="false" name="Email" fieldName="email" type="string" javaType="java.lang.String"/>
+    <Attribute id="att98x" key="false" name="Monthly Points" fieldName="monthlyPoints" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att96x" key="false" name="Photo" fieldName="photo" type="string" javaType="java.lang.String"/>
+  </Entity>
+  <Entity id="ent1h" name="Presences" className="com.webratio.webapp.gamificationCommunity.Presences" duration="volatileSession" packageName="com.webratio.webapp.gamificationCommunity" database="session_vdb">
+    <Attribute id="att1h" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att2h" key="false" name="Useroid" fieldName="useroid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att3h" key="false" name="Description" fieldName="description" type="string" javaType="java.lang.String"/>
+    <Attribute id="att4h" key="false" name="Timestamp" fieldName="timestamp" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="ownerId225355727" key="false" name="WROWNERID" fieldName="WROWNERID" type="integer" javaType="java.lang.Integer"/>
+  </Entity>
+  <Entity id="ent2q" name="GamifiedApplication" className="com.webratio.webapp.gamificationCommunity.GamifiedApplication" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att6q" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att7q" key="false" name="name" fieldName="name" type="string" javaType="java.lang.String"/>
+    <Attribute id="att24q" key="false" name="api key" fieldName="apiKey" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role7q</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent3q" name="Max Date Action Instance" className="com.webratio.webapp.gamificationCommunity.MaxDateActionInstance" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1" view="true" derived="true">
+    <Attribute id="att13q" key="true" name="actionTypeOid" fieldName="actionTypeOid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att14q" key="true" name="rankOid" fieldName="rankOid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att15q" key="false" name="maxDate" fieldName="maxDate" type="timestamp" javaType="java.sql.Timestamp"/>
+  </Entity>
+  <Entity id="ent5q" name="Thematic Area" className="com.webratio.webapp.gamificationCommunity.ThematicArea" duration="persistent" packageName="com.webratio.webapp.gamificationCommunity" database="db1">
+    <Attribute id="att21q" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att22q" key="false" name="Area Name" fieldName="areaName" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role8q|role9q|role11q</OutgoingRoles>
+    <InverseRoles>role8q|role9q|role11q</InverseRoles>
+  </Entity>
+  <Entity id="BundleData" name="Bundle Data" className="com.webratio.webapp.BundleData" duration="persistent" database="db1">
+    <Attribute id="bundleDataOID" key="true" name="OID" fieldName="OID" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="bundleDataLocale" key="false" name="Locale" fieldName="locale" type="string" javaType="java.lang.String"/>
+    <Attribute id="bundleDataKey" key="false" name="Key" fieldName="key" type="string" javaType="java.lang.String"/>
+    <Attribute id="bundleDataMessage" key="false" name="Message" fieldName="message" type="string" javaType="java.lang.String"/>
+  </Entity>
+  <Entity id="ent1p" name="MostimportantBadge" className="com.webratio.webapp.communityBadgesArea.MostimportantBadge" duration="persistent" packageName="com.webratio.webapp.communityBadgesArea" database="db1" view="true" derived="true">
+    <Attribute id="att4p" key="true" name="Oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att6p" key="false" name="Area" fieldName="area" type="string" javaType="java.lang.String"/>
+    <Attribute id="att7p" key="false" name="Title" fieldName="title" type="string" javaType="java.lang.String"/>
+    <Attribute id="att8p" key="false" name="Importance" fieldName="importance" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att9p" key="false" name="Checked Image" fieldName="checkedImage" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="checkedImageRef" useRefColumn="true" binaryFieldName="checkedImageBinary" entityName="MostimportantBadge" defBlobName="" contentType="image"/>
+    <Attribute id="att116x" key="false" name="Sort Number" fieldName="sortNumber" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att10p" key="false" name="HD Checked Image" fieldName="HDCheckedImage" type="blob" javaType="java.lang.String" storageType="database" uploadPolicy="managed" deletePolicy="delete" refFieldName="HDCheckedImageRef" useRefColumn="true" binaryFieldName="HDCheckedImageBinary" entityName="MostimportantBadge" defBlobName="" contentType="image"/>
+    <Attribute id="att1c" key="false" name="useroid" fieldName="useroid" type="integer" javaType="java.lang.Integer"/>
+    <OutgoingRoles>role5p</OutgoingRoles>
+    <InverseRoles>role5p</InverseRoles>
+  </Entity>
+  <Entity id="ent42x" name="Last Badge" className="com.webratio.webapp.communityBadgesArea.LastBadge" duration="volatileSession" packageName="com.webratio.webapp.communityBadgesArea" database="session_vdb">
+    <Attribute id="att259x" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att264x" key="false" name="nickname" fieldName="nickname" type="string" javaType="java.lang.String"/>
+    <Attribute id="att265x" key="false" name="area" fieldName="area" type="string" javaType="java.lang.String"/>
+    <Attribute id="att272x" key="false" name="title" fieldName="title" type="string" javaType="java.lang.String"/>
+    <Attribute id="att273x" key="false" name="date" fieldName="date" type="date" javaType="java.sql.Date"/>
+    <Attribute id="att274x" key="false" name="Image" fieldName="image" type="blob" javaType="java.lang.String" storageType="file" uploadPolicy="managed" deletePolicy="delete" refFieldName="imageRef" defBlobName="" uploadPath="virtual/ent42x" contentType="image"/>
+    <Attribute id="ownerId-1534090425" key="false" name="WROWNERID" fieldName="WROWNERID" type="integer" javaType="java.lang.Integer"/>
+  </Entity>
+  <Entity id="ent3p" name="Text Chunk" className="com.webratio.webapp.TextChunk" duration="persistent" database="db1">
+    <Attribute id="att15p" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att16p" key="false" name="Key" fieldName="key" type="string" javaType="java.lang.String"/>
+    <Attribute id="att17p" key="false" name="Message" fieldName="message" type="text" javaType="java.lang.String" clob="" clobFieldName="messageCLOB" contentType="text/html"/>
+    <Attribute id="att129p" key="false" name="languageCode" fieldName="languageCode" type="string" javaType="java.lang.String"/>
+  </Entity>
+  <Entity id="ent7q" name="Geographical Area" className="com.webratio.webapp.GeographicalArea" duration="persistent" database="db1">
+    <Attribute id="att30q" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att31q" key="false" name="name" fieldName="name" type="string" javaType="java.lang.String"/>
+  </Entity>
+  <!-- RELATIONSHIP_ROLES -->
+  <Role id="User2Group" inverseId="Group2User" source="User" target="Group" maxCard="many" fieldName="groups" derived="false" database="db1" direct="true"/>
+  <Role id="Group2User" inverseId="User2Group" source="Group" target="User" maxCard="many" fieldName="users" derived="false" database="db1" direct="false"/>
+  <Role id="User2DefaultGroup" inverseId="DefaultGroup2User" source="User" target="Group" maxCard="1" fieldName="defaultGroup" derived="false" database="db1" direct="true"/>
+  <Role id="DefaultGroup2User" inverseId="User2DefaultGroup" source="Group" target="User" maxCard="many" fieldName="defaultUsers" derived="false" database="db1" direct="false"/>
+  <Role id="Group2DefaultModule" inverseId="DefaultModule2Group" source="Group" target="Module" maxCard="1" fieldName="defaultModule" derived="false" database="db1" direct="true"/>
+  <Role id="DefaultModule2Group" inverseId="Group2DefaultModule" source="Module" target="Group" maxCard="many" fieldName="defaultGroups" derived="false" database="db1" direct="false"/>
+  <Role id="Group2Module" inverseId="Module2Group" source="Group" target="Module" maxCard="many" fieldName="modules" derived="false" database="db1" direct="true"/>
+  <Role id="Module2Group" inverseId="Group2Module" source="Module" target="Group" maxCard="many" fieldName="groups" derived="false" database="db1" direct="false"/>
+  <Role id="role7p" inverseId="role8p" source="ent15x" target="ent14x" maxCard="many" fieldName="userHeadQuarterToAction" derived="false" database="db1" direct="false"/>
+  <Role id="role8p" inverseId="role7p" source="ent14x" target="ent15x" maxCard="1" fieldName="actionToUserHeadQuarter" derived="false" database="db1" direct="true"/>
+  <Role id="role5x" inverseId="role6x" source="ent5x" target="ent15x" maxCard="1" fieldName="badgeAcquiredToUserHeadQuarter" derived="false" database="db1" direct="true"/>
+  <Role id="role6x" inverseId="role5x" source="ent15x" target="ent5x" maxCard="many" fieldName="userHeadQuarterToBadgeAcquired" derived="false" database="db1" direct="false"/>
+  <Role id="role11x" inverseId="role12x" source="ent5x" target="ent13x" maxCard="1" fieldName="badgeAcquiredToGamificationDictionary" derived="false" database="db1" direct="true"/>
+  <Role id="role12x" inverseId="role11x" source="ent13x" target="ent5x" maxCard="many" fieldName="gamificationDictionaryToBadgeAcquired" derived="false" database="db1" direct="false"/>
+  <Role id="role13x" inverseId="role14x" source="ent13x" target="ent16x" maxCard="many" fieldName="gamificationDictionaryToActionType" derived="false" database="db1" direct="true"/>
+  <Role id="role14x" inverseId="role13x" source="ent16x" target="ent13x" maxCard="many" fieldName="actionTypeToGamificationDictionary" derived="false" database="db1" direct="false"/>
+  <Role id="role15x" inverseId="role16x" source="ent16x" target="ent14x" maxCard="many" fieldName="actionTypeToActionInstance" derived="false" database="db1" direct="false"/>
+  <Role id="role16x" inverseId="role15x" source="ent14x" target="ent16x" maxCard="1" fieldName="actionInstanceToActionType" derived="false" database="db1" direct="true"/>
+  <Role id="role5p" inverseId="role6p" source="ent1p" target="ent15x" maxCard="1" fieldName="mostimportantBadgeToUsercrm" derived="true" database="db1" view="true" direct="false"/>
+  <Role id="role6p" inverseId="role5p" source="ent15x" target="ent1p" maxCard="many" fieldName="usercrmToMostimportantBadge" derived="true" database="db1" view="true" direct="false"/>
+  <Role id="role7x" inverseId="role8x" source="ent20x" target="ent19x" maxCard="many" fieldName="containersToTextMailHeader" derived="false" database="db1" direct="false"/>
+  <Role id="role8x" inverseId="role7x" source="ent19x" target="ent20x" maxCard="1" fieldName="textMailToContainersHeader" derived="false" database="db1" direct="true"/>
+  <Role id="role9x" inverseId="role10x" source="ent20x" target="ent19x" maxCard="many" fieldName="containersToTextMailFooter" derived="false" database="db1" direct="false"/>
+  <Role id="role10x" inverseId="role9x" source="ent19x" target="ent20x" maxCard="1" fieldName="textMailToContainersFooter" derived="false" database="db1" direct="true"/>
+  <Role id="role17x" inverseId="role18x" source="ent22x" target="ent19x" maxCard="1" fieldName="notificationToTextMail" derived="false" database="db1" direct="true"/>
+  <Role id="role18x" inverseId="role17x" source="ent19x" target="ent22x" maxCard="many" fieldName="textMailToNotification" derived="false" database="db1" direct="false"/>
+  <Role id="role21x" inverseId="role22x" source="ent22x" target="ent15x" maxCard="1" fieldName="notificationToCommunityUser" derived="false" database="db1" direct="true"/>
+  <Role id="role22x" inverseId="role21x" source="ent15x" target="ent22x" maxCard="many" fieldName="communityUserToNotification" derived="false" database="db1" direct="false"/>
+  <Role id="role51p" inverseId="role52p" source="ent15x" target="ent14p" maxCard="many" fieldName="communityUserToRewardInstance" derived="false" database="db1" direct="false"/>
+  <Role id="role52p" inverseId="role51p" source="ent14p" target="ent15x" maxCard="1" fieldName="rewardInstanceToCommunityUser" derived="false" database="db1" direct="true"/>
+  <Role id="role53p" inverseId="role54p" source="ent14p" target="ent12p" maxCard="1" fieldName="rewardInstanceToRewardType" derived="false" database="db1" direct="true"/>
+  <Role id="role54p" inverseId="role53p" source="ent12p" target="ent14p" maxCard="many" fieldName="rewardTypeToRewardInstance" derived="false" database="db1" direct="false"/>
+  <Role id="role23x" inverseId="role24x" source="ent12p" target="ent22x" maxCard="many" fieldName="rewardTypeToNotification" derived="false" database="db1" direct="false"/>
+  <Role id="role24x" inverseId="role23x" source="ent22x" target="ent12p" maxCard="1" fieldName="notificationToRewardType" derived="false" database="db1" direct="true"/>
+  <Role id="role7q" inverseId="role8q" source="ent2q" target="ent5q" maxCard="many" fieldName="gamifiedApplicationToThematicArea" derived="false" database="db1" direct="true"/>
+  <Role id="role8q" inverseId="role7q" source="ent5q" target="ent2q" maxCard="many" fieldName="thematicAreaToGamifiedApplication" derived="false" database="db1" direct="false"/>
+  <Role id="role9q" inverseId="role10q" source="ent5q" target="ent16x" maxCard="many" fieldName="thematicAreaToActionType" derived="false" database="db1" direct="false"/>
+  <Role id="role10q" inverseId="role9q" source="ent16x" target="ent5q" maxCard="1" fieldName="actionTypeToThematicArea" derived="false" database="db1" direct="true"/>
+  <Role id="role11q" inverseId="role12q" source="ent5q" target="ent13x" maxCard="many" fieldName="thematicAreaToBadgeType" derived="false" database="db1" direct="false"/>
+  <Role id="role12q" inverseId="role11q" source="ent13x" target="ent5q" maxCard="1" fieldName="badgeTypeToThematicArea" derived="false" database="db1" direct="true"/>
+</DataModel>

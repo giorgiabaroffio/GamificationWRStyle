@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Gamified App OID">icp118q</Parameter>
+  <Parameter name="Gamified App Name">icp119q</Parameter>
+  <Parameter name="Thematic Area OIDS">icp17q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm31q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu34q">icp119q</OperationParam>
+      <OperationParam unit="icu34q">icp17q</OperationParam>
+      <OperationParam unit="icu34q">icp118q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln144q</Link>
+      <Link resultCode="success" transport="true">ln106q</Link>
+      <Link resultCode="error" transport="true">ln106q</Link>
+      <Link resultCode="success" transport="true">ln139q</Link>
+      <Link resultCode="error" transport="true">ln139q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

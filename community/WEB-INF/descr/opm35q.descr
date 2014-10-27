@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.OperationModuleService">
+  <InputCollectorUnit name="" id="icu41q">
+    <InputParameter id="icp142q" name="Action Type OID"/>
+  </InputCollectorUnit>
+  <OKCollectorUnits>okcu40q</OKCollectorUnits>
+  <KOCollectorUnits>kocu24q</KOCollectorUnits>
+  <OperationUnits>icu41q|okcu40q|kocu24q|miu64q|dlu7q|seu45q</OperationUnits>
+</Descriptor>

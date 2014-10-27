@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>miu27q</Target>
+  <Secure>false</Secure>
+  <Source>adu5q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <Navigates>true</Navigates>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="miu27q.icp218q" sourceUnit="adu5q" sourceParam="map(internal)"/>
+    <ContextPropagation targetParam="miu27q.icp214q" sourceUnit="adu5q" sourceParam="map(firstname)"/>
+    <ContextPropagation targetParam="miu27q.icp219q" sourceUnit="adu5q" sourceParam="map(geoarea)"/>
+    <ContextPropagation targetParam="miu27q.icp215q" sourceUnit="adu5q" sourceParam="map(country)"/>
+    <ContextPropagation targetParam="miu27q.icp212q" sourceUnit="adu5q" sourceParam="map(publicprofile)"/>
+    <ContextPropagation targetParam="miu27q.icp213q" sourceUnit="adu5q" sourceParam="map(userid)"/>
+    <ContextPropagation targetParam="miu27q.icp209q" sourceUnit="adu5q" sourceParam="map(email)"/>
+    <ContextPropagation targetParam="miu27q.icp210q" sourceUnit="adu5q" sourceParam="map(isocode)"/>
+    <ContextPropagation targetParam="miu27q.icp217q" sourceUnit="adu5q" sourceParam="map(city)"/>
+    <ContextPropagation targetParam="miu27q.icp208q" sourceUnit="adu5q" sourceParam="map(photo)"/>
+    <ContextPropagation targetParam="miu27q.icp211q" sourceUnit="adu5q" sourceParam="map(birthdate)"/>
+    <ContextPropagation targetParam="miu27q.icp216q" sourceUnit="adu5q" sourceParam="map(lastname)"/>
+    <ContextPropagation targetParam="miu27q.icp220q" sourceUnit="adu5q" sourceParam="map(password)"/>
+  </ContextPropagations>
+</Descriptor>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.module.rtx.CollectorUnitService" name="">
+  <Type>INPUT</Type>
+  <Parameter name="Available">icp94q</Parameter>
+  <Parameter name="Language">icp95q</Parameter>
+  <Parameter name="Needed Points">icp96q</Parameter>
+  <Parameter name="Description">icp97q</Parameter>
+  <Parameter name="Title">icp98q</Parameter>
+  <Parameter name="Image">icp99q</Parameter>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName/>
+    <ParentContainer>opm28q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="icu31q">icp95q</OperationParam>
+      <OperationParam unit="icu31q">icp99q</OperationParam>
+      <OperationParam unit="icu31q">icp94q</OperationParam>
+      <OperationParam unit="icu31q">icp96q</OperationParam>
+      <OperationParam unit="icu31q">icp97q</OperationParam>
+      <OperationParam unit="icu31q">icp98q</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln250q</Link>
+      <Link resultCode="success" transport="true">ln140q</Link>
+      <Link resultCode="error" transport="true">ln140q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

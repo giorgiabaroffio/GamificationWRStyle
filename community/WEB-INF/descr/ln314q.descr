@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru23q</Target>
+  <Secure>false</Secure>
+  <Source>pcu18q</Source>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+  <ContextPropagations>
+    <ContextPropagation targetParam="cru23q.att52x" sourceUnit="pcu18q" sourceParam="pcp66q"/>
+    <ContextPropagation targetParam="cru23q.role16x.att38x" sourceUnit="pcu18q" sourceParam="pcp64q"/>
+    <ContextPropagation targetParam="cru23q.att51x" sourceUnit="pcu18q" sourceParam="pcp67q"/>
+    <ContextPropagation targetParam="cru23q.att29x" sourceUnit="pcu18q" sourceParam="pcp68q"/>
+    <ContextPropagation targetParam="cru23q.att73x" sourceUnit="pcu18q" sourceParam="pcp69q"/>
+    <ContextPropagation targetParam="cru23q.att83x" sourceUnit="pcu18q" sourceParam="pcp71q"/>
+    <ContextPropagation targetParam="cru23q.att82x" sourceUnit="pcu18q" sourceParam="pcp70q"/>
+    <ContextPropagation targetParam="cru23q.role8p.userOID" sourceUnit="pcu18q" sourceParam="pcp65q"/>
+    <ContextPropagation targetParam="cru23q.att5q" sourceUnit="pcu18q" sourceParam="pcp74q"/>
+  </ContextPropagations>
+</Descriptor>

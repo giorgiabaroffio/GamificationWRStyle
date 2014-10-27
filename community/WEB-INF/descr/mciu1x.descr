@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiChoiceIndexUnitService" name="All Reputation Actions">
+  <MaxResults/>
+  <Query entity="ent16x">
+    <Input id="p0" param="kcond54x.att38x" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att38x" name="oid" index="0"/>
+    <Output id="att39x" name="name" index="1"/>
+    <Output id="att71x" name="description" index="2"/>
+    <Output id="att41x" name="score" index="3"/>
+    <HQL>select a_actionType.oid, a_actionType.name, a_actionType.description, a_actionType.score from ActionType a_actionType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_actionType.oid in(?)}))</Where>order by a_actionType.score asc
+    </HQL>
+  </Query>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="mciu1x" linkId="ln207x" action="validate"/>
+  </wr:Validation>
+</Descriptor>

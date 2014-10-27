@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="Modify Badge">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent13x</Entity>
+  <ModifiedAttributes>att48x|att46x|att63x|att47x|att64x|att43x|att20x|att8q|att28x|att2p</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode>ENTITY</FetchMode>
+  <Query entity="ent13x">
+    <Input id="p0" param="kcond47q.att42x" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from BadgeType a_badgeType
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_badgeType.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <ModelName>Modify Badge</ModelName>
+    <ParentContainer>opg31q</ParentContainer>
+    <NavigationAncestors/>
+    <Secure>false</Secure>
+    <Localized>false</Localized>
+    <CheckPermission>false</CheckPermission>
+    <StartsTransaction>false</StartsTransaction>
+    <LinkIdRequired>true</LinkIdRequired>
+    <OperationParams>
+      <OperationParam unit="mfu25q">mfu25q.att64x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att2p</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att47x_name</OperationParam>
+      <OperationParam unit="mfu25q">kcond47q.att42x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att47x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att63x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att46x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att63x_name</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att8q</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att43x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att28x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att28x_name</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att2p_name</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att48x</OperationParam>
+      <OperationParam unit="mfu25q">mfu25q.att20x</OperationParam>
+      <Params/>
+    </OperationParams>
+    <OutgoingLinks>
+      <Link resultCode="success">oln198q</Link>
+      <Link resultCode="error">kln79q</Link>
+      <Link resultCode="success" transport="true">ln157q</Link>
+      <Link resultCode="error" transport="true">ln157q</Link>
+      <Link resultCode="error.opg31q">kln79q</Link>
+    </OutgoingLinks>
+    <IsLinkHistoryRecorded>true</IsLinkHistoryRecorded>
+  </WRParameterService>
+</Descriptor>

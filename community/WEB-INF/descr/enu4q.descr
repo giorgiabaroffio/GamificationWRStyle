@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="New">
+  <FormFields>
+    <Field id="fld7q" name="Name" type="string" localized="false"></Field>
+    <Field id="fld8q" name="Sort Number" type="string" localized="false"></Field>
+    <SelectionField id="sfld8q" name="Thematic Area" type="string" localized="false" value="" splitOutput="">
+      <Slot id="sfld8q_label" label="true" output="false"/>
+      <Slot id="sfld8q_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <wr:Validation xmlns:wr="http://www.webratio.com/2013/WebML/WRValidation">
+    <wr:ValidationLink elementId="enu4q" linkId="ln25q" action="validate"/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld7q" id="mnd5q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld8q" id="mnd6q" name="Mandatory">
+      <CompanionField/>
+    </MandatoryValidationRule>
+  </wr:Validation>
+</Descriptor>
